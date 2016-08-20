@@ -209,6 +209,8 @@
 		EE6EEA341D679CDB00D80EF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				HEADER_SEARCH_PATHS = "/Programs/C++/boost_1_60_0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +218,8 @@
 		EE6EEA351D679CDB00D80EF8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				HEADER_SEARCH_PATHS = "/Programs/C++/boost_1_60_0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
