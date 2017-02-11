@@ -11,4 +11,8 @@
 
 #include <stdio.h>
 
+
+void useType_Description();
+
+
 #endif /* Exercise_2_3_hpp */

@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void solve_2_3();
+
 #endif /* Exercise_2_3_JLBorges_hpp */

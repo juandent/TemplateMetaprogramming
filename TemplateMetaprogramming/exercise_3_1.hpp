@@ -11,4 +11,29 @@
 
 #include <stdio.h>
 
+namespace Chapter3
+{
+    void useQuantities();
+}
+
+namespace Solution_to_Exercise_3_1
+{
+    void solve();
+}
+
+
+namespace Solution_to_Exercise_3_2
+{
+    void solve();
+}
+
+namespace Solution_to_Exercise_3_3_AND_3_4
+{
+    void use_add_pointer();
+}
+
+namespace Solution_to_Exercise_3_7
+{
+    void solve_3_7();
+}
 #endif /* exercise_3_1_hpp */
