@@ -38,139 +38,153 @@ BOOST_STATIC_ASSERT((mpl::plus<
 
 
 namespace Chapter3 {
-    typedef mpl::vector_c<int,1,0,0,0,0,0,0> mass;
-    typedef mpl::vector_c<int,0,1,0,0,0,0,0> length;
-    typedef mpl::vector_c<int,0,0,1,0,0,0,0> time;
-    typedef mpl::vector_c<int,0,0,0,1,0,0,0> charge;
-    typedef mpl::vector_c<int,0,0,0,0,1,0,0> temperature;
-    typedef mpl::vector_c<int,0,0,0,0,0,1,0> intensity;
-    typedef mpl::vector_c<int,0,0,0,0,0,0,1> amount_of_substance;
-    
-    //                        m l  t
-    typedef mpl::vector_c<int,0,1,-1,0,0,0,0> velocity;         // l/t
-    typedef mpl::vector_c<int,0,1,-2,0,0,0,0> acceleration;     // l/(t2)
-    typedef mpl::vector_c<int,1,1,-1,0,0,0,0> momentum;         // ml/t
-    typedef mpl::vector_c<int,1,1,-2,0,0,0,0> force;            // ml/(t2)
-    
-    template<typename T, typename Dimensions>
-    struct quantity
-    {
-        explicit quantity(T x) : m_value{x} {}
-        
-        template<typename OtherDimensions>
-        quantity( quantity<T,OtherDimensions> const& rhs ) : m_value{rhs.value()} 
-        {
-            BOOST_STATIC_ASSERT((mpl::equal<Dimensions,OtherDimensions>::type::value));
-        }
-        
-        T value() const { return m_value; }
-    private:
-        T m_value;
-    };
-    
-    // implement addition and subtraction
+	namespace QuantityStuff {
+		typedef mpl::vector_c<int, 1, 0, 0, 0, 0, 0, 0> mass;
+		typedef mpl::vector_c<int, 0, 1, 0, 0, 0, 0, 0> length;
+		typedef mpl::vector_c<int, 0, 0, 1, 0, 0, 0, 0> time;
+		typedef mpl::vector_c<int, 0, 0, 0, 1, 0, 0, 0> charge;
+		typedef mpl::vector_c<int, 0, 0, 0, 0, 1, 0, 0> temperature;
+		typedef mpl::vector_c<int, 0, 0, 0, 0, 0, 1, 0> intensity;
+		typedef mpl::vector_c<int, 0, 0, 0, 0, 0, 0, 1> amount_of_substance;
+
+		//                        m l  t
+		typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+		typedef mpl::vector_c<int, 0, 1, -2, 0, 0, 0, 0> acceleration;     // l/(t2)
+		typedef mpl::vector_c<int, 1, 1, -1, 0, 0, 0, 0> momentum;         // ml/t
+		typedef mpl::vector_c<int, 1, 1, -2, 0, 0, 0, 0> force;            // ml/(t2)
+
+		template<typename T, typename Dimensions>
+		struct quantity
+		{
+			explicit quantity(T x) : m_value{ x } {}
+
+			template<typename OtherDimensions>
+			quantity(quantity<T, OtherDimensions> const& rhs) : m_value{ rhs.value() }
+			{
+				BOOST_STATIC_ASSERT((mpl::equal<Dimensions, OtherDimensions>::type::value));
+			}
+
+			T value() const { return m_value; }
+		private:
+			T m_value;
+		};
+
+		// implement addition and subtraction
 #ifdef SAME_DIMENSION_FOR_ARGUMENTS
-    template<typename T, typename D>
-    quantity<T,D>
-    operator+( quantity<T, D> x, quantity<T, D> y)
-    {
-        return quantity<T, D>{ x.value() + y.value() };
-    }
+		template<typename T, typename D>
+		quantity<T, D>
+			operator+(quantity<T, D> x, quantity<T, D> y)
+		{
+			return quantity<T, D>{ x.value() + y.value() };
+		}
 #else
-    // SOLUTION for Exercise 3.5:
-    template<typename T, typename D, typename OtherDimensions>
-    quantity<T,D>
-    operator+( quantity<T, D> x, quantity<T, OtherDimensions> y)
-    {
-        BOOST_STATIC_ASSERT((mpl::equal<D,OtherDimensions>::type::value));
-        return quantity<T, D>{ x.value() + y.value() };
-    }    
+	// SOLUTION for Exercise 3.5:
+		template<typename T, typename D, typename OtherDimensions>
+		quantity<T, D>
+			operator+(quantity<T, D> x, quantity<T, OtherDimensions> y)
+		{
+			BOOST_STATIC_ASSERT((mpl::equal<D, OtherDimensions>::type::value));
+			return quantity<T, D>{ x.value() + y.value() };
+		}
 #endif
 
-    template<typename T, typename D>
-    quantity<T,D>
-    operator-( quantity<T, D> x, quantity<T, D> y)
-    {
-        return quantity<T, D>{ x.value() - y.value() };
-    }
-    // create metafunction class for plus
-    struct plus_f
-    {
-        template<typename T1, typename T2>
-        struct apply
-        {
-            typedef typename mpl::plus<T1,T2>::type type;
-        };
-    };
-    // implementing multiplication
-    template<typename T, typename D1, typename D2>
-    quantity<
-        T
-    ,  typename mpl::transform<D1, D2, plus_f>::type
-    >
-    operator*( quantity<T, D1> x, quantity<T, D2> y)
-    {
-        typedef typename mpl::transform<D1, D2, plus_f>::type dim;
-        return quantity<T,dim>( x.value() * y.value());
-    }
-    
+		template<typename T, typename D>
+		quantity<T, D>
+			operator-(quantity<T, D> x, quantity<T, D> y)
+		{
+			return quantity<T, D>{ x.value() - y.value() };
+		}
+		// create metafunction class for plus
+		struct plus_f
+		{
+			template<typename T1, typename T2>
+			struct apply
+			{
+				typedef typename mpl::plus<T1, T2>::type type;
+			};
+		};
+		// implementing multiplication
+		template<typename T, typename D1, typename D2>
+		quantity<
+			T
+			, typename mpl::transform<D1, D2, plus_f>::type
+		>
+			operator*(quantity<T, D1> x, quantity<T, D2> y)
+		{
+			typedef typename mpl::transform<D1, D2, plus_f>::type dim;
+			return quantity<T, dim>(x.value() * y.value());
+		}
+
 #ifdef DIRECT_DIVISION_IMPLEMENTATION    
-    // implementing division
-    template<typename T, typename D1, typename D2>
-    quantity<
-        T
-    , typename mpl::transform<D1,D2, mpl::minus<_1,_2>>::type
-    >
-    operator/ (quantity<T, D1> x, quantity<T, D2> y)
-    {
-        typedef typename mpl::transform<D1,D2, mpl::minus<_1,_2>>::type dim;
-        
-        return quantity<T, dim>( x.value() / y.value());
-    }
+		// implementing division
+		template<typename T, typename D1, typename D2>
+		quantity<
+			T
+			, typename mpl::transform<D1, D2, mpl::minus<_1, _2>>::type
+		>
+			operator/ (quantity<T, D1> x, quantity<T, D2> y)
+		{
+			typedef typename mpl::transform<D1, D2, mpl::minus<_1, _2>>::type dim;
+
+			return quantity<T, dim>(x.value() / y.value());
+		}
 #endif
-    
-    // metafunction for getting divide_dimensions (via forwarding)
-    template<typename D1, typename D2>
-    struct divide_dimensions : mpl::transform<D1,D2, mpl::minus<_1,_2>>
-    {};
-    
-    // alternate division implementation:
-    template<typename T, typename D1, typename D2>
-    quantity<
-        T
-    ,   typename divide_dimensions<D1, D2>::type
-    >
-    operator/ (quantity<T,D1> x, quantity<T,D2> y )
-    {
-        return quantity<T, typename divide_dimensions<D1, D2>::type>(x.value()/y.value());
-    }
-    
-/* &useQuantities& */
-    void useQuantities()
-    {
-        quantity<float, length> l{1.0f};
-        quantity<float, mass> m{2.0f};
-        quantity<float, length> l2 {4.0f};
-        quantity<float, acceleration> a {2.0f};
-        
-        
-        std::cout << "force: " << (m*a).value() << std::endl;
-        
-        //quantity<float, mass> mm = m*a; // should fail!!
-        quantity<float, force> f = m*a;
-        
-        auto acc = f/m;
-        
-        f = f + m*a;
-        
-        std::cout << "force: " << f.value() << std::endl;
-        
-        auto r = l+l2;
-        r = l-l2;
-        //auto yy = l+m;
-        
-        
-    }
+
+		// metafunction for getting divide_dimensions (via forwarding)
+		template<typename D1, typename D2>
+		struct divide_dimensions : mpl::transform<D1, D2, mpl::minus<_1, _2>>
+		{};
+
+		// alternate division implementation:
+		template<typename T, typename D1, typename D2>
+		quantity<
+			T
+			, typename divide_dimensions<D1, D2>::type
+		>
+			operator/ (quantity<T, D1> x, quantity<T, D2> y)
+		{
+			return quantity<T, typename divide_dimensions<D1, D2>::type>(x.value() / y.value());
+		}
+
+		/* &useQuantities& */
+		void useQuantities()
+		{
+			quantity<float, length> l{ 1.0f };
+			quantity<float, mass> m{ 2.0f };
+			quantity<float, length> l2{ 4.0f };
+			quantity<float, acceleration> a{ 2.0f };
+
+
+			std::cout << "force: " << (m*a).value() << std::endl;
+
+			//quantity<float, mass> mm = m*a; // should fail!!
+			quantity<float, force> f = m*a;
+
+			auto acc = f / m;
+
+			f = f + m*a;
+
+			std::cout << "force: " << f.value() << std::endl;
+
+			auto r = l + l2;
+			r = l - l2;
+			//auto yy = l+m;
+		}
+	}
+
+	namespace HigherOrderMetafunctions
+	{
+		// calling meta function class with metafn forwarding
+		template <typename UnaryMetaFunctionClass, typename Arg>
+		struct apply1 : UnaryMetaFunctionClass::template apply<Arg>
+		{};
+
+		// now twice (f(f(x))  -- where f is a metafunction class -- is:
+		template <typename F, typename X>
+		struct twice : apply1<F, typename apply1<F,X>::type>
+		{};
+
+	}
 }
 
 // C++ Template Metaprogramming

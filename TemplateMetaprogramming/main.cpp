@@ -1161,7 +1161,7 @@ int main(int argc, const char * argv[]) {
     
     Solution_to_Exercise_3_7::solve_3_7();
     
-    Chapter3::useQuantities();
+    Chapter3::QuantityStuff::useQuantities();
     
     Solution_to_Exercise_3_3_AND_3_4::use_add_pointer();
     

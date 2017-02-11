@@ -13,7 +13,10 @@
 
 namespace Chapter3
 {
-    void useQuantities();
+	namespace QuantityStuff
+	{
+		void useQuantities();
+	}
 }
 
 namespace Solution_to_Exercise_3_1
