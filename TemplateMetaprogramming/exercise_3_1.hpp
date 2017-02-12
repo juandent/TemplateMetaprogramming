@@ -17,6 +17,10 @@ namespace Chapter3
 	{
 		void useQuantities();
 	}
+	namespace HigherOrderMetafunctions
+	{
+		void useTwicePointerDouble();
+	}
 }
 
 namespace Solution_to_Exercise_3_1

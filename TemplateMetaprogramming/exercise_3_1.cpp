@@ -174,7 +174,15 @@ namespace Chapter3 {
 
 	namespace HigherOrderMetafunctions
 	{
-		// calling meta function class with metafn forwarding
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		/// <summary>	calling meta function class with metafn forwarding. </summary>
+		///
+		/// <remarks>	Juan Dent, 11/2/2017. </remarks>
+		///
+		/// <typeparam name="UnaryMetaFunctionClass"> Type of the unary meta function class. </typeparam>
+		/// <typeparam name="Arg">					  Type of the argument. </typeparam>
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		template <typename UnaryMetaFunctionClass, typename Arg>
 		struct apply1 : UnaryMetaFunctionClass::template apply<Arg>
 		{};
@@ -184,6 +192,59 @@ namespace Chapter3 {
 		struct twice : apply1<F, typename apply1<F,X>::type>
 		{};
 
+		// now thrice (f(f(x))) -- where f is a metafunction class:
+		template <typename F, typename X>
+		struct thrice : apply1<F, typename apply1<F, typename apply1<F,X>::type>::type>
+		{};
+
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		/// <summary>	"Call" metafunction twice with F as std::add_pointer<_1> and X as type double. </summary>
+		///
+		/// <remarks>	Will not work because std::add_pointer<_1> is not a metafn class!!
+		/// 			Juan Dent, 11/2/2017. </remarks>
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		// this does  not work because std::add_pointer<_1> is not a metafn class and has no nested template<...> apply type
+		// 
+		typedef twice< std::add_pointer<_1>, double> twice_pointer_double_not_ok;
+
+		// create metafunction class for add_pointer<T>
+		struct add_pointer_f
+		{
+			template <typename T>
+			struct apply : std::add_pointer<T>
+			{};
+		};
+		typedef typename twice< add_pointer_f, double>::type twice_pointer_double;
+		typedef typename thrice< add_pointer_f, double>::type thrice_pointer_double;
+
+		namespace LambdaExpressions
+		{
+			// create twice to work with either metafn classes or placeholder expressions (i.e. any lambda expression)
+			template <typename F, typename Arg>
+			struct twice : apply1< typename mpl::lambda<F>::type,
+				typename apply1< typename mpl::lambda<F>::type, Arg>::type>
+			{};
+
+			typedef typename twice< std::add_pointer<_1>, int>::type twice_pointer_int;
+		}
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		/// <summary>	Use twice pointer double. </summary>
+		///
+		/// <remarks>	Juan Dent, 11/2/2017. </remarks>
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		void useTwicePointerDouble()
+		{
+			twice_pointer_double d;
+			apply1<add_pointer_f, double>::type f;
+			std::cout << std::is_same<double*, apply1<add_pointer_f, double>::type>::value << std::endl;
+			std::cout << std::is_same<double**, twice_pointer_double>::value << std::endl;
+			std::cout << std::is_same<double***, thrice_pointer_double>::value << std::endl;
+			LambdaExpressions::twice_pointer_int i;
+			std::cout << std::is_same<int**, LambdaExpressions::twice_pointer_int>::value << std::endl;
+
+		}
 	}
 }
 
