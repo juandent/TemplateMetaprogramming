@@ -20,6 +20,8 @@
 #include <tuple>
 #include <array>
 #include <utility>
+#include <functional>
+#include <type_traits>
 
 
 // TODO: reference additional headers your program requires here
