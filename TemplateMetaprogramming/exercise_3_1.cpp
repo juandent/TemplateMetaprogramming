@@ -173,6 +173,41 @@ namespace Chapter3 {
 		}
 	}
 
+	namespace Questions
+	{
+		namespace Q3_0
+		{
+			template< unsigned long N>
+			struct binary
+			{
+				static unsigned long constexpr value = binary<N / 10>::value * 2 + N % 10;
+				static_assert(N % 10 < 2, "invalid digit - not 0 nor 1");
+			};
+
+			template<>
+			struct binary<0>
+			{
+				static unsigned long constexpr value = 0;
+			};
+
+			void useBinary()
+			{
+				unsigned long constexpr one = binary<1>::value;
+				unsigned long constexpr three = binary<11>::value;
+				unsigned long constexpr four = binary<100>::value;
+			}
+		}
+		namespace Q3_1
+		{
+			typedef mpl::vector3_c<int, 1, 2, 3> sequence;
+
+			void useTransform()
+			{
+				typedef typename mpl::transform < mpl::vector_c<int, 1, 2, 3>, mpl::times<_1, mpl::int_<2>>>::type result;
+				result t;
+			}
+		}
+	}
 	namespace HigherOrderMetafunctions
 	{
 		////////////////////////////////////////////////////////////////////////////////////////////////////

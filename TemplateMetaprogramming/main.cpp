@@ -1151,6 +1151,8 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
 
+	Chapter3::Questions::Q3_1::useTransform();
+
 	Chapter3::HigherOrderMetafunctions::useTwicePointerDouble();
     
     Iterator_invalidation::useForwardListIterator();

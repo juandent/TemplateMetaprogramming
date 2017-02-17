@@ -21,6 +21,13 @@ namespace Chapter3
 	{
 		void useTwicePointerDouble();
 	}
+	namespace Questions
+	{
+		namespace Q3_1
+		{
+			void useTransform();
+		}
+	}
 }
 
 namespace Solution_to_Exercise_3_1

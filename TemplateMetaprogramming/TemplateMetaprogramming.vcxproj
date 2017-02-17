@@ -153,6 +153,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
