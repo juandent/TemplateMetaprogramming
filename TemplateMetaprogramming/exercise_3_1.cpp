@@ -222,7 +222,8 @@ namespace Chapter3 {
 				typedef ::mpl::int_<1'000>	m;
 				typedef ::mpl::int_<1'000'000>	km;
 
-
+				// template parameters must be integral wrappers with the value member exposed!
+				// this can be mpl::int_<N>, as a possible implementation
 				template <class U1, class U2>
 				struct factor
 				{
