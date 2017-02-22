@@ -27,6 +27,14 @@ namespace Chapter3
 		{
 			void useTransform();
 		}
+		namespace Q3_8
+		{
+			// units for length
+			namespace Length
+			{
+				void useLength();
+			}
+		}
 	}
 }
 

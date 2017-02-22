@@ -24,6 +24,8 @@
 #include <boost/mpl/reverse.hpp>
 #include <boost/mpl/at.hpp>
 #include <boost/lambda/lambda.hpp>
+#include <boost/mpl/divides.hpp>
+#include <boost/mpl/arithmetic.hpp>
 
 
 // Dimensions (pg 40 -- C++ Template Metaprogramming
@@ -39,6 +41,8 @@ BOOST_STATIC_ASSERT((mpl::plus<
 
 
 namespace Chapter3 {
+	namespace mpl = boost::mpl;
+
 	namespace QuantityStuff {
 		typedef mpl::vector_c<int, 1, 0, 0, 0, 0, 0, 0> mass;
 		typedef mpl::vector_c<int, 0, 1, 0, 0, 0, 0, 0> length;
@@ -199,12 +203,36 @@ namespace Chapter3 {
 		}
 		namespace Q3_1
 		{
-			typedef mpl::vector3_c<int, 1, 2, 3> sequence;
+			typedef ::mpl::vector3_c<int, 1, 2, 3> sequence;
 
 			void useTransform()
 			{
 				typedef typename mpl::transform < mpl::vector_c<int, 1, 2, 3>, mpl::times<_1, mpl::int_<2>>>::type result;
 				result t;
+			}
+		}
+		namespace Q3_8
+		{
+			// units for length
+			namespace Length
+			{
+				typedef ::mpl::int_<1>	mm;
+				typedef ::mpl::int_<10>	cm;
+				typedef ::mpl::int_<1'000>	m;
+				typedef ::mpl::int_<1'000'000>	km;
+
+
+				template <class U1, class U2>
+				struct factor
+				{
+					typedef typename mpl::divides<U1, U2>::type type;
+				};
+
+				void useLength()
+				{
+					using ff = factor<cm, mm>::type;
+					ff val;
+				}
 			}
 		}
 	}
