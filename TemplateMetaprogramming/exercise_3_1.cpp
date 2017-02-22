@@ -31,6 +31,7 @@
 // Dimensions (pg 40 -- C++ Template Metaprogramming
 namespace mpl = boost::mpl;
 using namespace mpl::placeholders;
+using namespace std;
 
 // binary lambda expression applied to 2 additional arguments:
 BOOST_STATIC_ASSERT((mpl::plus<
@@ -225,15 +226,43 @@ namespace Chapter3 {
 				template <class U1, class U2>
 				struct factor
 				{
-					typedef typename mpl::divides<U1, U2>::type type;
+				private:
+					static constexpr bool U1Smaller = std::conditional < U1::value < U2::value, std::true_type, std::false_type>::type::value;
+				public:
+					typedef typename std::conditional < U1Smaller, U1, U2>::type smaller_type;
+					typedef typename std::conditional < !U1Smaller, U1, U2>::type larger_type;
+					typedef smaller_type type;
+					typedef typename mpl::divides< larger_type, smaller_type>::type division_type;
+					static constexpr unsigned long long value = division_type::value;
+
 				};
 
 				void useLength()
 				{
-					using ff = factor<cm, mm>::type;
-					ff val;
+					using ff = factor<cm, mm>;
+					cout << ff::value << endl;
+					ff::smaller_type small;
+					ff::larger_type large;
+					ff::division_type div;
+					std::cout << ff::division_type::value << std::endl;
+					ff value;
+					auto val = ff::value;
+					using fff = factor<mm, cm>::division_type;
+					auto other = fff::value;
 				}
 			}
+			template <class T, class Dimensions, class Unit>
+			struct quantity
+			{
+				template< class OtherUnit>
+				explicit quantity(T x)
+				{
+
+				}
+				T value() const { return m_value;  }
+			private:
+				T m_value;
+			};
 		}
 	}
 	namespace HigherOrderMetafunctions
