@@ -26,6 +26,7 @@
 #include <boost/lambda/lambda.hpp>
 #include <boost/mpl/divides.hpp>
 #include <boost/mpl/arithmetic.hpp>
+#include <ratio>
 
 
 // Dimensions (pg 40 -- C++ Template Metaprogramming
@@ -217,29 +218,56 @@ namespace Chapter3 {
 			// units for length
 			namespace Length
 			{
-				typedef ::mpl::int_<1>	mm;
-				typedef ::mpl::int_<10>	cm;
-				typedef ::mpl::int_<1'000>	m;
-				typedef ::mpl::int_<1'000'000>	km;
+				typedef ratio<1, 1>			mm;
+				typedef ratio<10, 1>		cm;
+				typedef ratio<1000, 1>		m;
+				typedef ratio<1'000'000, 1>	km;
 
-				// template parameters must be integral wrappers with the value member exposed!
-				// this can be mpl::int_<N>, as a possible implementation
-				template <class U1, class U2>
+				template < class TargetUnits, class SourceUnits>
 				struct factor
 				{
 				private:
-					static constexpr bool U1Smaller = std::conditional < U1::value < U2::value, std::true_type, std::false_type>::type::value;
+					typedef  ratio_divide<TargetUnits, SourceUnits> r;
 				public:
-					typedef typename std::conditional < U1Smaller, U1, U2>::type smaller_type;
-					typedef typename std::conditional < !U1Smaller, U1, U2>::type larger_type;
-					typedef smaller_type type;
-					typedef typename mpl::divides< larger_type, smaller_type>::type division_type;
-					static constexpr unsigned long long value = division_type::value;
-
+					static long double convert(long double source)
+					{
+						source *= r::den;
+						source /= r::num;
+						return source;
+					}
 				};
+
+				namespace using_int_
+				{
+
+					// template parameters must be integral wrappers with the value member exposed!
+					// this can be mpl::int_<N>, as a possible implementation
+					template <class U1, class U2>
+					struct factor
+					{
+					private:
+						static constexpr bool U1Smaller = std::conditional < U1::value < U2::value, std::true_type, std::false_type>::type::value;
+					public:
+						typedef typename std::conditional < U1Smaller, U1, U2>::type smaller_type;
+						typedef typename std::conditional < !U1Smaller, U1, U2>::type larger_type;
+						typedef smaller_type type;
+						typedef typename mpl::divides< larger_type, smaller_type>::type division_type;
+						static constexpr unsigned long long value = division_type::value;
+
+					};
+				}
 
 				void useLength()
 				{
+					typedef  ratio_divide<cm, mm> r;
+
+					auto valinum = 15.0;
+					valinum *= r::den;
+					valinum /= r::num;
+					cout << valinum << endl;
+
+					cout << factor<cm, mm>::convert(15) << endl;
+#if 0
 					using ff = factor<cm, mm>;
 					cout << ff::value << endl;
 					ff::smaller_type small;
@@ -250,6 +278,7 @@ namespace Chapter3 {
 					auto val = ff::value;
 					using fff = factor<mm, cm>::division_type;
 					auto other = fff::value;
+#endif
 				}
 			}
 			template <class T, class Dimensions, class Unit>
@@ -258,6 +287,8 @@ namespace Chapter3 {
 				template< class OtherUnit>
 				explicit quantity(T x)
 				{
+					using f = Length::factor<Unit, OtherUnit>;
+					auto constexpr fac = f::value;
 
 				}
 				T value() const { return m_value;  }
