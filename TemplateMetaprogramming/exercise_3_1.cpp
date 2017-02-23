@@ -222,20 +222,85 @@ namespace Chapter3 {
 				typedef ratio<10, 1>		cm;
 				typedef ratio<1000, 1>		m;
 				typedef ratio<1'000'000, 1>	km;
+				typedef ratio<254, 10>		in;
 
+				template< class TargetUnits, class SourceUnits>
+				struct factor
+				{
+				private:
+					typedef  ratio_divide<TargetUnits, SourceUnits> r;
+				public:
+					static constexpr long double convertToSmaller(long double source)
+					{
+						return convert_helper< ( r::num >= r::den) >::convert(source);
+					}
+
+				private:
+					template<bool>
+					struct convert_helper
+					{
+						static constexpr long double convert(long double source)
+						{
+							return (source * r::den) / r::num;
+						}
+					};
+					template<> struct convert_helper<false>
+					{
+						static constexpr long double convert(long double source)
+						{
+							return (source * r::num) / r::den;
+						}
+					};
+				};
+				
+#if 0
 				template < class TargetUnits, class SourceUnits>
 				struct factor
 				{
 				private:
 					typedef  ratio_divide<TargetUnits, SourceUnits> r;
 				public:
+#if 0
+					//template<typename = enable_if<r::num >= r::den>::type >
+					static long double convertToSmallerUnit(long double source)
+					{
+						source *= r::den;
+						source /= r::num;
+						return source;
+					}
+					//template<typename = enable_if<r::num < r::den>::type >
+						static long double convertToSmallerUnit(long double source)
+						{
+							source *= r::num;
+							source /= r::den;
+							return source;
+						}
+#endif
 					static long double convert(long double source)
 					{
 						source *= r::den;
 						source /= r::num;
 						return source;
 					}
+#if 1
+					static long double convertToSmaller(long double source)
+					{
+						if (r::num >= r::den)
+						{
+							source *= r::den;
+							source /= r::num;
+							return source;
+						}
+						else
+						{
+							source *= r::num;
+							source /= r::den;
+							return source;
+						}
+					}
+#endif
 				};
+#endif
 
 				namespace using_int_
 				{
@@ -266,7 +331,9 @@ namespace Chapter3 {
 					valinum /= r::num;
 					cout << valinum << endl;
 
-					cout << factor<cm, mm>::convert(15) << endl;
+					//cout << factor<cm, mm>::convert(15) << endl;
+
+					cout << factor<in, cm>::convertToSmaller(25.4) << endl;
 #if 0
 					using ff = factor<cm, mm>;
 					cout << ff::value << endl;
