@@ -282,6 +282,26 @@ namespace Chapter3 {
 
  				};
 
+				template < class TargetUnits, class SourceUnits>
+				struct factor_using_tag_dispatch
+				{
+				private:
+					typedef  ratio_divide<TargetUnits, SourceUnits> r;
+				public:
+					static constexpr long double convertToSmaller(long double source)
+					{
+						return convert_helper(source, integral_constant<bool, (r::num >= r::den)>{} );
+					}
+				private:
+					static constexpr long double convert_helper(long double source, true_type)
+					{
+						return (source * r::den) / r::num;
+					}
+					static constexpr long double convert_helper(long double source, false_type)
+					{
+						return (source * r::num) / r::den;
+					}
+				};
 
 				namespace using_int_
 				{
@@ -318,6 +338,10 @@ namespace Chapter3 {
 					cout << factor<in, cm>::convertToSmaller(25.4) << endl;
 
 					cout << factor_using_enable_if<in, cm>::convertToSmaller(25.4) << endl;
+
+
+					cout << factor_using_tag_dispatch<in, cm>::convertToSmaller(25.4) << endl;
+
 #if 0
 					using ff = factor<cm, mm>;
 					cout << ff::value << endl;
