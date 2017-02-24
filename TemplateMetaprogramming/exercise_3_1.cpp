@@ -254,30 +254,35 @@ namespace Chapter3 {
 				};
 				
 
-#if 0
+				template < class TargetUnits, class SourceUnits>
 				struct factor_using_enable_if
 				{
 				private:
-					//typedef  ratio_divide<TargetUnits, SourceUnits> r;
+					typedef  ratio_divide<TargetUnits, SourceUnits> r;
 				public:
-					//template<typename S = enable_if<(r::num >= r::den)>::type >
-					template < class TargetUnits, class SourceUnits>
-					static long double convertToSmallerUnit(long double source, enable_if<(TargetUnits > SourceUnits)>::type * = nullptr)
+					static constexpr long double convertToSmaller(long double source)
 					{
-						source *= r::den;
-						source /= r::num;
-						return source;
+						return convert_helper(source, r{});
 					}
-					template<typename S = enable_if<(r::num < r::den)>::type >
-					static long double convertToSmallerUnit(long double source, S* = nullptr)
+				private:
+					template< typename R>
+					static constexpr
+					typename enable_if< (R::num >= R::den), long double>::type
+					convert_helper(long double source, R r)
 					{
-						source *= r::num;
-						source /= r::den;
-						return source;
+						return (source * R::den) / R::num;
+					}
+					template< typename R>
+					static constexpr
+					typename enable_if< (R::num < R::den), long double>::type
+						convert_helper(long double source, R r)
+					{
+						return (source * R::num) / R::den;
 					}
 
-				};
-#endif
+ 				};
+
+
 				namespace using_int_
 				{
 
@@ -311,6 +316,8 @@ namespace Chapter3 {
 					//cout << (in < cm) << endl;
 
 					cout << factor<in, cm>::convertToSmaller(25.4) << endl;
+
+					cout << factor_using_enable_if<in, cm>::convertToSmaller(25.4) << endl;
 #if 0
 					using ff = factor<cm, mm>;
 					cout << ff::value << endl;
