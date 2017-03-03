@@ -43,7 +43,7 @@ BOOST_STATIC_ASSERT((mpl::plus<
 
 
 namespace Chapter3 {
-	namespace mpl = boost::mpl;
+	namespace mpl = ::boost::mpl;
 
 	namespace QuantityStuff {
 		typedef mpl::vector_c<int, 1, 0, 0, 0, 0, 0, 0> mass;
@@ -153,7 +153,6 @@ namespace Chapter3 {
 			return quantity<T, typename divide_dimensions<D1, D2>::type>(x.value() / y.value());
 		}
 
-		/* &useQuantities& */
 		void useQuantities()
 		{
 			quantity<float, length> l{ 1.0f };
@@ -215,9 +214,24 @@ namespace Chapter3 {
 		}
 		namespace Q3_8
 		{
-			// units for length
-			namespace Length
+			namespace AddingUnitsToQuantity
 			{
+				typedef mpl::vector_c<int, 1, 0, 0, 0, 0, 0, 0> mass;
+				typedef mpl::vector_c<int, 0, 1, 0, 0, 0, 0, 0> length;
+				typedef mpl::vector_c<int, 0, 0, 1, 0, 0, 0, 0> time;
+				typedef mpl::vector_c<int, 0, 0, 0, 1, 0, 0, 0> charge;
+				typedef mpl::vector_c<int, 0, 0, 0, 0, 1, 0, 0> temperature;
+				typedef mpl::vector_c<int, 0, 0, 0, 0, 0, 1, 0> intensity;
+				typedef mpl::vector_c<int, 0, 0, 0, 0, 0, 0, 1> amount_of_substance;
+
+				//                        m l  t
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+				typedef mpl::vector_c<int, 0, 1, -2, 0, 0, 0, 0> acceleration;     // l/(t2)
+				typedef mpl::vector_c<int, 1, 1, -1, 0, 0, 0, 0> momentum;         // ml/t
+				typedef mpl::vector_c<int, 1, 1, -2, 0, 0, 0, 0> force;            // ml/(t2)
+
+				// units for length
+
 				typedef ratio<1, 1>			mm;
 				typedef ratio<10, 1>		cm;
 				typedef ratio<1000, 1>		m;
@@ -232,7 +246,7 @@ namespace Chapter3 {
 				public:
 					static constexpr long double convertToSmaller(long double source)
 					{
-						return convert_helper< ( r::num >= r::den) >::convert(source);
+						return convert_helper< (r::num >= r::den) >::convert(source);
 					}
 
 				private:
@@ -252,300 +266,162 @@ namespace Chapter3 {
 						}
 					};
 				};
-				
 
-				template < class TargetUnits, class SourceUnits>
-				struct factor_using_enable_if
+				namespace OtherImplementationsForFactor
 				{
-				private:
-					typedef  ratio_divide<TargetUnits, SourceUnits> r;
-				public:
-					static constexpr long double convertToSmaller(long double source)
-					{
-						return convert_helper(source, r{});
-					}
-				private:
-					template< typename R>
-					static constexpr
-					typename enable_if< (R::num >= R::den), long double>::type
-					convert_helper(long double source, R r)
-					{
-						return (source * R::den) / R::num;
-					}
-					template< typename R>
-					static constexpr
-					typename enable_if< (R::num < R::den), long double>::type
-						convert_helper(long double source, R r)
-					{
-						return (source * R::num) / R::den;
-					}
-
- 				};
-
-				template < class TargetUnits, class SourceUnits>
-				struct factor_using_tag_dispatch
-				{
-				private:
-					typedef  ratio_divide<TargetUnits, SourceUnits> r;
-				public:
-					static constexpr long double convertToSmaller(long double source)
-					{
-						return convert_helper(source, integral_constant<bool, (r::num >= r::den)>{} );
-					}
-				private:
-					static constexpr long double convert_helper(long double source, true_type)
-					{
-						return (source * r::den) / r::num;
-					}
-					static constexpr long double convert_helper(long double source, false_type)
-					{
-						return (source * r::num) / r::den;
-					}
-				};
-
-				namespace using_int_
-				{
-
-					// template parameters must be integral wrappers with the value member exposed!
-					// this can be mpl::int_<N>, as a possible implementation
-					template <class U1, class U2>
-					struct factor
+					template < class TargetUnits, class SourceUnits>
+					struct factor_using_enable_if
 					{
 					private:
-						static constexpr bool U1Smaller = std::conditional < U1::value < U2::value, std::true_type, std::false_type>::type::value;
+						typedef  ratio_divide<TargetUnits, SourceUnits> r;
 					public:
-						typedef typename std::conditional < U1Smaller, U1, U2>::type smaller_type;
-						typedef typename std::conditional < !U1Smaller, U1, U2>::type larger_type;
-						typedef smaller_type type;
-						typedef typename mpl::divides< larger_type, smaller_type>::type division_type;
-						static constexpr unsigned long long value = division_type::value;
+						static constexpr long double convertToSmaller(long double source)
+						{
+							return convert_helper(source, r{});
+						}
+					private:
+						template< typename R>
+						static constexpr
+							typename enable_if< (R::num >= R::den), long double>::type
+							convert_helper(long double source, R r)
+						{
+							return (source * R::den) / R::num;
+						}
+						template< typename R>
+						static constexpr
+							typename enable_if< (R::num < R::den), long double>::type
+							convert_helper(long double source, R r)
+						{
+							return (source * R::num) / R::den;
+						}
 
 					};
+
+					template < class TargetUnits, class SourceUnits>
+					struct factor_using_tag_dispatch
+					{
+					private:
+						typedef  ratio_divide<TargetUnits, SourceUnits> r;
+					public:
+						static constexpr long double convertToSmaller(long double source)
+						{
+							return convert_helper(source, integral_constant<bool, (r::num >= r::den)>{});
+						}
+					private:
+						static constexpr long double convert_helper(long double source, true_type)
+						{
+							return (source * r::den) / r::num;
+						}
+						static constexpr long double convert_helper(long double source, false_type)
+						{
+							return (source * r::num) / r::den;
+						}
+					};
+
+					namespace using_int_
+					{
+
+						// template parameters must be integral wrappers with the value member exposed!
+						// this can be mpl::int_<N>, as a possible implementation
+						template <class U1, class U2>
+						struct factor
+						{
+						private:
+							static constexpr bool U1Smaller = std::conditional < U1::value < U2::value, std::true_type, std::false_type>::type::value;
+						public:
+							typedef typename std::conditional < U1Smaller, U1, U2>::type smaller_type;
+							typedef typename std::conditional < !U1Smaller, U1, U2>::type larger_type;
+							typedef smaller_type type;
+							typedef typename mpl::divides< larger_type, smaller_type>::type division_type;
+							static constexpr unsigned long long value = division_type::value;
+
+						};
+					}
 				}
 
-				void useLength()
+				template <class T, class Dimensions, class Unit>
+				struct quantity
 				{
-					typedef  ratio_divide<cm, mm> r;
+					template< class OtherUnit>
+					explicit quantity(T x)
+					{
+						using f = Length::factor<Unit, OtherUnit>;
+						m_value = f::convertToSmaller(x);
 
-					auto valinum = 15.0;
-					valinum *= r::den;
-					valinum /= r::num;
-					cout << valinum << endl;
-
-					//cout << factor<cm, mm>::convert(15) << endl;
-					//cout << (in < cm) << endl;
-
-					cout << factor<in, cm>::convertToSmaller(25.4) << endl;
-
-					cout << factor_using_enable_if<in, cm>::convertToSmaller(25.4) << endl;
-
-
-					cout << factor_using_tag_dispatch<in, cm>::convertToSmaller(25.4) << endl;
-
-#if 0
-					using ff = factor<cm, mm>;
-					cout << ff::value << endl;
-					ff::smaller_type small;
-					ff::larger_type large;
-					ff::division_type div;
-					std::cout << ff::division_type::value << std::endl;
-					ff value;
-					auto val = ff::value;
-					using fff = factor<mm, cm>::division_type;
-					auto other = fff::value;
-#endif
-				}
+					}
+					explicit quantity(T x)
+					{
+						m_value = x;
+					}
+					T value() const { return m_value; }
+				private:
+					T m_value;
+				};
 			}
-			template <class T, class Dimensions, class Unit>
-			struct quantity
+			void useLength()
 			{
-				template< class OtherUnit>
-				explicit quantity(T x)
-				{
-					using f = Length::factor<Unit, OtherUnit>;
-					auto constexpr fac = f::value;
+				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
 
-				}
-				T value() const { return m_value;  }
-			private:
-				T m_value;
-			};
+				quantity<double, length, mm> l_mm{ 4.5 };
+
+
+
+
+				typedef  ratio_divide<cm, mm> r;
+
+				auto valinum = 15.0;
+				valinum *= r::den;
+				valinum /= r::num;
+				cout << valinum << endl;
+
+				//cout << factor<cm, mm>::convert(15) << endl;
+				//cout << (in < cm) << endl;
+
+				cout << factor<in, cm>::convertToSmaller(25.4) << endl;
+
+				//cout << factor_using_enable_if<in, cm>::convertToSmaller(25.4) << endl;
+
+
+				//cout << factor_using_tag_dispatch<in, cm>::convertToSmaller(25.4) << endl;
+
+			}
+
 		}
-	}
-	namespace HigherOrderMetafunctions
-	{
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-		/// <summary>	calling meta function class with metafn forwarding. </summary>
-		///
-		/// <remarks>	Juan Dent, 11/2/2017. </remarks>
-		///
-		/// <typeparam name="UnaryMetaFunctionClass"> Type of the unary meta function class. </typeparam>
-		/// <typeparam name="Arg">					  Type of the argument. </typeparam>
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		template <typename UnaryMetaFunctionClass, typename Arg>
-		struct apply1 : UnaryMetaFunctionClass::template apply<Arg>
-		{};
-
-		// now twice (f(f(x))  -- where f is a metafunction class -- is:
-		template <typename F, typename X>
-		struct twice : apply1<F, typename apply1<F,X>::type>
-		{};
-
-		// now thrice (f(f(x))) -- where f is a metafunction class:
-		template <typename F, typename X>
-		struct thrice : apply1<F, typename apply1<F, typename apply1<F,X>::type>::type>
-		{};
-
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-		/// <summary>	"Call" metafunction twice with F as std::add_pointer<_1> and X as type double. </summary>
-		///
-		/// <remarks>	Will not work because std::add_pointer<_1> is not a metafn class!!
-		/// 			Juan Dent, 11/2/2017. </remarks>
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-
-		// this does  not work because std::add_pointer<_1> is not a metafn class and has no nested template<...> apply type
-		// 
-		typedef twice< std::add_pointer<_1>, double> twice_pointer_double_not_ok;
-
-		// create metafunction class for add_pointer<T>
-		struct add_pointer_f
+		namespace HigherOrderMetafunctions
 		{
-			template <typename T>
-			struct apply : std::add_pointer<T>
+			////////////////////////////////////////////////////////////////////////////////////////////////////
+			/// <summary>	calling meta function class with metafn forwarding. </summary>
+			///
+			/// <remarks>	Juan Dent, 11/2/2017. </remarks>
+			///
+			/// <typeparam name="UnaryMetaFunctionClass"> Type of the unary meta function class. </typeparam>
+			/// <typeparam name="Arg">					  Type of the argument. </typeparam>
+			////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			template <typename UnaryMetaFunctionClass, typename Arg>
+			struct apply1 : UnaryMetaFunctionClass::template apply<Arg>
 			{};
-		};
-		typedef typename twice< add_pointer_f, double>::type twice_pointer_double;
-		typedef typename thrice< add_pointer_f, double>::type thrice_pointer_double;
 
-		namespace OurLambda
-		{
-#if 0
-			// a placeholder is defined like so:
-			template <int X>
-			struct PlaceHolder;
-
-			template<>
-			struct PlaceHolder<1>
-			{
-				typedef PlaceHolder<1> type;
-
-				template<typename C1, typename C2=void, typename C3=void>
-				struct apply
-				{
-					typedef C1 type;
-				};
-			};
-			typedef PlaceHolder<1> _1;
-
-			template<>
-			struct PlaceHolder<2>
-			{
-				typedef PlaceHolder<2> type;
-
-				template<typename C1, typename C2, typename C3 = void>
-				struct apply
-				{
-					typedef C2 type;
-				};
-			};
-			typedef PlaceHolder<2> _2;
-
-			template<>
-			struct PlaceHolder<3>
-			{
-				typedef PlaceHolder<3> type;
-
-				template<typename C1, typename C2, typename C3>
-				struct apply
-				{
-					typedef C3 type;
-				};
-			};
-			typedef PlaceHolder<3> _3;
-#endif
-
-			 
-			namespace Debug
-			{
-				template<typename T>
-				struct TypeDecl;
-			}
-
-
-			// In the general case, F is either a metafunction class or a placeholder expression
-			// We will deal with placeholder expressions in partially specialized templates of this one
-			// In this particular case, we assume F is a metafunction class (i.e. it contains a nested 
-			// metafunction called apply - a metafunction is a template or class if it does not have 
-			// non-type parameters and if it also returns a type called type -- i.e. nested) 
-			template <typename F>
-			struct lambda
-			{
-				typedef F type;
-
-				//typedef lambda type;
-				
-				//Debug::TypeDecl<F> lambda_f_instantiated;
-
-				template< typename... Args>
-				struct apply
-				{
-					typedef typename F::template apply<Args...>::type type;
-					//typedef typename F<Args...>::type type;
-				};
-
-
-			};
-
-			template<template<typename> class F>
-			struct lambda<F<_1>>		// matches add_pointer<_1>
-			{
-				typedef lambda<F<_1>> type;
-
-				//Debug::TypeDecl<_1> lambda_f_1_instantiated;
-
-				template<typename... Args>
-				struct apply
-				{
-					typedef typename F<Args...>::type type;		// invokes add_pointer<Arg>
-				};
-			};
-
-
-			template<template<typename, typename> class F>
-			struct lambda<F<_1,_2>>		// matches mpl::plus<_1,_2>
-			{
-				typedef lambda<F<_1,_2>> type;
-
-				//Debug::TypeDecl<_1> lambda_f_1_2_instantiated;
-
-				template<typename... Args>
-				struct apply
-				{
-					//TypeDecl<Arg0> a_variable_forArg0;
-					typedef typename F<Args...>::type type;		// invokes mpl::plus<Arg0, Arg1>
-				};
-			};
-
-
-			template <typename F, typename... Args>
-			struct apply : lambda<F>::type::template apply<Args...>
-			{
-				//Debug::TypeDecl<typename lambda<F>::type> apply_instantiated;
-			};
-
-#if 0
-			template <template <typename> class F, typename... Args>
-			struct apply<F<_1>, Args...> : lambda<F<_1>>::type::template apply<Args...>
-			{
-				//TypeDecl<F<_1>> a_variable;
-			};
-
-
-			template <template <typename, typename> class F, typename... Args>
-			struct apply<F<_1,_2>, Args...> : lambda<F<_1,_2>>::template apply<Args...>
+			// now twice (f(f(x))  -- where f is a metafunction class -- is:
+			template <typename F, typename X>
+			struct twice : apply1<F, typename apply1<F, X>::type>
 			{};
-#endif
+
+			// now thrice (f(f(x))) -- where f is a metafunction class:
+			template <typename F, typename X>
+			struct thrice : apply1<F, typename apply1<F, typename apply1<F, X>::type>::type>
+			{};
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////
+			/// <summary>	"Call" metafunction twice with F as std::add_pointer<_1> and X as type double. </summary>
+			///
+			/// <remarks>	Will not work because std::add_pointer<_1> is not a metafn class!!
+			/// 			Juan Dent, 11/2/2017. </remarks>
+			////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			// this does  not work because std::add_pointer<_1> is not a metafn class and has no nested template<...> apply type
+			// 
+			typedef twice< std::add_pointer<_1>, double> twice_pointer_double_not_ok;
 
 			// create metafunction class for add_pointer<T>
 			struct add_pointer_f
@@ -554,114 +430,254 @@ namespace Chapter3 {
 				struct apply : std::add_pointer<T>
 				{};
 			};
-			// create metafunction class for mpl::plus<T1,T2>
-			struct plus_f
-			{
-				template <typename T1, typename T2>
-				struct apply : mpl::plus<T1,T2>
-				{};
-			};
+			typedef typename twice< add_pointer_f, double>::type twice_pointer_double;
+			typedef typename thrice< add_pointer_f, double>::type thrice_pointer_double;
 
-			struct common_f
+			namespace OurLambda
 			{
-				template <typename T1, typename T2>
-				struct apply : std::common_type<T1,T2>
+#if 0
+				// a placeholder is defined like so:
+				template <int X>
+				struct PlaceHolder;
+
+				template<>
+				struct PlaceHolder<1>
 				{
-					typedef typename std::common_type<T1, T2>::type type;
+					typedef PlaceHolder<1> type;
+
+					template<typename C1, typename C2 = void, typename C3 = void>
+					struct apply
+					{
+						typedef C1 type;
+					};
 				};
-			};
+				typedef PlaceHolder<1> _1;
 
-			template<typename T1, typename T2>
-			struct common_type_metafunction : std::common_type<T1,T2>
-			{};
+				template<>
+				struct PlaceHolder<2>
+				{
+					typedef PlaceHolder<2> type;
 
-			template<size_t N>
-			struct integral
-			{
-				static constexpr size_t value = N;
-			};
+					template<typename C1, typename C2, typename C3 = void>
+					struct apply
+					{
+						typedef C2 type;
+					};
+				};
+				typedef PlaceHolder<2> _2;
 
-			void useOurLambda()
-			{
-				// work on add_pointer<_1>
-				
-				typedef typename apply<add_pointer_f, long>::type long_one_pointer;
-				long_one_pointer p = nullptr;
+				template<>
+				struct PlaceHolder<3>
+				{
+					typedef PlaceHolder<3> type;
 
-				typedef typename apply<std::add_pointer<_1>, long>::type another_long_one_pointer;
-				another_long_one_pointer pp = nullptr;
+					template<typename C1, typename C2, typename C3>
+					struct apply
+					{
+						typedef C3 type;
+					};
+				};
+				typedef PlaceHolder<3> _3;
+#endif
 
-				auto val = apply<plus_f, mpl::int_<3>, mpl::int_<9>>::type::value;
 
-				typedef typename apply<common_f, float, long>::type common;
-				common cc;
+				namespace Debug
+				{
+					template<typename T>
+					struct TypeDecl;
+				}
 
-				// this did not work because std::plus is a functor not a metafunction!!
-				// 
-				//typedef typename apply< mpl::plus<_1,_2>, mpl::int_<3>, mpl::int_<7>>::type twelve;
-				
-				typedef typename apply<common_type_metafunction<_1,_2>, float, long>::type common_type;
-				common_type ccc;
-				//common_type_metafunction<_1, _2>::type ss;
-				//Debug::TypeDecl<decltype(ss)> ss_name;
 
-				//typedef typename apply<std::common_type<_1, _2>, float, long>::type other_common_type;
-				//other_common_type occ;
-			}
-		}
+				// In the general case, F is either a metafunction class or a placeholder expression
+				// We will deal with placeholder expressions in partially specialized templates of this one
+				// In this particular case, we assume F is a metafunction class (i.e. it contains a nested 
+				// metafunction called apply - a metafunction is a template or class if it does not have 
+				// non-type parameters and if it also returns a type called type -- i.e. nested) 
+				template <typename F>
+				struct lambda
+				{
+					typedef F type;
 
-		namespace LambdaExpressions
-		{
-			// create twice to work with either metafn classes or placeholder expressions (i.e. any lambda expression)
-			template <typename F, typename Arg>
-			struct twice : apply1< typename mpl::lambda<F>::type,
-				typename apply1< typename mpl::lambda<F>::type, Arg>::type>
-			{};
+					//typedef lambda type;
 
-			typedef typename twice< std::add_pointer<_1>, int>::type twice_pointer_int;
+					//Debug::TypeDecl<F> lambda_f_instantiated;
 
-			// works with either metafn classes or placeholder expressions (i.e. any lambda expression)
-			template <typename F, typename Arg>
-			struct apply : mpl::lambda<F>::type::template apply<Arg>
-			{};
+					template< typename... Args>
+					struct apply
+					{
+						typedef typename F::template apply<Args...>::type type;
+						//typedef typename F<Args...>::type type;
+					};
 
-			// now generalize apply to use variadic templates
-			namespace Variadic
-			{
-				template<typename F, typename...Args>
-				struct apply : mpl::lambda<F>::type::template apply<Args...>
+
+				};
+
+				template<template<typename> class F>
+				struct lambda<F<_1>>		// matches add_pointer<_1>
+				{
+					typedef lambda<F<_1>> type;
+
+					//Debug::TypeDecl<_1> lambda_f_1_instantiated;
+
+					template<typename... Args>
+					struct apply
+					{
+						typedef typename F<Args...>::type type;		// invokes add_pointer<Arg>
+					};
+				};
+
+
+				template<template<typename, typename> class F>
+				struct lambda<F<_1, _2>>		// matches mpl::plus<_1,_2>
+				{
+					typedef lambda<F<_1, _2>> type;
+
+					//Debug::TypeDecl<_1> lambda_f_1_2_instantiated;
+
+					template<typename... Args>
+					struct apply
+					{
+						//TypeDecl<Arg0> a_variable_forArg0;
+						typedef typename F<Args...>::type type;		// invokes mpl::plus<Arg0, Arg1>
+					};
+				};
+
+
+				template <typename F, typename... Args>
+				struct apply : lambda<F>::type::template apply<Args...>
+				{
+					//Debug::TypeDecl<typename lambda<F>::type> apply_instantiated;
+				};
+
+#if 0
+				template <template <typename> class F, typename... Args>
+				struct apply<F<_1>, Args...> : lambda<F<_1>>::type::template apply<Args...>
+				{
+					//TypeDecl<F<_1>> a_variable;
+				};
+
+
+				template <template <typename, typename> class F, typename... Args>
+				struct apply<F<_1, _2>, Args...> : lambda<F<_1, _2>>::template apply<Args...>
 				{};
+#endif
+
+				// create metafunction class for add_pointer<T>
+				struct add_pointer_f
+				{
+					template <typename T>
+					struct apply : std::add_pointer<T>
+					{};
+				};
+				// create metafunction class for mpl::plus<T1,T2>
+				struct plus_f
+				{
+					template <typename T1, typename T2>
+					struct apply : mpl::plus<T1, T2>
+					{};
+				};
+
+				struct common_f
+				{
+					template <typename T1, typename T2>
+					struct apply : std::common_type<T1, T2>
+					{
+						typedef typename std::common_type<T1, T2>::type type;
+					};
+				};
+
+				template<typename T1, typename T2>
+				struct common_type_metafunction : std::common_type<T1, T2>
+				{};
+
+				template<size_t N>
+				struct integral
+				{
+					static constexpr size_t value = N;
+				};
+
+				void useOurLambda()
+				{
+					// work on add_pointer<_1>
+
+					typedef typename apply<add_pointer_f, long>::type long_one_pointer;
+					long_one_pointer p = nullptr;
+
+					typedef typename apply<std::add_pointer<_1>, long>::type another_long_one_pointer;
+					another_long_one_pointer pp = nullptr;
+
+					auto val = apply<plus_f, mpl::int_<3>, mpl::int_<9>>::type::value;
+
+					typedef typename apply<common_f, float, long>::type common;
+					common cc;
+
+					// this did not work because std::plus is a functor not a metafunction!!
+					// 
+					//typedef typename apply< mpl::plus<_1,_2>, mpl::int_<3>, mpl::int_<7>>::type twelve;
+
+					typedef typename apply<common_type_metafunction<_1, _2>, float, long>::type common_type;
+					common_type ccc;
+					//common_type_metafunction<_1, _2>::type ss;
+					//Debug::TypeDecl<decltype(ss)> ss_name;
+
+					//typedef typename apply<std::common_type<_1, _2>, float, long>::type other_common_type;
+					//other_common_type occ;
+				}
 			}
 
-			template <typename T>
-			using plus_five = mpl::plus<T, mpl::int_<5>>;
-		}
-		////////////////////////////////////////////////////////////////////////////////////////////////////
-		/// <summary>	Use twice pointer double. </summary>
-		///
-		/// <remarks>	Juan Dent, 11/2/2017. </remarks>
-		////////////////////////////////////////////////////////////////////////////////////////////////////
+			namespace LambdaExpressions
+			{
+				// create twice to work with either metafn classes or placeholder expressions (i.e. any lambda expression)
+				template <typename F, typename Arg>
+				struct twice : apply1< typename mpl::lambda<F>::type,
+					typename apply1< typename mpl::lambda<F>::type, Arg>::type>
+				{};
 
-		void useTwicePointerDouble()
-		{
-			twice_pointer_double d;
-			apply1<add_pointer_f, double>::type f;
-			std::cout << std::is_same<double*, apply1<add_pointer_f, double>::type>::value << std::endl;
-			std::cout << std::is_same<double**, twice_pointer_double>::value << std::endl;
-			std::cout << std::is_same<double***, thrice_pointer_double>::value << std::endl;
-			LambdaExpressions::twice_pointer_int i;
-			std::cout << std::is_same<int**, LambdaExpressions::twice_pointer_int>::value << std::endl;
+				typedef typename twice< std::add_pointer<_1>, int>::type twice_pointer_int;
 
-			std::cout << std::is_same<double*, LambdaExpressions::apply<std::add_pointer<_1>, double>::type>::value << std::endl;
+				// works with either metafn classes or placeholder expressions (i.e. any lambda expression)
+				template <typename F, typename Arg>
+				struct apply : mpl::lambda<F>::type::template apply<Arg>
+				{};
 
-			LambdaExpressions::apply<std::vector<_1>, int>::type xx;
-			xx.push_back(8);
+				// now generalize apply to use variadic templates
+				namespace Variadic
+				{
+					template<typename F, typename...Args>
+					struct apply : mpl::lambda<F>::type::template apply<Args...>
+					{};
+				}
 
-			auto val = LambdaExpressions::Variadic::apply<mpl::plus<_1, _2>, mpl::int_<3>, mpl::int_<7>>::type::value;
-			// partial metafn application:
-			std::cout << LambdaExpressions::Variadic::apply<LambdaExpressions::plus_five<_1>, mpl::int_<2>>::type::value << std::endl;
-			
-			OurLambda::useOurLambda();
+				template <typename T>
+				using plus_five = mpl::plus<T, mpl::int_<5>>;
+			}
+			////////////////////////////////////////////////////////////////////////////////////////////////////
+			/// <summary>	Use twice pointer double. </summary>
+			///
+			/// <remarks>	Juan Dent, 11/2/2017. </remarks>
+			////////////////////////////////////////////////////////////////////////////////////////////////////
+
+			void useTwicePointerDouble()
+			{
+				twice_pointer_double d;
+				apply1<add_pointer_f, double>::type f;
+				std::cout << std::is_same<double*, apply1<add_pointer_f, double>::type>::value << std::endl;
+				std::cout << std::is_same<double**, twice_pointer_double>::value << std::endl;
+				std::cout << std::is_same<double***, thrice_pointer_double>::value << std::endl;
+				LambdaExpressions::twice_pointer_int i;
+				std::cout << std::is_same<int**, LambdaExpressions::twice_pointer_int>::value << std::endl;
+
+				std::cout << std::is_same<double*, LambdaExpressions::apply<std::add_pointer<_1>, double>::type>::value << std::endl;
+
+				LambdaExpressions::apply<std::vector<_1>, int>::type xx;
+				xx.push_back(8);
+
+				auto val = LambdaExpressions::Variadic::apply<mpl::plus<_1, _2>, mpl::int_<3>, mpl::int_<7>>::type::value;
+				// partial metafn application:
+				std::cout << LambdaExpressions::Variadic::apply<LambdaExpressions::plus_five<_1>, mpl::int_<2>>::type::value << std::endl;
+
+				OurLambda::useOurLambda();
+			}
 		}
 	}
 }

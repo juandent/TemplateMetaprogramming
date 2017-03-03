@@ -17,10 +17,6 @@ namespace Chapter3
 	{
 		void useQuantities();
 	}
-	namespace HigherOrderMetafunctions
-	{
-		void useTwicePointerDouble();
-	}
 	namespace Questions
 	{
 		namespace Q3_1
@@ -30,10 +26,11 @@ namespace Chapter3
 		namespace Q3_8
 		{
 			// units for length
-			namespace Length
-			{
-				void useLength();
-			}
+			void useLength();
+		}
+		namespace HigherOrderMetafunctions
+		{
+			void useTwicePointerDouble();
 		}
 	}
 }
