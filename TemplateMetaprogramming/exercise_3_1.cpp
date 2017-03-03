@@ -244,7 +244,7 @@ namespace Chapter3 {
 				private:
 					typedef  ratio_divide<TargetUnits, SourceUnits> r;
 				public:
-					static constexpr long double convertToSmaller(long double source)
+					static constexpr long double convertToTarget(long double source)
 					{
 						return convert_helper< (r::num >= r::den) >::convert(source);
 					}
@@ -258,7 +258,7 @@ namespace Chapter3 {
 							return (source * r::den) / r::num;
 						}
 					};
-					template<> struct convert_helper<false>
+					template<> struct convert_helper<true>
 					{
 						static constexpr long double convert(long double source)
 						{
@@ -342,27 +342,47 @@ namespace Chapter3 {
 				template <class T, class Dimensions, class Unit>
 				struct quantity
 				{
-					template< class OtherUnit>
-					explicit quantity(T x)
-					{
-						using f = Length::factor<Unit, OtherUnit>;
-						m_value = f::convertToSmaller(x);
+					template<class T, class OtherD, class OtherUnit>
+					friend	struct quantity;
 
-					}
 					explicit quantity(T x)
 					{
 						m_value = x;
 					}
 					T value() const { return m_value; }
+
+					template<class T, class OtherD, class OtherUnit>
+					quantity& operator+= (quantity<T, OtherD, OtherUnit> rhs)
+					{
+						using f = factor<Unit, OtherUnit>;	// Unit == target unit
+						auto rhs_factored = f::convertToTarget(rhs.m_value);
+						m_value += rhs_factored;
+						return *this;
+					}
 				private:
 					T m_value;
 				};
+
+				template<typename T, typename D, typename Unit, typename OtherD, typename OtherUnit>
+				quantity<T, D, Unit>
+					operator+(quantity<T, D, Unit> x, quantity<T, OtherD, OtherUnit> y)
+				{
+					BOOST_STATIC_ASSERT((mpl::equal<D, OtherD>::type::value));
+					using f = factor<Unit, OtherUnit>;
+
+					return quantity<T, D, Unit>{ x.value() + f::convertToSmaller(y.value); };
+				}
+
 			}
 			void useLength()
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
 
 				quantity<double, length, mm> l_mm{ 4.5 };
+				quantity<double, length, m>  l_m{ 4.24 };
+
+				l_mm += l_m;
+
 
 
 
@@ -377,7 +397,7 @@ namespace Chapter3 {
 				//cout << factor<cm, mm>::convert(15) << endl;
 				//cout << (in < cm) << endl;
 
-				cout << factor<in, cm>::convertToSmaller(25.4) << endl;
+				cout << factor<in, cm>::convertToTarget(25.4) << endl;
 
 				//cout << factor_using_enable_if<in, cm>::convertToSmaller(25.4) << endl;
 
