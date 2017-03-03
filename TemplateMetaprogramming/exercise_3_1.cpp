@@ -370,7 +370,7 @@ namespace Chapter3 {
 					BOOST_STATIC_ASSERT((mpl::equal<D, OtherD>::type::value));
 					using f = factor<Unit, OtherUnit>;
 
-					return quantity<T, D, Unit>{ x.value() + f::convertToSmaller(y.value); };
+					return quantity<T, D, Unit>{ x.value() + f::convertToTarget(y.value()) };
 				}
 
 			}
@@ -378,13 +378,13 @@ namespace Chapter3 {
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
 
-				quantity<double, length, mm> l_mm{ 4.5 };
-				quantity<double, length, m>  l_m{ 4.24 };
+				quantity<long double, length, mm> l_mm{ 4.5 };
+				quantity<long double, length, m>  l_m{ 4.24 };
 
 				l_mm += l_m;
 
 
-
+				auto res = l_mm + l_m;
 
 
 				typedef  ratio_divide<cm, mm> r;
