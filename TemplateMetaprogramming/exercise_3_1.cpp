@@ -26,8 +26,9 @@
 #include <boost/lambda/lambda.hpp>
 #include <boost/mpl/divides.hpp>
 #include <boost/mpl/arithmetic.hpp>
+#include <boost/mpl/range_c.hpp>
 #include <ratio>
-
+#include <boost\mpl\vector.hpp>
 
 // Dimensions (pg 40 -- C++ Template Metaprogramming
 namespace mpl = boost::mpl;
@@ -230,13 +231,64 @@ namespace Chapter3 {
 				typedef mpl::vector_c<int, 1, 1, -1, 0, 0, 0, 0> momentum;         // ml/t
 				typedef mpl::vector_c<int, 1, 1, -2, 0, 0, 0, 0> force;            // ml/(t2)
 
-				// units for length
+				// value for mixed dimensions (general case)
+				//typedef mpl::vector_c<int, 
 
+				// value for only one dimension (particular case)
+				
+				// units for length:
 				typedef ratio<1, 1>			mm;
 				typedef ratio<10, 1>		cm;
 				typedef ratio<1000, 1>		m;
 				typedef ratio<1'000'000, 1>	km;
 				typedef ratio<254, 10>		in;
+
+				// units for mass:
+				typedef ratio<1, 1>			mg;
+				typedef ratio<1000, 1>		g;
+				typedef ratio<1'000'000, 1>	kg;
+
+				// units for time
+				typedef ratio<1, 1>			msec;
+				typedef ratio<1000, 1>		sec;
+
+				// let's assume we only have 2 dimensions: length and mass
+				//typedef mpl::vector_c<int, num_mass, den_mass, num_length, den_length>	units;
+
+				// we start with dimensions given in base units, e.g.:
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+				// the base unit for distance is mm
+				// the base unit for time is msec
+				
+				// say we have a velocity of 10.0 mm/msec
+				// and we need that velocity to be given in m/sec
+				
+				// 1000 mm = 1 m
+				// 1000 msec = 1 sec
+				
+				//10.0 mm/msec * 1/1000 = 0.01 m/msec
+				//0.01 m/msec * 1000/1 = 10.0 m/sec
+
+				// base units to m/sec
+				typedef mpl::vector_c<int, 0, 1, 1000, 0, 0, 0, 0> numerators;
+				typedef mpl::vector_c<int, 0, 1000, 1, 0, 0, 0, 0> denominators;
+
+				template<typename BaseUnit, typename TargetUnit>
+				struct ConversionFactor
+				{
+					typedef ratio_divide<BaseUnit, TargetUnit>	type;
+					static unsigned long long constexpr numerator = type::num;
+					static unsigned long long constexpr denominator = type::den;
+				};
+
+
+
+				// numerators:
+				// typedef mpl::vector_c<int, 1000, 
+				
+				//typedef mpl::transform<units,
+				// integer sequence
+				 
 
 				template< class TargetUnits, class SourceUnits>
 				struct factor
@@ -372,11 +424,61 @@ namespace Chapter3 {
 
 					return quantity<T, D, Unit>{ x.value() + f::convertToTarget(y.value()) };
 				}
+				template<typename T, typename D, typename Unit, typename OtherD, typename OtherUnit>
+				quantity<T, D, Unit>
+					operator-(quantity<T, D, Unit> x, quantity<T, OtherD, OtherUnit> y)
+				{
+					BOOST_STATIC_ASSERT((mpl::equal<D, OtherD>::type::value));
+					using f = factor<Unit, OtherUnit>;
+
+					return quantity<T, D, Unit>{ x.value() - f::convertToTarget(y.value()) };
+				}
 
 			}
+			template <typename A = void>
+			struct tester
+			{
+				typedef  A first_argument_type;
+				typedef  A second_argument_type;
+				typedef  A result_type;
+
+				constexpr A operator()(const A& _Left, const A& _Right) const
+				{	
+					return (_Left);
+				}
+			};
+
 			void useLength()
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
+
+				typedef ratio<1, 1>							unity;
+				typedef ConversionFactor<mm, m>::type		mm_to_m;
+				typedef ConversionFactor<msec, sec>::type	msec_to_sec;
+
+				cout << mm_to_m::num << " " << mm_to_m::den << endl;
+
+				// create a vector of convertion factors:
+				typedef mpl::vector<unity, mm_to_m, msec_to_sec, unity, unity, unity, unity> vec_conv_factors;
+				// velocity given using base units:
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+
+				auto v1 = mpl::at_c<velocity, 1>::type::value;	// => 1
+				auto v2 = mpl::at_c<velocity, 2>::type::value;	// => -1
+
+				// mix both sequences velocity and vec_conv_factors!! TODO
+
+				///velocity vel;
+				vec_conv_factors v_fac;
+
+				typedef mpl::transform<
+					velocity,
+					tester<_1>,
+					mpl::back_inserter< vec_conv_factors >
+				>::type vel;
+
+				vel v;
+
 
 				quantity<long double, length, mm> l_mm{ 4.5 };
 				quantity<long double, length, m>  l_m{ 4.24 };
@@ -386,6 +488,52 @@ namespace Chapter3 {
 
 				auto res = l_mm + l_m;
 
+				auto res2 = res - l_m;
+
+
+				typedef mpl::transform<
+					mpl::range_c<int, 0, 10>
+					, mpl::plus<_1, _1>
+					, mpl::front_inserter /* back_inserter*/ < mpl::vector0<> >
+				>::type result;
+
+				result transform_r;
+
+				typedef mpl::reverse_copy<
+					mpl::range_c<int, 0, 5>
+					, mpl::front_inserter< mpl::vector_c<int, 5, 6, 7, 8, 9> >
+				>::type range;
+
+				range r_copy;
+
+				typedef mpl::reverse_copy<
+					mpl::range_c<int, 0, 5>
+					, mpl::back_inserter< mpl::vector_c<int, 5, 6, 7, 8, 9> >
+				>::type range_rev_back;
+
+				range_rev_back r_back_copy;
+
+
+				typedef mpl::copy<
+					mpl::range_c<int, 0, 5>
+					, mpl::front_inserter< mpl::vector_c<int, 5, 6, 7, 8, 9> >
+				>::type range_down_up;
+
+				range_down_up dup;
+
+
+				typedef mpl::copy<
+					mpl::range_c<int, 0, 5>
+					, mpl::back_inserter< mpl::vector_c<int, 5, 6, 7, 8, 9> >
+				>::type range_up_down;
+
+				range_up_down rup;
+
+
+				// length a in mm * length b in inches
+				// dim = plus_f<D1,D2>
+				// a + factor<mm, in>::convert(b)
+				// for each dimension
 
 				typedef  ratio_divide<cm, mm> r;
 
