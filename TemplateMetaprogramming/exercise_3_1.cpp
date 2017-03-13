@@ -29,6 +29,7 @@
 #include <boost/mpl/range_c.hpp>
 #include <ratio>
 #include <boost\mpl\vector.hpp>
+#include <boost\mpl/size.hpp>
 
 // Dimensions (pg 40 -- C++ Template Metaprogramming
 namespace mpl = boost::mpl;
@@ -471,30 +472,63 @@ namespace Chapter3 {
 				}
 			};
 
+			namespace Debug
+			{
+				template<size_t N>
+				struct Decl;
+			}
+
 			template<typename Dimension, typename UnitFactors, size_t N>
-			struct process_dimension
+			struct process_dimension_element
 			{
 				template<bool isNeg> struct helper;
 			public:
+				//Debug::Decl<N> n;
 				static constexpr int value = mpl::at_c<Dimension, N>::type::value;
 				typedef typename mpl::at_c<UnitFactors, N>::type factor;
 				static constexpr bool isNegative = value < 0;
 
-				typedef typename helper<isNegative>::type type;
 			private:
+				static constexpr size_t abs_value = isNegative ? -value : value;
 				template<bool isNeg>
 				struct helper
 				{
-					typedef typename std::ratio<factor::num, factor::den>::type type;
+					typedef typename std::ratio<abs_value * factor::num, factor::den>::type type;
 				};
 
 				template<>
 				struct helper<true>
 				{
-					typedef typename std::ratio<factor::den, factor::num>::type type;
+					typedef typename std::ratio<abs_value * factor::den, factor::num>::type type;
 				};
+			public:
+				typedef typename helper<isNegative>::type type;
 			};
 
+			template<typename Dimension, typename UnitFactors, size_t N, size_t MAX>
+			struct process_dimension
+			{
+				typedef typename process_dimension_element<Dimension, UnitFactors, N>::type		element;
+				typedef typename process_dimension<Dimension, UnitFactors, N + 1, MAX>::container	next_container;
+
+				typedef typename mpl::push_front<next_container, element>::type container;
+			};
+
+			template<typename Dimension, typename UnitFactors, size_t N>
+			struct process_dimension<typename Dimension, typename UnitFactors, N, N>
+			{
+				typedef typename process_dimension_element<Dimension, UnitFactors, N>::type element;
+				typedef mpl::vector<element>		container;
+			};
+
+#if 0
+			template<typename Dimension, typename UnitFactors>
+			struct process_dimension<0>
+			{
+				typedef typename process_dimension_element<Dimension, UnitFactors, 0>::type element;
+				typedef vector<element>		container;
+			};
+#endif
 			void useLength()
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
@@ -522,10 +556,27 @@ namespace Chapter3 {
 				typedef typename mpl::at_c<vec_conv_factors, 2>::type f2;
 				typedef typename mpl::at_c<vec_conv_factors, 3>::type f3;
 
-				
-				typedef process_dimension<velocity, vec_conv_factors,2> second_dim;
+				cout << mpl::size<velocity>::type::value << endl;
 
-				cout << second_dim::num << " " << second_dim::den  << endl;
+				// calculate each element of velocity using the new units:
+				typedef typename process_dimension_element<velocity, vec_conv_factors,0>::type dim0;
+				cout << 0 << ": " << dim0::num << " " << dim0::den  << endl;
+				typedef typename process_dimension_element<velocity, vec_conv_factors, 1>::type dim1;
+				cout << 1 << ": " << dim1::num << " " << dim1::den << endl;
+				typedef typename process_dimension_element<velocity, vec_conv_factors, 2>::type dim2;
+				cout << 2 << ": " << dim2::num << " " << dim2::den << endl;
+				typedef typename process_dimension_element<velocity, vec_conv_factors, 3>::type dim3;
+				cout << 3 << ": " << dim3::num << " " << dim3::den << endl;
+				typedef typename process_dimension_element<velocity, vec_conv_factors, 4>::type dim4;
+				cout << 4 << ": " << dim4::num << " " << dim4::den << endl;
+				typedef typename process_dimension_element<velocity, vec_conv_factors, 5>::type dim5;
+				cout << 5 << ": " << dim5::num << " " << dim5::den << endl;
+				typedef typename process_dimension_element<velocity, vec_conv_factors, 6>::type dim6;
+				cout << 6 << ": " << dim6::num << " " << dim6::den << endl;
+
+
+				typedef typename process_dimension<velocity, vec_conv_factors, 0, mpl::size<velocity>::value-1>::container container;
+				container cont;
 
 				// mix both sequences velocity and vec_conv_factors!! TODO
 
