@@ -435,17 +435,64 @@ namespace Chapter3 {
 				}
 
 			}
-			template <typename A = void>
-			struct tester
-			{
-				typedef  A first_argument_type;
-				typedef  A second_argument_type;
-				typedef  A result_type;
+			// lambda expression = metafunction class or placeholder expression
+			
 
-				constexpr A operator()(const A& _Left, const A& _Right) const
+
+			template <typename A, typename B>
+			struct tester_metafunction
+			{
+				typedef  A type;
+
+				constexpr A operator()(const A& _Left, const B& _Right) const
 				{	
 					return (_Left);
 				}
+			};
+			// metafunction class (but useless)
+			struct tester
+			{
+				template<typename A, typename B>
+				struct apply
+				{
+					typedef typename tester_metafunction::type type;
+				};
+			};
+
+			template< typename Dimension >
+			struct extract_value
+			{
+				typedef Dimension type;		// return the dimension sequence (integral wrapper)
+				
+				template<size_t N>
+				static int constexpr get()	// shouldn't this be executed at compile time??
+				{
+					return mpl::at_c<Dimension, N>::type::value;
+				}
+			};
+
+			template<typename Dimension, typename UnitFactors, size_t N>
+			struct process_dimension
+			{
+				template<bool isNeg> struct helper;
+			public:
+				static constexpr int value = mpl::at_c<Dimension, N>::type::value;
+				typedef typename mpl::at_c<UnitFactors, N>::type factor;
+				static constexpr bool isNegative = value < 0;
+
+				typedef typename helper<isNegative>::type type;
+			private:
+				template<bool isNeg>
+				struct helper
+				{
+					typedef typename std::ratio<factor::num, factor::den>::type type;
+				};
+
+				template<>
+				struct helper<true>
+				{
+					typedef typename std::ratio<factor::den, factor::num>::type type;
+				};
 			};
 
 			void useLength()
@@ -465,20 +512,37 @@ namespace Chapter3 {
 
 				auto v1 = mpl::at_c<velocity, 1>::type::value;	// => 1
 				auto v2 = mpl::at_c<velocity, 2>::type::value;	// => -1
+#if 0
+				typedef extract_value<velocity> vel_extractor;
+				auto v3 = vel_extractor::get<1>();
+				auto v4 = vel_extractor::get<2>();
+#endif
+
+				typedef typename mpl::at_c<vec_conv_factors, 1>::type f1 ;
+				typedef typename mpl::at_c<vec_conv_factors, 2>::type f2;
+				typedef typename mpl::at_c<vec_conv_factors, 3>::type f3;
+
+				
+				typedef process_dimension<velocity, vec_conv_factors,2> second_dim;
+
+				cout << second_dim::num << " " << second_dim::den  << endl;
 
 				// mix both sequences velocity and vec_conv_factors!! TODO
 
 				///velocity vel;
 				vec_conv_factors v_fac;
 
+				typedef typename mpl::lambda < tester_metafunction<_1, _2>>::type tester_metafunction_class;
+
+#if 0
 				typedef mpl::transform<
 					velocity,
-					tester<_1>,
+					tester_metafunction_class,
 					mpl::back_inserter< vec_conv_factors >
 				>::type vel;
 
 				vel v;
-
+#endif
 
 				quantity<long double, length, mm> l_mm{ 4.5 };
 				quantity<long double, length, m>  l_m{ 4.24 };
