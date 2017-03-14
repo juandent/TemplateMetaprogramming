@@ -490,16 +490,17 @@ namespace Chapter3 {
 
 			private:
 				static constexpr size_t abs_value = isNegative ? -value : value;
+				static constexpr size_t multiplyBy = abs_value == 0 ? 1 : abs_value;
 				template<bool isNeg>
 				struct helper
 				{
-					typedef typename std::ratio<abs_value * factor::num, factor::den>::type type;
+					typedef typename std::ratio<multiplyBy * factor::num, factor::den>::type type;
 				};
 
 				template<>
 				struct helper<true>
 				{
-					typedef typename std::ratio<abs_value * factor::den, factor::num>::type type;
+					typedef typename std::ratio<multiplyBy * factor::den, factor::num>::type type;
 				};
 			public:
 				typedef typename helper<isNegative>::type type;
@@ -529,6 +530,60 @@ namespace Chapter3 {
 				typedef vector<element>		container;
 			};
 #endif
+			// both parameters are vectors of std::ratios
+			template< class TargetUnits, class SourceUnits>
+			struct complete_factor
+			{
+			private:
+				typedef  ratio_divide<TargetUnits, SourceUnits> r;
+			public:
+				static constexpr long double convertToTarget(long double source)
+				{
+					return convert_helper< (r::num >= r::den) >::convert(source);
+				}
+
+			private:
+				template<bool>
+				struct convert_helper
+				{
+					static constexpr long double convert(long double source)
+					{
+						return (source * r::den) / r::num;
+					}
+				};
+				template<> struct convert_helper<true>
+				{
+					static constexpr long double convert(long double source)
+					{
+						return (source * r::num) / r::den;
+					}
+				};
+			};
+
+			template <class T, class Dimensions, class TargetUnits>
+			struct Quantity
+			{
+				template<class T, class OtherD, class SourceUnits>
+				friend	struct Quantity;
+
+				explicit Quantity(T x)
+				{
+					m_value = x;
+				}
+				T value() const { return m_value; }
+
+				template<class T, class OtherD, class SourceUnits>
+				Quantity& operator+= (Quantity<T, OtherD, SourceUnits> rhs)
+				{
+					using f = complete_factor<TargetUnits, SourceUnits>;
+					auto rhs_factored = f::convertToTarget(rhs.m_value);
+					m_value += rhs_factored;
+					return *this;
+				}
+			private:
+				T m_value;
+			};
+
 			void useLength()
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
@@ -561,27 +616,20 @@ namespace Chapter3 {
 				// calculate each element of velocity using the new units:
 				typedef typename process_dimension_element<velocity, vec_conv_factors,0>::type dim0;
 				cout << 0 << ": " << dim0::num << " " << dim0::den  << endl;
-				typedef typename process_dimension_element<velocity, vec_conv_factors, 1>::type dim1;
-				cout << 1 << ": " << dim1::num << " " << dim1::den << endl;
-				typedef typename process_dimension_element<velocity, vec_conv_factors, 2>::type dim2;
-				cout << 2 << ": " << dim2::num << " " << dim2::den << endl;
-				typedef typename process_dimension_element<velocity, vec_conv_factors, 3>::type dim3;
-				cout << 3 << ": " << dim3::num << " " << dim3::den << endl;
-				typedef typename process_dimension_element<velocity, vec_conv_factors, 4>::type dim4;
-				cout << 4 << ": " << dim4::num << " " << dim4::den << endl;
-				typedef typename process_dimension_element<velocity, vec_conv_factors, 5>::type dim5;
-				cout << 5 << ": " << dim5::num << " " << dim5::den << endl;
-				typedef typename process_dimension_element<velocity, vec_conv_factors, 6>::type dim6;
-				cout << 6 << ": " << dim6::num << " " << dim6::den << endl;
 
-
+				//  this creates a container whose elements are std::ratio and their values should be multipled to the long double value of the quantity
 				typedef typename process_dimension<velocity, vec_conv_factors, 0, mpl::size<velocity>::value-1>::container container;
 				container cont;
+
+				static_assert(std::is_same<  mpl::at_c<container, 1>::type, mm_to_m>::value, "");
 
 				// mix both sequences velocity and vec_conv_factors!! TODO
 
 				///velocity vel;
 				vec_conv_factors v_fac;
+
+				// we have a quantity, and we want to change the units of it (but not its dimension!)
+				//quantity<long double, velocity
 
 				typedef typename mpl::lambda < tester_metafunction<_1, _2>>::type tester_metafunction_class;
 
