@@ -530,6 +530,33 @@ namespace Chapter3 {
 				typedef vector<element>		container;
 			};
 #endif
+			template<typename TargetUnits, typename SourceUnits, size_t N>
+			struct process_ratio
+			{
+			public:
+				//Debug::Decl<N> n;
+				typedef typename mpl::at_c<TargetUnits, N>::type target_factor;
+				typedef typename mpl::at_c<SourceUnits, N>::type source_factor;
+				typedef std::ratio_divide<target_factor, source_factor>	this_ratio;
+
+				typedef typename process_ratio<TargetUnits, SourceUnits, N - 1>::this_ratio	prev_ratio;
+
+				typedef std::ratio_multiply<prev_ratio, this_ratio> accumulative_ratio;
+			};
+
+			template<typename TargetUnits, typename SourceUnits>
+			struct process_ratio<TargetUnits, SourceUnits, 0>
+			{
+			public:
+				//Debug::Decl<N> n;
+				typedef typename mpl::at_c<TargetUnits, 0>::type target_factor;
+				typedef typename mpl::at_c<SourceUnits, 0>::type source_factor;
+				typedef std::ratio_divide<target_factor, source_factor>	this_ratio;
+
+				typedef this_ratio accumulative_ratio;
+			};
+
+
 			// both parameters are vectors of std::ratios
 			template< class TargetUnits, class SourceUnits>
 			struct complete_factor
