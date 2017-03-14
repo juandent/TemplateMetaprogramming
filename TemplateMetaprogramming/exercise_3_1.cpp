@@ -687,15 +687,28 @@ namespace Chapter3 {
 
 #else
 				typedef mpl::vector<unity, mm, msec, unity, unity, unity, unity> TargetUnits;
-				typedef mpl::vector<unity, cm, csec, unity, unity, unity, unity> SourceUnits;
+				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity> SourceUnits;
 
 				// velocity given using base units:
 				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 0>::type dim_0;
+				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
 																				   
 																				   // calculate each element of velocity using the new units:
-				cout << 0 << ": " << dim_0::num << " " << dim_0::den << endl;
+				cout << 1 << ": " << dim_1::num << " " << dim_1::den << endl;		// cm --> mm (x 10)
+
+				// dim 1: cm -> mm = x 10
+				// dim 2: sec -> msec = % 1000
+
+				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 2>::type dim_2;
+
+				cout << 2 << ": " << dim_2::num << " " << dim_2::den << endl;		// sec --> msec = % 1000
+
+
+				typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
+				a_container a_c;
+
+
 
 #if 0
 				//  this creates a container whose elements are std::ratio and their values should be multipled to the long double value of the quantity
