@@ -239,19 +239,20 @@ namespace Chapter3 {
 				
 				// units for length:
 				typedef ratio<1, 1>			mm;
-				typedef ratio<10, 1>		cm;
-				typedef ratio<1000, 1>		m;
+				typedef ratio<10, 1>		cm;		// how many mm in a cm: 10:1
+				typedef ratio<1000, 1>		m;		// how many mm in a m:  1000:1
 				typedef ratio<1'000'000, 1>	km;
-				typedef ratio<254, 10>		in;
+				typedef ratio<254, 10>		in;		// how many mm in an inch: 254:10			(how many cm in an inch: 2.54)  
 
 				// units for mass:
 				typedef ratio<1, 1>			mg;
-				typedef ratio<1000, 1>		g;
-				typedef ratio<1'000'000, 1>	kg;
+				typedef ratio<1000, 1>		g;		// how many mg in a g: 1000:1
+				typedef ratio<1'000'000, 1>	kg;		// how many mg in a kg: 1'000'000:1
 
 				// units for time
 				typedef ratio<1, 1>			msec;
-				typedef ratio<1000, 1>		sec;
+				typedef ratio<10, 1>		csec;	// how many msec in a csec: 10:1
+				typedef ratio<1000, 1>		sec;	// how many msec in a sec: 1000:1
 
 				// let's assume we only have 2 dimensions: length and mass
 				//typedef mpl::vector_c<int, num_mass, den_mass, num_length, den_length>	units;
@@ -478,6 +479,12 @@ namespace Chapter3 {
 				struct Decl;
 			}
 
+			template<typename OrigRatio>
+			struct ratio_invert
+			{
+				typedef std::ratio<OrigRatio::den, OrigRatio::num> type;
+			};
+
 			template<typename Dimension, typename UnitFactors, size_t N>
 			struct process_dimension_element
 			{
@@ -522,14 +529,6 @@ namespace Chapter3 {
 				typedef mpl::vector<element>		container;
 			};
 
-#if 0
-			template<typename Dimension, typename UnitFactors>
-			struct process_dimension<0>
-			{
-				typedef typename process_dimension_element<Dimension, UnitFactors, 0>::type element;
-				typedef vector<element>		container;
-			};
-#endif
 			template<typename TargetUnits, typename SourceUnits, size_t N>
 			struct process_ratio
 			{
@@ -537,7 +536,8 @@ namespace Chapter3 {
 				//Debug::Decl<N> n;
 				typedef typename mpl::at_c<TargetUnits, N>::type target_factor;
 				typedef typename mpl::at_c<SourceUnits, N>::type source_factor;
-				typedef std::ratio_divide<target_factor, source_factor>	this_ratio;
+				typedef std::ratio_divide<source_factor, target_factor>	this_ratio;
+
 
 				typedef typename process_ratio<TargetUnits, SourceUnits, N - 1>::this_ratio	prev_ratio;
 
@@ -549,14 +549,15 @@ namespace Chapter3 {
 			{
 			public:
 				//Debug::Decl<N> n;
-				typedef typename mpl::at_c<TargetUnits, 0>::type target_factor;
-				typedef typename mpl::at_c<SourceUnits, 0>::type source_factor;
-				typedef std::ratio_divide<target_factor, source_factor>	this_ratio;
+				typedef typename mpl::at_c<TargetUnits, 0>::type		target_factor;
+				typedef typename mpl::at_c<SourceUnits, 0>::type		source_factor;
+				typedef std::ratio_divide<source_factor, target_factor>	this_ratio;
 
 				typedef this_ratio accumulative_ratio;
 			};
 
 
+			// TODO!
 			// both parameters are vectors of std::ratios
 			template< class TargetUnits, class SourceUnits>
 			struct complete_factor
@@ -587,6 +588,58 @@ namespace Chapter3 {
 				};
 			};
 
+			namespace SeparateSourceAndTargetUnits
+			{
+
+				template<typename Dimension, typename TargetUnits, typename SourceUnits, size_t N>
+				struct process_dimension_element
+				{
+					template<bool isNeg> struct helper;
+				public:
+					//Debug::Decl<N> n;
+					static constexpr int value = mpl::at_c<Dimension, N>::type::value;
+					typedef typename mpl::at_c<TargetUnits, N>::type		target_unit;
+					typedef typename mpl::at_c<SourceUnits, N>::type		source_unit;
+					typedef std::ratio_divide<source_unit, target_unit>		factor;
+
+					static constexpr bool isNegative = value < 0;
+
+				private:
+					static constexpr size_t abs_value = isNegative ? -value : value;
+					static constexpr size_t multiplyBy = abs_value == 0 ? 1 : abs_value;
+					template<bool isNeg>
+					struct helper
+					{
+						typedef typename std::ratio<multiplyBy * factor::num, factor::den>::type type;
+					};
+
+					template<>
+					struct helper<true>
+					{
+						typedef typename std::ratio<multiplyBy * factor::den, factor::num>::type type;
+					};
+				public:
+					typedef typename helper<isNegative>::type type;
+				};
+
+				template<typename Dimension, typename TargetUnits, typename SourceUnits, size_t N, size_t MAX>
+				struct process_dimension
+				{
+					typedef typename process_dimension_element<Dimension, TargetUnits, SourceUnits, N>::type		element;
+					typedef typename process_dimension<Dimension, TargetUnits, SourceUnits, N + 1, MAX>::container	next_container;
+
+					typedef typename mpl::push_front<next_container, element>::type container;
+				};
+
+				template<typename Dimension, typename TargetUnits, typename SourceUnits, size_t N>
+				struct process_dimension<typename Dimension, typename TargetUnits, typename SourceUnits, N, N>
+				{
+					typedef typename process_dimension_element<Dimension, TargetUnits, SourceUnits, N>::type element;
+					typedef mpl::vector<element>		container;
+				};
+
+			}
+
 			template <class T, class Dimensions, class TargetUnits>
 			struct Quantity
 			{
@@ -616,15 +669,52 @@ namespace Chapter3 {
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
 
 				typedef ratio<1, 1>							unity;
-				typedef ConversionFactor<mm, m>::type		mm_to_m;
-				typedef ConversionFactor<msec, sec>::type	msec_to_sec;
+				// some lengths factors:
+				typedef ConversionFactor<mm, m>::type		mm_to_m;					// 1/1000
+				typedef ConversionFactor<mm, cm>::type		mm_to_cm;					// 1/10
+
+				// some time factors:
+				typedef ConversionFactor<msec, sec>::type	msec_to_sec;				// 1/1000
+				typedef ConversionFactor<msec, csec>::type	msec_to_csec;				// 1/10
+
+#if 0
+				typedef mpl::vector<msec, mm> TargetUnits;
+				typedef mpl::vector<csec, cm> SourceUnits;
+				typedef process_ratio<TargetUnits, SourceUnits, 1>::accumulative_ratio accumulative_ratio;
+				accumulative_ratio accum_ratio;
+
+				cout << accumulative_ratio::num << ", " << accumulative_ratio::den << endl;
+
+#else
+				typedef mpl::vector<unity, mm, msec, unity, unity, unity, unity> TargetUnits;
+				typedef mpl::vector<unity, cm, csec, unity, unity, unity, unity> SourceUnits;
+
+				// velocity given using base units:
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+
+				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 0>::type dim_0;
+																				   
+																				   // calculate each element of velocity using the new units:
+				cout << 0 << ": " << dim_0::num << " " << dim_0::den << endl;
+
+#if 0
+				//  this creates a container whose elements are std::ratio and their values should be multipled to the long double value of the quantity
+				typedef typename process_dimension<velocity, vec_conv_factors, 0, mpl::size<velocity>::value - 1>::container container;
+				container cont;
+#endif
+
+				typedef process_ratio<TargetUnits, SourceUnits, 6>::accumulative_ratio accumulative_ratio;
+				accumulative_ratio accum_ratio;
+#endif
 
 				cout << mm_to_m::num << " " << mm_to_m::den << endl;
 
 				// create a vector of convertion factors:
 				typedef mpl::vector<unity, mm_to_m, msec_to_sec, unity, unity, unity, unity> vec_conv_factors;
-				// velocity given using base units:
-				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+				typedef mpl::vector<unity, mm_to_m, msec_to_sec, unity, unity, unity, unity> vec_conv_factors;
+
+
+
 
 				auto v1 = mpl::at_c<velocity, 1>::type::value;	// => 1
 				auto v2 = mpl::at_c<velocity, 2>::type::value;	// => -1
