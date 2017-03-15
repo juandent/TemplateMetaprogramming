@@ -638,6 +638,36 @@ namespace Chapter3 {
 					typedef mpl::vector<element>		container;
 				};
 
+				template<typename RatioSequence, size_t N>
+				struct ratio_sequence_multiply
+				{
+					template<typename RatioSequence>
+					friend struct ratio_sequence_multiply<RatioSequence, 0>;
+
+					template<typename RatioSequence, size_t N>
+					friend struct ratio_sequence_multiply<RatioSequence, N - 1>;
+
+
+				private:
+					typedef typename mpl::at_c<RatioSequence, N>::type this_ratio;
+					typedef typename ratio_sequence_multiply<RatioSequence, N - 1>::this_ratio	prev_ratio;
+
+				public:
+					//Debug::Decl<N> n;
+					typedef std::ratio_multiply<prev_ratio, this_ratio> accumulative_ratio;
+				};
+
+				template<typename RatioSequence>
+				struct ratio_sequence_multiply<RatioSequence, 0>
+				{
+				private:
+					typedef typename mpl::at_c<RatioSequence, 0>::type this_ratio;
+				public:
+					//Debug::Decl<N> n;
+
+					typedef this_ratio accumulative_ratio;
+				};
+
 			}
 
 			template <class T, class Dimensions, class TargetUnits>
@@ -708,6 +738,9 @@ namespace Chapter3 {
 				typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
 				a_container a_c;
 
+				typedef typename SeparateSourceAndTargetUnits::ratio_sequence_multiply<a_container, 6>::accumulative_ratio accumulative_ratio;
+
+				cout << "accum ratio : " << accumulative_ratio::num << " : " << accumulative_ratio::den << endl;		// sec --> msec = % 1000
 
 
 #if 0
