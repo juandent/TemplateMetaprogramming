@@ -641,16 +641,13 @@ namespace Chapter3 {
 				template<typename RatioSequence, size_t N>
 				struct ratio_sequence_multiply
 				{
-					template<typename RatioSequence>
-					friend struct ratio_sequence_multiply<RatioSequence, 0>;
-
-					template<typename RatioSequence, size_t N>
-					friend struct ratio_sequence_multiply<RatioSequence, N - 1>;
+					//friend ratio_sequence_multiply<RatioSequence, 0>;
+					//friend ratio_sequence_multiply<RatioSequence, N - 1>;
 
 
-				private:
+				//private:
 					typedef typename mpl::at_c<RatioSequence, N>::type this_ratio;
-					typedef typename ratio_sequence_multiply<RatioSequence, N - 1>::this_ratio	prev_ratio;
+					typedef typename ratio_sequence_multiply<RatioSequence, N - 1>::accumulative_ratio	prev_ratio;
 
 				public:
 					//Debug::Decl<N> n;
@@ -660,7 +657,7 @@ namespace Chapter3 {
 				template<typename RatioSequence>
 				struct ratio_sequence_multiply<RatioSequence, 0>
 				{
-				private:
+				//private:
 					typedef typename mpl::at_c<RatioSequence, 0>::type this_ratio;
 				public:
 					//Debug::Decl<N> n;
@@ -738,6 +735,28 @@ namespace Chapter3 {
 				typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
 				a_container a_c;
 
+				typedef typename mpl::at_c<a_container, 0>::type ratio_0;
+				cout << ratio_0::num << ":" << ratio_0::den << endl;
+
+				typedef typename mpl::at_c<a_container, 1>::type ratio_1;
+				cout  << ratio_1::num << ":" << ratio_1::den << endl;
+
+				typedef typename mpl::at_c<a_container, 2>::type ratio_2;
+				cout << ratio_2::num << ":" << ratio_2::den << endl;
+
+				typedef typename mpl::at_c<a_container, 3>::type ratio_3;
+				cout << ratio_3::num << ":" << ratio_3::den << endl;
+
+				typedef typename mpl::at_c<a_container, 4>::type ratio_4;
+				cout << ratio_4::num << ":" << ratio_4::den << endl;
+
+				typedef typename mpl::at_c<a_container, 5>::type ratio_5;
+				cout << ratio_5::num << ":" << ratio_5::den << endl;
+
+				typedef typename mpl::at_c<a_container, 6>::type ratio_6;
+				cout << ratio_6::num << ":" << ratio_6::den << endl;
+
+
 				typedef typename SeparateSourceAndTargetUnits::ratio_sequence_multiply<a_container, 6>::accumulative_ratio accumulative_ratio;
 
 				cout << "accum ratio : " << accumulative_ratio::num << " : " << accumulative_ratio::den << endl;		// sec --> msec = % 1000
@@ -749,8 +768,8 @@ namespace Chapter3 {
 				container cont;
 #endif
 
-				typedef process_ratio<TargetUnits, SourceUnits, 6>::accumulative_ratio accumulative_ratio;
-				accumulative_ratio accum_ratio;
+//				typedef process_ratio<TargetUnits, SourceUnits, 6>::accumulative_ratio accumulative_ratio;
+//				accumulative_ratio accum_ratio;
 #endif
 
 				cout << mm_to_m::num << " " << mm_to_m::den << endl;
