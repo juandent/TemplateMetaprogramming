@@ -665,59 +665,85 @@ namespace Chapter3 {
 					typedef this_ratio accumulative_ratio;
 				};
 
+				namespace NoIntegrals
+				{
+//					typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
+
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+					/// <summary>	The process dimension into ratio. </summary>
+					///
+					/// <remarks>	Juan Dent, 16/3/2017. </remarks>
+					///
+					/// <typeparam name="T">		  	Represents the base type whose value we manipulate (usually long double). </typeparam>
+					/// <typeparam name="Dimension">  	Type of the dimension, e.g. velocity </typeparam>
+					/// <typeparam name="TargetUnits">	Sequence of target units in std::ratio format. </typeparam>
+					/// <typeparam name="SourceUnits">	Sequence of source units in std::ratio format. </typeparam>
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+
+					template<typename T, typename Dimension, typename TargetUnits, typename SourceUnits>
+					struct process_dimension_into_ratio
+					{
+					private:
+						typedef typename process_dimension<Dimension, TargetUnits, SourceUnits, 0, mpl::size<Dimension>::value - 1>::container container;
+						typedef typename ratio_sequence_multiply<container, mpl::size<container>::value -1 >::accumulative_ratio				ratio;
+					public:
+						typedef process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>											type;
+
+						static constexpr T get(T value)
+						{
+							return ratio::num * value / ratio::den;
+						}
+
+					};
+
+
+					template <class T, class Dimension, class TargetUnits>
+					struct Quantity
+					{
+						template<class T, class OtherD, class SourceUnits>
+						friend	struct Quantity;
+
+						explicit Quantity(T x)
+						{
+							m_value = x;
+						}
+						T value() const { return m_value; }
+
+						template<class T, class OtherD, class SourceUnits>
+						Quantity& operator+= (Quantity<T, OtherD, SourceUnits> rhs)
+						{
+							static_assert(mpl::equal<Dimension, OtherD>::value, "dimensions much match");
+							using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
+							auto rhs_factored = f::get(rhs.m_value);
+							m_value += rhs_factored;
+							return *this;
+						}
+					private:
+						T m_value;
+					};
+
+				}
 			}
-
-			template <class T, class Dimensions, class TargetUnits>
-			struct Quantity
-			{
-				template<class T, class OtherD, class SourceUnits>
-				friend	struct Quantity;
-
-				explicit Quantity(T x)
-				{
-					m_value = x;
-				}
-				T value() const { return m_value; }
-
-				template<class T, class OtherD, class SourceUnits>
-				Quantity& operator+= (Quantity<T, OtherD, SourceUnits> rhs)
-				{
-					using f = complete_factor<TargetUnits, SourceUnits>;
-					auto rhs_factored = f::convertToTarget(rhs.m_value);
-					m_value += rhs_factored;
-					return *this;
-				}
-			private:
-				T m_value;
-			};
 
 			void useLength()
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
 
+				// velocity given using base units:
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+
 				typedef ratio<1, 1>							unity;
-				// some lengths factors:
-				typedef ConversionFactor<mm, m>::type		mm_to_m;					// 1/1000
-				typedef ConversionFactor<mm, cm>::type		mm_to_cm;					// 1/10
-
-				// some time factors:
-				typedef ConversionFactor<msec, sec>::type	msec_to_sec;				// 1/1000
-				typedef ConversionFactor<msec, csec>::type	msec_to_csec;				// 1/10
-
-#if 0
-				typedef mpl::vector<msec, mm> TargetUnits;
-				typedef mpl::vector<csec, cm> SourceUnits;
-				typedef process_ratio<TargetUnits, SourceUnits, 1>::accumulative_ratio accumulative_ratio;
-				accumulative_ratio accum_ratio;
-
-				cout << accumulative_ratio::num << ", " << accumulative_ratio::den << endl;
-
-#else
 				typedef mpl::vector<unity, mm, msec, unity, unity, unity, unity> TargetUnits;
 				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity> SourceUnits;
 
-				// velocity given using base units:
-				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, TargetUnits> q{ 4.5 };
+
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, SourceUnits> o{ 4.5 };
+
+				q += o;
+
+				cout << o.value() << ", " <<   q.value() << endl;
+
 
 				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
 																				   
@@ -732,7 +758,10 @@ namespace Chapter3 {
 				cout << 2 << ": " << dim_2::num << " " << dim_2::den << endl;		// sec --> msec = % 1000
 
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
+				typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, mpl::size<velocity>::value - 1>::container a_container;
+
+
+				//typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
 				a_container a_c;
 
 				typedef typename mpl::at_c<a_container, 0>::type ratio_0;
@@ -761,16 +790,22 @@ namespace Chapter3 {
 
 				cout << "accum ratio : " << accumulative_ratio::num << " : " << accumulative_ratio::den << endl;		// sec --> msec = % 1000
 
+				typedef SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_ratio<long double, velocity, TargetUnits, SourceUnits> final_ratio;
+				auto units_changed = final_ratio::get(4.55);
 
 #if 0
 				//  this creates a container whose elements are std::ratio and their values should be multipled to the long double value of the quantity
 				typedef typename process_dimension<velocity, vec_conv_factors, 0, mpl::size<velocity>::value - 1>::container container;
 				container cont;
 #endif
+				// some lengths factors:
+				typedef ConversionFactor<mm, m>::type		mm_to_m;					// 1/1000
+				typedef ConversionFactor<mm, cm>::type		mm_to_cm;					// 1/10
 
-//				typedef process_ratio<TargetUnits, SourceUnits, 6>::accumulative_ratio accumulative_ratio;
-//				accumulative_ratio accum_ratio;
-#endif
+																						// some time factors:
+				typedef ConversionFactor<msec, sec>::type	msec_to_sec;				// 1/1000
+				typedef ConversionFactor<msec, csec>::type	msec_to_csec;				// 1/10
+
 
 				cout << mm_to_m::num << " " << mm_to_m::den << endl;
 
