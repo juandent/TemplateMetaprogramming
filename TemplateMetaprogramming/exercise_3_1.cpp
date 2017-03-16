@@ -698,25 +698,35 @@ namespace Chapter3 {
 
 					namespace Detail
 					{
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+						/// <summary>	Format unit that comes as a std::ratio </summary>
+						///
+						/// <remarks>	Juan Dent, 16/3/2017. </remarks>
+						///
+						/// <typeparam name="Unit">	Type of the unit. </typeparam>
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+
+						template<typename Ratio>
+						std::string formatRatio()
+						{
+							ostringstream os{};
+							os << Ratio::num << ":" << Ratio::den;
+							auto s = os.str();
+							return s;
+						}
+
+
 						template<typename UnitsAsFactors, size_t N>
 						struct units_as_string
 						{
 						private:
 							typedef typename mpl::at_c<UnitsAsFactors, N>::type unit;
-							static std::string formatUnit()
-							{
-								ostringstream os{};
-								os << unit::num << ":" << unit::den;
-								auto s = os.str();
-								return s;
-							}
 						public:
 							static std::string getName()
 							{
-								auto s = formatUnit();
-
-								s += " ";
-								s += units_as_string<UnitsAsFactors, N - 1>::getName();
+								auto s = units_as_string<UnitsAsFactors, N - 1>::getName();
+								s += ", ";
+								s += formatRatio<unit>();
 								return s;
 							}
 						};
@@ -729,16 +739,79 @@ namespace Chapter3 {
 						public:
 							static std::string getName()
 							{
-								auto s = formatUnit();
+								auto s = formatRatio<unit>();
 								return s;
 							}
 						};
+
+						template<typename UnitsAsFactors>
+						struct all_units_as_string
+						{
+							typedef units_as_string<UnitsAsFactors, mpl::size<UnitsAsFactors>::value - 1> type;
+						};
+
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+						/// <summary>	Produce a string with the dimension elements. </summary>
+						///
+						/// <remarks>	Juan Dent, 16/3/2017. </remarks>
+						///
+						/// <typeparam name="Dimension">	Type of the dimension. </typeparam>
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+
+						template<typename Dimension, size_t N>
+						struct dimension_elements_as_string
+						{
+							static int constexpr element_value = mpl::at_c<Dimension, N>::type::value;
+						};
+
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+						/// <summary>	A verify units. </summary>
+						///
+						/// <remarks>	Juan Dent, 16/3/2017. 
+						/// 			If pos x of the dimension is 0, then the 
+						/// 			corresponding unit must be unity (1:1)
+						/// 			</remarks>
+						///
+						/// <typeparam name="Dimension">	Type of the dimension. </typeparam>
+						/// <typeparam name="Units">		Type of the units. </typeparam>
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+
+						template<typename Dimension, typename Units, size_t N>
+						struct verify_units
+						{
+							static constexpr int dim_element_value = mpl::at_c<Dimension, N>::type::value;
+							typedef typename mpl::at_c<Units, N>::type	unit;
+							static constexpr bool is_valid = (dim_element_value != 0 || (dim_element_value == 0 && unit::num == 1 && unit::den == 1)) && verify_units<Dimension, Units, N-1>::is_valid;
+
+							static_assert(is_valid, "Dimensions whose elements are cero, must have corresponding unit to be 1:1!");
+						};
+
+						template<typename Dimension, typename Units>
+						struct verify_units<Dimension, Units, 0>
+						{
+							static constexpr int dim_element_value = mpl::at_c<Dimension,0>::type::value;
+							typedef typename mpl::at_c<Units, 0>::type	unit;
+							static constexpr bool is_valid = (dim_element_value != 0 || (dim_element_value == 0 && unit::num == 1 && unit::den == 1));
+
+							static_assert(is_valid, "Dimensions whose elements are cero, must have corresponding unit to be 1:1!");
+						};
+
+						template<typename Dimension, typename Units>
+						struct verify_all_units
+						{
+							static constexpr bool is_valid = verify_units<Dimension, Units, mpl::size<Dimension>::value - 1>::is_valid;
+						};
+
 					}
 
 
-					template <class T, class Dimension, class TargetUnits>
+					template <class T, class Dimension, class /*Units*/ TargetUnits>
 					struct Quantity
 					{
+						//static_assert(Detail::verify_all_units<Dimension, TargetUnits>::is_valid, "At least one element of Dimensions is cero, and yet the corresponding unit is not 1:1!");
+						const bool is_valid = Detail::verify_all_units<Dimension, TargetUnits>::is_valid;
+
+
 						template<class T, class OtherD, class SourceUnits>
 						friend	struct Quantity;
 
@@ -751,7 +824,7 @@ namespace Chapter3 {
 
 						static std::string unitsAsText()
 						{
-							return Detail::units_as_string<TargetUnits, mpl::size<TargetUnits>::value-1>::getName();
+							return Detail::all_units_as_string<TargetUnits>::type::getName();
 						}
 
 
@@ -772,7 +845,7 @@ namespace Chapter3 {
 					Quantity<T, Dimension, TargetUnits>
 						operator+(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
 					{
-						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match");
+						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match for addition");
 						using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 
 						return quantity<T, Dimension, TargetUnits>{ x.value() + f::get(y.value()) };
@@ -781,7 +854,7 @@ namespace Chapter3 {
 					Quantity<T, Dimension, TargetUnits>
 						operator-(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
 					{
-						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match");
+						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match for subtraction");
 						using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 
 						return quantity<T, Dimension, TargetUnits>{ x.value() - f::get(y.value()) };
@@ -819,17 +892,18 @@ namespace Chapter3 {
 					///
 					/// <returns>	The result of the operation. </returns>
 					////////////////////////////////////////////////////////////////////////////////////////////////////
-
-					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits, typename ResDimension = typename mpl::transform<Dimension, OtherDim, mpl::plus<_1, _2>>::type>
-					Quantity<T, ResDimension, TargetUnits>
+#if 0
+					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits, typename ResDimension = typename mpl::transform<Dimension, OtherDim, mpl::plus<_1, _2>>::type,
+						typename ResUnits = typename process_dimension_into_ratio<T, ResDimension, TargetUnits, SourceUnits>::type>
+					Quantity<T, ResDimension, ResUnits>
 					
 						operator*(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
 					{
-						using f = process_dimension_into_ratio<T, ResDimension, TargetUnits, SourceUnits>::type;
-
-						return Quantity<T, ResDimension, TargetUnits>{ x.value() + f::get(y.value()) };
+						auto x_transformed = ResUnits::get(x.value());
+						auto y_transformed = ResUnits::get(y.value());
+						return Quantity<T, ResDimension, ResUnits>{ x_transformed * y_transformed};
 					}
-
+#endif
 				}
 			}
 
@@ -843,26 +917,36 @@ namespace Chapter3 {
 
 
 				typedef ratio<1, 1>							unity;
-				typedef mpl::vector<mg, mm, msec, unity, unity, unity, unity> TargetUnits;
-				typedef mpl::vector<kg, cm, sec, unity, unity, unity, unity> SourceUnits;
+				typedef mpl::vector<unity, mm, msec, unity, unity, unity, unity> TargetUnits;
+				typedef mpl::vector<unity, m, sec, unity, unity, unity, unity> SourceUnits;
 
+#if 0
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, TargetUnits> q{ 4.5 };
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, SourceUnits> o{ 4.5 };
 
 				q += o;
 
 				cout << o.value() << ", " <<   q.value() << endl;
-
+#endif
 #if 1
-				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, TargetUnits> qq{ 4.5 };
-				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, mass, SourceUnits>		oo{ 4.5 };
+				typedef mpl::vector<unity, cm, msec, unity, unity, unity, unity> UnitsForA;
+				typedef mpl::vector<kg, unity, unity, unity, unity, unity, unity>  UnitsForB;
 
-				cout << qq.value() << endl;
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, UnitsForA>	qq{ 4.5 };
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, mass, UnitsForB>		oo{ 4.5 };
 
+				cout << "qq: " << qq.unitsAsText() << endl;
+				cout << "oo: " << oo.unitsAsText() << endl;
+
+				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type velocity_times_mass;
+
+				auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_elements_as_string<velocity_times_mass, 2>::element_value; //   ::type::getName();
+
+#if 0
 				auto xx = qq * oo;
 
 				cout << xx.value() << ", " << oo.value() << endl;
-
+#endif
 				cout << oo.unitsAsText() << endl;
 
 #endif
