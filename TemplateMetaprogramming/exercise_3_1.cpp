@@ -696,6 +696,45 @@ namespace Chapter3 {
 
 					};
 
+					namespace Detail
+					{
+						template<typename UnitsAsFactors, size_t N>
+						struct units_as_string
+						{
+						private:
+							typedef typename mpl::at_c<UnitsAsFactors, N>::type unit;
+							static std::string formatUnit()
+							{
+								ostringstream os{};
+								os << unit::num << ":" << unit::den;
+								auto s = os.str();
+								return s;
+							}
+						public:
+							static std::string getName()
+							{
+								auto s = formatUnit();
+
+								s += " ";
+								s += units_as_string<UnitsAsFactors, N - 1>::getName();
+								return s;
+							}
+						};
+
+						template<typename UnitsAsFactors>
+						struct units_as_string<UnitsAsFactors, 0>
+						{
+						private:
+							typedef typename mpl::at_c<UnitsAsFactors, 0>::type unit;
+						public:
+							static std::string getName()
+							{
+								auto s = formatUnit();
+								return s;
+							}
+						};
+					}
+
 
 					template <class T, class Dimension, class TargetUnits>
 					struct Quantity
@@ -709,10 +748,17 @@ namespace Chapter3 {
 						}
 						T value() const { return m_value; }
 
-						template<class T, class OtherD, class SourceUnits>
-						Quantity& operator+= (Quantity<T, OtherD, SourceUnits> rhs)
+
+						static std::string unitsAsText()
 						{
-							static_assert(mpl::equal<Dimension, OtherD>::value, "dimensions much match");
+							return Detail::units_as_string<TargetUnits, mpl::size<TargetUnits>::value-1>::getName();
+						}
+
+
+						template<class T, class OtherDim, class SourceUnits>
+						Quantity& operator+= (Quantity<T, OtherDim, SourceUnits> rhs)
+						{
+							static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match");
 							using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 							auto rhs_factored = f::get(rhs.m_value);
 							m_value += rhs_factored;
@@ -721,6 +767,68 @@ namespace Chapter3 {
 					private:
 						T m_value;
 					};
+
+					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits>
+					Quantity<T, Dimension, TargetUnits>
+						operator+(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
+					{
+						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match");
+						using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
+
+						return quantity<T, Dimension, TargetUnits>{ x.value() + f::get(y.value()) };
+					}
+					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits>
+					Quantity<T, Dimension, TargetUnits>
+						operator-(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
+					{
+						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match");
+						using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
+
+						return quantity<T, Dimension, TargetUnits>{ x.value() - f::get(y.value()) };
+					}
+
+					namespace Detail
+					{
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+						/// <summary>	The plus_f metafunction class </summary>
+						///
+						/// <remarks>	Juan Dent, 16/3/2017. </remarks>
+						////////////////////////////////////////////////////////////////////////////////////////////////////
+
+						struct plus_f
+						{
+							template<typename A, typename B>
+							struct apply
+							{
+								typedef typename mpl::plus<A, B>::type type;
+							};
+						};
+					}
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+					/// <summary>	Multiplication operator. </summary>
+					///
+					/// <remarks>	Juan Dent, 16/3/2017. </remarks>
+					///
+					/// <typeparam name="T">		  	Numeric type. </typeparam>
+					/// <typeparam name="Dimension">  	Type of dimension 1. </typeparam>
+					/// <typeparam name="TargetUnits">	Type of the target units. </typeparam>
+					/// <typeparam name="OtherDim">   	Type of dimension 2. </typeparam>
+					/// <typeparam name="SourceUnits">	Type of the source units. </typeparam>
+					/// <param name="x">	The Quantity&lt;T,Dimension,TargetUnits&gt; to process. </param>
+					/// <param name="y">	The Quantity&lt;T,OtherDim,SourceUnits&gt; to process. </param>
+					///
+					/// <returns>	The result of the operation. </returns>
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+
+					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits, typename ResDimension = typename mpl::transform<Dimension, OtherDim, mpl::plus<_1, _2>>::type>
+					Quantity<T, ResDimension, TargetUnits>
+					
+						operator*(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
+					{
+						using f = process_dimension_into_ratio<T, ResDimension, TargetUnits, SourceUnits>::type;
+
+						return Quantity<T, ResDimension, TargetUnits>{ x.value() + f::get(y.value()) };
+					}
 
 				}
 			}
@@ -731,19 +839,33 @@ namespace Chapter3 {
 
 				// velocity given using base units:
 				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+				typedef mpl::vector_c<int, 1, 0, 0, 0, 0, 0, 0> mass;
+
 
 				typedef ratio<1, 1>							unity;
-				typedef mpl::vector<unity, mm, msec, unity, unity, unity, unity> TargetUnits;
-				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity> SourceUnits;
+				typedef mpl::vector<mg, mm, msec, unity, unity, unity, unity> TargetUnits;
+				typedef mpl::vector<kg, cm, sec, unity, unity, unity, unity> SourceUnits;
 
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, TargetUnits> q{ 4.5 };
-
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, SourceUnits> o{ 4.5 };
 
 				q += o;
 
 				cout << o.value() << ", " <<   q.value() << endl;
 
+#if 1
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, TargetUnits> qq{ 4.5 };
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, mass, SourceUnits>		oo{ 4.5 };
+
+				cout << qq.value() << endl;
+
+				auto xx = qq * oo;
+
+				cout << xx.value() << ", " << oo.value() << endl;
+
+				cout << oo.unitsAsText() << endl;
+
+#endif
 
 				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
 																				   
