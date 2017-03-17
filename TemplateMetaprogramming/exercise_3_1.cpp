@@ -685,9 +685,10 @@ namespace Chapter3 {
 					{
 					private:
 						typedef typename process_dimension<Dimension, TargetUnits, SourceUnits, 0, mpl::size<Dimension>::value - 1>::container container;
+					public:
 						typedef typename ratio_sequence_multiply<container, mpl::size<container>::value -1 >::accumulative_ratio				ratio;
 					public:
-						typedef process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>											type;
+						//typedef process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>											type;
 
 						static constexpr T get(T value)
 						{
@@ -762,6 +763,36 @@ namespace Chapter3 {
 						struct dimension_elements_as_string
 						{
 							static int constexpr element_value = mpl::at_c<Dimension, N>::type::value;
+
+							static std::string getName()
+							{
+								// display int as a string
+								auto s = dimension_elements_as_string<Dimension, N - 1>::getName();
+								s += ", ";
+								s += std::to_string(element_value);
+								return s;
+							}
+
+						};
+
+						template<typename Dimension>
+						struct dimension_elements_as_string<Dimension,0>
+						{
+							static int constexpr element_value = mpl::at_c<Dimension, 0>::type::value;
+
+							static std::string getName()
+							{
+								// display int as a string
+								auto s = std::to_string(element_value);
+								return s;
+							}
+
+						};
+
+						template<typename Dimension>
+						struct dimension_as_string
+						{
+							typedef dimension_elements_as_string<Dimension, mpl::size<Dimension>::value - 1> type;
 						};
 
 						////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -893,15 +924,19 @@ namespace Chapter3 {
 					/// <returns>	The result of the operation. </returns>
 					////////////////////////////////////////////////////////////////////////////////////////////////////
 #if 0
-					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits, typename ResDimension = typename mpl::transform<Dimension, OtherDim, mpl::plus<_1, _2>>::type,
-						typename ResUnits = typename process_dimension_into_ratio<T, ResDimension, TargetUnits, SourceUnits>::type>
-					Quantity<T, ResDimension, ResUnits>
+					template<typename T, typename Dimension_A, typename Units_A, typename Dimension_B, typename Units_B, 
+						typename ResDimension = typename mpl::transform<Dimension_A, Dimension_B, mpl::plus<_1, _2>>::type,
+						typename ResUnits = typename process_dimension_into_ratio<T, ResDimension, Units_A, Units_B>::type>
+					Quantity<T, Dimension_A, Units_A>
 					
-						operator*(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
+					operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
 					{
+						auto name = Detail::all_units_as_string<ResUnits>::type::getName();
+						cout << name << endl;
+
 						auto x_transformed = ResUnits::get(x.value());
 						auto y_transformed = ResUnits::get(y.value());
-						return Quantity<T, ResDimension, ResUnits>{ x_transformed * y_transformed};
+						return Quantity<T, Dimension_A, Units_A>{ x_transformed * y_transformed};
 					}
 #endif
 				}
@@ -940,12 +975,57 @@ namespace Chapter3 {
 
 				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type velocity_times_mass;
 
-				auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_elements_as_string<velocity_times_mass, 2>::element_value; //   ::type::getName();
+				//auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_elements_as_string<velocity_times_mass, 2>::element_value; //   ::type::getName();
 
+				auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<velocity_times_mass>::type::getName();
+#if 1
+				{
 #if 0
-				auto xx = qq * oo;
+					template<typename T, typename Dimension_A, typename Units_A, typename Dimension_B, typename Units_B,
+						typename ResDimension = typename mpl::transform<Dimension_A, Dimension_B, mpl::plus<_1, _2>>::type,
+						typename ResUnits = typename process_dimension_into_ratio<T, ResDimension, Units_A, Units_B>::type>
+						Quantity<T, Dimension_A, Units_A>
 
-				cout << xx.value() << ", " << oo.value() << endl;
+						operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
+					{
+						auto name = Detail::all_units_as_string<ResUnits>::type::getName();
+						cout << name << endl;
+
+						auto x_transformed = ResUnits::get(x.value());
+						auto y_transformed = ResUnits::get(y.value());
+						return Quantity<T, Dimension_A, Units_A>{ x_transformed * y_transformed};
+					}
+#endif
+					typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
+					auto all_dim_elems = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<ResDimension>::type::getName();
+
+					// this next is flawed broken!!  -- not really, just access ratio instead of type!!!
+					typedef SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio ratio_accum; // ResUnits;
+					//ResUnits ru;
+					ratio_accum rac;
+
+					typedef SeparateSourceAndTargetUnits::process_dimension_element<ResDimension, UnitsForA, UnitsForB, 1>::type		element;
+					element ee;
+
+					typedef SeparateSourceAndTargetUnits::process_dimension<ResDimension, UnitsForA, UnitsForB, 6, 6>::container cont_of_units;
+					auto all_units_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::units_as_string<cont_of_units, 6>::getName();
+
+
+					//typedef typename process_dimension_into_ratio<T, ResDimension, Units_A, Units_B>::type>
+
+
+
+					cout << "stop" << endl;
+
+					//typedef SeparateSourceAndTargetUnits::ratio_sequence_multiply<
+					
+					//auto all_units = SeparateSourceAndTargetUnits::NoIntegrals::Detail::units_as_string<ResUnits, 0>::getName();
+
+					//using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits::NoIntegrals;
+
+					//auto xx = qq * oo;
+				}
+				//cout << xx.value() << ", " << oo.value() << endl;
 #endif
 				cout << oo.unitsAsText() << endl;
 
