@@ -590,17 +590,32 @@ namespace Chapter3 {
 
 			namespace SeparateSourceAndTargetUnits
 			{
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Process the dimensions to obtain a std::ratio at N. </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				///
+				/// <typeparam name="Dimension">  	Type of the dimension. </typeparam>
+				/// <typeparam name="TargetUnits">	Sequence of the target units. </typeparam>
+				/// <typeparam name="SourceUnits">	Sequence of the source units. </typeparam>
+				/// <typeparam name="N">		  	Position in the sequences. </typeparam>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
 
-				template<typename Dimension, typename TargetUnits, typename SourceUnits, size_t N>
-				struct process_dimension_element
+				template<typename Dimension, typename UnitsForA, typename UnitsForB, size_t N>
+				struct process_dimension_unit
 				{
 					template<bool isNeg> struct helper;
 				public:
 					//Debug::Decl<N> n;
+					
+					/// <summary>	If value is negative, the both corresponding 
+					/// 			units must be inverted! 
+					/// 			</summary>
 					static constexpr int value = mpl::at_c<Dimension, N>::type::value;
-					typedef typename mpl::at_c<TargetUnits, N>::type		target_unit;
-					typedef typename mpl::at_c<SourceUnits, N>::type		source_unit;
-					typedef std::ratio_divide<source_unit, target_unit>		factor;
+
+					typedef typename mpl::at_c<UnitsForA, N>::type			unit_for_a;
+					typedef typename mpl::at_c<UnitsForB, N>::type			unit_for_b;
+					typedef std::ratio_multiply <unit_for_a, unit_for_b>	unit_to_base;		// changed ratio_divide to ratio_multiply
 
 					static constexpr bool isNegative = value < 0;
 
@@ -610,13 +625,13 @@ namespace Chapter3 {
 					template<bool isNeg>
 					struct helper
 					{
-						typedef typename std::ratio<multiplyBy * factor::num, factor::den>::type type;
+						typedef typename std::ratio<multiplyBy * unit_to_base::num, unit_to_base::den>::type type;
 					};
 
 					template<>
 					struct helper<true>
 					{
-						typedef typename std::ratio<multiplyBy * factor::den, factor::num>::type type;
+						typedef typename std::ratio<multiplyBy * unit_to_base::den, unit_to_base::num>::type type;
 					};
 				public:
 					typedef typename helper<isNegative>::type type;
@@ -625,7 +640,7 @@ namespace Chapter3 {
 				template<typename Dimension, typename TargetUnits, typename SourceUnits, size_t N, size_t MAX>
 				struct process_dimension
 				{
-					typedef typename process_dimension_element<Dimension, TargetUnits, SourceUnits, N>::type		element;
+					typedef typename process_dimension_unit<Dimension, TargetUnits, SourceUnits, N>::type		element;
 					typedef typename process_dimension<Dimension, TargetUnits, SourceUnits, N + 1, MAX>::container	next_container;
 
 					typedef typename mpl::push_front<next_container, element>::type container;
@@ -634,7 +649,7 @@ namespace Chapter3 {
 				template<typename Dimension, typename TargetUnits, typename SourceUnits, size_t N>
 				struct process_dimension<typename Dimension, typename TargetUnits, typename SourceUnits, N, N>
 				{
-					typedef typename process_dimension_element<Dimension, TargetUnits, SourceUnits, N>::type element;
+					typedef typename process_dimension_unit<Dimension, TargetUnits, SourceUnits, N>::type element;
 					typedef mpl::vector<element>		container;
 				};
 
@@ -690,7 +705,9 @@ namespace Chapter3 {
 					template<typename T, typename Dimension, typename TargetUnits, typename SourceUnits>
 					struct process_dimension_into_ratio
 					{
+#ifdef NOT_DEBUG
 					private:
+#endif
 						typedef typename process_dimension<Dimension, TargetUnits, SourceUnits, 0, mpl::size<Dimension>::value - 1>::container container;
 					public:
 						typedef typename ratio_sequence_multiply<container, mpl::size<container>::value -1 >::accumulative_ratio				ratio;
@@ -960,7 +977,7 @@ namespace Chapter3 {
 
 				typedef ratio<1, 1>							unity;
 				typedef mpl::vector<unity, mm, msec, unity, unity, unity, unity> TargetUnits;
-				typedef mpl::vector<unity, m, sec, unity, unity, unity, unity> SourceUnits;
+				typedef mpl::vector<unity, m, csec, unity, unity, unity, unity> SourceUnits;
 
 #if 0
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, TargetUnits> q{ 4.5 };
@@ -971,11 +988,11 @@ namespace Chapter3 {
 				cout << o.value() << ", " <<   q.value() << endl;
 #endif
 #if 1
-				typedef mpl::vector<unity, cm, msec, unity, unity, unity, unity> UnitsForA;
+				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity> UnitsForA;
 				typedef mpl::vector<kg, unity, unity, unity, unity, unity, unity>  UnitsForB;
 
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, UnitsForA>	qq{ 4.5 };
-				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, mass, UnitsForB>		oo{ 4.5 };
+				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, mass, UnitsForB>		oo{ 12.0 };
 
 				//cout << "qq: " << qq.unitsAsText() << endl;
 				//cout << "oo: " << oo.unitsAsText() << endl;
@@ -1012,6 +1029,10 @@ namespace Chapter3 {
 					cout << "(" << vel_dimension_as_str << ") + (" << mass_dimension_as_str << ") = (" << res_dimension_as_str << ")" << endl;
 
 					
+
+					typedef SeparateSourceAndTargetUnits::process_dimension_unit<ResDimension, UnitsForA, UnitsForB, 2>::unit_to_base f;
+					f ff;
+
 					////////////////////////////////////////////////////////////////////////////////////////////////////
 					/// <summary>	Defines an alias representing the accumulative ratio given a dimension
 					/// 			and 2 sets of units. </summary>
@@ -1021,9 +1042,14 @@ namespace Chapter3 {
 					/// 			</remarks>
 					////////////////////////////////////////////////////////////////////////////////////////////////////
 
-					typedef SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio ratio_accum;
+					typedef SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB> intermediate_type;  //       ::ratio ratio_accum;
+					auto all_units_for_process_dimension = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<intermediate_type::container>::type::getName();
+					typedef intermediate_type::ratio ratio_accum;
+
+					
 					ratio_accum rac;
 
+					cout << "units for processed dimension and 2 unit seq: " << all_units_for_process_dimension << endl;
 					cout << "accumulative ratio = " << ratio_accum::num << ":" << ratio_accum::den << endl;
 
 					auto all_units_for_A = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<UnitsForA>::type::getName();
@@ -1037,7 +1063,7 @@ namespace Chapter3 {
 
 					cout << "units for A = (" << all_units_for_A << ")\nunits for B = (" << all_units_for_B << ")\nunits using ResDimension = (" << all_units_in_container << ")" << endl;
 
-					typedef SeparateSourceAndTargetUnits::process_dimension_element<ResDimension, UnitsForA, UnitsForB, 1>::type		element;
+					typedef SeparateSourceAndTargetUnits::process_dimension_unit<ResDimension, UnitsForA, UnitsForB, 1>::type		element;
 					element ee;
 
 					typedef SeparateSourceAndTargetUnits::process_dimension<ResDimension, UnitsForA, UnitsForB, 6, 6>::container cont_of_units;
@@ -1055,11 +1081,11 @@ namespace Chapter3 {
 				}
 				//cout << xx.value() << ", " << oo.value() << endl;
 #endif
-				cout << oo.unitsAsText() << endl;
+				//cout << oo.unitsAsText() << endl;
 
 #endif
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
+				typedef typename SeparateSourceAndTargetUnits::process_dimension_unit<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
 																				   
 																				   // calculate each element of velocity using the new units:
 				cout << 1 << ": " << dim_1::num << " " << dim_1::den << endl;		// cm --> mm (x 10)
@@ -1067,7 +1093,7 @@ namespace Chapter3 {
 				// dim 1: cm -> mm = x 10
 				// dim 2: sec -> msec = % 1000
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension_element<velocity, TargetUnits, SourceUnits, 2>::type dim_2;
+				typedef typename SeparateSourceAndTargetUnits::process_dimension_unit<velocity, TargetUnits, SourceUnits, 2>::type dim_2;
 
 				cout << 2 << ": " << dim_2::num << " " << dim_2::den << endl;		// sec --> msec = % 1000
 
