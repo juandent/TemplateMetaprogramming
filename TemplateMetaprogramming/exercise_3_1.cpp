@@ -669,8 +669,15 @@ namespace Chapter3 {
 				{
 //					typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
 
+					//process_dimension<ResDimension, UnitsForA, UnitsForB, 0, mpl::size<ResDimension>::value - 1>::container
+
+					template<typename Dimension, typename UnitsForA, typename UnitsForB>
+					struct process_dimension_into_unit_container
+					{
+						typedef typename process_dimension<Dimension, UnitsForA, UnitsForB, 0, mpl::size<Dimension>::value - 1>::container container;
+					};
 					////////////////////////////////////////////////////////////////////////////////////////////////////
-					/// <summary>	The process dimension into ratio. </summary>
+					/// <summary>	Process dimension into an accumulative ratio. </summary>
 					///
 					/// <remarks>	Juan Dent, 16/3/2017. </remarks>
 					///
@@ -983,7 +990,7 @@ namespace Chapter3 {
 #if 0
 					template<typename T, typename Dimension_A, typename Units_A, typename Dimension_B, typename Units_B,
 						typename ResDimension = typename mpl::transform<Dimension_A, Dimension_B, mpl::plus<_1, _2>>::type,
-						typename ResUnits = typename process_dimension_into_ratio<T, ResDimension, Units_A, Units_B>::type>
+						typename ResUnits = typename process_dimension_into_unit_container<ResDimension, Units_A, Units_B>::type>
 						Quantity<T, Dimension_A, Units_A>
 
 						operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
@@ -996,23 +1003,44 @@ namespace Chapter3 {
 						return Quantity<T, Dimension_A, Units_A>{ x_transformed * y_transformed};
 					}
 #endif
-					typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
-					auto all_dim_elems = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<ResDimension>::type::getName();
+					auto vel_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<velocity>::type::getName();
+					auto mass_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<mass>::type::getName();
 
-					// this next is flawed broken!!  -- not really, just access ratio instead of type!!!
-					typedef SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio ratio_accum; // ResUnits;
-					//ResUnits ru;
+					typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
+					auto res_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<ResDimension>::type::getName();
+
+					cout << "(" << vel_dimension_as_str << ") + (" << mass_dimension_as_str << ") = (" << res_dimension_as_str << ")" << endl;
+
+					
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+					/// <summary>	Defines an alias representing the accumulative ratio given a dimension
+					/// 			and 2 sets of units. </summary>
+					///
+					/// <remarks>	Juan Dent, 17/3/2017. 
+					/// 			Vital: access ratio instead of type!!
+					/// 			</remarks>
+					////////////////////////////////////////////////////////////////////////////////////////////////////
+
+					typedef SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio ratio_accum;
 					ratio_accum rac;
+
+					cout << "accumulative ratio = " << ratio_accum::num << ":" << ratio_accum::den << endl;
+
+					auto all_units_for_A = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<UnitsForA>::type::getName();
+					auto all_units_for_B = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<UnitsForB>::type::getName();
+
+
+					typedef typename SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_unit_container<ResDimension, UnitsForA, UnitsForB>::container a_container_of_units;
+					a_container_of_units ac;
+
+					auto all_units_in_container = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<a_container_of_units>::type::getName();
+
+					cout << "units for A = (" << all_units_for_A << ")\nunits for B = (" << all_units_for_B << ")\nunits using ResDimension = (" << all_units_in_container << ")" << endl;
 
 					typedef SeparateSourceAndTargetUnits::process_dimension_element<ResDimension, UnitsForA, UnitsForB, 1>::type		element;
 					element ee;
 
 					typedef SeparateSourceAndTargetUnits::process_dimension<ResDimension, UnitsForA, UnitsForB, 6, 6>::container cont_of_units;
-					auto all_units_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::units_as_string<cont_of_units, 6>::getName();
-
-
-					//typedef typename process_dimension_into_ratio<T, ResDimension, Units_A, Units_B>::type>
-
 
 
 					cout << "stop" << endl;
