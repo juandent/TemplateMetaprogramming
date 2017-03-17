@@ -589,6 +589,9 @@ namespace Chapter3 {
 
 			namespace SeparateSourceAndTargetUnits
 			{
+				template<typename Dimension, typename Units>
+				struct verify_all_units;
+
 				////////////////////////////////////////////////////////////////////////////////////////////////////
 				/// <summary>	Process the dimensions to obtain a std::ratio at N. </summary>
 				///
@@ -603,6 +606,7 @@ namespace Chapter3 {
 				template<typename Dimension, typename UnitsForA, typename UnitsForB, size_t N>
 				struct process_dimension_unit
 				{
+					//static_assert( verify_all_units<Dimension, )
 					template<bool isNeg> struct helper;
 				public:
 					//Debug::Decl<N> n;
@@ -1004,11 +1008,11 @@ namespace Chapter3 {
 
 				// calculate factor at pos 1
 				typedef process_dimension_unit<velocity, UnitsForA, UnitsForB, 1>::type f1;				
-				Debug::output( "factor at pos 1", Debug::formatRatio<f1>());	// 10,000
+				Debug::output( "factor at pos 1", Debug::formatRatio<f1>());	// 10,000:1
 
 				// calculate factor at pos 2
 				typedef process_dimension_unit<velocity, UnitsForA, UnitsForB, 2>::type f2;
-				Debug::output("factor at pos 2", Debug::formatRatio<f2>());		// 10,000
+				Debug::output("factor at pos 2", Debug::formatRatio<f2>());		// 1:10,000
 
 				typedef typename mpl::transform<velocity, velocity, mpl::plus<_1, _2>>::type  ResDimension;
 				Debug::output("velocity^2 dimension", dimension_as_string<ResDimension>::type::getName());
@@ -1023,6 +1027,67 @@ namespace Chapter3 {
 
 			}
 
+			void multiply_mass_by_velocity()
+			{
+				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
+				using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits;
+				using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits::NoIntegrals;
+				using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits::NoIntegrals::Detail;
+
+
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the velocity dimension. </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0>		velocity;			// l/t
+				typedef mpl::vector_c<int, 1, 0, 0, 0, 0, 0, 0>			mass;				// mass
+
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the units for A, which is a velocity </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity>	UnitsForA;
+
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the units for B, which is a mass </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				typedef mpl::vector<kg, unity, unity, unity, unity, unity, unity>	UnitsForB;
+
+				Quantity<long double, velocity, UnitsForA>		qq{ 4.5 };
+				Quantity<long double, mass, UnitsForB>			oo{ 12.0 };
+
+				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
+				Debug::output("velocity * mass dimension", dimension_as_string<ResDimension>::type::getName());
+
+				// calculate factor at pos 0
+				typedef process_dimension_unit< ResDimension, UnitsForA, UnitsForB, 0>::type f0;
+				Debug::output("factor at pos 0", Debug::formatRatio<f0>());	// 10,000
+
+				// calculate factor at pos 1
+				typedef process_dimension_unit< ResDimension, UnitsForA, UnitsForB, 1>::type f1;
+				Debug::output("factor at pos 1", Debug::formatRatio<f1>());	// 10,000
+
+																			// calculate factor at pos 2
+				typedef process_dimension_unit<ResDimension, UnitsForA, UnitsForB, 2>::type f2;
+				Debug::output("factor at pos 2", Debug::formatRatio<f2>());		// 10,000
+
+
+				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::container	unit_container;
+				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio		accum_ratio;
+
+				Debug::output("Accum ratio", Debug::formatRatio<accum_ratio>());
+
+				Debug::output("Resultant units", all_units_as_string<unit_container>::type::getName());
+
+
+			}
 			void useLength()
 			{
 				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
@@ -1046,6 +1111,7 @@ namespace Chapter3 {
 #endif
 #if 1
 				multiply_velocities();
+				multiply_mass_by_velocity();
 
 				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity> UnitsForA;
 				typedef mpl::vector<kg, unity, unity, unity, unity, unity, unity>  UnitsForB;
