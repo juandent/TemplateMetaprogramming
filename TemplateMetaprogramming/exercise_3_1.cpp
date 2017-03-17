@@ -977,8 +977,8 @@ namespace Chapter3 {
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, velocity, UnitsForA>	qq{ 4.5 };
 				SeparateSourceAndTargetUnits::NoIntegrals::Quantity<long double, mass, UnitsForB>		oo{ 4.5 };
 
-				cout << "qq: " << qq.unitsAsText() << endl;
-				cout << "oo: " << oo.unitsAsText() << endl;
+				//cout << "qq: " << qq.unitsAsText() << endl;
+				//cout << "oo: " << oo.unitsAsText() << endl;
 
 				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type velocity_times_mass;
 
