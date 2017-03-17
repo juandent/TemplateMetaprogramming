@@ -31,6 +31,8 @@
 #include <boost\mpl\vector.hpp>
 #include <boost\mpl/size.hpp>
 
+#include "Debug.h"
+
 // Dimensions (pg 40 -- C++ Template Metaprogramming
 namespace mpl = boost::mpl;
 using namespace mpl::placeholders;
@@ -254,6 +256,9 @@ namespace Chapter3 {
 				typedef ratio<10, 1>		csec;	// how many msec in a csec: 10:1
 				typedef ratio<1000, 1>		sec;	// how many msec in a sec: 1000:1
 
+				// unity
+				typedef ratio<1, 1>			unity;
+
 				// let's assume we only have 2 dimensions: length and mass
 				//typedef mpl::vector_c<int, num_mass, den_mass, num_length, den_length>	units;
 
@@ -473,12 +478,6 @@ namespace Chapter3 {
 				}
 			};
 
-			namespace Debug
-			{
-				template<size_t N>
-				struct Decl;
-			}
-
 			template<typename OrigRatio>
 			struct ratio_invert
 			{
@@ -615,23 +614,25 @@ namespace Chapter3 {
 
 					typedef typename mpl::at_c<UnitsForA, N>::type			unit_for_a;
 					typedef typename mpl::at_c<UnitsForB, N>::type			unit_for_b;
-					typedef std::ratio_multiply <unit_for_a, unit_for_b>	unit_to_base;		// changed ratio_divide to ratio_multiply
+					//typedef std::ratio_multiply <unit_for_a, unit_for_b>	unit_to_base;		// changed ratio_divide to ratio_multiply
 
 					static constexpr bool isNegative = value < 0;
 
 				private:
-					static constexpr size_t abs_value = isNegative ? -value : value;
-					static constexpr size_t multiplyBy = abs_value == 0 ? 1 : abs_value;
+					typedef std::ratio_multiply <unit_for_a, unit_for_b>	unit_to_base;
+					/// <summary>	take only -1, 0 or 1. </summary>
+					static constexpr size_t abs_value = isNegative ? -1 : 1;		// //static constexpr size_t abs_value = isNegative ? -value : value;
+					static constexpr size_t multiplyBy = value == 0 ? 1 : abs_value;
 					template<bool isNeg>
 					struct helper
 					{
-						typedef typename std::ratio<multiplyBy * unit_to_base::num, unit_to_base::den>::type type;
+						typedef typename std::ratio</*multiplyBy **/ unit_to_base::num, unit_to_base::den>::type type;
 					};
 
 					template<>
 					struct helper<true>
 					{
-						typedef typename std::ratio<multiplyBy * unit_to_base::den, unit_to_base::num>::type type;
+						typedef typename std::ratio</*multiplyBy **/ unit_to_base::den, unit_to_base::num>::type type;
 					};
 				public:
 					typedef typename helper<isNegative>::type type;
@@ -723,23 +724,6 @@ namespace Chapter3 {
 
 					namespace Detail
 					{
-						////////////////////////////////////////////////////////////////////////////////////////////////////
-						/// <summary>	Format unit that comes as a std::ratio </summary>
-						///
-						/// <remarks>	Juan Dent, 16/3/2017. </remarks>
-						///
-						/// <typeparam name="Unit">	Type of the unit. </typeparam>
-						////////////////////////////////////////////////////////////////////////////////////////////////////
-
-						template<typename Ratio>
-						std::string formatRatio()
-						{
-							ostringstream os{};
-							os << Ratio::num << ":" << Ratio::den;
-							auto s = os.str();
-							return s;
-						}
-
 
 						template<typename UnitsAsFactors, size_t N>
 						struct units_as_string
@@ -751,7 +735,7 @@ namespace Chapter3 {
 							{
 								auto s = units_as_string<UnitsAsFactors, N - 1>::getName();
 								s += ", ";
-								s += formatRatio<unit>();
+								s += Debug::formatRatio<unit>();
 								return s;
 							}
 						};
@@ -764,7 +748,7 @@ namespace Chapter3 {
 						public:
 							static std::string getName()
 							{
-								auto s = formatRatio<unit>();
+								auto s = Debug::formatRatio<unit>();
 								return s;
 							}
 						};
@@ -962,8 +946,81 @@ namespace Chapter3 {
 						auto y_transformed = ResUnits::get(y.value());
 						return Quantity<T, Dimension_A, Units_A>{ x_transformed * y_transformed};
 					}
+
+#else if defined(DEFINE_QUANTITY_MULTIPLICATION)          // better
+					template<typename T, typename Dimension_A, typename Units_A, typename Dimension_B, typename Units_B,
+						typename ResDimension = typename mpl::transform<Dimension_A, Dimension_B, mpl::plus<_1, _2>>::type,
+						typename ResUnits = typename process_dimension_into_unit_container<ResDimension, Units_A, Units_B>::type>
+						Quantity<T, Dimension_A, Units_A>
+
+						operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
+					{
+						auto name = Detail::all_units_as_string<ResUnits>::type::getName();
+						cout << name << endl;
+
+						auto x_transformed = ResUnits::get(x.value());
+						auto y_transformed = ResUnits::get(y.value());
+						return Quantity<T, Dimension_A, Units_A>{ x_transformed * y_transformed};
+					}
 #endif
+
 				}
+			}
+
+			void multiply_velocities()
+			{
+				using namespace ::Chapter3::Questions::Q3_8::AddingUnitsToQuantity;
+				using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits;
+				using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits::NoIntegrals;
+				using namespace ::Chapter3::Questions::Q3_8::SeparateSourceAndTargetUnits::NoIntegrals::Detail;
+
+
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the velocity dimension. </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				typedef mpl::vector_c<int, 0, 1, -1, 0, 0, 0, 0> velocity;         // l/t
+
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the units for A, which is a velocity </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity>	UnitsForA;
+
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the units for B, which is a velocity </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. </remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				typedef mpl::vector<unity, m, csec, unity, unity, unity, unity>	UnitsForB;	
+
+				Quantity<long double, velocity, UnitsForA>		qq{ 4.5 };
+				Quantity<long double, velocity, UnitsForB>		oo{ 12.0 };
+
+				// calculate factor at pos 1
+				typedef process_dimension_unit<velocity, UnitsForA, UnitsForB, 1>::type f1;				
+				Debug::output( "factor at pos 1", Debug::formatRatio<f1>());	// 10,000
+
+				// calculate factor at pos 2
+				typedef process_dimension_unit<velocity, UnitsForA, UnitsForB, 2>::type f2;
+				Debug::output("factor at pos 2", Debug::formatRatio<f2>());		// 10,000
+
+				typedef typename mpl::transform<velocity, velocity, mpl::plus<_1, _2>>::type  ResDimension;
+				Debug::output("velocity^2 dimension", dimension_as_string<ResDimension>::type::getName());
+				
+				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::container	unit_container;
+				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio		accum_ratio;
+
+				Debug::output("Accum ratio", Debug::formatRatio<accum_ratio>());
+
+				Debug::output("Resultant units", all_units_as_string<unit_container>::type::getName());
+
+
 			}
 
 			void useLength()
@@ -988,6 +1045,8 @@ namespace Chapter3 {
 				cout << o.value() << ", " <<   q.value() << endl;
 #endif
 #if 1
+				multiply_velocities();
+
 				typedef mpl::vector<unity, cm, sec, unity, unity, unity, unity> UnitsForA;
 				typedef mpl::vector<kg, unity, unity, unity, unity, unity, unity>  UnitsForB;
 
@@ -997,6 +1056,14 @@ namespace Chapter3 {
 				//cout << "qq: " << qq.unitsAsText() << endl;
 				//cout << "oo: " << oo.unitsAsText() << endl;
 
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+				/// <summary>	Defines an alias representing the velocity times mass. </summary>
+				///
+				/// <remarks>	Juan Dent, 17/3/2017. 
+				/// 			(quantities multiplied have their dimensions added)
+				/// 			</remarks>
+				////////////////////////////////////////////////////////////////////////////////////////////////////
+
 				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type velocity_times_mass;
 
 				//auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_elements_as_string<velocity_times_mass, 2>::element_value; //   ::type::getName();
@@ -1004,22 +1071,6 @@ namespace Chapter3 {
 				auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<velocity_times_mass>::type::getName();
 #if 1
 				{
-#if 0
-					template<typename T, typename Dimension_A, typename Units_A, typename Dimension_B, typename Units_B,
-						typename ResDimension = typename mpl::transform<Dimension_A, Dimension_B, mpl::plus<_1, _2>>::type,
-						typename ResUnits = typename process_dimension_into_unit_container<ResDimension, Units_A, Units_B>::type>
-						Quantity<T, Dimension_A, Units_A>
-
-						operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
-					{
-						auto name = Detail::all_units_as_string<ResUnits>::type::getName();
-						cout << name << endl;
-
-						auto x_transformed = ResUnits::get(x.value());
-						auto y_transformed = ResUnits::get(y.value());
-						return Quantity<T, Dimension_A, Units_A>{ x_transformed * y_transformed};
-					}
-#endif
 					auto vel_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<velocity>::type::getName();
 					auto mass_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<mass>::type::getName();
 
@@ -1030,7 +1081,7 @@ namespace Chapter3 {
 
 					
 
-					typedef SeparateSourceAndTargetUnits::process_dimension_unit<ResDimension, UnitsForA, UnitsForB, 2>::unit_to_base f;
+					typedef SeparateSourceAndTargetUnits::process_dimension_unit<ResDimension, UnitsForA, UnitsForB, 2>::type f;
 					f ff;
 
 					////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1367,13 +1418,6 @@ namespace Chapter3 {
 				};
 				typedef PlaceHolder<3> _3;
 #endif
-
-
-				namespace Debug
-				{
-					template<typename T>
-					struct TypeDecl;
-				}
 
 
 				// In the general case, F is either a metafunction class or a placeholder expression
