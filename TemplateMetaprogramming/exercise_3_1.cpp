@@ -958,7 +958,7 @@ namespace Chapter3 {
 					template<typename T, typename Dimension_A, typename Units_A, typename Dimension_B, typename Units_B,
 						typename ResDimension = typename mpl::transform<Dimension_A, Dimension_B, mpl::plus<_1, _2>>::type,
 						typename Base = typename process_dimension_into_ratio<T, ResDimension, Units_A, Units_B>,
-						typename ResUnits = typename Base::container,
+						typename ResUnits = mpl::vector<AddingUnitsToQuantity::unity, AddingUnitsToQuantity::unity, AddingUnitsToQuantity::unity, AddingUnitsToQuantity::unity, AddingUnitsToQuantity::unity, AddingUnitsToQuantity::unity, AddingUnitsToQuantity::unity>,
 						typename AccumRatio = typename Base::ratio
 					>
 					Quantity<T, ResDimension, ResUnits>
