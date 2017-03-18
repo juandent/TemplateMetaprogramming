@@ -1086,6 +1086,15 @@ namespace Chapter3 {
 
 				Debug::output("Resultant units", all_units_as_string<unit_container>::type::getName());
 
+				typedef typename process_dimension_into_unit_container<ResDimension, UnitsForA, UnitsForB>::container container;
+
+				Debug::output("Unit container", all_units_as_string<container>::type::getName());
+
+				static_assert(mpl::equal<unit_container, container>::value, "units must match");
+
+				// expected result of multiplying the 2 quantities (a velocity and a mass)
+				// qq * oo = 54 X 10,000 = 54,000 mm * mg/msec
+				// 
 
 			}
 			void useLength()
