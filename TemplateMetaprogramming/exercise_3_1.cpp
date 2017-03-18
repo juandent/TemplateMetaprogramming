@@ -921,6 +921,7 @@ namespace Chapter3 {
 						};
 					}
 #define DEFINE_QUANTITY_MULTIPLICATION
+#define QUANTITY_DEBUG
 					////////////////////////////////////////////////////////////////////////////////////////////////////
 					/// <summary>	Multiplication operator. </summary>
 					///
@@ -963,10 +964,12 @@ namespace Chapter3 {
 					Quantity<T, ResDimension, ResUnits>
 					operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
 					{
-						auto name = Detail::all_units_as_string<ResUnits>::type::getName();
-						cout << name << endl;
-
+						auto units_as_ratios = Detail::all_units_as_string<ResUnits>::type::getName();
 						auto multiply_result = x.value() * y.value() * AccumRatio::num / AccumRatio::den;
+#ifdef QUANTITY_DEBUG
+						auto as_str = std::to_string(multiply_result) + " " + units_as_ratios;
+						Debug::output("Quantity * result", as_str);
+#endif
 						return Quantity<T, ResDimension, ResUnits>{ multiply_result};
 					}
 #endif
@@ -1098,8 +1101,6 @@ namespace Chapter3 {
 				// expected result of multiplying the 2 quantities (a velocity and a mass)
 				// qq * oo = 54 X 10,000 = 54,000 mm * mg/msec
 				auto multi_result = qq * oo;
-
-				//Debug::output("mult_result", multi_result);
 
 				cout << "stop" << endl;
 
