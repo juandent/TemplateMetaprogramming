@@ -965,9 +965,10 @@ namespace Chapter3 {
 					operator*(Quantity<T, Dimension_A, Units_A> x, Quantity<T, Dimension_B, Units_B> y)
 					{
 						auto units_as_ratios = Detail::all_units_as_string<ResUnits>::type::getName();
+						auto dimensions = Detail::dimension_as_string<ResDimension>::type::getName();
 						auto multiply_result = x.value() * y.value() * AccumRatio::num / AccumRatio::den;
 #ifdef QUANTITY_DEBUG
-						auto as_str = std::to_string(multiply_result) + " " + units_as_ratios;
+						auto as_str = std::to_string(multiply_result) + " " + units_as_ratios + " (" + dimensions + ")";
 						Debug::output("Quantity * result", as_str);
 #endif
 						return Quantity<T, ResDimension, ResUnits>{ multiply_result};
