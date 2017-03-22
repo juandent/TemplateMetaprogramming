@@ -11,7 +11,7 @@ namespace Debug
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	template<typename Ratio>
-	std::string formatRatio()
+	inline std::string formatRatio()
 	{
 		std::ostringstream os{};
 		os << Ratio::num << ":" << Ratio::den;
@@ -29,7 +29,7 @@ namespace Debug
 	/// <param name="sep">  	(Optional) The separator. </param>
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	void output(const std::string&  title, const std::string& str, const std::string& sep = " = ")
+	inline void output(const std::string&  title, const std::string& str, const std::string& sep = " = ")
 	{
 		std::cout << title << sep << str << std::endl;
 	}

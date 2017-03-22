@@ -146,19 +146,23 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssociativeSequences.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Exercise 2_3.hpp" />
     <ClInclude Include="Exercise 2_3_JLBorges.hpp" />
     <ClInclude Include="exercise_3_1.hpp" />
+    <ClInclude Include="SequenceClasses.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SequenceClasses.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

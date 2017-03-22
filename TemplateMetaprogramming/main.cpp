@@ -10,7 +10,8 @@
 #include "exercise_3_1.hpp"
 #include "Exercise 2_3.hpp"
 #include "Exercise 2_3_JLBorges.hpp"
-
+#include "AssociativeSequences.h"
+#include "SequenceClasses.h"
 
 
 constexpr size_t rankkk = boost::rank<int[8][2]>::value;
@@ -1150,6 +1151,10 @@ private:
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	TinySequenceImplementation::useTiny();
+
+	AssociativeSequences::Basics::usingOrder();
 
 	Chapter3::Questions::Q3_8::useLength();
 
