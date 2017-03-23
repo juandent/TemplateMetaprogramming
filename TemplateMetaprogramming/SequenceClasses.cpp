@@ -35,6 +35,8 @@
 #include <boost\mpl\vector\vector10.hpp>
 #include <boost\mpl\iterator_tags.hpp>
 #include <boost\mpl\distance.hpp>
+#include <boost\mpl\clear.hpp>
+#include <boost\mpl\push_back.hpp>
 
 #include "Debug.h"
 
@@ -383,6 +385,13 @@ struct tiny_size
 	: mpl::int_<3>
 {};
 
+//create an "overload" of tiny_size!! : NOT POSSIBLE
+
+template<typename Tiny>
+struct tiny_size_composite 
+	: tiny_size< typename Tiny::t0, typename Tiny::t1, typename Tiny::t2> 
+{};
+
 #else	// SPECIFYING type inside struct
 
 template<>
@@ -454,6 +463,70 @@ struct mpl::end_impl<tiny_tag>
 
 #endif
 
+
+template<>
+struct mpl::clear_impl<tiny_tag>
+{
+	template<typename Tiny>
+	struct apply : tiny<>
+	{};
+};
+
+template<>
+struct mpl::push_front_impl<tiny_tag>
+{
+	template<typename Tiny, typename T>
+	struct apply : tiny<T, typename Tiny::t0, typename Tiny::t1>
+	{
+		static_assert(tiny_size<typename Tiny::t0, typename Tiny::t1, typename Tiny::t2>::value < 3, "tiny must have space left for push_front");
+	};
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	A push back primitive. Constant time complexity! </summary>
+///
+/// <remarks>	Juan Dent, 23/3/2017. </remarks>
+///
+/// <typeparam name="Tiny">	Type of the tiny. </typeparam>
+/// <typeparam name="T">   	Generic type parameter. </typeparam>
+/// <typeparam name="N">   	Type of the n. </typeparam>
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template< typename Tiny, typename T, typename N>
+struct push_back_primitive
+{
+	static_assert( N::value < 3, "cannot push_back on a full tiny sequence");
+};
+
+
+template< typename Tiny, typename T>
+struct push_back_primitive<Tiny, T, mpl::int_<0>>
+{
+	typedef tiny<T>	type;
+};
+
+template< typename Tiny, typename T>
+struct push_back_primitive<Tiny, T, mpl::int_<1>>
+{
+	typedef tiny<typename Tiny::t0, T>	type;
+};
+
+template< typename Tiny, typename T>
+struct push_back_primitive<Tiny, T, mpl::int_<2>>
+{
+	typedef tiny<typename Tiny::t0, typename Tiny::t1, T>	type;
+};
+
+template<>
+struct mpl::push_back_impl<tiny_tag>
+{
+	template<typename Tiny, typename T>
+	struct apply 
+		: push_back_primitive<Tiny, T, typedef  typename tiny_size_composite<Tiny>::type>
+	{};
+};
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // namespace: TinySequenceImplementation
 //
@@ -469,6 +542,8 @@ deref
 at
 begin
 end
+push_back
+push_front
 */
 
 namespace TinySequenceImplementation
@@ -499,7 +574,33 @@ namespace TinySequenceImplementation
 
 		typedef typename mpl::distance<end, begin>::type dist;
 		dist d;
-		
+
+#ifdef WATCH_ERROR
+		typedef typename mpl::push_front<t1, double>::type new_t1;
+		new_t1 tt1;
+#endif
+
+		typedef tiny<double, unsigned char[]> t2;
+
+		cout << tiny_size_composite<t2>::value << endl;
+
+		typedef typename mpl::push_front<t2, long>::type new_t2;
+		new_t2 tt2;
+
+		typedef tiny<unsigned char[]> t3;
+
+		typedef typename mpl::push_back<t3, long long>::type new_t3;
+		new_t3 tt3;
+
+		typedef typename mpl::push_back<new_t3, unsigned long>::type new_t4;
+		new_t4 tt4;
+
+//#define WATCH_ERROR
+#ifdef WATCH_ERROR
+		typedef typename mpl::push_back<new_t4, unsigned long>::type new_t5;
+		new_t5 tt5;
+#endif
+
 		cout << f << endl;
 	}
 }
