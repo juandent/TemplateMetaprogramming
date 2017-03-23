@@ -121,6 +121,7 @@ namespace SequenceClasses {
 	struct tiny_iterator
 	{
 		typedef mpl::random_access_iterator_tag category;
+		typedef tiny_iterator	type;
 
 		// More OO design - yet it fails to make each metafunction serve one goal well and only one
 		// not good idea:
@@ -194,6 +195,8 @@ namespace SequenceClasses {
 	};
 #endif
 
+#ifdef DEFINE_INSIDE_NAMESPACES_EXPLICITLY
+
 namespace boost { namespace mpl {
 
 #ifndef NO_TAG
@@ -221,6 +224,63 @@ namespace boost { namespace mpl {
 	}
 }
 
+#else
+
+#define DEFINE_WITH_QUALIFIED_NAMESPACE_BUT_AT_GLOBAL_SCOPE
+#ifdef DEFINE_WITH_QUALIFIED_NAMESPACE_BUT_AT_GLOBAL_SCOPE
+
+#ifndef NO_TAG
+	template<>
+	struct mpl::at_impl<tiny_tag>
+	{
+		template<typename Tiny, typename N>
+		struct apply : tiny_at<Tiny, N::value>
+		{};
+	};
+
+#if 0
+	template<typename Sequence, typename N>
+	struct at
+		: at_impl<typename Sequence::tag>
+		::template apply<Sequence, N>
+	{};
+#endif
+#endif
+
+	// now deref iterator
+	template<typename Tiny, typename Pos>
+	struct mpl::deref< tiny_iterator<Tiny, Pos>> : at<Tiny, Pos>
+	{};
+#else		// DEFINE_WITH_QUALIFIED_NAMESPACE_BUT_AT_ANOTHER_NAMESPACE_SCOPE
+
+	namespace Foo
+	{
+#ifndef NO_TAG
+		template<>
+		struct mpl::at_impl<tiny_tag>				// specialization not allowed in this namespace Foo
+		{
+			template<typename Tiny, typename N>
+			struct apply : tiny_at<Tiny, N::value>
+			{};
+		};
+
+#if 0
+		template<typename Sequence, typename N>
+		struct at
+			: at_impl<typename Sequence::tag>
+			::template apply<Sequence, N>
+		{};
+#endif
+#endif
+
+		// now deref iterator
+		template<typename Tiny, typename Pos>
+		struct ::mpl::deref< tiny_iterator<Tiny, Pos>> : at<Tiny, Pos>
+		{};
+
+	}
+#endif
+#endif
 
 // advance
 
@@ -247,9 +307,152 @@ template<typename Tiny, typename Pos1, typename Pos2>
 struct mpl::distance < tiny_iterator<Tiny, Pos1>, tiny_iterator<Tiny, Pos2>> : mpl::minus<Pos2, Pos1>
 {};
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	A begin implementation - returns iterator to first element of sequence </summary>
+///
+/// <remarks>	Juan Dent, 23/3/2017. </remarks>
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template<>
+struct mpl::begin_impl<tiny_tag>
+{
+	template<typename Tiny>
+	struct apply
+	{
+		typedef tiny_iterator<Tiny, mpl::int_<0>> type;
+	};
+};
+
+#define RETURNING_ITERATORS
+#ifdef RETURNING_ITERATORS
+
+#ifdef USE_LOG_N_IMPLEMENTATION
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	An end implementation.
+/// 			Using eval_if
+/// 			Complexity is O(N), where N is number of types in sequence Tiny </summary>
+///
+/// <remarks>	Juan Dent, 23/3/2017. </remarks>
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template<>
+struct mpl::end_impl<tiny_tag>
+{
+	// count how many none elements
+	template<typename Tiny>
+	struct apply  :  
+		mpl::eval_if<is_same<none, typename Tiny::t0>, 
+		tiny_iterator<Tiny, mpl::int_<0>>,
+		mpl::eval_if<is_same<none, typename Tiny::t1>,
+		tiny_iterator<Tiny, mpl::int_<1>>,
+		mpl::eval_if<is_same<none, typename Tiny::t2>,
+		tiny_iterator<Tiny, mpl::int_<2>>,
+		tiny_iterator<Tiny, mpl::int_<3>>
+		>
+		>
+		>
+	{};
+};
+
+#else
+
+template<typename T0, typename T1, typename T2>
+struct tiny_size;
+
+#define INHERITING_TYPE_FROM_INT_
+#ifdef INHERITING_TYPE_FROM_INT_
+
+template<>
+struct tiny_size<none, none, none> 
+	: mpl::int_<0>
+{};
+
+template<typename T0>
+struct tiny_size<T0, none, none>
+	: mpl::int_<1>
+{};
+
+template <typename T0, typename T1>
+struct tiny_size<T0, T1, none>
+	: mpl::int_<2>
+{};
+
+template<typename T0, typename T1, typename T2>
+struct tiny_size 
+	: mpl::int_<3>
+{};
+
+#else	// SPECIFYING type inside struct
+
+template<>
+struct tiny_size<none, none, none>
+{
+	typedef mpl::int_<0> type;
+};
+
+template<typename T0>
+struct tiny_size<T0, none, none>
+{
+	typedef mpl::int_<1> type;
+};
+
+template <typename T0, typename T1>
+struct tiny_size<T0, T1, none>
+{
+	typedef mpl::int_<2> type;
+};
+
+template<typename T0, typename T1, typename T2>
+struct tiny_size
+{
+	typedef mpl::int_<3> type;
+};
+
+#endif
+
+template<>
+struct mpl::end_impl<tiny_tag>
+{
+	template<typename Tiny>
+	struct apply
+	{
+		typedef tiny_iterator < 
+			Tiny,
+			typename tiny_size<
+			typename Tiny::t0, 
+			typename Tiny::t1, 
+			typename Tiny::t2
+			>::type
+			>	type;
+	};
+};
+
+#endif
+
+#else		// ERROR!!
+
+template<>
+struct mpl::end_impl<tiny_tag>
+{
+	// count how many none elements
+	template<typename Tiny>
+	struct apply :
+		mpl::eval_if<is_same<none, typename Tiny::t0>,
+		mpl::int_<0>,
+		mpl::eval_if<is_same<none, typename Tiny::t1>,
+		mpl::int_<1>,
+		mpl::eval_if<is_same<none, typename Tiny::t2>,
+		mpl::int_<2>,
+		mpl::int_<3>
+		>
+		>
+		>
+	{};
+};
 
 
-
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // namespace: TinySequenceImplementation
@@ -264,6 +467,8 @@ next
 prior
 deref
 at
+begin
+end
 */
 
 namespace TinySequenceImplementation
@@ -272,7 +477,29 @@ namespace TinySequenceImplementation
 	{
 		typedef tiny<int, char*, long> t1;
 
-		typedef mpl::at<t1, int_<0>> first;
-		first f;
+		typedef mpl::at<t1, mpl::int_<0>>::type first;		// int
+		first f = 9;
+
+		typedef tiny_iterator<t1, mpl::int_<0>>	iter;
+		iter it;
+
+		typedef typename mpl::next<iter>::type ff;
+		ff anf;
+
+		typedef typename mpl::deref<iter>::type deref_t;
+		deref_t dt;
+		
+		typedef typename mpl::begin<t1>::type  begin;
+
+		typedef typename mpl::end<t1>::type  end;;
+
+		typedef typename mpl::advance<end, mpl::int_<-1>>::type last;
+		typedef typename mpl::deref<last>::type last_value_type;
+		last_value_type lvalue;
+
+		typedef typename mpl::distance<end, begin>::type dist;
+		dist d;
+		
+		cout << f << endl;
 	}
 }
