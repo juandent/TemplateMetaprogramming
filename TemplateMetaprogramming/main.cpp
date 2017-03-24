@@ -12,6 +12,7 @@
 #include "Exercise 2_3_JLBorges.hpp"
 #include "AssociativeSequences.h"
 #include "SequenceClasses.h"
+#include "Chapter6.h"
 
 
 constexpr size_t rankkk = boost::rank<int[8][2]>::value;
@@ -1151,6 +1152,8 @@ private:
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	Section6_3::useTransform();
 
 	TinySequenceImplementation::useTiny();
 

@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssociativeSequences.h" />
+    <ClInclude Include="Chapter6.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Exercise 2_3.hpp" />
     <ClInclude Include="Exercise 2_3_JLBorges.hpp" />
@@ -157,6 +158,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssociativeSequences.cpp" />
+    <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
