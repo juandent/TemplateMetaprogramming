@@ -42,6 +42,9 @@
 #include <boost\mpl\inserter.hpp>
 #include <boost\mpl\back.hpp>
 #include <boost\mpl\protect.hpp>
+#include <boost\mpl\quote.hpp>
+#include <boost\mpl\apply_wrap.hpp>
+#include <boost\mpl\list_c.hpp>
 
 #include "Debug.h"
 
@@ -177,23 +180,43 @@ namespace LambdaMetaFunction
 	struct int_plus : mpl::int_< (N1::value + N2::value)>
 	{};
 
-	typedef mpl::lambda < int_plus<_1, mpl::int_<42>>>::type f1;
+	typedef mpl::lambda < int_plus<_1, mpl::int_<42>>>::type f0;
 
 	typedef mpl::bind< mpl::quote2<int_plus>, _1, mpl::int_<30>> f2;
 
-	typedef f1::apply< mpl::int_<25>>::type r1;
+	typedef f0::apply< mpl::int_<25>>::type r1;
 	typedef f2::apply< mpl::int_<35>>::type r2;
 
 	static_assert( r1::value == 67, "");
 	static_assert(r2::value == 65, "");
 
-
-	// mpl::protect
-	
-	// protect is an identity wrapper for a Metafunction Class that prevents its argument from being recognized as a bind expression.
-
 	////////////////////////////////////////////////////////////////////////////////////////////////////
-	/// <summary>	A f is a metafunction class (has nested template class apply with nested type </summary>
+	/// <summary>	mpl::protect is an identity wrapper for a metafunction class that prevents 
+	/// 			its argument to be recognized as a bind expression </summary>
+	///
+	///				
+	/// 
+	/// <remarks>	For any metafunction class f: 
+	/// 			typedef mpl::protect<f> g;
+	/// 			If f is a bind expression equivalent to:
+	/// 			
+	/// 			struct g
+	/// 			{
+	/// 				template< typename U1, ... typename Un>
+	///					struct apply
+	///						: apply_wrapn<f, U1, ... Un>
+	///					{};
+	/// 			};
+	/// 			
+	/// 			otherwise equivalent to typedef f g;
+	/// 			
+	/// 			Juan Dent, 24/3/2017. </remarks>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	Example: A f is a metafunction class (has nested template class 
+	/// 			apply with nested type </summary>
 	///
 	/// <remarks>	Juan Dent, 23/3/2017. </remarks>
 	////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -207,16 +230,177 @@ namespace LambdaMetaFunction
 		};
 	};
 
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	Defines an alias representing the first b.
+	/// 			(bind expression) </summary>
+	///
+	/// <remarks>	Juan Dent, 24/3/2017. </remarks>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	typedef mpl::bind< mpl::quote3<mpl::if_>, _1, _2, mpl::bind<f, _1, _2>> b1;
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	Defines an alias representing the second b.
+	/// 			(bind expression) </summary>
+	///
+	/// <remarks>	Juan Dent, 24/3/2017. </remarks>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	typedef mpl::bind< mpl::quote3<mpl::if_>, _1, _2, mpl::protect< mpl::bind<f, _1, _2>>> b2;
 
-	typedef mpl::apply_wrap2<b1, mpl::false_, char>::type wr1;
+	typedef mpl::apply_wrap2<b1, mpl::false_, unsigned>::type wr1;
 
-	typedef mpl::apply_wrap2<b2, mpl::false_, char>::type wr2;
+	typedef mpl::apply_wrap2<b2, mpl::false_, long>::type wr2;
 
-	static_assert(is_same<wr1, char>::value, "");
+	static_assert(is_same<wr1, unsigned>::value, "");
 
 	static_assert(is_same < wr2, mpl::protect< mpl::bind<f, _1, _2>>>::value, "");
+
+	void useLambdaMetaFunction()
+	{
+		b1 bb;
+		b2 bb2;
+		wr1 w1;
+		wr2 w2;
+
+		cout << "end of function\n";
+	}
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	Higher order primitive that wraps an n-ary metafunction to a 
+	/// 			metafunction class: quoten. </summary>
+	///
+	/// <value>	mpl::quoten </value>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	template<typename T>
+	struct f1
+	{
+		typedef T type;
+	};
+
+	template<typename T1, typename T2, typename T3, typename T4, typename T5>
+	struct f5
+	{
+		// no type member
+	};
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	Generating metafunction classes with mpl::quote </summary>
+	///
+	/// <remarks>	Juan Dent, 24/3/2017. </remarks>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	typedef mpl::quote1<f1>::apply<int>::type t1;
+
+	typedef mpl::quote5<f5>::apply<char, short, int, long, long long>::type t5;
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// namespace: bind
+//
+// summary:	bind is a higher - order primitive for Metafunction Class composition and argument binding.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+namespace bind
+{
+	struct f1
+	{
+		template<typename U1> struct apply
+		{
+			typedef U1 type;
+		};
+	};
+
+	struct f5
+	{
+		template<typename U1, typename U2, typename U3, typename U4, typename U5>
+		struct apply
+		{
+			typedef U5 type;
+		};
+	};
+
+	typedef typename f1::template apply<char>::type f1_invoked_with_template;
+	typedef typename f1::apply<char>::type			f1_invoked;
+
+	static_assert(is_same<f1_invoked, f1_invoked_with_template>::value, "");
+
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	in this case, f or ak is a bind expression. </summary>
+	///
+	/// <remarks>	Juan Dent, 24/3/2017. </remarks>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	typedef mpl::apply_wrap1< mpl::bind1<f1, _1>, int>::type r11;
+	typedef mpl::apply_wrap5< mpl::bind1<f1, _5>, void, void, void, void, int>::type r12;
+
+	static_assert(is_same<r11, int>::value, "");
+	static_assert(is_same<r12, int>::value, "");
+
+	typedef mpl::apply_wrap5< mpl::bind5<f5, _1, _2, _3, _4, _5>, void, void, void, void, int>::type r51;
+	typedef mpl::apply_wrap5< mpl::bind5<f5, _5, _4, _3, _2, _1>, int, void, void, void, void>::type r52;
+
+	static_assert(is_same<r51, int>::value, "");
+	static_assert(is_same<r52, int>::value, "");
+
+}
+
+
+namespace reverse_fold
+{
+	typedef mpl::list_c<int, 5, -1, 0, -7, -2, 0, -5, 4>		numbers;
+	typedef mpl::list_c<int, -1, -7, -2, -5>					negatives;
+
+	typedef mpl::reverse_fold<
+		numbers,
+		mpl::list_c<int>,
+		mpl::if_< 
+		mpl::less< _2, mpl::int_<0>>, 
+		mpl::push_front<_1, _2>,
+		_1>
+	>::type result;
+
+	static_assert(mpl::equal<negatives, result>::value, "");
+
+	typedef mpl::reverse_fold <
+		numbers,
+		mpl::list_c<int>,
+		mpl::if_<
+		mpl::less< _2, mpl::int_<0>>,
+		mpl::push_front<_1, _2>,
+		_1>,
+		mpl::push_front<_1,_2>
+	>::type result_both;
+
+	typedef mpl::vector_c<int, 1, 2, 3, 4, 5> integers;
+
+	typedef mpl::list_c<int, 3, 5, 7>			odds;
+
+	typedef mpl::reverse_fold<
+		integers,
+		mpl::fold<odds, mpl::vector<>, mpl::push_back<_1,_2>>::type,
+		mpl::push_back<_1,_2>
+	>::type t;
+
+#if 1	// NOT OK
+	typedef mpl::reverse_fold< 
+		integers, 
+		mpl::vector<>,
+		mpl::push_front<_1, _2>,
+		mpl::push_front<odds,_2>	
+	>::type t_equivalent;
+#endif
+
+	void useReverseFold()
+	{
+		result_both res;
+		t at;
+		t_equivalent otherT;
+
+		cout << "end\n";
+	}
+	// static_assert(mpl::equal<negatives, result>::value, "");
 
 }

@@ -1153,6 +1153,10 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
 
+	reverse_fold::useReverseFold();
+
+	LambdaMetaFunction::useLambdaMetaFunction();
+
 	Section6_3::useTransform();
 
 	TinySequenceImplementation::useTiny();
