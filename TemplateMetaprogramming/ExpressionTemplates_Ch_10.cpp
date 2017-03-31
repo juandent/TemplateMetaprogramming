@@ -86,8 +86,11 @@ operator-(L const& l, R const& r)
 }
 
 
-class Array : public std::vector<float>
+class Array : std::vector<float>
 {
+	template<typename L, typename OpTag, typename R>
+	friend struct Expression;
+
 public:
 	using std::vector<float>::vector;
 
@@ -105,9 +108,10 @@ public:
 void useExpressionTemplate()
 {
 	Array a{ 1,3,6,9 };
-	Array b{ 2,4,12,18 };
-	Array c{ 14,88,4,90 };
+	Array b{ 2,4,12,11 };
+	Array c{ 4,8,4,9 };
 	auto x = (a + b)[1];
 	auto y = (a + b + c)[1];
-
+	Array z(4);
+	z = a + b + c;
 }
