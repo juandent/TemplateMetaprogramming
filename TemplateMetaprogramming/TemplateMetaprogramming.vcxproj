@@ -152,6 +152,7 @@
     <ClInclude Include="Exercise 2_3.hpp" />
     <ClInclude Include="Exercise 2_3_JLBorges.hpp" />
     <ClInclude Include="exercise_3_1.hpp" />
+    <ClInclude Include="ExpressionTemplates_Ch_10.h" />
     <ClInclude Include="SequenceClasses.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -163,6 +164,7 @@
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
+    <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SequenceClasses.cpp" />
     <ClCompile Include="stdafx.cpp">
