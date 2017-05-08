@@ -558,21 +558,21 @@ namespace TinySequenceImplementation
 		typedef tiny_iterator<t1, mpl::int_<0>>	iter;
 		iter it;
 
-		typedef typename mpl::next<iter>::type ff;
+		typedef mpl::next<iter>::type ff;
 		ff anf;
 
-		typedef typename mpl::deref<iter>::type deref_t;
+		typedef mpl::deref<iter>::type deref_t;
 		deref_t dt;
 		
-		typedef typename mpl::begin<t1>::type  begin;
+		typedef  mpl::begin<t1>::type  begin;
 
-		typedef typename mpl::end<t1>::type  end;;
+		typedef  mpl::end<t1>::type  end;;
 
-		typedef typename mpl::advance<end, mpl::int_<-1>>::type last;
-		typedef typename mpl::deref<last>::type last_value_type;
+		typedef  mpl::advance<end, mpl::int_<-1>>::type last;
+		typedef  mpl::deref<last>::type last_value_type;
 		last_value_type lvalue;
 
-		typedef typename mpl::distance<end, begin>::type dist;
+		typedef  mpl::distance<end, begin>::type dist;
 		dist d;
 
 #ifdef WATCH_ERROR
@@ -584,15 +584,15 @@ namespace TinySequenceImplementation
 
 		cout << tiny_size_composite<t2>::value << endl;
 
-		typedef typename mpl::push_front<t2, long>::type new_t2;
+		typedef  mpl::push_front<t2, long>::type new_t2;
 		new_t2 tt2;
 
 		typedef tiny<unsigned char[]> t3;
 
-		typedef typename mpl::push_back<t3, long long>::type new_t3;
+		typedef  mpl::push_back<t3, long long>::type new_t3;
 		new_t3 tt3;
 
-		typedef typename mpl::push_back<new_t3, unsigned long>::type new_t4;
+		typedef  mpl::push_back<new_t3, unsigned long>::type new_t4;
 		new_t4 tt4;
 
 //#define WATCH_ERROR

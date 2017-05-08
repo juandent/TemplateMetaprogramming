@@ -104,9 +104,9 @@ namespace Section6_3
 		front_col fc;
 
 
-		typedef typename mpl::begin<S>::type beg_iter;
-		typedef typename mpl::next<beg_iter>::type	second_iter;
-		typedef typename mpl::deref<second_iter>::type second_type;
+		typedef  mpl::begin<S>::type beg_iter;
+		typedef  mpl::next<beg_iter>::type	second_iter;
+		typedef  mpl::deref<second_iter>::type second_type;
 
 		second_type sec;
 
@@ -322,8 +322,8 @@ namespace bind
 		};
 	};
 
-	typedef typename f1::template apply<char>::type f1_invoked_with_template;
-	typedef typename f1::apply<char>::type			f1_invoked;
+	typedef  f1::template apply<char>::type f1_invoked_with_template;
+	typedef  f1::apply<char>::type			f1_invoked;
 
 	static_assert(is_same<f1_invoked, f1_invoked_with_template>::value, "");
 

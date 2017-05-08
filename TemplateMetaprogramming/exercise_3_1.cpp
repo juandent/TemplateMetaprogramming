@@ -212,7 +212,7 @@ namespace Chapter3 {
 
 			void useTransform()
 			{
-				typedef typename mpl::transform < mpl::vector_c<int, 1, 2, 3>, mpl::times<_1, mpl::int_<2>>>::type result;
+				typedef  mpl::transform < mpl::vector_c<int, 1, 2, 3>, mpl::times<_1, mpl::int_<2>>>::type result;
 				result t;
 			}
 		}
@@ -1021,11 +1021,11 @@ namespace Chapter3 {
 				typedef process_dimension_unit<velocity, UnitsForA, UnitsForB, 2>::type f2;
 				Debug::output("factor at pos 2", Debug::formatRatio<f2>());		// 1:10,000
 
-				typedef typename mpl::transform<velocity, velocity, mpl::plus<_1, _2>>::type  ResDimension;
+				typedef  mpl::transform<velocity, velocity, mpl::plus<_1, _2>>::type  ResDimension;
 				Debug::output("velocity^2 dimension", dimension_as_string<ResDimension>::type::getName());
 				
-				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::container	unit_container;
-				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio		accum_ratio;
+				typedef  process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::container	unit_container;
+				typedef  process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio		accum_ratio;
 
 				Debug::output("Accum ratio", Debug::formatRatio<accum_ratio>());
 
@@ -1070,7 +1070,7 @@ namespace Chapter3 {
 				Quantity<long double, velocity, UnitsForA>		qq{ 4.5 };
 				Quantity<long double, mass, UnitsForB>			oo{ 12.0 };
 
-				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
+				typedef  mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
 				Debug::output("velocity * mass dimension", dimension_as_string<ResDimension>::type::getName());
 
 				// calculate factor at pos 0
@@ -1086,14 +1086,14 @@ namespace Chapter3 {
 				Debug::output("factor at pos 2", Debug::formatRatio<f2>());		// 10,000
 
 
-				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::container	unit_container;
-				typedef typename process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio		accum_ratio;
+				typedef  process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::container	unit_container;
+				typedef  process_dimension_into_ratio<long double, ResDimension, UnitsForA, UnitsForB>::ratio		accum_ratio;
 
 				Debug::output("Accum ratio", Debug::formatRatio<accum_ratio>());
 
 				Debug::output("Resultant units", all_units_as_string<unit_container>::type::getName());
 
-				typedef typename process_dimension_into_unit_container<ResDimension, UnitsForA, UnitsForB>::container container;
+				typedef  process_dimension_into_unit_container<ResDimension, UnitsForA, UnitsForB>::container container;
 
 				Debug::output("Unit container", all_units_as_string<container>::type::getName());
 
@@ -1148,7 +1148,7 @@ namespace Chapter3 {
 				/// 			</remarks>
 				////////////////////////////////////////////////////////////////////////////////////////////////////
 
-				typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type velocity_times_mass;
+				typedef  mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type velocity_times_mass;
 
 				//auto name = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_elements_as_string<velocity_times_mass, 2>::element_value; //   ::type::getName();
 
@@ -1158,7 +1158,7 @@ namespace Chapter3 {
 					auto vel_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<velocity>::type::getName();
 					auto mass_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<mass>::type::getName();
 
-					typedef typename mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
+					typedef  mpl::transform<velocity, mass, mpl::plus<_1, _2>>::type  ResDimension;
 					auto res_dimension_as_str = SeparateSourceAndTargetUnits::NoIntegrals::Detail::dimension_as_string<ResDimension>::type::getName();
 
 					cout << "(" << vel_dimension_as_str << ") + (" << mass_dimension_as_str << ") = (" << res_dimension_as_str << ")" << endl;
@@ -1191,7 +1191,7 @@ namespace Chapter3 {
 					auto all_units_for_B = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<UnitsForB>::type::getName();
 
 
-					typedef typename SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_unit_container<ResDimension, UnitsForA, UnitsForB>::container a_container_of_units;
+					typedef  SeparateSourceAndTargetUnits::NoIntegrals::process_dimension_into_unit_container<ResDimension, UnitsForA, UnitsForB>::container a_container_of_units;
 					a_container_of_units ac;
 
 					auto all_units_in_container = SeparateSourceAndTargetUnits::NoIntegrals::Detail::all_units_as_string<a_container_of_units>::type::getName();
@@ -1220,7 +1220,7 @@ namespace Chapter3 {
 
 #endif
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension_unit<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
+				typedef  SeparateSourceAndTargetUnits::process_dimension_unit<velocity, TargetUnits, SourceUnits, 1>::type dim_1;
 																				   
 																				   // calculate each element of velocity using the new units:
 				cout << 1 << ": " << dim_1::num << " " << dim_1::den << endl;		// cm --> mm (x 10)
@@ -1228,40 +1228,40 @@ namespace Chapter3 {
 				// dim 1: cm -> mm = x 10
 				// dim 2: sec -> msec = % 1000
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension_unit<velocity, TargetUnits, SourceUnits, 2>::type dim_2;
+				typedef  SeparateSourceAndTargetUnits::process_dimension_unit<velocity, TargetUnits, SourceUnits, 2>::type dim_2;
 
 				cout << 2 << ": " << dim_2::num << " " << dim_2::den << endl;		// sec --> msec = % 1000
 
 
-				typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, mpl::size<velocity>::value - 1>::container a_container;
+				typedef  SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, mpl::size<velocity>::value - 1>::container a_container;
 
 
 				//typedef typename SeparateSourceAndTargetUnits::process_dimension<velocity, TargetUnits, SourceUnits, 0, 6>::container a_container;
 				a_container a_c;
 
-				typedef typename mpl::at_c<a_container, 0>::type ratio_0;
+				typedef  mpl::at_c<a_container, 0>::type ratio_0;
 				cout << ratio_0::num << ":" << ratio_0::den << endl;
 
-				typedef typename mpl::at_c<a_container, 1>::type ratio_1;
+				typedef  mpl::at_c<a_container, 1>::type ratio_1;
 				cout  << ratio_1::num << ":" << ratio_1::den << endl;
 
-				typedef typename mpl::at_c<a_container, 2>::type ratio_2;
+				typedef  mpl::at_c<a_container, 2>::type ratio_2;
 				cout << ratio_2::num << ":" << ratio_2::den << endl;
 
-				typedef typename mpl::at_c<a_container, 3>::type ratio_3;
+				typedef  mpl::at_c<a_container, 3>::type ratio_3;
 				cout << ratio_3::num << ":" << ratio_3::den << endl;
 
-				typedef typename mpl::at_c<a_container, 4>::type ratio_4;
+				typedef  mpl::at_c<a_container, 4>::type ratio_4;
 				cout << ratio_4::num << ":" << ratio_4::den << endl;
 
-				typedef typename mpl::at_c<a_container, 5>::type ratio_5;
+				typedef  mpl::at_c<a_container, 5>::type ratio_5;
 				cout << ratio_5::num << ":" << ratio_5::den << endl;
 
-				typedef typename mpl::at_c<a_container, 6>::type ratio_6;
+				typedef  mpl::at_c<a_container, 6>::type ratio_6;
 				cout << ratio_6::num << ":" << ratio_6::den << endl;
 
 
-				typedef typename SeparateSourceAndTargetUnits::ratio_sequence_multiply<a_container, 6>::accumulative_ratio accumulative_ratio;
+				typedef  SeparateSourceAndTargetUnits::ratio_sequence_multiply<a_container, 6>::accumulative_ratio accumulative_ratio;
 
 				cout << "accum ratio : " << accumulative_ratio::num << " : " << accumulative_ratio::den << endl;		// sec --> msec = % 1000
 
@@ -1299,18 +1299,18 @@ namespace Chapter3 {
 				auto v4 = vel_extractor::get<2>();
 #endif
 
-				typedef typename mpl::at_c<vec_conv_factors, 1>::type f1 ;
-				typedef typename mpl::at_c<vec_conv_factors, 2>::type f2;
-				typedef typename mpl::at_c<vec_conv_factors, 3>::type f3;
+				typedef  mpl::at_c<vec_conv_factors, 1>::type f1 ;
+				typedef  mpl::at_c<vec_conv_factors, 2>::type f2;
+				typedef  mpl::at_c<vec_conv_factors, 3>::type f3;
 
 				cout << mpl::size<velocity>::type::value << endl;
 
 				// calculate each element of velocity using the new units:
-				typedef typename process_dimension_element<velocity, vec_conv_factors,0>::type dim0;
+				typedef  process_dimension_element<velocity, vec_conv_factors,0>::type dim0;
 				cout << 0 << ": " << dim0::num << " " << dim0::den  << endl;
 
 				//  this creates a container whose elements are std::ratio and their values should be multipled to the long double value of the quantity
-				typedef typename process_dimension<velocity, vec_conv_factors, 0, mpl::size<velocity>::value-1>::container container;
+				typedef  process_dimension<velocity, vec_conv_factors, 0, mpl::size<velocity>::value-1>::container container;
 				container cont;
 
 				static_assert(std::is_same<  mpl::at_c<container, 1>::type, mm_to_m>::value, "");
@@ -1323,7 +1323,7 @@ namespace Chapter3 {
 				// we have a quantity, and we want to change the units of it (but not its dimension!)
 				//quantity<long double, velocity
 
-				typedef typename mpl::lambda < tester_metafunction<_1, _2>>::type tester_metafunction_class;
+				typedef  mpl::lambda < tester_metafunction<_1, _2>>::type tester_metafunction_class;
 
 #if 0
 				typedef mpl::transform<
@@ -1453,8 +1453,8 @@ namespace Chapter3 {
 				struct apply : std::add_pointer<T>
 				{};
 			};
-			typedef typename twice< add_pointer_f, double>::type twice_pointer_double;
-			typedef typename thrice< add_pointer_f, double>::type thrice_pointer_double;
+			typedef  twice< add_pointer_f, double>::type twice_pointer_double;
+			typedef  thrice< add_pointer_f, double>::type thrice_pointer_double;
 
 			namespace OurLambda
 			{
@@ -1616,22 +1616,22 @@ namespace Chapter3 {
 				{
 					// work on add_pointer<_1>
 
-					typedef typename apply<add_pointer_f, long>::type long_one_pointer;
+					typedef  apply<add_pointer_f, long>::type long_one_pointer;
 					long_one_pointer p = nullptr;
 
-					typedef typename apply<std::add_pointer<_1>, long>::type another_long_one_pointer;
+					typedef  apply<std::add_pointer<_1>, long>::type another_long_one_pointer;
 					another_long_one_pointer pp = nullptr;
 
 					auto val = apply<plus_f, mpl::int_<3>, mpl::int_<9>>::type::value;
 
-					typedef typename apply<common_f, float, long>::type common;
+					typedef  apply<common_f, float, long>::type common;
 					common cc;
 
 					// this did not work because std::plus is a functor not a metafunction!!
 					// 
 					//typedef typename apply< mpl::plus<_1,_2>, mpl::int_<3>, mpl::int_<7>>::type twelve;
 
-					typedef typename apply<common_type_metafunction<_1, _2>, float, long>::type common_type;
+					typedef  apply<common_type_metafunction<_1, _2>, float, long>::type common_type;
 					common_type ccc;
 					//common_type_metafunction<_1, _2>::type ss;
 					//Debug::TypeDecl<decltype(ss)> ss_name;
@@ -1649,7 +1649,7 @@ namespace Chapter3 {
 					typename apply1< typename mpl::lambda<F>::type, Arg>::type>
 				{};
 
-				typedef typename twice< std::add_pointer<_1>, int>::type twice_pointer_int;
+				typedef  twice< std::add_pointer<_1>, int>::type twice_pointer_int;
 
 				// works with either metafn classes or placeholder expressions (i.e. any lambda expression)
 				template <typename F, typename Arg>
@@ -1715,9 +1715,9 @@ namespace Solution_to_Exercise_3_1 //
         typedef mpl::vector_c<int,1,2,3> source_seq;
         typedef mpl::vector_c<int,1,1,1> next_seq;
         
-        typedef typename mpl::transform<source_seq, next_seq, mpl::plus<_1,_2>>::type seq_for_exercise_3_1_sol_1;
+        typedef  mpl::transform<source_seq, next_seq, mpl::plus<_1,_2>>::type seq_for_exercise_3_1_sol_1;
         
-        typedef typename mpl::transform<source_seq, source_seq, mpl::plus<_1,mpl::int_<1>>>::type seq_for_exercise_3_1_sol_2;
+        typedef  mpl::transform<source_seq, source_seq, mpl::plus<_1,mpl::int_<1>>>::type seq_for_exercise_3_1_sol_2;
         
         std::cout << std::is_same<seq_for_exercise_3_1_sol_1, seq_for_exercise_3_1_sol_2>::value << std::endl;
         
@@ -1746,9 +1746,9 @@ namespace Solution_to_Exercise_3_2
         namespace mpl = boost::mpl;
         typedef mpl::vector_c<int,1,2,3> source_seq;
         
-        typedef typename mpl::transform<source_seq, source_seq, mpl::times<_1,_2>>::type seq_for_exercise_3_2_sol_1;
+        typedef  mpl::transform<source_seq, source_seq, mpl::times<_1,_2>>::type seq_for_exercise_3_2_sol_1;
         
-        typedef typename mpl::transform<source_seq, source_seq, mpl::times<_1,_1>>::type seq_for_exercise_3_2_sol_2;
+        typedef  mpl::transform<source_seq, source_seq, mpl::times<_1,_1>>::type seq_for_exercise_3_2_sol_2;
         
         std::cout << std::is_same<seq_for_exercise_3_2_sol_1, seq_for_exercise_3_2_sol_2>::value << std::endl;
         
@@ -1883,7 +1883,7 @@ namespace Solution_to_Exercise_3_6
 /* &solve& */
     void solve()
     {
-        typedef typename mpl::apply<_1, typename mpl::apply<_1,_2>::type>::type twice_lambda_expression;
+        typedef  mpl::apply<_1, typename mpl::apply<_1,_2>::type>::type twice_lambda_expression;
         
 //        typedef twice_lambda_expression::apply<boost::add_pointer<_1>, int>::type the_lambda;
         

@@ -13,7 +13,7 @@
 #include <iostream>
 #include <cassert>
 #include <boost/type_traits.hpp>
-#include <loki/Typelist.h>
+#include <Typelist.h>
 #include <boost/mpl/vector_c.hpp>
 #include <boost/mpl/transform.hpp>
 #include <boost/mpl/placeholders.hpp>

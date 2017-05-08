@@ -182,8 +182,8 @@ namespace JD
         
         typedef ApplyTypeFuncs<C, X, Y> BaseType2;
         
-        typedef typename std::remove_pointer<C>::type c_pointer;
-        typedef typename std::remove_const<c_pointer>::type c_pointer_const;
+        typedef std::remove_pointer<C>::type c_pointer;
+        typedef std::remove_const<c_pointer>::type c_pointer_const;
         
         cout << std::is_same<C, c_pointer>::value << endl;
         cout << std::is_same<C, c_pointer_const>::value << endl;
@@ -196,12 +196,12 @@ namespace JD
         cout << typeid(c_pointer).name() << endl;
         cout << typeid(c_pointer_const).name() << endl;
         
-        typedef typename BaseType2::Remove<std::remove_const, std::remove_pointer>::c_type C_Type;
-        typedef typename BaseType2::Add<std::add_pointer, std::add_const>::y_type Y_Type;
+        typedef  BaseType2::Remove<std::remove_const, std::remove_pointer>::c_type C_Type;
+        typedef  BaseType2::Add<std::add_pointer, std::add_const>::y_type Y_Type;
         
         cout << std::is_same<C_Type, X>::value << endl;
         
-        typedef typename BaseType2::Result<C_Type, Y_Type>::type ReturnType;
+        typedef  BaseType2::Result<C_Type, Y_Type>::type ReturnType;
         
         std::cout << typeid(ReturnType).name() << std::endl;
 
@@ -224,8 +224,8 @@ namespace  TypeFuncList {
 /* &useTypeFuncList& */
     void useTypeFuncList()
     {
-        typedef typename TypeFuncList<boost::remove_const, boost::remove_pointer, boost::remove_bounds>::type Removers;
-        typedef typename TypeFuncList<boost::add_pointer, boost::remove_pointer, boost::remove_bounds>::type Adders;
+        typedef  TypeFuncList<boost::remove_const, boost::remove_pointer, boost::remove_bounds>::type Removers;
+        typedef  TypeFuncList<boost::add_pointer, boost::remove_pointer, boost::remove_bounds>::type Adders;
     }
     
     template<typename ...Ts>
@@ -237,7 +237,7 @@ namespace  TypeFuncList {
 /* &useType& */
     void useType()
     {
-        typedef typename Type<int, bool, char>::type Integrals;
+        typedef  Type<int, bool, char>::type Integrals;
         Integrals integrals;
         
         
@@ -796,7 +796,7 @@ namespace JD
             
             //replace_type<bool*&, bool, int>::type z = 5;
             
-            typedef typename FirstNotNil<Nil, char, int, bool>::type FNN;
+            typedef  FirstNotNil<Nil, char, int, bool>::type FNN;
             
             std::cout << typeid(FNN).name() <<  " " <<  typeid(Nil).name()  << std::endl;
             
@@ -1085,19 +1085,21 @@ private:
         namespace Iterator_invalidation
         {
             template<typename T>
-            struct list_node;
+            class list_node;
             
             template <typename T>
-            class half_list_node{
+            class half_list_node {
             public:
                 half_list_node( list_node<T>* p) : next{p} {}
                 list_node<T> *next;
             };
             
             template <typename T>
-            class list_node : public half_list_node<T>{
+            class list_node : public half_list_node<T> {
             public:
-                list_node( const T& d, list_node<T>* p) : half_list_node<T>{p}, data{d} {}
+                list_node( const T& d, list_node<T>* p) 
+					: half_list_node<T>( p ), data( d )
+				{}
                 T data;
             };
             
@@ -1209,7 +1211,7 @@ int main(int argc, const char * argv[]) {
     
     TypeFuncList::useType();
     
-    typedef typename FirstNotNil<Nil, char, int, bool>::type FNN;
+    typedef  FirstNotNil<Nil, char, int, bool>::type FNN;
     
     std::cout << typeid(FNN).name() <<  " " <<  typeid(Nil).name()  << std::endl;
     
@@ -1251,28 +1253,28 @@ int main(int argc, const char * argv[]) {
     
     //c_not_nil c {};
     
-    typedef typename replace_type<C, bool, int>::type0 Type0;
+    typedef  replace_type<C, bool, int>::type0 Type0;
     
     std::cout << "Type0 is: " << boost::is_same<Nil, Type0>::value << "\n";
     
-    typedef typename replace_type<C, bool, int>::not_nil NotNil;
+    typedef  replace_type<C, bool, int>::not_nil NotNil;
     
     //NotNil nn{};
     
     std::cout << "NotNill is: " << boost::is_same<Nil, NotNil>::value << typeid(NotNil).name()   << "\n";
     
-    typedef typename boost::remove_const<C>::type C_minus_const;
-    typedef typename boost::remove_pointer<C_minus_const>::type C_minus_ptr_minus_const;
+    typedef  boost::remove_const<C>::type C_minus_const;
+    typedef  boost::remove_pointer<C_minus_const>::type C_minus_ptr_minus_const;
     
     std::cout << boost::is_same<C_minus_ptr_minus_const, bool>::value << std::endl;
     
-    typedef typename CombineTypeFuncs<bool const*, boost::remove_const, boost::remove_pointer>::type Plain;
+    typedef  CombineTypeFuncs<bool const*, boost::remove_const, boost::remove_pointer>::type Plain;
     
     Plain p {};
     
     std::cout << p <<  " Plain is bool: " << boost::is_same<Plain, bool>::value << std::endl;
     
-    typedef typename CombineTypeFuncs<Plain, boost::add_pointer, boost::add_const>::type PlainRestored;
+    typedef  CombineTypeFuncs<Plain, boost::add_pointer, boost::add_const>::type PlainRestored;
     
     PlainRestored pr{};
     
@@ -1282,7 +1284,7 @@ int main(int argc, const char * argv[]) {
     
     //bool same = replace_type<void*, void, int>::stripped_are_same;
     
-    typedef typename replace_type<void*, void, int>::type t;
+    typedef  replace_type<void*, void, int>::type t;
     
     t aT  = nullptr;
     
