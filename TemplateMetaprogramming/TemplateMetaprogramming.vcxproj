@@ -164,9 +164,13 @@
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
+    <ClCompile Include="Exercises_4.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RatioSequenceBug.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="SequenceClasses.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

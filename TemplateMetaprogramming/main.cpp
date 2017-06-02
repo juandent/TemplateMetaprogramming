@@ -1098,7 +1098,7 @@ private:
             class list_node : public half_list_node<T> {
             public:
                 list_node( const T& d, list_node<T>* p) 
-					: half_list_node<T>( p ), data( d )
+					: half_list_node<T>{ p }, data{ d }
 				{}
                 T data;
             };
@@ -1149,12 +1149,14 @@ private:
         }
         
         
-        
+void testAssignmentOfIntToPointer();
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	testAssignmentOfIntToPointer();
 
 	useExpressionTemplate();
 

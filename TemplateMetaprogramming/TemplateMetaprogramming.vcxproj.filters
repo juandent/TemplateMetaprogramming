@@ -80,5 +80,11 @@
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RatioSequenceBug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises_4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
