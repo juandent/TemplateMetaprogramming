@@ -48,6 +48,9 @@
     <ClInclude Include="ExpressionTemplates_Ch_10.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Exercises_4.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

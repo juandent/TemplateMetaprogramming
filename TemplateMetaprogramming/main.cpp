@@ -14,6 +14,7 @@
 #include "SequenceClasses.h"
 #include "Chapter6.h"
 #include "ExpressionTemplates_Ch_10.h"
+#include "Exercises_4.hpp"
 
 
 constexpr size_t rankkk = boost::rank<int[8][2]>::value;
@@ -1155,6 +1156,8 @@ void testAssignmentOfIntToPointer();
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	Exercise_4_3::Section_1::Original::call_next_if();
 
 	testAssignmentOfIntToPointer();
 
