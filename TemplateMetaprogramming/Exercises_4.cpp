@@ -19,19 +19,49 @@
 #include <boost\mpl/is_sequence.hpp>
 #include <boost\mpl/vector.hpp>
 #include <boost\type_traits\is_same.hpp>
+#include <boost\mpl/or.hpp>
 
 
 namespace mpl = boost::mpl;
 
 using namespace boost::mpl::placeholders;
 
-namespace Exercise_4_1 {
+namespace Exercise_4_0 {
 
 	template<typename T>
 	struct FailsIfInstantiated
 	{
 		static_assert(boost::is_integral<T>::value, "T must be integral");
+		constexpr static const bool value = boost::is_integral<T>::value;
+		typedef FailsIfInstantiated type;
 	};
+
+	// type must have nested:
+	// static const bool value
+	// typedef XX type;
+
+	namespace JD {
+
+		struct accesses_static_var
+		{
+			static const int value = 99;
+			constexpr int getValue()  { return value; }
+		};
+		template< bool C_ > struct bool_
+		{
+			static const bool value = C_;
+			typedef mpl::integral_c_tag tag;
+			typedef bool_ type;
+			typedef bool value_type;
+			constexpr operator bool() const { return this->value; }
+		};
+
+		void useJDbool_()
+		{
+			constexpr bool val = bool_<false>{};
+			constexpr int v = accesses_static_var().getValue();
+		}
+	}
 
 	void doShortCircuit()
 	{
@@ -40,15 +70,56 @@ namespace Exercise_4_1 {
 #define MAKE_BOTH_ARGS_INSTANTIATE
 
 		typedef mpl::or_ < mpl::true_, FailsIfInstantiated<double> >::type res;
+		constexpr bool same = boost::is_same<res, mpl::bool_<true>>::value;
 
 #ifdef MAKE_BOTH_ARGS_INSTANTIATE
-		typedef mpl::or_ < mpl::false_, FailsIfInstantiated<double> >::type res2;
+		typedef mpl::or_ < mpl::false_, FailsIfInstantiated<int> >::type res2;
 #endif
 
 		typedef mpl::and_< mpl::false_, FailsIfInstantiated<double>>::type res3;
 
 #ifdef MAKE_BOTH_ARGS_INSTANTIATE
-		typedef mpl::and_< mpl::true_, FailsIfInstantiated<double>>::type res4;
+		//typedef mpl::and_< mpl::true_, FailsIfInstantiated<double>>::type res4;
+#endif
+	}
+}
+
+namespace Exercise_4_1 {
+
+	template<typename N1, typename N2>
+	struct logical_or  : mpl::bool_<
+		mpl::eval_if<
+			N1,
+			mpl::true_,
+		mpl::eval_if<
+			N2,
+			mpl::true_,
+			mpl::false_>
+		>::type::value
+	>
+	{};
+
+	void doShortCircuit()
+	{
+		using Exercise_4_0::FailsIfInstantiated;
+
+		// how do I know an expression is not invoked? Use the above structure!!
+
+#define MAKE_BOTH_ARGS_INSTANTIATE
+
+		typedef logical_or < mpl::true_, FailsIfInstantiated<double> >::type res;
+		constexpr bool same = boost::is_same<res, mpl::bool_<true>>::value;
+
+#ifdef MAKE_BOTH_ARGS_INSTANTIATE
+		typedef logical_or < mpl::false_, FailsIfInstantiated<int> >::type res2;
+		//typedef logical_or < mpl::false_, FailsIfInstantiated<double> >::type res_2;
+
+#endif
+
+//		typedef mpl::and_< mpl::false_, FailsIfInstantiated<double>>::type res3;
+
+#ifdef MAKE_BOTH_ARGS_INSTANTIATE
+		//typedef mpl::and_< mpl::true_, FailsIfInstantiated<double>>::type res4;
 #endif
 	}
 }
