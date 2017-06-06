@@ -99,6 +99,116 @@ namespace Exercise_4_1 {
 	>
 	{};
 
+
+	template<typename N1, typename N2>
+	struct logical_and : mpl::bool_<
+		mpl::eval_if<
+		mpl::not_<N1>,
+		mpl::false_,
+		mpl::eval_if<
+		mpl::not_<N2>,
+		mpl::false_,
+		mpl::true_>
+		>::type::value
+	>
+	{};
+
+	namespace Using_if_
+	{
+		template<typename N1, typename N2>
+		struct logical_or : mpl::bool_<
+			mpl::if_<
+			N1,
+			mpl::true_,
+			mpl::if_<
+			N2,
+			mpl::true_,
+			mpl::false_>
+			>::type::type::value
+		>
+		{};
+
+	}
+	void doShortCircuit()
+	{
+		using Exercise_4_0::FailsIfInstantiated;
+
+		// how do I know an expression is not invoked? Use the above structure!!
+
+#define MAKE_BOTH_ARGS_INSTANTIATE
+
+		typedef logical_or < mpl::true_, FailsIfInstantiated<double> >::type res;
+		constexpr bool same = boost::is_same<res, mpl::bool_<true>>::value;
+
+#ifdef MAKE_BOTH_ARGS_INSTANTIATE
+		typedef logical_or < mpl::false_, FailsIfInstantiated<int> >::type res2;
+		//typedef logical_or < mpl::false_, FailsIfInstantiated<double> >::type res_2;
+
+#endif
+		Using_if_::logical_or<mpl::false_, FailsIfInstantiated<int>>::type res_22;
+		Using_if_::logical_or<mpl::true_, FailsIfInstantiated<double>>::type res_23;
+
+
+		typedef logical_and< mpl::false_, FailsIfInstantiated<double>>::type res3;
+
+#ifdef MAKE_BOTH_ARGS_INSTANTIATE
+		//typedef logical_and< mpl::true_, FailsIfInstantiated<double>>::type res4;
+#endif
+	}
+}
+
+namespace Exercise_4_2 {
+
+	template<typename N1, typename N2, typename N3=mpl::false_, typename N4=mpl::false_, typename N5=mpl::false_>
+	struct logical_or : mpl::bool_<
+		mpl::eval_if<
+		N1,
+		mpl::true_,
+		mpl::eval_if<
+		N2,
+		mpl::true_,
+		mpl::eval_if<
+		N3,
+		mpl::true_,
+		mpl::eval_if<
+		N4,
+		mpl::true_,
+		mpl::eval_if<
+		N5,
+		mpl::true_,
+		mpl::false_>
+		>
+		>
+		>
+		>::type::value
+	>
+	{};
+
+	template<typename N1, typename N2, typename N3 = mpl::true_, typename N4 = mpl::true_, typename N5 = mpl::true_>
+	struct logical_and : mpl::bool_<
+		mpl::eval_if<
+		mpl::not_<N1>,
+		mpl::false_,
+		mpl::eval_if<
+		mpl::not_<N2>,
+		mpl::false_,
+		mpl::eval_if<
+		mpl::not_<N3>,
+		mpl::false_,
+		mpl::eval_if<
+		mpl::not_<N4>,
+		mpl::false_,
+		mpl::eval_if<
+		mpl::not_<N5>,
+		mpl::false_,
+		mpl::true_>
+		>
+		>
+		>
+		>::type::value
+	>
+	{};
+
 	void doShortCircuit()
 	{
 		using Exercise_4_0::FailsIfInstantiated;
@@ -116,13 +226,16 @@ namespace Exercise_4_1 {
 
 #endif
 
-//		typedef mpl::and_< mpl::false_, FailsIfInstantiated<double>>::type res3;
+
+		typedef logical_and< mpl::false_, FailsIfInstantiated<double>>::type res3;
 
 #ifdef MAKE_BOTH_ARGS_INSTANTIATE
-		//typedef mpl::and_< mpl::true_, FailsIfInstantiated<double>>::type res4;
+		//typedef logical_and< mpl::true_, FailsIfInstantiated<double>>::type res4;
 #endif
 	}
+
 }
+
 
 namespace Exercise_4_3 {
 
