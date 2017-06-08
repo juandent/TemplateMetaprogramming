@@ -386,5 +386,14 @@ namespace Exercise_4_3 {
 	}
 }
 
+namespace Integral_operators
+{
+	void doIntegralOperators()
+	{
+		typedef mpl::int_<4>::type	four;
+		typedef mpl::next<four>::type five;
+		typedef mpl::prior<four>::type three;
 
+	}
+}
 
