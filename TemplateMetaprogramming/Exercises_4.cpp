@@ -19,7 +19,9 @@
 #include <boost\mpl/is_sequence.hpp>
 #include <boost\mpl/vector.hpp>
 #include <boost\type_traits\is_same.hpp>
+#include <boost\type_traits.hpp>
 #include <boost\mpl/or.hpp>
+#include <boost\type_traits\is_member_object_pointer.hpp>
 
 
 namespace mpl = boost::mpl;
@@ -394,6 +396,58 @@ namespace Integral_operators
 		typedef mpl::next<four>::type five;
 		typedef mpl::prior<four>::type three;
 
+	}
+}
+
+namespace Exercise_4_4
+{
+	
+	/// <summary>	is_data_member_pointer. </summary>
+	struct A
+	{
+		std::string name;
+		std::string last_name;
+		void setName(const std::string& s)
+		{
+			name = s;
+		}
+	};
+
+
+	template<typename T>
+	struct is_function_member : mpl::false_
+	{};
+
+	template< typename DataType, typename StructType, typename ...Args>
+	struct is_function_member<DataType (StructType::*)(Args...)> : mpl::true_
+	{
+		typedef DataType Ret;
+	};
+
+	template<typename T>
+	struct is_data_member_pointer : mpl::bool_ <
+		mpl::and_<boost::is_member_pointer<T>, mpl::not_< is_function_member<T>>>::value >
+	{};
+
+	void doFirst()
+	{
+		A a;
+		using Pm = std::string A::*;
+		using Pf = void (A::*)(const std::string&);
+		Pm p = &A::name;
+		Pf f = &A::setName;
+		
+		constexpr bool _is_function_m_Pf = is_function_member<Pf>::value;
+		static_assert(_is_function_m_Pf == true);
+
+		constexpr bool _is_function_m_Pm = is_function_member<Pm>::value;
+		static_assert(_is_function_m_Pm == false);
+
+		constexpr bool _is_data_pointer_Pm = is_data_member_pointer<Pm>::value;
+		static_assert(_is_data_pointer_Pm == true);
+
+		constexpr bool _is_data_pointer_Pf = is_data_member_pointer<Pf>::value;
+		static_assert(_is_data_pointer_Pf == false);
 	}
 }
 

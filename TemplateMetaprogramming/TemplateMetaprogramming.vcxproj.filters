@@ -92,5 +92,14 @@
     <ClCompile Include="Chapter_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PPP_Chapter_19.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestModules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="void_t.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

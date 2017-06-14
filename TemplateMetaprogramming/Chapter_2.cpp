@@ -32,6 +32,7 @@ namespace Section_2_5
 
 	void doPrimaryTypeCategorization(void* p)
 	{
+		constexpr decltype(p) ap = nullptr;
 		constexpr bool _isvoid = boost::is_void<decltype(p)>::value;
 		constexpr bool _isfunc = boost::is_function<decltype(aVoidFunction)>::value;
 

@@ -104,6 +104,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SourceComp)\loki;$(SourceComp)\boost_1_62_0\boost_1_62_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -171,6 +174,7 @@
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PPP_Chapter_19.cpp" />
     <ClCompile Include="RatioSequenceBug.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -181,6 +185,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TestModules.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="void_t.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
