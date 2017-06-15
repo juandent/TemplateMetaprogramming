@@ -413,6 +413,9 @@ namespace Exercise_4_4
 		}
 	};
 
+	void aFunction()
+	{
+	}
 
 	template<typename T>
 	struct is_function_member : mpl::false_
@@ -423,6 +426,23 @@ namespace Exercise_4_4
 	{
 		typedef DataType Ret;
 	};
+
+	template<typename T>
+	struct is_a_function : mpl::false_ {};
+
+	template<typename RetType, typename ...Args>
+	struct is_a_function<RetType (*)(Args...)> : mpl::true_ {};
+	
+
+		
+	////////////////////////////////////////////////////////////////////////////////////////////////////
+	/// <summary>	The is data member pointer.
+	/// 			First sub exercise in 4.4 </summary>
+	///
+	/// <remarks>	Juan Dent, 15/6/2017. </remarks>
+	///
+	/// <typeparam name="T">	Generic type parameter. </typeparam>
+	////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	template<typename T>
 	struct is_data_member_pointer : mpl::bool_ <
@@ -448,6 +468,16 @@ namespace Exercise_4_4
 
 		constexpr bool _is_data_pointer_Pf = is_data_member_pointer<Pf>::value;
 		static_assert(_is_data_pointer_Pf == false);
+
+		using Pff = void(*)();
+		Pff aPff = aFunction;
+
+		constexpr bool _is_pointer_aPff = boost::is_pointer<decltype(aPff)>::value;
+		constexpr bool _is_a_function_aPff = is_a_function<decltype(aPff)>::value;
+
+		constexpr bool _is_pointer_aFunction = boost::is_pointer<decltype(aFunction)>::value;
+		constexpr bool _is_a_function_aFunction = is_a_function<decltype(aFunction)>::value;
+
 	}
 }
 
