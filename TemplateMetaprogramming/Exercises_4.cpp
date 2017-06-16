@@ -431,10 +431,21 @@ namespace Exercise_4_4
 	struct is_a_function : mpl::false_ {};
 
 	template<typename RetType, typename ...Args>
-	struct is_a_function<RetType (*)(Args...)> : mpl::true_ {};
+	struct is_a_function<RetType (Args...)> : mpl::true_ {};
 	
+	template<typename T>
+	struct is_pointer_to_function : mpl::false_ {};
 
+	template<typename RetType, typename ...Args>
+	struct is_pointer_to_function<RetType (*)(Args...)> : mpl::true_ {};
 		
+	template<typename T>
+	struct is_reference_to_function_pointer : mpl::false_ {};
+
+	//int*&
+	template<typename RetType, typename ...Args>
+	struct is_reference_to_function_pointer<RetType (* const &)(Args...)> : mpl::true_ {};
+
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// <summary>	The is data member pointer.
 	/// 			First sub exercise in 4.4 </summary>
@@ -471,12 +482,40 @@ namespace Exercise_4_4
 
 		using Pff = void(*)();
 		Pff aPff = aFunction;
+		
+		// is_pointer_to_function:
+		typedef boost::remove_pointer<Pff>::type should_be_function;
+		constexpr bool _x = boost::is_function<should_be_function>::value;
+		static_assert(_x == true);
 
-		constexpr bool _is_pointer_aPff = boost::is_pointer<decltype(aPff)>::value;
-		constexpr bool _is_a_function_aPff = is_a_function<decltype(aPff)>::value;
+		using Rf = void(*&)();
+		//Rf rF = aFunction;
 
-		constexpr bool _is_pointer_aFunction = boost::is_pointer<decltype(aFunction)>::value;
-		constexpr bool _is_a_function_aFunction = is_a_function<decltype(aFunction)>::value;
+		// is_reference_to_function_pointer:
+		typedef boost::remove_reference<Rf>::type should_be_function_pointer;
+		constexpr bool _y = is_pointer_to_function<should_be_function_pointer>::value;
+		static_assert(_y == true);
+
+
+		constexpr bool _is_pointer_aPff = is_pointer_to_function<decltype(aPff)>::value;
+		static_assert(_is_pointer_aPff == true);
+
+		constexpr bool _is_a_function_aFunction = is_pointer_to_function<decltype(aFunction)>::value;
+		static_assert(_is_a_function_aFunction == false);
+
+		using RPF = void(* const&)();
+		RPF rPf = aFunction;
+
+		constexpr bool _is_reference = boost::is_reference<decltype(rPf)>::value;
+		static_assert(_is_reference == true);
+
+		typedef boost::remove_reference<RPF>::type no_ref;
+		typedef boost::remove_const<no_ref>::type no_const;
+
+		constexpr bool _is_pointer_function = is_pointer_to_function< boost::remove_reference< decltype(rPf)>::type>::value;
+
+
+		constexpr bool _is_reference_to_function_pointer = is_reference_to_function_pointer<decltype(rPf)>::value;
 
 	}
 }
