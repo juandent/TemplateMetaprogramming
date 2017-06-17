@@ -22,6 +22,7 @@
 #include <boost\type_traits.hpp>
 #include <boost\mpl/or.hpp>
 #include <boost\type_traits\is_member_object_pointer.hpp>
+#include <vector>
 
 
 namespace mpl = boost::mpl;
@@ -432,19 +433,64 @@ namespace Exercise_4_4
 
 	template<typename RetType, typename ...Args>
 	struct is_a_function<RetType (Args...)> : mpl::true_ {};
-	
+#if 0
 	template<typename T>
 	struct is_pointer_to_function : mpl::false_ {};
 
 	template<typename RetType, typename ...Args>
 	struct is_pointer_to_function<RetType (*)(Args...)> : mpl::true_ {};
-		
+#endif
+#if 0
+	template <typename T>
+	struct is_pointer_to_function : mpl::bool_<
+		mpl::and_< boost::is_pointer<T>, boost::is_function< boost::remove_pointer<T>>>::value
+	>
+	{};
+#endif
+
+	namespace helper
+	{
+		template<typename T>
+		struct is_pointer_to_function_impl
+		{
+			constexpr static bool _is_pointer = boost::is_pointer<T>::value;
+			typedef typename boost::remove_pointer<T>::type	T_pointer_removed;
+			constexpr static bool _is_function = boost::is_function<T_pointer_removed>::value;
+			constexpr static bool value = _is_pointer && _is_function;
+		};
+	}
+
+	template <typename T>
+	struct is_pointer_to_function :  mpl::bool_< helper::is_pointer_to_function_impl<T>::value >
+	{};
+
+	namespace alternative
+	{
+		template <typename T>
+		struct is_pointer_to_function : mpl::bool_ <
+			mpl::and_< boost::is_pointer<T>, boost::is_function<typename boost::remove_pointer<T>::type>>::value
+		>
+		{};
+
+
+	}
+
 	template<typename T>
-	struct is_reference_to_function_pointer : mpl::false_ {};
+	struct is_reference_to_function_pointer : mpl::bool_<
+		is_pointer_to_function<boost::remove_reference<T>>::value
+	>
+	{};
+
+	template<typename T>
+	struct is_reference_to_non_const : mpl::bool_<
+		mpl::and_<boost::is_reference<T>, mpl::not_< boost::is_const<typename boost::remove_reference<T>::type>>>::value
+	>
+	{};
+
 
 	//int*&
-	template<typename RetType, typename ...Args>
-	struct is_reference_to_function_pointer<RetType (* const &)(Args...)> : mpl::true_ {};
+//	template<typename RetType, typename ...Args>
+//	struct is_reference_to_function_pointer<RetType (* const &)(Args...)> : mpl::true_ {};
 
 	////////////////////////////////////////////////////////////////////////////////////////////////////
 	/// <summary>	The is data member pointer.
@@ -488,6 +534,25 @@ namespace Exercise_4_4
 		constexpr bool _x = boost::is_function<should_be_function>::value;
 		static_assert(_x == true);
 
+		{
+			constexpr bool _x = boost::is_pointer<Pff>::value;
+			typedef boost::remove_pointer<Pff>::type	ff;
+			constexpr bool _y = boost::is_function<ff>::value;
+			static_assert(_y == true);
+		}
+
+		{
+			const int& f = 5;
+			int x = 45;
+			int& r = x;
+
+			constexpr bool _f = is_reference_to_non_const<decltype(f)>::value;
+			static_assert(_f == false);
+			constexpr bool _r = is_reference_to_non_const<decltype(r)>::value;
+			static_assert(_r == true);
+			constexpr bool _x = is_reference_to_non_const<decltype(x)>::value;
+			static_assert(_x == false);
+		}
 		using Rf = void(*&)();
 		//Rf rF = aFunction;
 
@@ -497,7 +562,7 @@ namespace Exercise_4_4
 		static_assert(_y == true);
 
 
-		constexpr bool _is_pointer_aPff = is_pointer_to_function<decltype(aPff)>::value;
+		constexpr bool _is_pointer_aPff = is_pointer_to_function<Pff>::value;
 		static_assert(_is_pointer_aPff == true);
 
 		constexpr bool _is_a_function_aFunction = is_pointer_to_function<decltype(aFunction)>::value;
@@ -520,3 +585,29 @@ namespace Exercise_4_4
 	}
 }
 
+namespace Exercise_4_5
+{
+	template <typename Container, typename Value>
+	typename mpl::if_< boost::is_const<Container>, typename Container::const_iterator, typename Container::iterator>::type
+		container_find(Container& c, Value const& v)
+	{
+		return std::find(c.begin(), c.end(), v);
+	}
+
+	void searchVector()
+	{
+		std::vector<int> v{ 1,2,3,4,5,6 };
+		constexpr bool _v_const = boost::is_const<decltype(v)>::value;
+		static_assert(_v_const == false);
+
+		auto at = container_find(v, 4);
+
+		const std::vector<int> cv{ v };
+		constexpr bool _cv_const = boost::is_const<decltype(cv)>::value;
+		static_assert(_cv_const == true);
+
+		auto cat = container_find(cv, 4);
+
+		typedef mpl::if_< boost::is_const<decltype(v)>, typename decltype(v)::const_iterator, typename decltype(v)::iterator>::type ret;
+	}
+}
