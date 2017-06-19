@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <type_traits>
+#include <utility>
 #include <boost\mpl\plus.hpp>
 #include <boost\mpl\int.hpp>
 
@@ -8,39 +9,21 @@
 //{
 
 //};
+// 
+using namespace std;
 namespace mpl = boost::mpl;
 
-namespace detail {
-#if 0
-	template <typename MetaFn, typename ...Args>
-	using result = MetaFn::apply<Args...>::type;
-	struct is_metafunction_class_impl : mpl::true_
-	{};
-#endif
-#if 0
-	template <typename MetaFn, typename ...Args>
-	constexpr bool is_metafunction_class_impl()
-	{
-		return false;
-	};
-#endif
-}
-
-#if 1
-template<typename MetaFn, typename A1, typename A2, typename A = typedef template MetaFn::apply<A1,A2>::type>
-struct test
+template <typename T, typename ...Args> struct has_template_apply
 {
-	constexpr static int value = 1;
-	typedef A type;
+	template<typename U>
+	static std::true_type test(U&, typename T::template apply<Args...>* = nullptr) { return true; }
+
+	static std::false_type test(...) { return false; }
+
+	using type = decltype(test( declval<T>()));
+	constexpr static bool value = type{};
 };
 
-template<typename MetaFn, typename A1, typename A2>
-struct test
-{
-	constexpr static int value = 2;
-	typedef A type;
-};
-#endif
 
 struct plus_f
 {
@@ -58,10 +41,7 @@ struct plus_no_metafunction_class
 
 void doTest()
 {
-	//const expr int value = detail::is_metafunction_class_impl<plus_f, mpl::int_<3>, mpl::int_<8>>();
-
-//	typedef 		test<plus_f, mpl::int_<3>, mpl::int_<6>>::type plus_type;
-//	constexpr int _value_2 = test<plus_no_metafunction_class, mpl::int_<3>, mpl::int_<9>>::value;
-	
+	constexpr bool _has = has_template_apply<plus_f, void>::value;
+	constexpr bool _hasnot = has_template_apply<plus_no_metafunction_class, void>::value;
 }
 
