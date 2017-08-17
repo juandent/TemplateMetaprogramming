@@ -1915,6 +1915,8 @@ namespace Solution_to_Exercise_3_7
         
         t1 d;
         
+
+
         typedef mpl::apply<_1, mpl::plus<_1,_2>>::type t2;                  // NO ALTERNATE
         typedef mpl::apply<_1, std::vector<int>>::type t3;                  // NO ALTERNATE
         typedef mpl::apply<_1, std::vector<_1>>::type t4;                   // NO ALTERNATE
@@ -1922,7 +1924,27 @@ namespace Solution_to_Exercise_3_7
         typedef mpl::apply<mpl::lambda<_1>, std::vector<_1>>::type t6;      // HAS APPLY
         typedef mpl::apply<mpl::lambda<_1>, mpl::plus<_1,_2>>::type t7;     // HAS APPLY
         typedef mpl::apply<_1, mpl::lambda<mpl::plus<_1,_2>>>::type t8;     // HAS NO APPLY
-        
+      
+#define EXAMINE_APPLY
+#ifdef EXAMINE_APPLY
+		typedef mpl::apply<_2, mpl::int_<3>, mpl::int_<9>>::type t22;
+		{
+			auto v = mpl::apply< mpl::multiplies<_1, _2>, mpl::int_<6>, mpl::int_<10>>::type::value;
+			cout << v << endl;
+		}
+		typedef mpl::apply<_2, mpl::plus<_1, _2>, mpl::multiplies<_1,_2>>::type t222;
+		// this one selects the multiplies metafn
+		{
+			auto v = mpl::apply<t222, mpl::int_<4>, mpl::int_<5>>::type::value;
+			cout << v << endl;
+		}
+		typedef mpl::protect < mpl::bind < mpl::multiplies<_1, _2>, mpl::lambda<mpl::int_<44>>::type, mpl::lambda<mpl::int_<66>>::type>> f;
+		typedef mpl::bind < mpl::multiplies<_1, _2>, mpl::lambda<mpl::int_<44>>::type, mpl::lambda<mpl::int_<66>>::type> f_no_protect;
+
+
+#endif
+#define T2_type
+#ifdef T2_type
         // for t2:
         auto val_t2 = 
         mpl::apply<
@@ -1931,24 +1953,31 @@ namespace Solution_to_Exercise_3_7
         ,mpl::int_<5>
         >::type::value;
         cout << val_t2 << endl;
-        
+#endif
+
+#define T3_type
+#ifdef T3_type
         // This next is true because std::vector<int> is not a metafunction template! (see pg 56)
         static_assert(std::is_same<t3, std::vector<int>>::value,"");
         // for t3:
         t3 val_t3 = {2,8};
         
         cout << val_t3[0] << endl;
-        
+#endif
+#define T4_type
+#ifdef T4_type
         // for t4:
         typedef 
         mpl::apply<
             t4
         ,   double
+			, float
         >::type t4_vec;
         t4_vec t4_vector = {3.5, 5.7};
         
         cout << t4_vector[0] << endl;
-        
+#endif
+
         // for t5:
         t5 val_t5 = {2,77,90};
         cout << val_t5[2] << endl;
