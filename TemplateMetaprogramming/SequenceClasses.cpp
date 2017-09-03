@@ -37,6 +37,7 @@
 #include <boost\mpl\distance.hpp>
 #include <boost\mpl\clear.hpp>
 #include <boost\mpl\push_back.hpp>
+#include <boost\mpl\times.hpp>
 
 #include "Debug.h"
 
@@ -609,7 +610,7 @@ tiny_size_composite
 
 namespace TinySequenceImplementation
 {
-	template < template<typename...> typename List , typename... T >
+	template < template<typename...> typename List, typename... T >
 	constexpr typename std::enable_if< (sizeof...(T) <= 3), bool >::type
 		is_valid_tiny() { return true; }
 
@@ -630,7 +631,7 @@ namespace TinySequenceImplementation
 		static_assert(tiny_size_composite<three>::value == 3);
 
 		// must have less than 3 parameters!!
-		static_assert(is_valid_tiny<tiny,int,int,int,int>() == false);
+		static_assert(is_valid_tiny<tiny, int, int, int, int>() == false);
 		static_assert(is_valid_tiny<tiny, int, int, int>() == true);
 
 #if 0
@@ -708,5 +709,69 @@ namespace TinySequenceImplementation
 #endif
 
 		cout << f << endl;
+	}
+}
+
+
+namespace Chapter5_exercises
+{
+	// exercise 5.1
+	template<typename IntegralWrapper, int Pos, int Size>
+	struct wrapped_value
+	{
+		static constexpr int value_result = (2 * (Pos+1) <= Size) ? 2 : 1;
+		typedef mpl::times<IntegralWrapper, mpl::int_<value_result>>	type;
+	};
+
+	namespace impl
+	{
+		template<typename RASequence, int Pos, int Size>
+		struct add_element
+		{
+			typedef typename wrapped_value<mpl::at<RASequence, Pos>::type, Pos, Size>::type new_element;
+			
+		};
+
+		template<typename RASequence, int Size>
+		struct add_element<RASequence,0,Size>
+		{
+			
+		};
+
+	}
+
+	// USE THIS:
+	typedef mpl::vector_c<int, 1, 1, 2, 3, 5, 8, 13, 21, 34> fibonacci;
+	typedef mpl::push_back<fibonacci, mpl::int_<55> >::type fibonacci2;
+	//
+
+	template< template<typename...T> typename RASequence>
+	struct double_first_half
+	{
+		static constexpr size_t Size = sizeof...(T);
+		typedef decltype(mpl::at<RASequence, 0>::value)  type_of_elements;
+
+		//wrapped_value<mpl::at<RASequence,   Size-1>::type
+	};
+
+	//template< typename RASequence, int Pos, int Size>
+
+
+	void exercise5_1()
+	{
+		typedef mpl::vector2_c<long, 3, 5>::type orig_RASequence;	// of integral constant wrappers: models *vector_c* (not list_c, set_c)
+
+		typedef typename mpl::at<orig_RASequence, mpl::int_<0>>::type zero;
+		typedef wrapped_value<zero, 0, 2>::type	zero_result;
+		static_assert(zero_result::value == 6);
+		typedef typename mpl::at<orig_RASequence, mpl::int_<1>>::type one;
+		typedef wrapped_value<one, 1, 2>::type	one_result;
+		static_assert(one_result::value == 5);
+
+
+
+		//typedef double_first_half<orig_RASequence, 2> doubled_sequence;
+
+		//typedef typename double_wrapped_value<mpl::int_<2>>::type  wrapped_double_value;
 	}
 }
