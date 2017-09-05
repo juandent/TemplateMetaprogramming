@@ -730,6 +730,17 @@ namespace Chapter5_exercises
 			typedef mpl::integral_c<ElementType, resulting_value> type;
 		};
 
+#if 0
+		template<typename RASequence, int Size>
+		struct add_element<RASequence, Size - 1, Size>
+		{
+			typedef typename std::remove_const< decltype(mpl::at<RASequence, mpl::int_<0>>::type::value)>::type	ElementType;
+
+			// use a make_index_sequence:
+			typedef mpl::vector_c<ElementType, get_element<0>, get_element<1>, ..., get_element<Size - 1>>;
+		};
+#endif
+
 		template<typename RASequence, size_t Pos, int Size>
 		struct add_element
 		{
@@ -805,11 +816,15 @@ namespace Chapter5_exercises
 	
 
 
-#if 0
+#if 1
 		typedef mpl::vector_c<int, 3, 8, 12, 33>	RASequence;
 		
 		typedef double_first_half<RASequence>::type	ChangedSequence;
 
+		static_assert(mpl::equal<ChangedSequence, mpl::vector_c<int, 6, 16, 12, 33>>::value);
+
+		typedef mpl::copy<RASequence>::type	copy;
+#if 0
 		constexpr static auto element_at_0 = mpl::at<RASequence, mpl::int_<0>>::type::value;
 		typedef decltype(element_at_0)	ElementType;
 
@@ -823,6 +838,7 @@ namespace Chapter5_exercises
 		typedef	mpl::at<ChangedSequence, mpl::int_<1>>::type oneth;
 		typedef	mpl::at<ChangedSequence, mpl::int_<2>>::type secondth;
 		typedef	mpl::at<ChangedSequence, mpl::int_<3>>::type thirdth;
+#endif
 #endif
 
 		//static_assert(mpl::equal<ChangedSequence, mpl::vector_c<int, 6, 16, 12, 33>>::type::value == true);
