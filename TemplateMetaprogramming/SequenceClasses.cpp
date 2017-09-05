@@ -38,6 +38,7 @@
 #include <boost\mpl\clear.hpp>
 #include <boost\mpl\push_back.hpp>
 #include <boost\mpl\times.hpp>
+#include <boost\mpl\push_back.hpp>
 
 #include "Debug.h"
 
@@ -715,27 +716,43 @@ namespace TinySequenceImplementation
 
 namespace Chapter5_exercises
 {
+#if 1
 	// exercise 5.1
-	template<typename IntegralWrapper, int Pos, int Size>
-	struct wrapped_value
-	{
-		static constexpr int value_result = (2 * (Pos+1) <= Size) ? 2 : 1;
-		typedef mpl::times<IntegralWrapper, mpl::int_<value_result>>	type;
-	};
-
 	namespace impl
 	{
-		template<typename RASequence, int Pos, int Size>
+		template<typename IntegralWrapper, size_t Pos, int Size, typename ElementType>
+		struct wrapped_value
+		{
+			static constexpr ElementType multiply_factor = (2 * (Pos + 1) <= Size) ? 2 : 1;
+			static constexpr ElementType orig_value = IntegralWrapper::value;
+			static constexpr ElementType resulting_value = multiply_factor*orig_value;
+
+			typedef mpl::integral_c<ElementType, resulting_value> type;
+		};
+
+		template<typename RASequence, size_t Pos, int Size>
 		struct add_element
 		{
-			typedef typename wrapped_value<mpl::at<RASequence, Pos>::type, Pos, Size>::type new_element;
-			
+			typedef typename std::remove_const< decltype(mpl::at<RASequence, mpl::int_<0>>::type::value)>::type	ElementType;
+
+			typedef typename mpl::int_<Pos>::type PosWrapper;
+			typedef typename mpl::at<RASequence, PosWrapper>::type original_element;
+			typedef typename wrapped_value<original_element, Pos, Size, ElementType>::type current_element;
+			typedef typename add_element<RASequence, Pos-1, Size>::output_sequence	previous_sequence;
+			typedef typename mpl::push_back<previous_sequence, current_element>::type output_sequence;
 		};
 
 		template<typename RASequence, int Size>
-		struct add_element<RASequence,0,Size>
+		struct add_element<RASequence, 0,Size>
 		{
-			
+			typedef typename std::remove_const< decltype(mpl::at<RASequence, mpl::int_<0>>::type::value)>::type	ElementType;
+
+			typedef typename mpl::int_<0>::type PosWrapper;
+			typedef typename mpl::at<RASequence, PosWrapper>::type original_element;
+
+			typedef typename wrapped_value<original_element, 0, Size, ElementType>::type current_element;
+			typedef typename mpl::clear<RASequence>::type	empty_sequence;
+			typedef typename mpl::push_back<empty_sequence, current_element>::type output_sequence;
 		};
 
 	}
@@ -745,15 +762,14 @@ namespace Chapter5_exercises
 	typedef mpl::push_back<fibonacci, mpl::int_<55> >::type fibonacci2;
 	//
 
-	template< template<typename...T> typename RASequence>
+	template< typename RASequence>
 	struct double_first_half
 	{
-		static constexpr size_t Size = sizeof...(T);
-		typedef decltype(mpl::at<RASequence, 0>::value)  type_of_elements;
-
-		//wrapped_value<mpl::at<RASequence,   Size-1>::type
+		static constexpr size_t Size = mpl::size<RASequence>::value;
+		typedef typename impl::add_element<RASequence, Size - 1, Size>::output_sequence	type;
 	};
 
+#endif
 	//template< typename RASequence, int Pos, int Size>
 
 
@@ -761,14 +777,55 @@ namespace Chapter5_exercises
 	{
 		typedef mpl::vector2_c<long, 3, 5>::type orig_RASequence;	// of integral constant wrappers: models *vector_c* (not list_c, set_c)
 
+#if 0 // all these are ok
 		typedef typename mpl::at<orig_RASequence, mpl::int_<0>>::type zero;
-		typedef wrapped_value<zero, 0, 2>::type	zero_result;
+		typedef impl::wrapped_value<zero, 0, 2, long>::type	zero_result;
 		static_assert(zero_result::value == 6);
 		typedef typename mpl::at<orig_RASequence, mpl::int_<1>>::type one;
-		typedef wrapped_value<one, 1, 2>::type	one_result;
+		typedef impl::wrapped_value<one, 1, 2, long>::type	one_result;
 		static_assert(one_result::value == 5);
+#endif
+		// empty sequence and push_back
+		typedef mpl::vector_c<int, 1, 1, 2, 3, 5, 8, 13, 21, 34> fibonacci;
+		typedef mpl::at<fibonacci, mpl::int_<1>>::type	second_element;
+		//typedef mpl::times<second_element, mpl::int_<2>> doubled_element;
+		constexpr int value = second_element::value * 2;
+		typedef mpl::integral_c<int, value>	doubled_element;
+		typedef mpl::clear<fibonacci>::type empty;
+		typedef typename mpl::push_back<empty, doubled_element >::type fibonacci2;
+
+		typedef mpl::at<fibonacci2, mpl::int_<0>>::type	orig_second_element_accessed;
+		constexpr bool equal = std::is_same<doubled_element, orig_second_element_accessed>::value;
+		static_assert(equal);	// !!
+
+		typedef std::remove_const< decltype(mpl::at<fibonacci, mpl::int_<0>>::type::value)>::type	ElementType;
 
 
+		typedef mpl::at<fibonacci2, mpl::int_<1>>::type	conv_second_element_accessed;
+	
+
+
+#if 0
+		typedef mpl::vector_c<int, 3, 8, 12, 33>	RASequence;
+		
+		typedef double_first_half<RASequence>::type	ChangedSequence;
+
+		constexpr static auto element_at_0 = mpl::at<RASequence, mpl::int_<0>>::type::value;
+		typedef decltype(element_at_0)	ElementType;
+
+		//const size_t zeroth = 
+		typedef	mpl::at<RASequence, mpl::int_<0>>::type orig_zero;
+
+		typedef	mpl::at<ChangedSequence, mpl::int_<0>>::type zeroth;
+
+		constexpr bool same = std::is_same<zeroth, typename mpl::integral_c<int, 6>::type>::value;
+
+		typedef	mpl::at<ChangedSequence, mpl::int_<1>>::type oneth;
+		typedef	mpl::at<ChangedSequence, mpl::int_<2>>::type secondth;
+		typedef	mpl::at<ChangedSequence, mpl::int_<3>>::type thirdth;
+#endif
+
+		//static_assert(mpl::equal<ChangedSequence, mpl::vector_c<int, 6, 16, 12, 33>>::type::value == true);
 
 		//typedef double_first_half<orig_RASequence, 2> doubled_sequence;
 
