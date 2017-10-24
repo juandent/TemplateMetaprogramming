@@ -170,6 +170,7 @@
     <ClCompile Include="Chapter_2.cpp" />
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="DetectionIdiom.cpp" />
+    <ClCompile Include="Enable_if.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="Exercises_4.cpp" />

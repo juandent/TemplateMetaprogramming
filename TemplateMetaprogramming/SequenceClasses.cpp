@@ -39,6 +39,8 @@
 #include <boost\mpl\push_back.hpp>
 #include <boost\mpl\times.hpp>
 #include <boost\mpl\push_back.hpp>
+#include <boost\mpl\vector.hpp>
+#include <boost\mpl\begin.hpp>
 
 #include "Debug.h"
 
@@ -534,6 +536,7 @@ struct mpl::clear_impl<tiny_tag>
 	{};
 };
 
+#if 0
 template<>
 struct mpl::push_front_impl<tiny_tag>
 {
@@ -543,6 +546,7 @@ struct mpl::push_front_impl<tiny_tag>
 		static_assert(tiny_size<typename Tiny::t0, typename Tiny::t1, typename Tiny::t2>::value < 3, "tiny must have space left for push_front");
 	};
 };
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /// <summary>	A push back primitive. Constant time complexity! </summary>
@@ -551,7 +555,7 @@ struct mpl::push_front_impl<tiny_tag>
 ///
 /// <typeparam name="Tiny">	Type of the tiny. </typeparam>
 /// <typeparam name="T">   	Generic type parameter. </typeparam>
-/// <typeparam name="N">   	Type of the n. </typeparam>
+/// <typeparam name="N">   	Size of tiny.	</typeparam>
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 template< typename Tiny, typename T, typename N>
@@ -579,6 +583,9 @@ struct push_back_primitive<Tiny, T, mpl::int_<2>>
 	typedef tiny<typename Tiny::t0, typename Tiny::t1, T>	type;
 };
 
+#define USE_REFACTORING_FOR_PUSH_BACK
+#ifndef USE_REFACTORING_FOR_PUSH_BACK
+
 template<>
 struct mpl::push_back_impl<tiny_tag>
 {
@@ -588,6 +595,155 @@ struct mpl::push_back_impl<tiny_tag>
 	{};
 };
 
+#endif
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	A push front primitive. Constant time complexity! </summary>
+///
+/// <remarks>	Juan Dent, 23/3/2017. </remarks>
+///
+/// <typeparam name="Tiny">	Type of the tiny. </typeparam>
+/// <typeparam name="T">   	Generic type parameter. </typeparam>
+/// <typeparam name="N">   	Number of elements in tiny. </typeparam>
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+template< typename Tiny, typename T, typename N>
+struct push_front_primitive
+{
+	static_assert(N::value < 3, "cannot push_front on a full tiny sequence");
+};
+
+template< typename Tiny, typename T>
+struct push_front_primitive<Tiny, T, mpl::int_<0>>
+{
+	typedef tiny<T>	type;
+};
+
+template< typename Tiny, typename T>
+struct push_front_primitive<Tiny, T, mpl::int_<1>>
+{
+	typedef tiny<T, typename Tiny::t0>	type;
+};
+
+template< typename Tiny, typename T>
+struct push_front_primitive<Tiny, T, mpl::int_<2>>
+{
+	typedef tiny<T, typename Tiny::t0, typename Tiny::t1>	type;
+};
+
+template<>
+struct mpl::push_front_impl<tiny_tag>
+{
+	template<typename Tiny, typename T>
+	struct apply : push_front_primitive<Tiny, T, typename tiny_size_composite<Tiny>::type>
+	{};
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	An insert primitive. </summary>
+///
+/// <remarks>	Juan Dent, 5/9/2017. </remarks>
+///
+/// <typeparam name="Tiny">	Type of the tiny. </typeparam>
+/// <typeparam name="T">   	Generic type parameter. </typeparam>
+/// <typeparam name="Pos"> 	Iterator where to insert. </typeparam>
+/// <typeparam name="N">   	Size of tiny. </typeparam>
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+namespace impl
+{
+	template< typename Tiny, typename T,size_t Index, size_t Size>
+	struct insert
+	{
+		static_assert(Size < 3, "cannot insert on a full tiny sequence");
+		static_assert(Index <= Size, "cannot insert 2 positions after end of tiny sequence");
+
+	};
+
+	template< typename Tiny, typename T>
+	struct insert<Tiny, T, 0, 0>
+	{
+		typedef tiny<T>	type;
+	};
+
+	template< typename Tiny, typename T>
+	struct insert<Tiny, T, 0, 1>
+	{
+		typedef tiny<T, typename Tiny::t0>	type;
+	};
+
+	template< typename Tiny, typename T>
+	struct insert<Tiny, T, 1, 1>
+	{
+		typedef tiny<typename Tiny::t0, T>	type;
+	};
+
+	template< typename Tiny, typename T>
+	struct insert<Tiny, T, 0, 2>
+	{
+		typedef tiny<T, typename Tiny::t0, typename Tiny::t1>	type;
+	};
+
+	template< typename Tiny, typename T>
+	struct insert<Tiny, T, 1, 2>
+	{
+		typedef tiny<typename Tiny::t0, T, typename Tiny::t1>	type;
+	};
+
+	template< typename Tiny, typename T>
+	struct insert<Tiny, T, 2, 2>
+	{
+		typedef tiny<typename Tiny::t0, typename Tiny::t1, T>	type;
+	};
+
+}
+
+template<typename Tiny, typename Pos>
+struct index
+{
+	typedef typename mpl::begin<Tiny>::type	start_iter;
+	static constexpr size_t value = mpl::distance<start_iter, Pos>::value;
+};
+
+template< typename Tiny, typename T, typename Pos, typename N>
+struct insert_primitive
+{
+	static_assert(N::value < 3, "cannot insert on a full tiny sequence");
+
+	static constexpr size_t index = index<Tiny, Pos>::value;
+	static constexpr size_t size = N::value;
+
+	typedef typename impl::insert<Tiny, T, index, size>::type type;
+};
+
+template<>
+struct mpl::insert_impl<tiny_tag>
+{
+	template<typename Tiny, typename Pos,typename T>
+	struct apply : insert_primitive<Tiny, T, Pos, typename tiny_size_composite<Tiny>::type>
+	{};
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	A push back - alternative using insert to refactor </summary>
+///
+/// <remarks>	Juan Dent, 5/9/2017. </remarks>
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#ifdef USE_REFACTORING_FOR_PUSH_BACK
+
+template<>
+struct mpl::push_back_impl<tiny_tag>
+{
+#if 1
+	template<typename Tiny, typename T, typename Pos = typename mpl::end<Tiny>::type>
+	struct apply : insert_primitive<Tiny, T, Pos, typename tiny_size_composite<Tiny>::type>
+	{};
+#else
+
+#endif
+};
+
+#endif
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // namespace: TinySequenceImplementation
@@ -598,6 +754,7 @@ struct mpl::push_back_impl<tiny_tag>
 /*
 advance
 distance
+insert
 next
 prior
 deref
@@ -658,6 +815,28 @@ namespace TinySequenceImplementation
 	}
 	void useTiny()
 	{
+		typedef tiny<int, long> two_integrals;
+		typedef mpl::begin<two_integrals>::type	begin_iter;
+		typedef mpl::advance< begin_iter, mpl::int_<1>>::type iter_into_1;
+		constexpr size_t index = mpl::distance<begin_iter, iter_into_1>::value;
+
+		typedef mpl::insert<two_integrals, begin_iter, char[3]>::type	inserted_tiny;
+		typedef mpl::insert<two_integrals, iter_into_1, char[3]>::type	inserted_tiny_second_place;
+		typedef mpl::insert<two_integrals, typename mpl::next<iter_into_1>::type, char[3]>::type	inserted_tiny_third_place;
+
+
+
+
+		//iter_into_1::type
+
+		typedef mpl::insert<two_integrals, iter_into_1, char*>::type inserted;
+
+		typedef mpl::vector<char, short, int, long> some_types;
+		typedef mpl::begin<some_types>::type some_iter;
+
+		static_assert(is_same< mpl::deref<some_iter>::type, char >::value);
+		static_assert(some_iter::pos::value == 0);
+
 		typedef tiny<int, char*, long> t1;
 
 		typedef mpl::at<t1, mpl::int_<0>>::type first;		// int
@@ -683,7 +862,8 @@ namespace TinySequenceImplementation
 		typedef  mpl::distance<end, begin>::type dist;
 		dist d;
 
-#ifdef WATCH_ERROR
+//#define WATCH_ERROR
+#ifdef WATCH_ERROR_FOR_PUSH_FRONT
 		typedef typename mpl::push_front<t1, double>::type new_t1;
 		new_t1 tt1;
 #endif
@@ -695,7 +875,7 @@ namespace TinySequenceImplementation
 		typedef  mpl::push_front<t2, long>::type new_t2;
 		new_t2 tt2;
 
-		typedef tiny<unsigned char[]> t3;
+		typedef tiny<unsigned char[4]> t3;
 
 		typedef  mpl::push_back<t3, long long>::type new_t3;
 		new_t3 tt3;
@@ -703,7 +883,7 @@ namespace TinySequenceImplementation
 		typedef  mpl::push_back<new_t3, unsigned long>::type new_t4;
 		new_t4 tt4;
 
-		//#define WATCH_ERROR
+//#define WATCH_ERROR
 #ifdef WATCH_ERROR
 		typedef typename mpl::push_back<new_t4, unsigned long>::type new_t5;
 		new_t5 tt5;
