@@ -2,7 +2,7 @@
 
 #include <type_traits>
 #include <iostream>
-
+using namespace std;
 
 
 
@@ -220,5 +220,45 @@ namespace ListaDeTipos
 #if 0
 		typedef TypeOfIndex<0, lista_vacia>::type first_type_in_empty_list;
 #endif
+	}
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// namespace: SpecialMemberFunctions
+//
+// summary:	C++ Templates, 2nd edition.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+namespace SpecialMemberFunctions
+{
+	template<typename U>
+	using NotIntegral = std::enable_if_t<!std::is_integral<U>::value>;
+
+	template<typename T>
+	class C
+	{
+	public:
+		C() = default;
+
+		C(C const volatile &) = delete;
+
+		template<typename U, typename = NotIntegral<U> >
+		C( C<U> const &) {
+			std::cout << "tmpl copy ctor\n";
+		}
+	};
+
+	void useSpecialMemberFunctions()
+	{
+		std::cout << "about to create a C\n";
+		C<string> x;
+		C<string> y{ x };
+#if 0
+		C<int> z;
+		C<int> zz{ z };
+#endif
+
 	}
 }

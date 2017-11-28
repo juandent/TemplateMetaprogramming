@@ -1152,10 +1152,28 @@ private:
         
 void testAssignmentOfIntToPointer();
 
+namespace SpecialMemberFunctions
+{
+	void useSpecialMemberFunctions();
+}
+
+namespace Non_Type_Parameters
+{
+	void usePrint();
+}
+
+void useDXTM();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useDXTM();
+
+	Non_Type_Parameters::usePrint();
+
+	SpecialMemberFunctions::useSpecialMemberFunctions();
 
 	Exercise_4_3::Section_1::Original::call_next_if();
 
