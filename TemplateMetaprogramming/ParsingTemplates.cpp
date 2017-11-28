@@ -115,6 +115,7 @@ namespace InheritanceAndClassTemplates
 		T strange;					// means Base<double>::T (==> int)
 	};
 
-
+	// dependent base class
+	
 
 }
