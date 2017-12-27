@@ -11,6 +11,7 @@ class BXT
 		struct Magic
 		{
 			int n = 0;
+			//typename U::X * px;
 		};
 };
 
@@ -115,6 +116,89 @@ namespace InheritanceAndClassTemplates
 		T strange;					// means Base<double>::T (==> int)
 	};
 
+	// dependent base class	(pg 237  C++ Templates: The Complete Guide, 2nd edition
+	template<typename T>
+	class DD : public Base<T>
+	{
+	public:
+		void f() { this->basefield = 0; }		// #1 problem
+	};
+	
+	template<>
+	class Base<bool>
+	{
+	public:
+		enum { basefield = 42 };		// #2 tricky
+	};
 
+	//template class DD<bool>;
 
+	void g(DD<bool>& d)
+	{
+		//d.f();							// #3 oops
+	}
+}
+
+namespace Instantiation
+{
+	namespace POI
+	{
+		class MyInt
+		{
+			int m_i;
+		public:
+			MyInt(int i)
+				: m_i{i}
+			{}
+			int get() const { return m_i; }
+		};
+
+		MyInt operator-(MyInt const& a)
+		{
+			return MyInt(-a.get());
+		}
+
+		bool operator > (MyInt const& l, MyInt const& r)
+		{
+			return l.get() > r.get();
+		}
+
+		using Int = MyInt;
+
+		template<typename T>
+		void ff(T i)
+		{
+			if (i > 0)
+			{
+				gg(-i);
+			}
+		}
+
+		void hh(Int x)
+		{
+			ff<Int>(x);
+		}
+		
+		void gg(Int x)
+		{
+			ff<Int>(x);
+		}
+		
+
+		template<typename T>
+		void f1(T x)
+		{
+			g1(x);	
+		}
+
+		template void f1(int);
+
+		void g1(int i)
+		{}
+
+		void useF1()
+		{
+			f1(7);
+		}
+	}
 }

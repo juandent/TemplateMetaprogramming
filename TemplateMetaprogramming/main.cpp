@@ -1162,12 +1162,16 @@ namespace Non_Type_Parameters
 	void usePrint();
 }
 
+void useB7();
+
 void useDXTM();
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useB7();
 
 	useDXTM();
 

@@ -111,6 +111,7 @@
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
+      <ShowIncludes>true</ShowIncludes>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -180,6 +181,7 @@
     <ClCompile Include="Exercises_4.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
+    <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyLamda.cpp" />
     <ClCompile Include="non-type parameters.cpp" />

@@ -122,5 +122,8 @@
     <ClCompile Include="ParsingTemplates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LiteralOperators_CPPTemplates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
