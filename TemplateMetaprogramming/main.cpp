@@ -1166,10 +1166,34 @@ void useB7();
 
 void useDXTM();
 
+namespace Sqlpp11_Fragments
+{
+	void useSwallow();
+}
+
+namespace sqlpp
+{
+	void useIndexSequence();
+	void useCharSequence();
+
+}
+
+namespace JD
+{
+	void useTypeSetJD();
+}
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	JD::useTypeSetJD();
+
+	sqlpp::useIndexSequence();
+
+	sqlpp::useCharSequence();
+
+	Sqlpp11_Fragments::useSwallow();
 
 	useB7();
 
