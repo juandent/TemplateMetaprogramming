@@ -1182,10 +1182,16 @@ namespace JD
 {
 	void useTypeSetJD();
 }
+
+void doReverseAtRunTime();
+
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	doReverseAtRunTime();
 
 	JD::useTypeSetJD();
 

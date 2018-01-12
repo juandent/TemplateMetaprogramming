@@ -424,6 +424,224 @@ namespace sqlpp
 	}
 }
 
+template<typename T>
+struct TypeDisplayer;
+
+namespace sqlpp
+{
+	template <typename Expr, typename ValueType>
+	struct expression_operators
+	{
+		//ValueType::_print_me;
+		//TypeDisplayer<ValueType> xType;
+		//static_assert(wrong_t<expression_operators>::value, "Missing expression operators for ValueType");
+	};
+
+	void useExprOp()
+	{
+		expression_operators < tag::is_expression, detail::is_expression_t<std::string> > ff;
+	}
+}
+
+namespace sqlpp
+{
+	namespace detail
+	{
+		template <typename... T>
+		struct type_vector
+		{
+		};
+
+		template <typename... T>
+		struct type_vector_cat_impl
+		{
+			static_assert(wrong_t<type_vector_cat_impl>::value, "type_vector_cat must be called with type_vector arguments");
+		};
+
+		template <>
+		struct type_vector_cat_impl<>
+		{
+			using type = type_vector<>;
+		};
+
+		template <typename... T>
+		struct type_vector_cat_impl<type_vector<T...>>
+		{
+			using type = type_vector<T...>;
+		};
+
+		template <typename... L, typename... R>
+		struct type_vector_cat_impl<type_vector<L...>, type_vector<R...>>
+		{
+			using type = type_vector<L..., R...>;
+		};
+
+		template <typename... L, typename... Rest>
+		struct type_vector_cat_impl<type_vector<L...>, Rest...>
+		{
+			using type = typename type_vector_cat_impl<type_vector<L...>, typename type_vector_cat_impl<Rest...>::type>::type;
+		};
+
+		template <typename... T>
+		using type_vector_cat_t = typename type_vector_cat_impl<T...>::type;
+
+		template <typename T>
+		struct type_vector_size
+		{
+			static_assert(wrong_t<type_vector_size>::value,
+				"type_vector_size needs to be called with a type_vector argument");
+		};
+
+		template <typename... T>
+		struct type_vector_size<type_vector<T...>>
+		{
+			static constexpr std::size_t value = sizeof...(T);
+		};
+  }  // namespace detail
+}  // namespace sqlpp
+
+
+//// void_t:
+namespace sqlpp
+{
+	namespace detail
+	{
+		template <typename T>
+		struct void_impl
+		{
+			using type = void;
+		};
+
+		template <typename T>
+		using void_t = typename void_impl<T>::type;
+	}  // namespace detail
+}  // namespace sqlpp
+
+//////  type_traits:
+namespace sqlpp
+{
+	struct no_value_t;
+	namespace detail
+	{
+		template <typename T, typename Enable = void>
+		struct value_type_of_impl
+		{
+			using type = no_value_t;
+		};
+
+		template <typename T>
+		struct value_type_of_impl<T, detail::void_t<typename T::_traits::_value_type>>
+		{
+			using type = typename T::_traits::_value_type;
+		};
+	}  // namespace detail
+	template <typename T>
+	using value_type_of = typename detail::value_type_of_impl<T>::type;
+
+	//// a type:
+	//using boolean = bool;
+	struct boolean
+	{
+		
+	};
+	// this could be the type of a colum
+	struct AType
+	{
+		struct _traits
+		{
+			using _value_type = boolean;
+		};
+	};
+	// example of matching
+	using _value_type = AType::_traits::_value_type;
+
+	using aTypeValueType = detail::value_type_of_impl<AType, detail::void_t<AType::_traits::_value_type>>::type;
+
+	using aTypeValueTypeOf = detail::value_type_of_impl<AType>::type;
+
+	using aTypeValueTypeOfOf = value_type_of<AType>;
+
+	constexpr bool same = std::is_same<aTypeValueType, boolean>::value;
+
+	template <typename T>
+	struct is_not_cpp_bool_t
+	{
+		static constexpr bool value = not std::is_same<T, bool>::value;
+	};
+
+	// data types
+	struct boolean;
+	template <typename T>
+	using is_boolean_t = std::is_same<value_type_of<T>, boolean>;
+
+	struct day_point;
+	template <typename T>
+	using is_day_point_t = std::is_same<value_type_of<T>, day_point>;
+
+	struct floating_point;
+	template <typename T>
+	using is_floating_point_t = std::is_same<value_type_of<T>, floating_point>;
+
+	struct integral;
+	template <typename T>
+	using is_integral_t = std::is_same<value_type_of<T>, integral>;
+
+	struct unsigned_integral;
+	template <typename T>
+	using is_unsigned_integral_t = std::is_same<value_type_of<T>, unsigned_integral>;
+
+	struct text;
+	template <typename T>
+	using is_text_t = std::is_same<value_type_of<T>, text>;
+
+	struct time_of_day;
+	template <typename T>
+	using is_time_of_day_t = std::is_same<value_type_of<T>, time_of_day>;
+
+	struct time_point;
+	template <typename T>
+	using is_time_point_t = std::is_same<value_type_of<T>, time_point>;
+#if 0
+	// joined data type
+	template <typename T>
+	using is_numeric_t =
+		logic::any_t<is_integral_t<T>::value, is_unsigned_integral_t<T>::value, is_floating_point_t<T>::value>;
+
+	template <typename T>
+	using is_numeric_not_unsigned_t =
+		logic::any_t<is_integral_t<T>::value, not is_unsigned_integral_t<T>::value, is_floating_point_t<T>::value>;
+
+	template <typename T>
+	using is_day_or_time_point_t = logic::any_t<is_day_point_t<T>::value, is_time_point_t<T>::value>;
+#endif
+	namespace tag
+	{
+		struct can_be_null
+		{
+		};
+	}  // namespace tag
+
+	namespace detail
+	{
+		template <typename T, typename Enable = void>
+		struct column_spec_can_be_null_impl
+		{
+			using type = std::false_type;
+		};
+		template <typename T>
+		struct column_spec_can_be_null_impl<
+			T,
+			typename std::enable_if<detail::is_element_of<tag::can_be_null, typename T::_traits::_tags>::value>::type>
+		{
+			using type = std::true_type;
+		};
+	}  // namespace detail
+	template <typename T>
+	using column_spec_can_be_null_t = typename detail::column_spec_can_be_null_impl<T>::type;
+}
+
+
+
 #if 0
 template <typename Table, typename... ColumnSpec>
 struct table_t : public table_base_t, public ColumnSpec::_alias_t::template _member_t<column_t<Table, ColumnSpec>>...

@@ -183,6 +183,8 @@
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MPLAlgorithms.cpp" />
+    <ClCompile Include="MPLFold.cpp" />
     <ClCompile Include="MyLamda.cpp" />
     <ClCompile Include="non-type parameters.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />

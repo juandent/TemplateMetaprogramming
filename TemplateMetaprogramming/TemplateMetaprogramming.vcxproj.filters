@@ -128,5 +128,11 @@
     <ClCompile Include="Sqlpp11_fragments.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MPLAlgorithms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MPLFold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
