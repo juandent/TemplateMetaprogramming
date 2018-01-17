@@ -245,56 +245,93 @@ namespace JD
 	};
 
 	using aVector = vector<int, char>;
-	using head = something<aVector>::type;
+	using head_000 = something<aVector>::type;
 
+	//////////////////
+	// get_by_pos
 
-#if 0
-	template<typename Elem>
-	struct push_back
+	template<size_t N, typename>
+	struct get_by_pos
 	{
-		template<typename Seq, typename...ExistingElements>
-		struct apply
-		{
-			using type = vector<Elem, ExistingElements...>;
-		};
+		using type = nil_t;
 	};
 
-	template<typename Elem>
-	struct push_back
+	template<size_t N, template<typename...> typename Seq, typename Head, typename...Tail>
+	struct get_by_pos<N, Seq<Head, Tail...>>
 	{
-		template<typename...ExistingElements>
-		struct apply<vector<ExistingElements...>>
-		{
-			using type = vector<Elem, ExistingElements...>;
-		};
+		using type = typename get_by_pos<N - 1, Seq<Tail...>>::type;
 	};
 
-	using MyVector = vector<int, unsigned, char>;
+	template<template<typename...> typename Seq, typename Head, typename...Tail>
+	struct get_by_pos<0, Seq<Head, Tail...>>
+	{
+		using type = Head;
+	};
 
-	using res = push_back<long double>::apply<MyVector>::type;
+
+	using aVector = vector<int, char>;
+	using type_1 = get_by_pos<1, aVector>::type;
+
+	//////////////////////////
+	// push_back_external
+
+	template<typename Elem, typename Seq>
+	struct push_back_external
+	{
+		using type = nil_t;
+	};
+
+	template<typename Elem, template<typename...> typename Seq>
+	struct push_back_external<Seq<>, Elem>
+	{
+		using type = vector<Elem>;
+	};
 
 
-#endif
+	template<typename Elem, template<typename...> typename Seq, typename Head, typename...Tail>
+	struct push_back_external<Seq<Head, Tail...>, Elem>
+	{
+		using type = vector<Head, Tail..., Elem>;
+	};
 
+	using pushed_back = push_back_external<vector<int>, long double>::type;
+
+	//////////////////////////
+	// push_front_external
+
+	template<typename Seq, typename Elem>
+	struct push_front_external
+	{
+		//using type = nil_t;
+	};
+
+	template<typename Elem, template<typename...> typename Seq>
+	struct push_front_external<Seq<>, Elem>
+	{
+		using type = vector<Elem>;
+	};
+
+
+	template<typename Elem, template<typename...> typename Seq, typename Head, typename...Tail>
+	struct push_front_external<Seq<Head, Tail...>, Elem>
+	{
+		using type = vector<Elem, Head, Tail...>;
+	};
+
+	using pushed_front = push_front_external<vector<int, char>, long double>::type;
 
 
 	// sample sequence:
 	using SampleSeq = vector<long, float, short>;
 
 
-#if 0
-	template<size_t N, template<typename Head, typename...Tail> class Vec>
-	struct get_at<N, SampleSeq
-	{
-		using type = get_at_t<N, Elements...>;
-	};
-#endif
 
 	template<typename>
 	struct head
 	{
 		using type = nil_t;
 	};
+
 	template<template<typename...> class Seq, typename First, typename ...Rest>
 	struct head<Seq<First,Rest...>>
 	{
@@ -370,7 +407,63 @@ namespace JD
 
 	using elem0 = get_at_t<1, char, long>;
 
+#if 0
+	///////////////////////////////
+	// myFold: the good one!!!
 
+	template<typename Seq, typename Prev, template<typename P, typename H> class BinaryOp>
+	struct myFold
+	{
+		using type = typename myFold<tail_t<Seq>, 
+			typename BinaryOp<Prev, head_t<Seq>>::type, 
+			BinaryOp>::type;
+	};
+
+	// specialized template (end of recursion)
+	template<typename Prev, template<typename P, typename H> typename BinaryOp>
+	struct myFold<nil_t, Prev, BinaryOp>
+	{
+		using type = Prev;
+	};
+
+	using xx = typename myFold<MySeq, vector<>, push_back_external>::type;
+	using at00 = get_by_pos<2, xx>::type;
+
+	using yy = typename myFold<MySeq, vector<>, push_front_external>::type;
+
+	constexpr bool are_equal = mpl::equal<yy, vector<long double, long, float, double, short, float, long>>::value;
+
+	using yy00 = get_by_pos<6, yy>::type;
+
+	constexpr bool eqqq = std::is_same<yy00, long double>::value;
+
+#endif
+
+	///////////////////////////////
+	// myReverseFold
+
+	template<typename Seq, typename Prev, template<typename P, typename H> class BinaryOp>
+	struct myReverseFold
+	{
+		using type = typename BinaryOp<
+			typename myReverseFold<tail_t<Seq>, Prev, BinaryOp>::type, head_t<Seq>>::type;
+	};
+
+	// specialized template (end of recursion)
+	template<typename Prev, template<typename P, typename H> typename BinaryOp>
+	struct myReverseFold<nil_t, Prev, BinaryOp>
+	{
+		using type = Prev;
+	};
+
+	namespace Internal
+	{
+		using r_xx = typename myReverseFold<MySeq, vector<>, push_back_external>::type;
+		using r_at00 = get_by_pos<2, r_xx>::type;
+		constexpr bool are_equal_also = mpl::equal<r_xx, vector<long double, long, float, double, short, float, long>>::value;
+
+	}
+#if 0
 	// BinaryOp sample#2: (primary template)
 	struct meta_push_back
 	{
@@ -383,13 +476,21 @@ namespace JD
 
 
 	using one_elem = vector<>::push_back<long>::type;
+	using empty_vector = meta_push_back::apply<vector<>, char>::type;
+	constexpr bool eqq = mpl::equal<empty_vector, vector<char>>::value;
 
 	using intelem = meta_push_back::apply<vector<float, int>, char>::type;
+
+	using at0 = get_by_pos<0, intelem>::type;
+	using at1 = get_by_pos<1, intelem>::type;
+	using at2 = get_by_pos<2, intelem>::type;
+
+
 
 	using result = fold_t<MySeq, vector<>, meta_push_back>;
 
 	using one = result::get_at<1>::type;
-
+#endif
 
 	//constexpr bool same_contents = mpl::equal(grown, vector<char, long, float, short, double, float, long, long double>)::value;
 

@@ -1,0 +1,11 @@
+<Externals>
+<f name="_isctype" id="19d3ebc38e19d50593ef9f92f74cb43a_a5bb80cd4be801ac96350b2a26b9d4e0" file="2" linestart="24" lineend="24" extC="true" access="none">
+<Attributed/>
+<p name="_C" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+</p>
+<p name="_Type" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+</p>
+</f>
+</Externals>

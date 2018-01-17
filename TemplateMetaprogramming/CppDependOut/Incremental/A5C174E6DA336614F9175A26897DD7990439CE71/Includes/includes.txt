@@ -1,0 +1,42 @@
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\associativesequences.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\chapter6.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\debug.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercise 2_3.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercise 2_3_jlborges.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercises_4.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercise_3_1.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\expressiontemplates_ch_10.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\myfold.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\myreversedfold.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\sequenceclasses.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\stdafx.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\targetver.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\utilsformyfold.h
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\adl.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\associativesequences.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\chapter6.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\chapter_2.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\dependentnames.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\detectionidiom.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\enable_if.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercise 2_3.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercise 2_3_jlborges.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercises_4.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\exercise_3_1.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\expressiontemplates_ch_10.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\literaloperators_cpptemplates.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\main.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\mplalgorithms.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\mplfold.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\myfold.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\mylamda.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\myreversefold.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\non-type parameters.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\parsingtemplates.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\ppp_chapter_19.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\ratiosequencebug.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\sequenceclasses.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\sqlpp11_fragments.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\stdafx.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\testmodules.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\void_t.cpp

@@ -1185,11 +1185,17 @@ namespace JD
 
 void doReverseAtRunTime();
 
+void useReverseFold();
+void useMyFold();
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useMyFold();
+
+	useReverseFold();
 
 	doReverseAtRunTime();
 

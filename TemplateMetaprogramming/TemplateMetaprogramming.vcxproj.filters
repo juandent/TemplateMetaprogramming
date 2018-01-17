@@ -54,6 +54,15 @@
     <ClInclude Include="Exercises_4.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyFold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilsForMyFold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyReversedFold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -132,6 +141,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MPLFold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFold.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyReverseFold.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

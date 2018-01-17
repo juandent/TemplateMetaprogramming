@@ -164,9 +164,12 @@
     <ClInclude Include="Exercises_4.hpp" />
     <ClInclude Include="exercise_3_1.hpp" />
     <ClInclude Include="ExpressionTemplates_Ch_10.h" />
+    <ClInclude Include="MyFold.h" />
+    <ClInclude Include="MyReversedFold.h" />
     <ClInclude Include="SequenceClasses.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="UtilsForMyFold.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADL.cpp" />
@@ -185,7 +188,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MPLAlgorithms.cpp" />
     <ClCompile Include="MPLFold.cpp" />
+    <ClCompile Include="MyFold.cpp" />
     <ClCompile Include="MyLamda.cpp" />
+    <ClCompile Include="MyReverseFold.cpp" />
     <ClCompile Include="non-type parameters.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
     <ClCompile Include="PPP_Chapter_19.cpp" />

@@ -1,0 +1,74 @@
+<Root>
+<Comments>
+<c f="1" b="37" e="37"/>
+<c f="1" b="38" e="37"/>
+<c f="1" b="48" e="48"/>
+<c f="1" b="49" e="49"/>
+<c f="1" b="51" e="49"/>
+<c f="1" b="64" e="64"/>
+<c f="1" b="65" e="65"/>
+<c f="1" b="67" e="65"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="3" bc="1"/>
+<m f="1" bl="4" bc="1"/>
+<m f="1" bl="5" bc="1"/>
+<m f="1" bl="6" bc="1"/>
+<m f="1" bl="7" bc="1"/>
+<m f="1" bl="8" bc="1"/>
+<m f="1" bl="9" bc="1"/>
+<m f="1" bl="10" bc="1"/>
+<m f="1" bl="11" bc="1"/>
+<m f="1" bl="12" bc="1"/>
+<m f="1" bl="13" bc="1"/>
+<m f="1" bl="14" bc="1"/>
+<m f="1" bl="15" bc="1"/>
+<m f="1" bl="16" bc="1"/>
+<m f="1" bl="17" bc="1"/>
+</Directives>
+<tun>
+<tm access="none" depth="0" pod="true" kind="struct" name="biggest_float_as_double" id="85ae6ad9afff5a7f70b4deaaec1e9315_462449a5f7f2893b60387cbdb8653b42" file="1" linestart="24" lineend="34">
+<template_parameters>
+<ttp name="Seq" id="85ae6ad9afff5a7f70b4deaaec1e9315_60abe686af819b682fe21ca8eab6046a" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="biggest_float_as_double" id="85ae6ad9afff5a7f70b4deaaec1e9315_462449a5f7f2893b60387cbdb8653b42" file="1" linestart="25" lineend="34">
+<cr access="public" kind="struct" name="biggest_float_as_double" id="85ae6ad9afff5a7f70b4deaaec1e9315_c5cdaf2773cc089fec5eff0e9000ffab" file="1" linestart="25" lineend="25"/>
+</cr>
+</tm>
+<cr access="none" depth="0" pod="true" kind="struct" name="A" id="85ae6ad9afff5a7f70b4deaaec1e9315_64cecaff51f5707d379a5b955ac06de0" file="1" linestart="51" lineend="51">
+<cr access="public" kind="struct" name="A" id="85ae6ad9afff5a7f70b4deaaec1e9315_f292a6ec99e2b852e336ca5573c4129e" file="1" linestart="51" lineend="51"/>
+</cr>
+<cr access="none" depth="0" pod="true" kind="struct" name="B" id="85ae6ad9afff5a7f70b4deaaec1e9315_345bd04e883f32895d1b77184cac14d3" file="1" linestart="52" lineend="52">
+<cr access="public" kind="struct" name="B" id="85ae6ad9afff5a7f70b4deaaec1e9315_c187f3dbd71a871a77d4221ba9833dbc" file="1" linestart="52" lineend="52"/>
+</cr>
+<cr access="none" depth="0" pod="true" kind="struct" name="C" id="85ae6ad9afff5a7f70b4deaaec1e9315_79d7d227c1be1efab58fc7eeec5d8a63" file="1" linestart="53" lineend="53">
+<cr access="public" kind="struct" name="C" id="85ae6ad9afff5a7f70b4deaaec1e9315_bf3a238d7f1fc30584847dceae2c9a42" file="1" linestart="53" lineend="53"/>
+</cr>
+<v name="equal1" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="85ae6ad9afff5a7f70b4deaaec1e9315_e52f8a97bca49efb0cd86d67b96c99a4" file="1" linestart="61" lineend="61" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+
+</Stmt>
+</v>
+<v name="res_sum" proto="const auto" const="true" isLiteral="true" id="85ae6ad9afff5a7f70b4deaaec1e9315_66ff45a35edf1b319e12c10bbe4edbd3" file="1" linestart="82" lineend="82" access2="public">
+<QualType const="true">
+<auto/>
+</QualType>
+<Stmt>
+
+</Stmt>
+</v>
+<v name="equal" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="85ae6ad9afff5a7f70b4deaaec1e9315_16bf5b2559ce4c80c2e17ef9b459533c" file="1" linestart="88" lineend="88" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+
+</Stmt>
+</v>
+</tun>
+</Root>

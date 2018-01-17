@@ -1,0 +1,88 @@
+<Root>
+<Comments>
+<c f="1" b="30" e="30"/>
+<c f="1" b="31" e="30"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="3" bc="1"/>
+<m f="1" bl="4" bc="1"/>
+<m f="1" bl="5" bc="1"/>
+<m f="1" bl="6" bc="1"/>
+<m f="1" bl="7" bc="1"/>
+<m f="1" bl="8" bc="1"/>
+<m f="1" bl="9" bc="1"/>
+<m f="1" bl="10" bc="1"/>
+<m f="1" bl="11" bc="1"/>
+<m f="1" bl="12" bc="1"/>
+<m f="1" bl="13" bc="1"/>
+<m f="1" bl="14" bc="1"/>
+<m f="1" bl="15" bc="1"/>
+<m f="1" bl="16" bc="1"/>
+<m f="1" bl="17" bc="1"/>
+<m f="1" bl="18" bc="1"/>
+<m f="1" bl="19" bc="1"/>
+<m f="1" bl="20" bc="1"/>
+</Directives>
+<tun>
+<ns name="Section_2_5" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_467a27692d95b9028c7858e418028b5d" file="1" linestart="26" lineend="40">
+<f namespace="Section_2_5" name="aVoidFunction" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_1e4596c5ec6686006c38d9d3b164c427" file="1" linestart="28" lineend="31" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="29" cb="2" le="31" ce="2"/>
+
+</Stmt>
+</f>
+<f namespace="Section_2_5" name="doPrimaryTypeCategorization" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_930279bdd37823309b18cf1629a18c4b" file="1" linestart="33" lineend="39" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="p" proto="void *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<bt name="void"/>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="34" cb="2" le="39" ce="2">
+<dst lb="35" cb="3" le="35" ce="37">
+<exp pvirg="true"/>
+<Var nm="ap">
+<QualType const="true">
+<decltype/>
+</QualType>
+<n32 lb="35" cb="30">
+<n16 lb="35" cb="30">
+<exp pvirg="true"/>
+</n16>
+</n32>
+</Var>
+</dst>
+<dst lb="36" cb="3" le="36" ce="62">
+<exp pvirg="true"/>
+<Var nm="_isvoid" value="true">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+</Var>
+</dst>
+<dst lb="37" cb="3" le="37" ce="78">
+<exp pvirg="true"/>
+<Var nm="_isfunc" value="true">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</ns>
+</tun>
+</Root>
