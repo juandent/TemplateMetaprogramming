@@ -1,5 +1,10 @@
 <Root>
-<Comments/>
+<Comments>
+<c f="1" b="6" e="6"/>
+<c f="1" b="7" e="6"/>
+<c f="1" b="17" e="17"/>
+<c f="1" b="18" e="17"/>
+</Comments>
 <Macros/>
 <Directives>
 <m f="1" bl="1" bc="1"/>
@@ -250,9 +255,9 @@
 </TypedefNameDecl>
 </cr>
 </tm>
-<ctps Spec="&lt;nil_t, type-parameter-0-0, BinaryOp&gt;" access="none" depth="0" pod="true" kind="struct" name="myFold" id="fbc450b7a34f86c8cc54b67068863be8_f1d67dc4ec40f06e55eb1bc2ed2155c3" file="3" linestart="17" lineend="21">
-<cr access="public" kind="struct" name="myFold" id="fbc450b7a34f86c8cc54b67068863be8_7874001d194c6e2cb263a71bb2a9c069" file="3" linestart="18" lineend="18"/>
-<TypedefNameDecl name="type" id="fbc450b7a34f86c8cc54b67068863be8_36de2128df9852915bd000813de9de2a" file="3" linestart="20" lineend="20">
+<ctps Spec="&lt;vector&lt;&gt;, type-parameter-0-0, BinaryOp&gt;" access="none" depth="0" pod="true" kind="struct" name="myFold" id="fbc450b7a34f86c8cc54b67068863be8_f1e6e22ece093ab434c8f34a543f9e2c" file="3" linestart="17" lineend="21">
+<cr access="public" kind="struct" name="myFold" id="fbc450b7a34f86c8cc54b67068863be8_be4198432a1b5f9d65546b019c865deb" file="3" linestart="18" lineend="18"/>
+<TypedefNameDecl name="type" id="fbc450b7a34f86c8cc54b67068863be8_69a55b8a11f356293870cdb94b4d09cb" file="3" linestart="20" lineend="20">
 <ttp/>
 </TypedefNameDecl>
 </ctps>
@@ -287,11 +292,7 @@
 <Tdef>
 <ety>
 <Tdef>
-<ety>
-<Tdef>
 <sttp/>
-</Tdef>
-</ety>
 </Tdef>
 </ety>
 </Tdef>
@@ -341,6 +342,148 @@
 <Tdef>
 <ety>
 <Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</TypedefNameDecl>
+<TypedefNameDecl name="r_xx" id="6926bf140a84fa60ee62162e64f4f1e9_52ddf092c4346185a7e9c2044bbcfc1c" file="1" linestart="10" lineend="10">
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</TypedefNameDecl>
+<TypedefNameDecl name="r_at00" id="6926bf140a84fa60ee62162e64f4f1e9_9dee6445c3ce8a5f8b3b057b1e817796" file="1" linestart="11" lineend="11">
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</TypedefNameDecl>
+<TypedefNameDecl name="r_xx_front" id="6926bf140a84fa60ee62162e64f4f1e9_58e7f150884737f671968a30dc7cf38b" file="1" linestart="13" lineend="13">
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</TypedefNameDecl>
+<TypedefNameDecl name="r_at00_front" id="6926bf140a84fa60ee62162e64f4f1e9_39eacaeadf9722d48be3a7fac33f949f" file="1" linestart="14" lineend="14">
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</TypedefNameDecl>
+<f name="useMyFold" id="6926bf140a84fa60ee62162e64f4f1e9_da0088b6425e6aed1bc2e84af4db8bf8" file="1" linestart="18" lineend="24" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="19" cb="1" le="24" ce="1">
+<dst lb="20" cb="2" le="20" ce="10">
+<exp pvirg="true"/>
+<Var nm="anR" value="true">
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
 <ety>
 <Tdef>
 <sttp/>
@@ -361,7 +504,119 @@
 </Tdef>
 </ety>
 </Tdef>
+<n10 lb="20" cb="7">
+<typeptr id="89eb1743fc4c083a79ad75fc1d3c8c18_7e4099281fc44e42c552cfbc6f73c57d">
+<template_arguments>
+<bt name="long"/>
+<bt name="float"/>
+<bt name="short"/>
+<bt name="double"/>
+<bt name="float"/>
+<bt name="long"/>
+<bt name="long double"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<dst lb="21" cb="2" le="21" ce="19">
+<exp pvirg="true"/>
+<Var nm="otherR" value="true">
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
 </ety>
-</TypedefNameDecl>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+<n10 lb="21" cb="13">
+<typeptr id="89eb1743fc4c083a79ad75fc1d3c8c18_80f6ffb3a00b9a5d0fff47f1a34e2499">
+<template_arguments>
+<bt name="long double"/>
+<bt name="long"/>
+<bt name="float"/>
+<bt name="double"/>
+<bt name="short"/>
+<bt name="float"/>
+<bt name="long"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<dst lb="22" cb="2" le="22" ce="12">
+<exp pvirg="true"/>
+<Var nm="at2" value="true">
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</Var>
+</dst>
+<dst lb="23" cb="2" le="23" ce="24">
+<exp pvirg="true"/>
+<Var nm="at2_front" value="true">
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
 </tun>
 </Root>

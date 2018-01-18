@@ -20,6 +20,8 @@ struct myFold<vector<>, Prev, BinaryOp>
 	using type = Prev;
 };
 
+
+#ifdef USE_SAMPLES
 // sample sequence:
 using MySeq = vector<long, float, short, double, float, long, long double>;
 
@@ -28,3 +30,4 @@ using xx = typename myFold<MySeq, vector<>, push_back_external>::type;
 using at00 = get_by_pos<2, xx>::type;
 
 using yy = typename myFold<MySeq, vector<>, push_front_external>::type;
+#endif

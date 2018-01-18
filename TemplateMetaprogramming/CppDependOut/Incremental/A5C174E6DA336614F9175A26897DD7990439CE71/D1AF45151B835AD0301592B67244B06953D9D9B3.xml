@@ -199,7 +199,7 @@
 </f>
 </ns>
 <NamedDecl name="&lt;using-directive&gt;" id="5c7c8012c362e2fad3af48104a311aba_6728b6b0f829183eb7bbd3d3d987c87d" file="1" linestart="54" lineend="54"/>
-<ns name="Section6_3" id="5c7c8012c362e2fad3af48104a311aba_7a98771a58906190f5ed4fc4f1e48c37" file="1" linestart="57" lineend="140" original="0xa06dc90">
+<ns name="Section6_3" id="5c7c8012c362e2fad3af48104a311aba_7a98771a58906190f5ed4fc4f1e48c37" file="1" linestart="57" lineend="140" original="0x9c7a0b0">
 <tm namespace="Section6_3" access="none" depth="0" pod="true" kind="struct" name="second" id="5c7c8012c362e2fad3af48104a311aba_df058e015b9f367d3fe2e0ec6b9ce65a" file="1" linestart="74" lineend="82">
 <template_parameters>
 <ttp name="Seq" id="5c7c8012c362e2fad3af48104a311aba_bfd0f0d933ea70e39bbaeb7afe484e4f" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -305,7 +305,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="LambdaMetaFunction" id="5c7c8012c362e2fad3af48104a311aba_5c0fbb541bd712ad494f3922ac937de2" file="1" linestart="144" lineend="298" original="0xa06ddc8">
+<ns name="LambdaMetaFunction" id="5c7c8012c362e2fad3af48104a311aba_5c0fbb541bd712ad494f3922ac937de2" file="1" linestart="144" lineend="298" original="0x9c7a1e8">
 <tm namespace="LambdaMetaFunction" access="none" depth="0" pod="true" kind="struct" name="second" id="5c7c8012c362e2fad3af48104a311aba_7bd84f2521e6587213fe8a752916d48d" file="1" linestart="151" lineend="159">
 <template_parameters>
 <ttp name="Seq" id="5c7c8012c362e2fad3af48104a311aba_928045bf92247b86d3d444ec184fe3d2" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -467,7 +467,7 @@
 </tyd>
 <sas/>
 </ns>
-<ns name="reverse_fold" id="5c7c8012c362e2fad3af48104a311aba_ead2e9a1aedbdb6f762ceb6c0e0e7807" file="1" linestart="351" lineend="406" original="0xa06df00">
+<ns name="reverse_fold" id="5c7c8012c362e2fad3af48104a311aba_ead2e9a1aedbdb6f762ceb6c0e0e7807" file="1" linestart="351" lineend="406" original="0x9c7a320">
 <f namespace="reverse_fold" name="useReverseFold" id="5c7c8012c362e2fad3af48104a311aba_2dde61675cc3928d9ae70c5cdd184aa0" file="1" linestart="396" lineend="403" previous="b41c7023aa6b6aea39b0332c78eb70f6_2dde61675cc3928d9ae70c5cdd184aa0" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
 <bt name="void"/>

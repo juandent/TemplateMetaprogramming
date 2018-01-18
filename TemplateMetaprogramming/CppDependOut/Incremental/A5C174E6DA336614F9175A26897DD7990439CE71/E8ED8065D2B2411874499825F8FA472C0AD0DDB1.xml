@@ -2,6 +2,8 @@
 <Comments>
 <c f="1" b="5" e="5"/>
 <c f="1" b="6" e="5"/>
+<c f="1" b="15" e="15"/>
+<c f="1" b="16" e="15"/>
 </Comments>
 <Macros/>
 <Directives>
@@ -285,13 +287,35 @@
 </Tdef>
 </ety>
 </TypedefNameDecl>
-<f name="useReverseFold" id="519723b4e4f1ff48dad4cf1247f3ae1b_25d37b7cda1192281a37ecf642eeabed" file="1" linestart="13" lineend="16" access="none" hasbody="true" isdef="true">
+<TypedefNameDecl name="r_xx_front" id="519723b4e4f1ff48dad4cf1247f3ae1b_58e7f150884737f671968a30dc7cf38b" file="1" linestart="12" lineend="12">
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<tss>
+<templatebase id="89eb1743fc4c083a79ad75fc1d3c8c18_dcbc568ba4760eb73c72601c576e4b90"/>
+<template_arguments>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</TypedefNameDecl>
+<f name="useReverseFold" id="519723b4e4f1ff48dad4cf1247f3ae1b_25d37b7cda1192281a37ecf642eeabed" file="1" linestart="16" lineend="20" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
 <bt name="void"/>
 </fpt>
 <Stmt>
-<u lb="14" cb="1" le="16" ce="1">
-<dst lb="15" cb="2" le="15" ce="10">
+<u lb="17" cb="1" le="20" ce="1">
+<dst lb="18" cb="2" le="18" ce="10">
 <exp pvirg="true"/>
 <Var nm="anR" value="true">
 <Tdef>
@@ -316,7 +340,7 @@
 </Tdef>
 </ety>
 </Tdef>
-<n10 lb="15" cb="7">
+<n10 lb="18" cb="7">
 <typeptr id="89eb1743fc4c083a79ad75fc1d3c8c18_80f6ffb3a00b9a5d0fff47f1a34e2499">
 <template_arguments>
 <bt name="long double"/>
@@ -326,6 +350,47 @@
 <bt name="short"/>
 <bt name="float"/>
 <bt name="long"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<dst lb="19" cb="2" le="19" ce="19">
+<exp pvirg="true"/>
+<Var nm="otherR" value="true">
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<tss>
+<templatebase id="89eb1743fc4c083a79ad75fc1d3c8c18_dcbc568ba4760eb73c72601c576e4b90"/>
+<template_arguments>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+<sttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+<n10 lb="19" cb="13">
+<typeptr id="89eb1743fc4c083a79ad75fc1d3c8c18_7e4099281fc44e42c552cfbc6f73c57d">
+<template_arguments>
+<bt name="long"/>
+<bt name="float"/>
+<bt name="short"/>
+<bt name="double"/>
+<bt name="float"/>
+<bt name="long"/>
+<bt name="long double"/>
 </template_arguments>
 </typeptr>
 <temp/>

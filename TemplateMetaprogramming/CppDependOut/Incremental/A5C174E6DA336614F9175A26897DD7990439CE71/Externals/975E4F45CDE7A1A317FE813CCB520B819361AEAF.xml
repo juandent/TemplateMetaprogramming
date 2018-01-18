@@ -118,22 +118,6 @@
 </m>
 </cr>
 </tm>
-<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="6" linestart="28" lineend="28" storage="extern" access2="none">
-<Tdef>
-<tss>
-<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>
-<template_arguments>
-<bt name="char"/>
-<tss>
-<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</tss>
-</template_arguments>
-</tss>
-</Tdef>
-</v>
 <f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="5" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
 <lrf>
@@ -235,4 +219,20 @@
 </p>
 </f>
 </ft>
+<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="6" linestart="28" lineend="28" storage="extern" access2="none">
+<Tdef>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</v>
 </Externals>
