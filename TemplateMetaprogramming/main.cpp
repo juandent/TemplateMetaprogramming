@@ -1188,10 +1188,17 @@ void doReverseAtRunTime();
 void useReverseFold();
 void useMyFold();
 
+void doit();
+void useObjectCounter();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useObjectCounter();
+
+	doit();
 
 	useMyFold();
 

@@ -47,13 +47,13 @@ struct get_by_pos
 	using type = nil_t;
 };
 
-template<size_t N, template<typename...> typename Seq, typename Head, typename...Tail>
+template<size_t N, template<typename...> class Seq, typename Head, typename...Tail>
 struct get_by_pos<N, Seq<Head, Tail...>>
 {
 	using type = typename get_by_pos<N - 1, Seq<Tail...>>::type;
 };
 
-template<template<typename...> typename Seq, typename Head, typename...Tail>
+template<template<typename...> class Seq, typename Head, typename...Tail>
 struct get_by_pos<0, Seq<Head, Tail...>>
 {
 	using type = Head;
@@ -73,14 +73,14 @@ struct push_back_external
 	//using type = nil_t;
 };
 
-template<typename Elem, template<typename...> typename Seq>
+template<typename Elem, template<typename...> class Seq>
 struct push_back_external<Seq<>, Elem>
 {
 	using type = vector<Elem>;
 };
 
 
-template<typename Elem, template<typename...> typename Seq, typename Head, typename...Tail>
+template<typename Elem, template<typename...> class Seq, typename Head, typename...Tail>
 struct push_back_external<Seq<Head, Tail...>, Elem>
 {
 	using type = vector<Head, Tail..., Elem>;
@@ -97,14 +97,14 @@ struct push_front_external
 	//using type = nil_t;
 };
 
-template<typename Elem, template<typename...> typename Seq>
+template<typename Elem, template<typename...> class Seq>
 struct push_front_external<Seq<>, Elem>
 {
 	using type = vector<Elem>;
 };
 
 
-template<typename Elem, template<typename...> typename Seq, typename Head, typename...Tail>
+template<typename Elem, template<typename...> class Seq, typename Head, typename...Tail>
 struct push_front_external<Seq<Head, Tail...>, Elem>
 {
 	using type = vector<Elem, Head, Tail...>;

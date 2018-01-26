@@ -14,7 +14,7 @@ struct myFold
 };
 
 // specialized template (end of recursion)
-template<typename Prev, template<typename P, typename H> typename BinaryOp>
+template<typename Prev, template<typename P, typename H> class BinaryOp>
 struct myFold<vector<>, Prev, BinaryOp>
 {
 	using type = Prev;
