@@ -6,6 +6,10 @@ class ListNode
 public:
 	T value;
 	ListNode<T>* next = nullptr;
-	~ListNode() { delete next; }
+	~ListNode() 
+	{
+		std::cout << value.value << next << std::endl;
+		delete next;	// if nullptr, delete does nothing!!
+	}
 };
 
