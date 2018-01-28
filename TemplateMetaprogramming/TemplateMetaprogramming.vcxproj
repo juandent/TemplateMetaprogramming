@@ -165,6 +165,11 @@
     <ClInclude Include="Exercises_4.hpp" />
     <ClInclude Include="exercise_3_1.hpp" />
     <ClInclude Include="ExpressionTemplates_Ch_10.h" />
+    <ClInclude Include="IteratorFacade.hpp" />
+    <ClInclude Include="iteratorfacadeaccess.h" />
+    <ClInclude Include="IteratorFacadeByAccess.hpp" />
+    <ClInclude Include="ListNode.h" />
+    <ClInclude Include="ListNodeIterator.h" />
     <ClInclude Include="MyFold.h" />
     <ClInclude Include="MyReversedFold.h" />
     <ClInclude Include="SequenceClasses.h" />
@@ -187,6 +192,7 @@
     <ClCompile Include="Exercises_4.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
+    <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MPLAlgorithms.cpp" />
