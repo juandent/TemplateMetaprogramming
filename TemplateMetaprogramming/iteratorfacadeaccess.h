@@ -1,12 +1,12 @@
 #pragma once
 
-//namespace IteratorByFacadeAccess
-//{
+namespace IteratorByFacadeAccess
+{
 	class IteratorFacadeAccess
 	{
 		// only IteratorFacade can use these definitions
 		template<typename Derived, typename Value, typename Category, typename Reference, typename Distance>
-		friend class IteratorFacadeUsingAccess;
+		friend class IteratorFacade;
 
 		// required of all iterators
 		template<typename Reference, typename Iterator>
@@ -29,5 +29,5 @@
 		}
 	};
 
-//}
+}
 

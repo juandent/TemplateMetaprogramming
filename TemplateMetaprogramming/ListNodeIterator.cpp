@@ -2,15 +2,17 @@
 
 #include "ListNodeIterator.h"
 
-struct A
+namespace IteratorByFacadeAccess
 {
-	int value;
-};
-
+	struct A
+	{
+		int value;
+	};
+}
 
 void useListsNodeIterator()
 {
-	//using namespace IteratorByFacadeAccess;
+	using namespace IteratorByFacadeAccess;
 
 	auto head = std::unique_ptr<ListNode<A>>{ new ListNode<A>{15, new ListNode<A>{ 16, new ListNode<A>{17, nullptr}}} };
 

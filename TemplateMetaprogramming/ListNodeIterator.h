@@ -33,10 +33,10 @@ namespace IteratorByFacade
 }
 #endif
 
-//namespace IteratorByFacadeAccess
-//{
+namespace IteratorByFacadeAccess
+{
 	template<typename T>
-	class ListNodeIterator 	: public IteratorFacadeUsingAccess<ListNodeIterator<T>, T,	std::forward_iterator_tag>
+	class ListNodeIterator 	: public IteratorFacade<ListNodeIterator<T>, T,	std::forward_iterator_tag>
 	{
 		friend class IteratorFacadeAccess;
 
@@ -55,4 +55,4 @@ namespace IteratorByFacade
 		ListNodeIterator(ListNode<T>* current = nullptr) : current(current) { }
 	};
 
-//}
+}

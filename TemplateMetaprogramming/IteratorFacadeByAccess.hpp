@@ -2,16 +2,16 @@
 
 #include "iteratorfacadeaccess.h"
 
-//namespace IteratorByFacadeAccess
-//{
+namespace IteratorByFacadeAccess
+{
 	template<typename Derived, typename Value, typename Category,
 		typename Reference = Value & , typename Distance = std::ptrdiff_t>
-		class IteratorFacadeUsingAccess
+		class IteratorFacade
 	{
 		Derived& asDerived() { return *static_cast<Derived*>(this); };
 		Derived const& asDerived() const { return *static_cast<Derived const*>(this); };
 
-		static bool areEqual(const IteratorFacadeUsingAccess& lhs, const IteratorFacadeUsingAccess& rhs)
+		static bool areEqual(const IteratorFacade& lhs, const IteratorFacade& rhs)
 		{
 			return IteratorFacadeAccess::equals(lhs.asDerived(), rhs.asDerived());
 		}
@@ -45,9 +45,9 @@
 			return result;
 		}
 
-		friend bool operator== (IteratorFacadeUsingAccess const& lhs, IteratorFacadeUsingAccess const& rhs)
+		friend bool operator== (IteratorFacade const& lhs, IteratorFacade const& rhs)
 		{
-			return IteratorFacadeUsingAccess::areEqual(lhs, rhs);
+			return IteratorFacade::areEqual(lhs, rhs);
 		}
 #if 0	
 		// bidirectional iterator interface:
@@ -64,4 +64,4 @@
 #endif
 	};
 
-//}
+}
