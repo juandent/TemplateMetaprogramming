@@ -172,6 +172,8 @@
     <ClInclude Include="ListNodeIterator.h" />
     <ClInclude Include="MyFold.h" />
     <ClInclude Include="MyReversedFold.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="ProjectionIterator_CPPTempl.h" />
     <ClInclude Include="SequenceClasses.h" />
     <ClInclude Include="sqlpp11_mockdb.h" />
     <ClInclude Include="stdafx.h" />
@@ -203,6 +205,7 @@
     <ClCompile Include="non-type parameters.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
     <ClCompile Include="PPP_Chapter_19.cpp" />
+    <ClCompile Include="ProjectionIterator_CPPTempl.cpp" />
     <ClCompile Include="RatioSequenceBug.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>

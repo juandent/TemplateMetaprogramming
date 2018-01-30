@@ -19,7 +19,7 @@ namespace IteratorByFacadeAccess
 		template<typename Iterator>
 		static void increment(Iterator & i)
 		{
-			return i.increment();
+			i.increment();
 		}
 
 		template<typename Iterator>
@@ -27,6 +27,30 @@ namespace IteratorByFacadeAccess
 		{
 			return lhs.equals(rhs);
 		}
+
+		// required by bidirectional iterators
+		template<typename Iterator>
+		static void decrement(Iterator & i)
+		{
+			i.decrement();
+		}
+
+		// required by random access iterators
+		// advance
+		template<typename Iterator, typename Difference>
+		static void advance(Iterator& i, Difference n)
+		{
+			i.advance(n);
+		}
+
+
+		//measureDistance
+		template<typename Distance, typename Iterator>
+		static Distance measureDistance(const Iterator& lhs, const Iterator& rhs)
+		{
+			return lhs.measureDistance(rhs);
+		}
+
 	};
 
 }

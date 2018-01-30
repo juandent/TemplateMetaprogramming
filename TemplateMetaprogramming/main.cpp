@@ -1191,11 +1191,14 @@ void useMyFold();
 void doit();
 void useObjectCounter();
 void useListsNodeIterator();
+void useProjectionIterator();
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useProjectionIterator();
 
 	useListsNodeIterator();
 
