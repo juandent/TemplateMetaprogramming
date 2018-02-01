@@ -1192,11 +1192,26 @@ void doit();
 void useObjectCounter();
 void useListsNodeIterator();
 void useProjectionIterator();
+void useNamedTemplateArgs();
+
+namespace EBCO
+{
+	void main();
+}
+
+void useEqualityComparable();
+
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useEqualityComparable();
+
+	EBCO::main();
+
+	useNamedTemplateArgs();
 
 	useProjectionIterator();
 

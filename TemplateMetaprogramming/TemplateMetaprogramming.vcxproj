@@ -172,6 +172,7 @@
     <ClInclude Include="ListNodeIterator.h" />
     <ClInclude Include="MyFold.h" />
     <ClInclude Include="MyReversedFold.h" />
+    <ClInclude Include="NamedTemplateArgs_CPPTempl.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="ProjectionIterator_CPPTempl.h" />
     <ClInclude Include="SequenceClasses.h" />
@@ -188,12 +189,14 @@
     <ClCompile Include="CRTP_0.cpp" />
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="DetectionIdiom.cpp" />
+    <ClCompile Include="EBCO_CPPTempl.cpp" />
     <ClCompile Include="Enable_if.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="Exercises_4.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
+    <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
     <ClCompile Include="main.cpp" />
@@ -202,6 +205,7 @@
     <ClCompile Include="MyFold.cpp" />
     <ClCompile Include="MyLamda.cpp" />
     <ClCompile Include="MyReverseFold.cpp" />
+    <ClCompile Include="NamedTemplateArgs_CPPTempl.cpp" />
     <ClCompile Include="non-type parameters.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
     <ClCompile Include="PPP_Chapter_19.cpp" />
