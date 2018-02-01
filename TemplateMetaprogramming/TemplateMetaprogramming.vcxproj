@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ADL.cpp" />
+    <ClCompile Include="AliasTemplates_CPPTemp.cpp" />
     <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
@@ -208,6 +209,7 @@
     <ClCompile Include="NamedTemplateArgs_CPPTempl.cpp" />
     <ClCompile Include="non-type parameters.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
+    <ClCompile Include="PassByValue_decay_CPPTemp.cpp" />
     <ClCompile Include="PPP_Chapter_19.cpp" />
     <ClCompile Include="ProjectionIterator_CPPTempl.cpp" />
     <ClCompile Include="RatioSequenceBug.cpp">

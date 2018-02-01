@@ -1,0 +1,25 @@
+<Externals>
+<cr namespace="std" access="none" depth="1" kind="struct" name="forward_iterator_tag" id="72a1e00403a41909458e8bb6a65a6ecc_ee977fdb01655ef3c2580f0692a44276" file="6" linestart="559" lineend="562">
+<base access="public">
+<rt>
+<cr id="72a1e00403a41909458e8bb6a65a6ecc_c98cf9b1d0709d4ff8c9e1029d63b90f"/>
+</rt>
+</base>
+</cr>
+<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="7" linestart="28" lineend="28" storage="extern" access2="none">
+<Tdef>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</v>
+</Externals>

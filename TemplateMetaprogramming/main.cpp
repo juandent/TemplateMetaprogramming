@@ -1201,11 +1201,18 @@ namespace EBCO
 
 void useEqualityComparable();
 
+void PassByValue();
+
+void useDecayT();
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useDecayT();
+
+	PassByValue();
 
 	useEqualityComparable();
 

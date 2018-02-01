@@ -1,0 +1,1286 @@
+<Root>
+<Comments/>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="3" bc="1"/>
+</Directives>
+<tun>
+<tm access="none" depth="0" kind="class" name="ListNode" id="559fa9e9bae6a73099275413ccd1a9f8_6d3474366813c0fd1b88dcb33906dab0" file="2" linestart="3" lineend="14">
+<template_parameters>
+<ttp name="T" id="559fa9e9bae6a73099275413ccd1a9f8_1db1e55a58dfc6e12acd35829c7898e6" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" depth="0" kind="class" name="ListNode" id="559fa9e9bae6a73099275413ccd1a9f8_6d3474366813c0fd1b88dcb33906dab0" file="2" linestart="4" lineend="14">
+<cr access="public" kind="class" name="ListNode" id="559fa9e9bae6a73099275413ccd1a9f8_454646358f65823d858c1f1537a2943f" file="2" linestart="4" lineend="4"/>
+<asd access="public"/>
+<fl name="value" id="559fa9e9bae6a73099275413ccd1a9f8_cea2609f0d83a796aff5fdb67cf010ab" file="2" linestart="7" lineend="7" access="public" proto="T">
+<ttp/>
+</fl>
+<fl name="next" id="559fa9e9bae6a73099275413ccd1a9f8_c7cac02bd5385da4306241689ae856b7" file="2" linestart="8" lineend="8" isPtr="true" access="public" proto="ListNode&lt;T&gt; *">
+<pt>
+<tss>
+<templatebase id="559fa9e9bae6a73099275413ccd1a9f8_6d3474366813c0fd1b88dcb33906dab0"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</pt>
+</fl>
+<d name="~ListNode&lt;T&gt;" id="559fa9e9bae6a73099275413ccd1a9f8_7d0b1d0e455e9e866df82cdfc668ae0d" file="2" linestart="9" lineend="13" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="10" cb="2" le="13" ce="2">
+<xop lb="11" cb="3" le="11" ce="44" kind="&lt;&lt;">
+<xop lb="11" cb="3" le="11" ce="31" kind="&lt;&lt;">
+<xop lb="11" cb="3" le="11" ce="22" kind="&lt;&lt;">
+<drx lb="11" cb="3" le="11" ce="8" kind="lvalue" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<n14 lb="11" cb="16" le="11" ce="22">
+<exp pvirg="true"/>
+<mex lb="11" cb="16" kind="lvalue" id="559fa9e9bae6a73099275413ccd1a9f8_cea2609f0d83a796aff5fdb67cf010ab" nm="value" arrow="1">
+<n19 lb="11" cb="16"/>
+</mex>
+</n14>
+</xop>
+<mex lb="11" cb="31" kind="lvalue" id="559fa9e9bae6a73099275413ccd1a9f8_c7cac02bd5385da4306241689ae856b7" nm="next" arrow="1">
+<n19 lb="11" cb="31"/>
+</mex>
+</xop>
+<n44 lb="11" cb="39" le="11" ce="44"/>
+</xop>
+<n13 lb="12" cb="3" le="12" ce="10">
+<exp pvirg="true"/>
+<mex lb="12" cb="10" kind="lvalue" id="559fa9e9bae6a73099275413ccd1a9f8_c7cac02bd5385da4306241689ae856b7" nm="next" arrow="1">
+<n19 lb="12" cb="10"/>
+</mex>
+</n13>
+</u>
+
+</Stmt>
+</d>
+</cr>
+</tm>
+<Comments>
+<c f="3" b="7" e="7"/>
+<c f="3" b="8" e="7"/>
+<c f="3" b="11" e="11"/>
+<c f="3" b="12" e="11"/>
+<c f="3" b="18" e="18"/>
+<c f="3" b="19" e="18"/>
+<c f="3" b="31" e="31"/>
+<c f="3" b="32" e="31"/>
+<c f="3" b="38" e="38"/>
+<c f="3" b="39" e="39"/>
+<c f="3" b="40" e="39"/>
+<c f="3" b="47" e="47"/>
+<c f="3" b="48" e="47"/>
+</Comments>
+<Macros/>
+<Directives/>
+<ns name="IteratorByFacadeAccess" id="5f17e97ff0a6de906c03680f215a345e_5b0fdfcc634c6e5ba64db2405649ed07" file="3" linestart="3" lineend="56">
+<cr namespace="IteratorByFacadeAccess" access="none" depth="0" pod="true" kind="class" name="IteratorFacadeAccess" id="5f17e97ff0a6de906c03680f215a345e_9b59b61259c95fc3fa564a9c208a0baa" file="3" linestart="5" lineend="54">
+<cr access="public" kind="class" name="IteratorFacadeAccess" id="5f17e97ff0a6de906c03680f215a345e_e8e8616ea0a817274c79abaf6216a67e" file="3" linestart="5" lineend="5"/>
+<frDecl>
+<tm namespace="IteratorByFacadeAccess" access="none" kind="class" name="IteratorFacade" id="5f17e97ff0a6de906c03680f215a345e_52db2dcde8b8b98d181c4620b1196c62" file="3" linestart="8" lineend="9">
+<template_parameters>
+<ttp name="Derived" id="5f17e97ff0a6de906c03680f215a345e_d1134ec24889f94a1774cfab7461816d" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Value" id="5f17e97ff0a6de906c03680f215a345e_9b9986e56ca6c098e5c9b41b763c7013" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="Category" id="5f17e97ff0a6de906c03680f215a345e_b472496112eb749a54700f2dbc4bd3de" depth="0" index="2" proto="type-parameter-0-2"/>
+<ttp name="Reference" id="5f17e97ff0a6de906c03680f215a345e_f78cafc202985f9430f782baf7b4e3dd" depth="0" index="3" proto="type-parameter-0-3"/>
+<ttp name="Distance" id="5f17e97ff0a6de906c03680f215a345e_345ef556e2b0dbcad3ae3c9b766ca63e" depth="0" index="4" proto="type-parameter-0-4"/>
+</template_parameters>
+<cr namespace="IteratorByFacadeAccess" access="none" kind="class" name="IteratorFacade" id="5f17e97ff0a6de906c03680f215a345e_5f0d2850b58ce374d073392123f967e0" file="3" linestart="9" lineend="9"/>
+</tm>
+</frDecl>
+<ft name="dereference" id="5f17e97ff0a6de906c03680f215a345e_08326b1129ac9509856a16157e72cd34" file="3" linestart="12" lineend="16">
+<template_parameters>
+<ttp name="Reference" id="5f17e97ff0a6de906c03680f215a345e_d5fe3d799b707ef6d917ed61cc2392ed" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Iterator" id="5f17e97ff0a6de906c03680f215a345e_a90a4a5edc7adafc30edca7e8b015d2f" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<m name="dereference" id="5f17e97ff0a6de906c03680f215a345e_5167f85e6e1678d1fa130f78e2a4c3b5" file="3" linestart="13" lineend="16" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="Reference">
+<ttp/>
+</fpt>
+<p name="i" proto="const Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="14" cb="3" le="16" ce="3">
+<rx lb="15" cb="4" le="15" ce="25" pvirg="true">
+<ce lb="15" cb="11" le="15" ce="25" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="15" cb="11" le="15" ce="13">
+<exp pvirg="true"/>
+<drx lb="15" cb="11" kind="lvalue" nm="i"/>
+</n14>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<ft name="increment" id="5f17e97ff0a6de906c03680f215a345e_a101e3a5a15c479fe777190535861685" file="3" linestart="19" lineend="23">
+<template_parameters>
+<ttp name="Iterator" id="5f17e97ff0a6de906c03680f215a345e_066283162a165332ef252843e029abc7" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<m name="increment" id="5f17e97ff0a6de906c03680f215a345e_d8be6990a5e17df7b02fee32461e7818" file="3" linestart="20" lineend="23" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="i" proto="Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<ttp/>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="21" cb="3" le="23" ce="3">
+<ce lb="22" cb="4" le="22" ce="16" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="22" cb="4" le="22" ce="6">
+<exp pvirg="true"/>
+<drx lb="22" cb="4" kind="lvalue" nm="i"/>
+</n14>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<ft name="equals" id="5f17e97ff0a6de906c03680f215a345e_81b4a1dc936c0a0684cec36058de3204" file="3" linestart="25" lineend="29">
+<template_parameters>
+<ttp name="Iterator" id="5f17e97ff0a6de906c03680f215a345e_6db7f8b6a93bc0cea4d30eb860f7d14d" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<m name="equals" id="5f17e97ff0a6de906c03680f215a345e_898344385691005066cf33b4ca045763" file="3" linestart="26" lineend="29" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="lhs" proto="const Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="27" cb="3" le="29" ce="3">
+<rx lb="28" cb="4" le="28" ce="25" pvirg="true">
+<ce lb="28" cb="11" le="28" ce="25" nbparm="1">
+<exp pvirg="true"/>
+<n14 lb="28" cb="11" le="28" ce="15">
+<exp pvirg="true"/>
+<drx lb="28" cb="11" kind="lvalue" nm="lhs"/>
+</n14>
+<drx lb="28" cb="22" kind="lvalue" nm="rhs"/>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<ft name="decrement" id="5f17e97ff0a6de906c03680f215a345e_4f978c620dd386a75e832f74422b95c5" file="3" linestart="32" lineend="36">
+<template_parameters>
+<ttp name="Iterator" id="5f17e97ff0a6de906c03680f215a345e_adbfca2d092908d58a757ac97643b1ef" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<m name="decrement" id="5f17e97ff0a6de906c03680f215a345e_3926d2838bb921552526899e834ba2d9" file="3" linestart="33" lineend="36" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="i" proto="Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<ttp/>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="34" cb="3" le="36" ce="3">
+<ce lb="35" cb="4" le="35" ce="16" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="35" cb="4" le="35" ce="6">
+<exp pvirg="true"/>
+<drx lb="35" cb="4" kind="lvalue" nm="i"/>
+</n14>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<ft name="advance" id="5f17e97ff0a6de906c03680f215a345e_859461416fb2a78437f980f6052fe6fb" file="3" linestart="40" lineend="44">
+<template_parameters>
+<ttp name="Iterator" id="5f17e97ff0a6de906c03680f215a345e_6cd6a27d463e01b3eaf876c3d90c794e" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Difference" id="5f17e97ff0a6de906c03680f215a345e_fd6548bd479244178e467b6f5798e045" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<m name="advance" id="5f17e97ff0a6de906c03680f215a345e_47ded2ef12a3845cbc8ef40ab1dbcf8c" file="3" linestart="41" lineend="44" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="i" proto="Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<ttp/>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="n" proto="Difference" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="42" cb="3" le="44" ce="3">
+<ce lb="43" cb="4" le="43" ce="15" nbparm="1">
+<exp pvirg="true"/>
+<n14 lb="43" cb="4" le="43" ce="6">
+<exp pvirg="true"/>
+<drx lb="43" cb="4" kind="lvalue" nm="i"/>
+</n14>
+<drx lb="43" cb="14" kind="lvalue" nm="n"/>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<ft name="measureDistance" id="5f17e97ff0a6de906c03680f215a345e_84095dc4715a98d07cd6a6d355d80f96" file="3" linestart="48" lineend="52">
+<template_parameters>
+<ttp name="Distance" id="5f17e97ff0a6de906c03680f215a345e_459b3b17613dd96059d8c5fc1a8320dc" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Iterator" id="5f17e97ff0a6de906c03680f215a345e_60ab0353bc4c4a1ced0fd28c3e83451d" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<m name="measureDistance" id="5f17e97ff0a6de906c03680f215a345e_bcac5f9613ed0e44d6bceb25e64a7b0b" file="3" linestart="49" lineend="52" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="Distance">
+<ttp/>
+</fpt>
+<p name="lhs" proto="const Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const Iterator &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="50" cb="3" le="52" ce="3">
+<rx lb="51" cb="4" le="51" ce="34" pvirg="true">
+<ce lb="51" cb="11" le="51" ce="34" nbparm="1">
+<exp pvirg="true"/>
+<n14 lb="51" cb="11" le="51" ce="15">
+<exp pvirg="true"/>
+<drx lb="51" cb="11" kind="lvalue" nm="lhs"/>
+</n14>
+<drx lb="51" cb="31" kind="lvalue" nm="rhs"/>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+</ft>
+</cr>
+</ns>
+<Comments>
+<c f="4" b="30" e="30"/>
+<c f="4" b="31" e="30"/>
+<c f="4" b="45" e="45"/>
+<c f="4" b="46" e="45"/>
+<c f="4" b="62" e="62"/>
+<c f="4" b="63" e="62"/>
+<c f="4" b="68" e="68"/>
+<c f="4" b="69" e="68"/>
+<c f="4" b="76" e="76"/>
+<c f="4" b="77" e="76"/>
+<c f="4" b="81" e="81"/>
+<c f="4" b="82" e="81"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="4" bl="3" bc="1"/>
+</Directives>
+<ns name="IteratorByFacadeAccess" id="76a02b3d3239217ff239850c40983d88_5b0fdfcc634c6e5ba64db2405649ed07" file="4" linestart="5" lineend="100" original="0x9b2e078">
+<tm namespace="IteratorByFacadeAccess" access="none" depth="0" pod="true" kind="class" name="IteratorFacade" id="76a02b3d3239217ff239850c40983d88_52db2dcde8b8b98d181c4620b1196c62" file="4" linestart="7" lineend="98" previous="5f17e97ff0a6de906c03680f215a345e_52db2dcde8b8b98d181c4620b1196c62">
+<template_parameters>
+<ttp name="Derived" id="76a02b3d3239217ff239850c40983d88_d1134ec24889f94a1774cfab7461816d" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Value" id="76a02b3d3239217ff239850c40983d88_9b9986e56ca6c098e5c9b41b763c7013" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="Category" id="76a02b3d3239217ff239850c40983d88_b472496112eb749a54700f2dbc4bd3de" depth="0" index="2" proto="type-parameter-0-2"/>
+<ttp name="Reference" id="76a02b3d3239217ff239850c40983d88_f78cafc202985f9430f782baf7b4e3dd" depth="0" index="3" proto="type-parameter-0-3">
+<lrf>
+<ttp/>
+</lrf>
+</ttp>
+<ttp name="Distance" id="76a02b3d3239217ff239850c40983d88_345ef556e2b0dbcad3ae3c9b766ca63e" depth="0" index="4" proto="type-parameter-0-4">
+<ety>
+<Tdef>
+<bt name="int"/>
+</Tdef>
+</ety>
+</ttp>
+</template_parameters>
+<cr namespace="IteratorByFacadeAccess" access="none" depth="0" pod="true" kind="class" name="IteratorFacade" id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0" file="4" linestart="9" lineend="98" previous="5f17e97ff0a6de906c03680f215a345e_5f0d2850b58ce374d073392123f967e0">
+<cr access="public" kind="class" name="IteratorFacade" id="76a02b3d3239217ff239850c40983d88_ff90d73f8ae83269aac951e30ea2d570" file="4" linestart="9" lineend="9"/>
+<m name="asDerived" id="76a02b3d3239217ff239850c40983d88_bd722d4c26c5b67c62c5706dc11a6d25" file="4" linestart="11" lineend="11" access="private" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="Derived &amp;">
+<lrf>
+<ttp/>
+</lrf>
+</fpt>
+<Stmt>
+<u lb="11" cb="24" le="11" ce="63">
+<rx lb="11" cb="26" le="11" ce="60" pvirg="true">
+<uo lb="11" cb="33" le="11" ce="60" kind="*">
+<scast lb="11" cb="34" le="11" ce="60">
+<cast cast="Dependent">
+<pt>
+<ttp/>
+</pt>
+</cast>
+<n19 lb="11" cb="56"/>
+</scast>
+</uo>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="asDerived" id="76a02b3d3239217ff239850c40983d88_4a65eb9a4043caeaa096902210bdbc90" file="4" linestart="12" lineend="12" access="private" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="const Derived &amp;">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+</fpt>
+<Stmt>
+<u lb="12" cb="36" le="12" ce="81">
+<rx lb="12" cb="38" le="12" ce="78" pvirg="true">
+<uo lb="12" cb="45" le="12" ce="78" kind="*">
+<scast lb="12" cb="46" le="12" ce="78">
+<cast cast="Dependent">
+<pt>
+<QualType const="true">
+<ttp/>
+</QualType>
+</pt>
+</cast>
+<n19 lb="12" cb="74"/>
+</scast>
+</uo>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="areEqual" id="76a02b3d3239217ff239850c40983d88_568f3289997e11f8b5642956cb2cd6e9" file="4" linestart="14" lineend="17" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="lhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="15" cb="3" le="17" ce="3">
+<rx lb="16" cb="4" le="16" ce="72" pvirg="true">
+<ce lb="16" cb="11" le="16" ce="72" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="16" cb="11" le="16" ce="33"/>
+<ce lb="16" cb="40" le="16" ce="54" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="16" cb="40" le="16" ce="44">
+<exp pvirg="true"/>
+<drx lb="16" cb="40" kind="lvalue" nm="lhs"/>
+</n14>
+</ce>
+<ce lb="16" cb="57" le="16" ce="71" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="16" cb="57" le="16" ce="61">
+<exp pvirg="true"/>
+<drx lb="16" cb="57" kind="lvalue" nm="rhs"/>
+</n14>
+</ce>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="measureDistance" id="76a02b3d3239217ff239850c40983d88_f93e9d9047c41562b47d27005153c84a" file="4" linestart="19" lineend="22" access="private" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="Distance">
+<ttp/>
+</fpt>
+<p name="lhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="20" cb="3" le="22" ce="3">
+<rx lb="21" cb="4" le="21" ce="91" pvirg="true">
+<ce lb="21" cb="11" le="21" ce="91" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="21" cb="11" le="21" ce="57"/>
+<ce lb="21" cb="59" le="21" ce="73" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="21" cb="59" le="21" ce="63">
+<exp pvirg="true"/>
+<drx lb="21" cb="59" kind="lvalue" nm="lhs"/>
+</n14>
+</ce>
+<ce lb="21" cb="76" le="21" ce="90" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="21" cb="76" le="21" ce="80">
+<exp pvirg="true"/>
+<drx lb="21" cb="76" kind="lvalue" nm="rhs"/>
+</n14>
+</ce>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<asd access="public"/>
+<TypedefNameDecl name="value_type" id="76a02b3d3239217ff239850c40983d88_a4826cb01b84e5f710e0b32712ae5090" file="4" linestart="24" lineend="24">
+<DependentName/>
+</TypedefNameDecl>
+<TypedefNameDecl name="reference" id="76a02b3d3239217ff239850c40983d88_07b298d15c93ace5df511d5887f6f2d0" file="4" linestart="25" lineend="25">
+<ttp/>
+</TypedefNameDecl>
+<TypedefNameDecl name="pointer" id="76a02b3d3239217ff239850c40983d88_6bdbd3ce3542ad14314119db74af3d9b" file="4" linestart="26" lineend="26">
+<pt>
+<ttp/>
+</pt>
+</TypedefNameDecl>
+<TypedefNameDecl name="difference_type" id="76a02b3d3239217ff239850c40983d88_65453a6b0d294ce09ec4e486075b3599" file="4" linestart="27" lineend="27">
+<ttp/>
+</TypedefNameDecl>
+<TypedefNameDecl name="iterator_category" id="76a02b3d3239217ff239850c40983d88_7afbef29c9e888e1536f24cb72d8a412" file="4" linestart="28" lineend="28">
+<ttp/>
+</TypedefNameDecl>
+<m name="operator*" id="76a02b3d3239217ff239850c40983d88_0a099ec0038366940daa55e295c1da09" file="4" linestart="31" lineend="34" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="reference">
+<Tdef>
+<ttp/>
+</Tdef>
+</fpt>
+<Stmt>
+<u lb="32" cb="3" le="34" ce="3">
+<rx lb="33" cb="4" le="33" ce="67" pvirg="true">
+<ce lb="33" cb="11" le="33" ce="67" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="33" cb="11" le="33" ce="54"/>
+<ce lb="33" cb="56" le="33" ce="66" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="33" cb="56">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="operator-&gt;" id="76a02b3d3239217ff239850c40983d88_5855d534bb64b9a7c3391d49714e1ff1" file="4" linestart="36" lineend="39" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="pointer">
+<Tdef>
+<pt>
+<ttp/>
+</pt>
+</Tdef>
+</fpt>
+<Stmt>
+<u lb="37" cb="3" le="39" ce="3">
+<rx lb="38" cb="4" le="38" ce="68" pvirg="true">
+<uo lb="38" cb="11" le="38" ce="68" kind="&amp;">
+<ce lb="38" cb="12" le="38" ce="68" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="38" cb="12" le="38" ce="55"/>
+<ce lb="38" cb="57" le="38" ce="67" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="38" cb="57">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</ce>
+</uo>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="operator++" id="76a02b3d3239217ff239850c40983d88_94bdf283d7d7e94ab53293faefddc828" file="4" linestart="40" lineend="44" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="Derived &amp;">
+<lrf>
+<ttp/>
+</lrf>
+</fpt>
+<Stmt>
+<u lb="41" cb="3" le="44" ce="3">
+<ce lb="42" cb="4" le="42" ce="47" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="42" cb="4" le="42" ce="26"/>
+<ce lb="42" cb="36" le="42" ce="46" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="42" cb="36">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</ce>
+<rx lb="43" cb="4" le="43" ce="21" pvirg="true">
+<ce lb="43" cb="11" le="43" ce="21" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="43" cb="11">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="operator++" id="76a02b3d3239217ff239850c40983d88_bcc7e2f0eceffc67a2e265781dd6af6f" file="4" linestart="46" lineend="51" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="Derived">
+<ttp/>
+</fpt>
+<p name="" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="47" cb="3" le="51" ce="3">
+<dst lb="48" cb="4" le="48" ce="31">
+<exp pvirg="true"/>
+<Var nm="result" value="true">
+<ttp/>
+<n47 lb="48" cb="18" le="48" ce="30">
+<exp pvirg="true"/>
+<ce lb="48" cb="19" le="48" ce="29" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="48" cb="19">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</n47>
+</Var>
+</dst>
+<ce lb="49" cb="4" le="49" ce="47" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="49" cb="4" le="49" ce="26"/>
+<ce lb="49" cb="36" le="49" ce="46" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="49" cb="36">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</ce>
+<rx lb="50" cb="4" le="50" ce="11" pvirg="true">
+<drx lb="50" cb="11" kind="lvalue" nm="result"/>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<frDecl>
+<f namespace="IteratorByFacadeAccess" name="operator==" id="76a02b3d3239217ff239850c40983d88_4c08f2fd5a20eec441f0e3914f7c7f9a" file="4" linestart="52" lineend="55" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="lhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="53" cb="3" le="55" ce="3">
+<rx lb="54" cb="4" le="54" ce="44" pvirg="true">
+<ce lb="54" cb="11" le="54" ce="44" nbparm="2" id="76a02b3d3239217ff239850c40983d88_568f3289997e11f8b5642956cb2cd6e9">
+<exp pvirg="true"/>
+<drx lb="54" cb="11" le="54" ce="27" kind="lvalue" id="76a02b3d3239217ff239850c40983d88_568f3289997e11f8b5642956cb2cd6e9" nm="areEqual"/>
+<drx lb="54" cb="36" kind="lvalue" nm="lhs"/>
+<drx lb="54" cb="41" kind="lvalue" nm="rhs"/>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</frDecl>
+<frDecl>
+<f namespace="IteratorByFacadeAccess" name="operator!=" id="76a02b3d3239217ff239850c40983d88_a3478b35092786ec6dd5ab7e42048ec8" file="4" linestart="56" lineend="59" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="lhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="57" cb="3" le="59" ce="3">
+<rx lb="58" cb="4" le="58" ce="21" pvirg="true">
+<uo lb="58" cb="11" le="58" ce="21" kind="!">
+<n46 lb="58" cb="12" le="58" ce="21">
+<exp pvirg="true"/>
+<xop lb="58" cb="13" le="58" ce="18" kind="==">
+<drx lb="58" cb="13" kind="lvalue" nm="lhs"/>
+<drx lb="58" cb="18" kind="lvalue" nm="rhs"/>
+</xop>
+</n46>
+</uo>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</frDecl>
+<m name="operator--" id="76a02b3d3239217ff239850c40983d88_40b5399055713befaf305ebe09240394" file="4" linestart="63" lineend="67" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="Derived &amp;">
+<lrf>
+<ttp/>
+</lrf>
+</fpt>
+<Stmt>
+<u lb="64" cb="3" le="67" ce="3">
+<ce lb="65" cb="4" le="65" ce="47" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="65" cb="4" le="65" ce="26"/>
+<ce lb="65" cb="36" le="65" ce="46" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="65" cb="36">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</ce>
+<rx lb="66" cb="4" le="66" ce="21" pvirg="true">
+<ce lb="66" cb="11" le="66" ce="21" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="66" cb="11">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="operator--" id="76a02b3d3239217ff239850c40983d88_10c51cd0ffb431737c10ee9b8e9ad72c" file="4" linestart="69" lineend="74" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="Derived">
+<ttp/>
+</fpt>
+<p name="" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="70" cb="3" le="74" ce="3">
+<dst lb="71" cb="4" le="71" ce="31">
+<exp pvirg="true"/>
+<Var nm="result" value="true">
+<ttp/>
+<n47 lb="71" cb="18" le="71" ce="30">
+<exp pvirg="true"/>
+<ce lb="71" cb="19" le="71" ce="29" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="71" cb="19">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</n47>
+</Var>
+</dst>
+<ce lb="72" cb="4" le="72" ce="47" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="72" cb="4" le="72" ce="26"/>
+<ce lb="72" cb="36" le="72" ce="46" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="72" cb="36">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</ce>
+<rx lb="73" cb="4" le="73" ce="11" pvirg="true">
+<drx lb="73" cb="11" kind="lvalue" nm="result"/>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="operator[]" id="76a02b3d3239217ff239850c40983d88_6bd68b0053f22d75db6a3addfdead3f7" file="4" linestart="77" lineend="82" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="reference">
+<Tdef>
+<ttp/>
+</Tdef>
+</fpt>
+<p name="n" proto="difference_type" access2="none">
+<Tdef>
+<ttp/>
+</Tdef>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="78" cb="3" le="82" ce="3">
+<dst lb="79" cb="4" le="79" ce="33">
+<exp pvirg="true"/>
+<Var nm="result" value="true">
+<ttp/>
+<il lb="79" cb="18" le="79" ce="32">
+<exp pvirg="true"/>
+<ce lb="79" cb="20" le="79" ce="30" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="79" cb="20">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</il>
+</Var>
+</dst>
+<ce lb="80" cb="4" le="80" ce="43" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="80" cb="4" le="80" ce="26"/>
+<drx lb="80" cb="34" kind="lvalue" nm="result"/>
+<drx lb="80" cb="42" kind="lvalue" nm="n"/>
+</ce>
+<rx lb="81" cb="4" le="81" ce="12" pvirg="true">
+<uo lb="81" cb="11" le="81" ce="12" kind="*">
+<drx lb="81" cb="12" kind="lvalue" nm="result"/>
+</uo>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="operator+=" id="76a02b3d3239217ff239850c40983d88_987c2667351c6fb546667f1e9c63d5e2" file="4" linestart="83" lineend="87" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="Derived &amp;">
+<lrf>
+<ttp/>
+</lrf>
+</fpt>
+<p name="n" proto="difference_type" access2="none">
+<Tdef>
+<ttp/>
+</Tdef>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="84" cb="3" le="87" ce="3">
+<ce lb="85" cb="4" le="85" ce="48" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="85" cb="4" le="85" ce="26"/>
+<ce lb="85" cb="34" le="85" ce="44" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="85" cb="34">
+<exp pvirg="true"/>
+</umex>
+</ce>
+<drx lb="85" cb="47" kind="lvalue" nm="n"/>
+</ce>
+<rx lb="86" cb="4" le="86" ce="21" pvirg="true">
+<ce lb="86" cb="11" le="86" ce="21" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="86" cb="11">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<frDecl>
+<f namespace="IteratorByFacadeAccess" name="operator-" id="76a02b3d3239217ff239850c40983d88_78097a1003e8b2ece141286e41f51514" file="4" linestart="89" lineend="92" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="difference_type">
+<Tdef>
+<ttp/>
+</Tdef>
+</fpt>
+<p name="lhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="90" cb="3" le="92" ce="3">
+<rx lb="91" cb="4" le="91" ce="51" pvirg="true">
+<ce lb="91" cb="11" le="91" ce="51" nbparm="2" id="76a02b3d3239217ff239850c40983d88_f93e9d9047c41562b47d27005153c84a">
+<exp pvirg="true"/>
+<drx lb="91" cb="11" le="91" ce="27" kind="lvalue" id="76a02b3d3239217ff239850c40983d88_f93e9d9047c41562b47d27005153c84a" nm="measureDistance"/>
+<drx lb="91" cb="43" kind="lvalue" nm="lhs"/>
+<drx lb="91" cb="48" kind="lvalue" nm="rhs"/>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</frDecl>
+<frDecl>
+<f namespace="IteratorByFacadeAccess" name="operator&lt;" id="76a02b3d3239217ff239850c40983d88_d0c882d6b26a658efd85d2eb496f8ae1" file="4" linestart="93" lineend="97" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="lhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const IteratorFacade&lt;Derived, Value, Category, Reference, Distance&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="94" cb="3" le="97" ce="3">
+<dst lb="95" cb="4" le="95" ce="61">
+<exp pvirg="true"/>
+<Var nm="distance" value="true">
+<auto/>
+<ce lb="95" cb="20" le="95" ce="60" nbparm="2" id="76a02b3d3239217ff239850c40983d88_f93e9d9047c41562b47d27005153c84a">
+<exp pvirg="true"/>
+<drx lb="95" cb="20" le="95" ce="36" kind="lvalue" id="76a02b3d3239217ff239850c40983d88_f93e9d9047c41562b47d27005153c84a" nm="measureDistance"/>
+<drx lb="95" cb="52" kind="lvalue" nm="lhs"/>
+<drx lb="95" cb="57" kind="lvalue" nm="rhs"/>
+</ce>
+</Var>
+</dst>
+<rx lb="96" cb="4" le="96" ce="22" pvirg="true">
+<xop lb="96" cb="11" le="96" ce="22" kind="&lt;">
+<drx lb="96" cb="11" kind="lvalue" nm="distance"/>
+<n45 lb="96" cb="22">
+<flit/>
+</n45>
+</xop>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</frDecl>
+</cr>
+</tm>
+</ns>
+<Comments>
+<c f="5" b="5" e="5"/>
+<c f="5" b="6" e="5"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="5" bl="4" bc="1"/>
+<m f="5" bl="6" bc="1"/>
+<m f="5" bl="7" bc="1"/>
+<m f="5" bl="9" bc="1"/>
+</Directives>
+<ns name="IteratorByFacadeAccess" id="ea683ad1553eee0cbcbd27ae779d48e3_5b0fdfcc634c6e5ba64db2405649ed07" file="5" linestart="36" lineend="58" original="0x9b2e078">
+<tm namespace="IteratorByFacadeAccess" access="none" depth="1" kind="class" name="ListNodeIterator" id="ea683ad1553eee0cbcbd27ae779d48e3_8699f65b38e866acf86d122e09c39c16" file="5" linestart="38" lineend="56">
+<template_parameters>
+<ttp name="T" id="ea683ad1553eee0cbcbd27ae779d48e3_3eb9630797764a2b422cd59648ecfbd3" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="IteratorByFacadeAccess" access="none" depth="1" kind="class" name="ListNodeIterator" id="ea683ad1553eee0cbcbd27ae779d48e3_2d66cba4327c5c82227e2cd653b7491f" file="5" linestart="39" lineend="56">
+<base access="public">
+<tss>
+<templatebase id="76a02b3d3239217ff239850c40983d88_5f0d2850b58ce374d073392123f967e0"/>
+<template_arguments>
+<tss>
+<templatebase id="ea683ad1553eee0cbcbd27ae779d48e3_2d66cba4327c5c82227e2cd653b7491f"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+<ttp/>
+<ety>
+<rt>
+<cr id="72a1e00403a41909458e8bb6a65a6ecc_ee977fdb01655ef3c2580f0692a44276"/>
+</rt>
+</ety>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="ListNodeIterator" id="ea683ad1553eee0cbcbd27ae779d48e3_e6b8d4a76854d463bf19397e5602eace" file="5" linestart="39" lineend="39"/>
+<frDecl>
+<rt>
+<cr id="5f17e97ff0a6de906c03680f215a345e_9b59b61259c95fc3fa564a9c208a0baa"/>
+</rt>
+</frDecl>
+<fl name="current" id="ea683ad1553eee0cbcbd27ae779d48e3_c8a1402caf1a774369e2c4283ffac163" file="5" linestart="43" lineend="43" isPtr="true" access="private" proto="ListNode&lt;T&gt; *">
+<pt>
+<tss>
+<templatebase id="559fa9e9bae6a73099275413ccd1a9f8_6d3474366813c0fd1b88dcb33906dab0"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</pt>
+</fl>
+<m name="dereference" id="ea683ad1553eee0cbcbd27ae779d48e3_601996484f0af851d6a878cf72495d2b" file="5" linestart="45" lineend="47" access="private" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="T &amp;">
+<lrf>
+<ttp/>
+</lrf>
+</fpt>
+<Stmt>
+<u lb="45" cb="27" le="47" ce="3">
+<rx lb="46" cb="4" le="46" ce="20" pvirg="true">
+<n14 lb="46" cb="11" le="46" ce="20">
+<exp pvirg="true"/>
+<mex lb="46" cb="11" kind="lvalue" id="ea683ad1553eee0cbcbd27ae779d48e3_c8a1402caf1a774369e2c4283ffac163" nm="current" arrow="1">
+<n19 lb="46" cb="11"/>
+</mex>
+</n14>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<m name="increment" id="ea683ad1553eee0cbcbd27ae779d48e3_619ecf3b551f9b4090d79fe1e4747394" file="5" linestart="48" lineend="50" access="private" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="48" cb="20" le="50" ce="3">
+<xop lb="49" cb="4" le="49" ce="23" kind="=">
+<mex lb="49" cb="4" kind="lvalue" id="ea683ad1553eee0cbcbd27ae779d48e3_c8a1402caf1a774369e2c4283ffac163" nm="current" arrow="1">
+<n19 lb="49" cb="4"/>
+</mex>
+<n14 lb="49" cb="14" le="49" ce="23">
+<exp pvirg="true"/>
+<mex lb="49" cb="14" kind="lvalue" id="ea683ad1553eee0cbcbd27ae779d48e3_c8a1402caf1a774369e2c4283ffac163" nm="current" arrow="1">
+<n19 lb="49" cb="14"/>
+</mex>
+</n14>
+</xop>
+</u>
+
+</Stmt>
+</m>
+<m name="equals" id="ea683ad1553eee0cbcbd27ae779d48e3_21fbb84ccfce73b78697ada3a1f66e65" file="5" linestart="51" lineend="53" access="private" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="other" proto="const ListNodeIterator&lt;T&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<InjectedClassName>
+<cr id="ea683ad1553eee0cbcbd27ae779d48e3_2d66cba4327c5c82227e2cd653b7491f"/>
+</InjectedClassName>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="51" cb="52" le="53" ce="3">
+<rx lb="52" cb="4" le="52" ce="28" pvirg="true">
+<xop lb="52" cb="11" le="52" ce="28" kind="==">
+<mex lb="52" cb="11" kind="lvalue" id="ea683ad1553eee0cbcbd27ae779d48e3_c8a1402caf1a774369e2c4283ffac163" nm="current" arrow="1">
+<n19 lb="52" cb="11"/>
+</mex>
+<n14 lb="52" cb="22" le="52" ce="28">
+<exp pvirg="true"/>
+<drx lb="52" cb="22" kind="lvalue" nm="other"/>
+</n14>
+</xop>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<asd access="public"/>
+<c name="ListNodeIterator&lt;T&gt;" id="ea683ad1553eee0cbcbd27ae779d48e3_5e0ab86b7fd8ccbba251ab94e815f7c4" file="5" linestart="55" lineend="55" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="current" proto="ListNode&lt;T&gt; *" isPtr="true" init="true" access2="none">
+<pt>
+<tss>
+<templatebase id="559fa9e9bae6a73099275413ccd1a9f8_6d3474366813c0fd1b88dcb33906dab0"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</pt>
+<Stmt>
+<n16 lb="55" cb="43">
+<exp pvirg="true"/>
+</n16>
+
+</Stmt>
+</p>
+<initlist id="ea683ad1553eee0cbcbd27ae779d48e3_c8a1402caf1a774369e2c4283ffac163">
+<Stmt>
+<n47 lb="55" cb="61" le="55" ce="69">
+<exp pvirg="true"/>
+<drx lb="55" cb="62" kind="lvalue" nm="current"/>
+</n47>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="55" cb="71" le="55" ce="73"/>
+
+</Stmt>
+</c>
+</cr>
+</tm>
+</ns>
+<ns name="IteratorByFacadeAccess" id="af61b441001637621033c9bd22b6c9df_5b0fdfcc634c6e5ba64db2405649ed07" file="1" linestart="5" lineend="11" original="0x9b2e078">
+<cr namespace="IteratorByFacadeAccess" access="none" depth="0" pod="true" kind="struct" name="A" id="af61b441001637621033c9bd22b6c9df_300f531d78a246e938159cd139e6f3e8" file="1" linestart="7" lineend="10">
+<cr access="public" kind="struct" name="A" id="af61b441001637621033c9bd22b6c9df_02c659064ddedb04b8042688bde9bacb" file="1" linestart="7" lineend="7"/>
+<fl name="value" id="af61b441001637621033c9bd22b6c9df_2f0dfae21390da46ab5b9b0c4be5780c" file="1" linestart="9" lineend="9" isLiteral="true" access="public" proto="int">
+<bt name="int"/>
+</fl>
+<c name="A" id="af61b441001637621033c9bd22b6c9df_4a5406f52c6d3d452990a829dc942583" file="1" linestart="7" lineend="7" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+<c name="A" id="af61b441001637621033c9bd22b6c9df_3ba03291cba1924b2dedb685c0f2ab2a" file="1" linestart="7" lineend="7" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const IteratorByFacadeAccess::A &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="af61b441001637621033c9bd22b6c9df_300f531d78a246e938159cd139e6f3e8"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<c name="A" id="af61b441001637621033c9bd22b6c9df_bb3b952ab8da82ec3cca35ce8e2eac5a" file="1" linestart="7" lineend="7" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="IteratorByFacadeAccess::A &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="af61b441001637621033c9bd22b6c9df_300f531d78a246e938159cd139e6f3e8"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cr>
+</ns>
+<f name="useListsNodeIterator" id="af61b441001637621033c9bd22b6c9df_47c7e4822a96621eed195ac377fea106" file="1" linestart="13" lineend="26" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="14" cb="1" le="26" ce="1">
+<dst lb="15" cb="2" le="15" ce="40">
+<exp pvirg="true"/>
+<Var nm="&lt;using-directive&gt;"/>
+</dst>
+<dst lb="17" cb="2" le="17" ce="117">
+<exp pvirg="true"/>
+<Var nm="head" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="19" cb="2" le="19" ce="45">
+<exp pvirg="true"/>
+<Var nm="iter" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="20" cb="2" le="20" ce="20">
+<exp pvirg="true"/>
+<Var nm="value" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="21" cb="2" le="21" ce="24">
+<exp pvirg="true"/>
+<Var nm="val" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="22" cb="2" le="22" ce="20">
+<exp pvirg="true"/>
+<Var nm="next" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="23" cb="2" le="23" ce="20">
+<exp pvirg="true"/>
+<Var nm="post" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="24" cb="2" le="24" ce="24">
+<exp pvirg="true"/>
+<Var nm="eq" value="true">
+<auto/>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<NDepend IsCProject="false" IsPhysical="false" AppName="TemplateMetaprogramming" Platform="DotNet" FileWrittenByProductVersion="2017.3.0.65">
+<NDepend IsCProject="false" IsPhysical="false" AppName="TemplateMetaprogramming" Platform="DotNet" FileWrittenByProductVersion="2018.1.0.73">
   <OutputDir KeepXmlFiles="False">C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CppDependOut</OutputDir>
   <Projects>
     <Name>C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TemplateMetaprogramming.sln</Name>
@@ -7,14 +7,14 @@
   </Projects>
   <FrameworkProjects />
   <Dirs />
-  <Report Kind="0" SectionsEnabled="110591" XslPath="" Flags="261120" />
+  <Report Kind="0" SectionsEnabled="131071" XslPath="" Flags="261120" />
   <BuildComparisonSetting ProjectMode="CurrentProject" BuildMode="NDaysAgoAnalysisResult" ProjectFileToCompareWith="" BuildFileToCompareWith="" NDaysAgo="30" />
   <BaselineInUISetting ProjectMode="CurrentProject" BuildMode="NDaysAgoAnalysisResult" ProjectFileToCompareWith="" BuildFileToCompareWith="" NDaysAgo="30" />
   <CoverageFiles CoverageDir="" UncoverableAttribute="" />
-  <Plugins Plugin="true" Vera="false" Modernize="false">
+  <Plugins Plugin="true" Vera="false" Modernize="true">
     <LoadedPlugins />
   </Plugins>
-  <ProjectParserSettings ParseIncludes="false" ParserKind="clang" QmakeFilePath="" ParserNbCores="0" ParserTimeOut="10" />
+  <ProjectParserSettings ParseIncludes="true" ParserKind="clang" QmakeFilePath="" ParserNbCores="0" ParserTimeOut="10" />
   <TrendMetrics UseCustomLog="False" LogRecurrence="3" LogLabel="2" UseCustomDir="False" CustomDir="">
     <Chart Name="Lines of Code" ShowInReport="True">
       <Serie MetricName="# Lines of Code" MetricUnit="Loc" Color="#FF00BFFF" ChartType="Line" ScaleExp="0" />
@@ -5260,5 +5260,4 @@ select t
 ]]></Query>
     </Group>
   </Queries>
-  <WarnFilter />
 </NDepend>

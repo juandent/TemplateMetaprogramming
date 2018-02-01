@@ -1,4 +1,5 @@
 <Externals>
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_76e43d9fa50c2ce16dafa9452550a098" file="4" linestart="389" lineend="479"/>
 <cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639" file="4" linestart="349" lineend="352">
 <base access="public">
 <tss>
@@ -10,14 +11,13 @@
 </tss>
 </base>
 </cr>
-<cr namespace="std" access="none" kind="class" name="basic_ostringstream" id="ce7d66c4fb37f82f4844d16a4c953408_95a628997c78cce13a730fe75069da30" file="4" linestart="517" lineend="517"/>
-<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_76e43d9fa50c2ce16dafa9452550a098" file="4" linestart="389" lineend="479"/>
 <tm namespace="std" access="none" kind="class" name="allocator" id="ce7d66c4fb37f82f4844d16a4c953408_07566aa809aee0bdf1c0fac16e19fa85" file="4" linestart="482" lineend="483">
 <template_parameters>
 <ttp name="_Ty" id="ce7d66c4fb37f82f4844d16a4c953408_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
 </template_parameters>
 <cr namespace="std" access="none" kind="class" name="allocator" id="ce7d66c4fb37f82f4844d16a4c953408_07566aa809aee0bdf1c0fac16e19fa85" file="4" linestart="483" lineend="483"/>
 </tm>
+<cr namespace="std" access="none" kind="class" name="basic_ostringstream" id="ce7d66c4fb37f82f4844d16a4c953408_95a628997c78cce13a730fe75069da30" file="4" linestart="517" lineend="517"/>
 <cr namespace="std" access="none" depth="0" kind="class" name="allocator" id="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85" file="5" linestart="999" lineend="1082" previous="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85">
 <tm parent="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85" access="none" depth="0" pod="true" kind="struct" name="rebind" id="6110fe54ba3fb31470656e507d722665_38c2be5a786a253bb82af3c54854f921" file="5" linestart="1022" lineend="1026">
 <template_parameters>

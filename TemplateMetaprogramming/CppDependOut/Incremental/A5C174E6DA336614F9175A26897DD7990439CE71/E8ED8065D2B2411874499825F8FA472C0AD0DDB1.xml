@@ -135,11 +135,6 @@
 </template_parameters>
 <cr access="none" depth="0" pod="true" kind="struct" name="push_back_external" id="89eb1743fc4c083a79ad75fc1d3c8c18_f3aa2ea1afea6165c73552f8b42157eb" file="2" linestart="71" lineend="74">
 <cr access="public" kind="struct" name="push_back_external" id="89eb1743fc4c083a79ad75fc1d3c8c18_156c6ee80c9f98dd38a0456f8af10785" file="2" linestart="71" lineend="71"/>
-<TypedefNameDecl name="type" id="89eb1743fc4c083a79ad75fc1d3c8c18_0f586a9aab88eb9c4573346ccac19920" file="2" linestart="73" lineend="73">
-<rt>
-<cr id="89eb1743fc4c083a79ad75fc1d3c8c18_9822eb36ecd337cc8682324624e4c8ca"/>
-</rt>
-</TypedefNameDecl>
 </cr>
 </tm>
 <ctps Spec="&lt;&lt;&gt;, type-parameter-0-0&gt;" access="none" depth="0" pod="true" kind="struct" name="push_back_external" id="89eb1743fc4c083a79ad75fc1d3c8c18_54448fa7941a1a3c997f59adaf1236af" file="2" linestart="76" lineend="80">

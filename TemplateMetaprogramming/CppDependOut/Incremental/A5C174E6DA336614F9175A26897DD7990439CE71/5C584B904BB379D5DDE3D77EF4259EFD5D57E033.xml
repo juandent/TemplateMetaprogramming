@@ -2,8 +2,8 @@
 <Comments>
 <c f="1" b="6" e="6"/>
 <c f="1" b="7" e="6"/>
-<c f="1" b="17" e="17"/>
-<c f="1" b="18" e="17"/>
+<c f="1" b="18" e="18"/>
+<c f="1" b="19" e="18"/>
 </Comments>
 <Macros/>
 <Directives>
@@ -25,6 +25,8 @@
 <c f="2" b="67" e="67"/>
 <c f="2" b="68" e="68"/>
 <c f="2" b="70" e="68"/>
+<c f="2" b="73" e="73"/>
+<c f="2" b="74" e="73"/>
 <c f="2" b="91" e="91"/>
 <c f="2" b="92" e="92"/>
 <c f="2" b="94" e="92"/>
@@ -160,11 +162,6 @@
 </template_parameters>
 <cr access="none" depth="0" pod="true" kind="struct" name="push_back_external" id="89eb1743fc4c083a79ad75fc1d3c8c18_f3aa2ea1afea6165c73552f8b42157eb" file="2" linestart="71" lineend="74">
 <cr access="public" kind="struct" name="push_back_external" id="89eb1743fc4c083a79ad75fc1d3c8c18_156c6ee80c9f98dd38a0456f8af10785" file="2" linestart="71" lineend="71"/>
-<TypedefNameDecl name="type" id="89eb1743fc4c083a79ad75fc1d3c8c18_0f586a9aab88eb9c4573346ccac19920" file="2" linestart="73" lineend="73">
-<rt>
-<cr id="89eb1743fc4c083a79ad75fc1d3c8c18_9822eb36ecd337cc8682324624e4c8ca"/>
-</rt>
-</TypedefNameDecl>
 </cr>
 </tm>
 <ctps Spec="&lt;&lt;&gt;, type-parameter-0-0&gt;" access="none" depth="0" pod="true" kind="struct" name="push_back_external" id="89eb1743fc4c083a79ad75fc1d3c8c18_54448fa7941a1a3c997f59adaf1236af" file="2" linestart="76" lineend="80">
@@ -261,7 +258,7 @@
 <ttp/>
 </TypedefNameDecl>
 </ctps>
-<TypedefNameDecl name="MySeq" id="fbc450b7a34f86c8cc54b67068863be8_c63fa03edc65a28d721a1e4ed65af688" file="3" linestart="24" lineend="24">
+<TypedefNameDecl name="MySeq" id="6926bf140a84fa60ee62162e64f4f1e9_c63fa03edc65a28d721a1e4ed65af688" file="1" linestart="7" lineend="7">
 <tss>
 <templatebase id="89eb1743fc4c083a79ad75fc1d3c8c18_dcbc568ba4760eb73c72601c576e4b90"/>
 <template_arguments>
@@ -274,91 +271,6 @@
 <bt name="long double"/>
 </template_arguments>
 </tss>
-</TypedefNameDecl>
-<TypedefNameDecl name="xx" id="fbc450b7a34f86c8cc54b67068863be8_a8ce064785c9ddd8272f8255fae219a7" file="3" linestart="27" lineend="27">
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</TypedefNameDecl>
-<TypedefNameDecl name="at00" id="fbc450b7a34f86c8cc54b67068863be8_2c1a9b6feec158b93fc8a02d34e84052" file="3" linestart="28" lineend="28">
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</TypedefNameDecl>
-<TypedefNameDecl name="yy" id="fbc450b7a34f86c8cc54b67068863be8_1bd5233b380bc41a8ab42db54d7c05ee" file="3" linestart="30" lineend="30">
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
 </TypedefNameDecl>
 <TypedefNameDecl name="r_xx" id="6926bf140a84fa60ee62162e64f4f1e9_52ddf092c4346185a7e9c2044bbcfc1c" file="1" linestart="10" lineend="10">
 <ety>
@@ -410,63 +322,13 @@
 </Tdef>
 </ety>
 </TypedefNameDecl>
-<TypedefNameDecl name="r_xx_front" id="6926bf140a84fa60ee62162e64f4f1e9_58e7f150884737f671968a30dc7cf38b" file="1" linestart="13" lineend="13">
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</TypedefNameDecl>
-<TypedefNameDecl name="r_at00_front" id="6926bf140a84fa60ee62162e64f4f1e9_39eacaeadf9722d48be3a7fac33f949f" file="1" linestart="14" lineend="14">
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</TypedefNameDecl>
-<f name="useMyFold" id="6926bf140a84fa60ee62162e64f4f1e9_da0088b6425e6aed1bc2e84af4db8bf8" file="1" linestart="18" lineend="24" access="none" hasbody="true" isdef="true">
+<f name="useMyFold" id="6926bf140a84fa60ee62162e64f4f1e9_da0088b6425e6aed1bc2e84af4db8bf8" file="1" linestart="19" lineend="27" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
 <bt name="void"/>
 </fpt>
 <Stmt>
-<u lb="19" cb="1" le="24" ce="1">
-<dst lb="20" cb="2" le="20" ce="10">
+<u lb="20" cb="1" le="27" ce="1">
+<dst lb="21" cb="2" le="21" ce="10">
 <exp pvirg="true"/>
 <Var nm="anR" value="true">
 <Tdef>
@@ -504,7 +366,7 @@
 </Tdef>
 </ety>
 </Tdef>
-<n10 lb="20" cb="7">
+<n10 lb="21" cb="7">
 <typeptr id="89eb1743fc4c083a79ad75fc1d3c8c18_7e4099281fc44e42c552cfbc6f73c57d">
 <template_arguments>
 <bt name="long"/>
@@ -520,83 +382,9 @@
 </n10>
 </Var>
 </dst>
-<dst lb="21" cb="2" le="21" ce="19">
-<exp pvirg="true"/>
-<Var nm="otherR" value="true">
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-<n10 lb="21" cb="13">
-<typeptr id="89eb1743fc4c083a79ad75fc1d3c8c18_80f6ffb3a00b9a5d0fff47f1a34e2499">
-<template_arguments>
-<bt name="long double"/>
-<bt name="long"/>
-<bt name="float"/>
-<bt name="double"/>
-<bt name="short"/>
-<bt name="float"/>
-<bt name="long"/>
-</template_arguments>
-</typeptr>
-<temp/>
-</n10>
-</Var>
-</dst>
 <dst lb="22" cb="2" le="22" ce="12">
 <exp pvirg="true"/>
 <Var nm="at2" value="true">
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<ety>
-<Tdef>
-<sttp/>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</ety>
-</Tdef>
-</Var>
-</dst>
-<dst lb="23" cb="2" le="23" ce="24">
-<exp pvirg="true"/>
-<Var nm="at2_front" value="true">
 <Tdef>
 <ety>
 <Tdef>

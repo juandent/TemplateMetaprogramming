@@ -1,0 +1,56 @@
+<Root>
+<Comments/>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+</Directives>
+<tun>
+<RedeclarableTemplateDecl name="AddLValueReferenceT" id="2ee7ce4bebc610a73c9ea2f28f256a9c_6dd0ed0c63ee012e7971ed27524dfcd6" file="1" linestart="3" lineend="4">
+<template_parameters>
+<ttp name="T" id="2ee7ce4bebc610a73c9ea2f28f256a9c_758cee7a865ac07050f87902c1a0aa1f" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="AddLValueReferenceT" id="2ee7ce4bebc610a73c9ea2f28f256a9c_6dd0ed0c63ee012e7971ed27524dfcd6" file="1" linestart="4" lineend="4">
+<lrf>
+<ttp/>
+</lrf>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<f name="useAddLValueReference" id="2ee7ce4bebc610a73c9ea2f28f256a9c_dd0b6a473ad343e4c0a7be9385472a24" file="1" linestart="7" lineend="12" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="8" cb="1" le="12" ce="1">
+<dst lb="9" cb="2" le="9" ce="38">
+<exp pvirg="true"/>
+<Var nm="ref"/>
+</dst>
+<dst lb="10" cb="2" le="10" ce="11">
+<exp pvirg="true"/>
+<Var nm="i" value="true">
+<bt name="int"/>
+<n45 lb="10" cb="10">
+<flit/>
+</n45>
+</Var>
+</dst>
+<dst lb="11" cb="2" le="11" ce="18">
+<exp pvirg="true"/>
+<Var nm="pR">
+<Tdef>
+<tss>
+<templatebase id="2ee7ce4bebc610a73c9ea2f28f256a9c_6dd0ed0c63ee012e7971ed27524dfcd6"/>
+<template_arguments>
+<bt name="int"/>
+</template_arguments>
+</tss>
+</Tdef>
+<drx lb="11" cb="17" kind="lvalue" nm="i"/>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

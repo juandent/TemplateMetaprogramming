@@ -1,4 +1,14 @@
 <Externals>
+<cr namespace="std" access="none" depth="1" kind="struct" name="is_same" id="ca5adf2e9ebe71e52946c2177ddd81d1_256c50d0405499789a249828b6bb411e" file="2" linestart="84" lineend="87">
+<base access="public">
+<Tdef>
+<tss>
+<templatebase id="ca5adf2e9ebe71e52946c2177ddd81d1_84a6953c26582fecb01761a3189184d1"/>
+<template_arguments/>
+</tss>
+</Tdef>
+</base>
+</cr>
 <tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="ca5adf2e9ebe71e52946c2177ddd81d1_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="16" lineend="34">
 <template_parameters>
 <ttp name="_Ty" id="ca5adf2e9ebe71e52946c2177ddd81d1_3ddd43b4e6565475f3b9a7df82f4d2fb" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -12,16 +22,6 @@
 </v>
 </cr>
 </tm>
-<cr namespace="std" access="none" depth="1" kind="struct" name="is_same" id="ca5adf2e9ebe71e52946c2177ddd81d1_256c50d0405499789a249828b6bb411e" file="2" linestart="84" lineend="87">
-<base access="public">
-<Tdef>
-<tss>
-<templatebase id="ca5adf2e9ebe71e52946c2177ddd81d1_84a6953c26582fecb01761a3189184d1"/>
-<template_arguments/>
-</tss>
-</Tdef>
-</base>
-</cr>
 <cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639" file="3" linestart="349" lineend="352">
 <base access="public">
 <tss>

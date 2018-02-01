@@ -344,7 +344,7 @@
 </Stmt>
 </m>
 </cr>
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="78" lineend="91" original="0xa339fb8">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="78" lineend="91" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="static_check_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_ab3a0736947f6bfc5685d35fe74c2c0a" file="1" linestart="80" lineend="84">
 <template_parameters>
 <DeclaratorDecl name="Consistent" id="b4ef6484950c9f628c38ba1e6fbeddfc_1f26adaa3dd6a3ab81e8f0db595cd71c" file="1" linestart="80" lineend="80" depth="0" index="0">
@@ -385,7 +385,7 @@
 </template_parameters>
 <cr namespace="sqlpp" access="none" kind="struct" name="NoDefinition" id="b4ef6484950c9f628c38ba1e6fbeddfc_2ff7449f36359cc4e145d6d11a2801e2" file="1" linestart="98" lineend="98"/>
 </tm>
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="100" lineend="126" original="0xa339fb8">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="100" lineend="126" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" kind="struct" name="static_combined_check_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_1e46ed4f5a18bbc394af35ba59dbf934" file="1" linestart="102" lineend="103">
 <template_parameters>
 <ttp name="StaticChecks" id="b4ef6484950c9f628c38ba1e6fbeddfc_6ac1d939ce90a85a3439aa4129ec990f" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -442,7 +442,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="165" lineend="175" original="0xa339f40">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="165" lineend="175" original="0x90cdad0">
 <tm namespace="sqlpp" access="none" depth="0" pod="true" kind="struct" name="statement_policies_t" id="b4ef6484950c9f628c38ba1e6fbeddfc_fd4866608f5928551acf604bb386186d" file="1" linestart="167" lineend="171">
 <template_parameters>
 <ttp name="Db" id="b4ef6484950c9f628c38ba1e6fbeddfc_330bd72efda976b34a9464962429b28a" depth="0" index="0" proto="type-parameter-0-0">
@@ -468,8 +468,8 @@
 </Stmt>
 </v>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="177" lineend="273" original="0xa339f40">
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="179" lineend="205" original="0xa339fb8">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="177" lineend="273" original="0x90cdad0">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="179" lineend="205" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="index_sequence" id="b4ef6484950c9f628c38ba1e6fbeddfc_7adffd05b3ddafbf00f1da6fe34b8220" file="1" linestart="183" lineend="186">
 <template_parameters>
 <DeclaratorDecl name="Ints" id="b4ef6484950c9f628c38ba1e6fbeddfc_b8d74a858b78e38f3897425b11f0f626" file="1" linestart="183" lineend="183" depth="0" index="0">
@@ -1111,8 +1111,8 @@
 </Stmt>
 </f>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="316" lineend="373" original="0xa339f40">
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="318" lineend="372" original="0xa339fb8">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="316" lineend="373" original="0x90cdad0">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="318" lineend="372" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" kind="struct" name="is_element_of" id="b4ef6484950c9f628c38ba1e6fbeddfc_0673d13df1ca1b959d8a65874b956e40" file="1" linestart="320" lineend="321">
 <template_parameters>
 <ttp name="E" id="b4ef6484950c9f628c38ba1e6fbeddfc_4c828bd87c7001821923e52c3111f3ea" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -1258,11 +1258,11 @@
 </ctps>
 </ns>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="401" lineend="425" original="0xa339f40">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="401" lineend="425" original="0x90cdad0">
 <ns name="tag" id="b4ef6484950c9f628c38ba1e6fbeddfc_9be14ab43a07edafee7592f3408a9784" file="1" linestart="403" lineend="406">
 <cr namespace="sqlpp.tag" access="none" kind="struct" name="is_expression" id="b4ef6484950c9f628c38ba1e6fbeddfc_0788c87dded911ae8893d966760c55a3" file="1" linestart="405" lineend="405"/>
 </ns>
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="407" lineend="424" original="0xa339fb8">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="407" lineend="424" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="is_expression_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_bfcf8a7f333d1b00d69a7c66297d6a5f" file="1" linestart="409" lineend="413">
 <template_parameters>
 <ttp name="T" id="b4ef6484950c9f628c38ba1e6fbeddfc_c221a0ae66e2ad97ce0cd38a8632a431" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -1323,7 +1323,7 @@
 </template_parameters>
 <cr access="none" kind="struct" name="TypeDisplayer" id="b4ef6484950c9f628c38ba1e6fbeddfc_14c86594e6a82d6e96eb49dc3bb13522" file="1" linestart="428" lineend="428"/>
 </tm>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="430" lineend="444" original="0xa339f40">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="430" lineend="444" original="0x90cdad0">
 <tm namespace="sqlpp" access="none" depth="0" pod="true" kind="struct" name="expression_operators" id="b4ef6484950c9f628c38ba1e6fbeddfc_522d955b14c9d3cfdfb87a337563e506" file="1" linestart="432" lineend="438">
 <template_parameters>
 <ttp name="Expr" id="b4ef6484950c9f628c38ba1e6fbeddfc_0399849b27a14b418918c4253f820abb" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -1406,8 +1406,8 @@
 </Stmt>
 </f>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="446" lineend="501" original="0xa339f40">
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="448" lineend="500" original="0xa339fb8">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="446" lineend="501" original="0x90cdad0">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="448" lineend="500" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="type_vector" id="b4ef6484950c9f628c38ba1e6fbeddfc_c0b529dcd579863305b9af0bcb6d34dd" file="1" linestart="450" lineend="453">
 <template_parameters>
 <ttp name="T" id="b4ef6484950c9f628c38ba1e6fbeddfc_1e0b5e5040e48f72906533f68abcc67e" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -1500,8 +1500,8 @@
 </ctps>
 </ns>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="505" lineend="518" original="0xa339f40">
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="507" lineend="517" original="0xa339fb8">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="505" lineend="518" original="0x90cdad0">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="507" lineend="517" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="void_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_3b666b24786ae8bb34da35594695da8a" file="1" linestart="509" lineend="513">
 <template_parameters>
 <ttp name="T" id="b4ef6484950c9f628c38ba1e6fbeddfc_a05341da3f4da0fcdb210390c4ecd22e" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -1523,9 +1523,9 @@
 </RedeclarableTemplateDecl>
 </ns>
 </ns>
-<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="521" lineend="641" original="0xa339f40">
+<ns name="sqlpp" id="b4ef6484950c9f628c38ba1e6fbeddfc_02ffde64e9be4238a9dbaca47e1b7b45" file="1" linestart="521" lineend="641" original="0x90cdad0">
 <cr namespace="sqlpp" access="none" kind="struct" name="no_value_t" id="b4ef6484950c9f628c38ba1e6fbeddfc_e5c8e83a9cb778ee677085a5971fd78f" file="1" linestart="523" lineend="523"/>
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="524" lineend="537" original="0xa339fb8">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="524" lineend="537" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="value_type_of_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_f7b0b07fea419c3195aa910a3e5d4c3e" file="1" linestart="526" lineend="530">
 <template_parameters>
 <ttp name="T" id="b4ef6484950c9f628c38ba1e6fbeddfc_fa23c3a613d28016bc1acb5e46804ef2" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -1840,12 +1840,12 @@
 </ety>
 </TypedefNameDecl>
 </RedeclarableTemplateDecl>
-<ns name="tag" id="b4ef6484950c9f628c38ba1e6fbeddfc_9be14ab43a07edafee7592f3408a9784" file="1" linestart="617" lineend="622" original="0xa357300">
+<ns name="tag" id="b4ef6484950c9f628c38ba1e6fbeddfc_9be14ab43a07edafee7592f3408a9784" file="1" linestart="617" lineend="622" original="0x9f0ff80">
 <cr namespace="sqlpp.tag" access="none" depth="0" pod="true" kind="struct" name="can_be_null" id="b4ef6484950c9f628c38ba1e6fbeddfc_cbf79488fc7d26f1d6561ef097b90305" file="1" linestart="619" lineend="621">
 <cr access="public" kind="struct" name="can_be_null" id="b4ef6484950c9f628c38ba1e6fbeddfc_b0128f9352879342d0ab074bdacf0576" file="1" linestart="619" lineend="619"/>
 </cr>
 </ns>
-<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="624" lineend="638" original="0xa339fb8">
+<ns name="detail" id="b4ef6484950c9f628c38ba1e6fbeddfc_78fd79d4227642a3e1564bb01f95388b" file="1" linestart="624" lineend="638" original="0x90cdb48">
 <tm namespace="sqlpp.detail" access="none" depth="0" pod="true" kind="struct" name="column_spec_can_be_null_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_eab128ffd7d97f500ce85c6f56d29ec5" file="1" linestart="626" lineend="630">
 <template_parameters>
 <ttp name="T" id="b4ef6484950c9f628c38ba1e6fbeddfc_898c42f0db3beef8998007379682018a" depth="0" index="0" proto="type-parameter-0-0"/>

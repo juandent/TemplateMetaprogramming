@@ -206,5 +206,11 @@
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AliasTemplates_CPPTemp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PassByValue_decay_CPPTemp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

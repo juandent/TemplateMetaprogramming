@@ -1,0 +1,4 @@
+<log>
+ <error level="warning" id="pp_pragma_once_in_main_file" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\MyReversedFold.h" line="1" col="9" msg="#pragma once in main file" />
+ <error level="warning" id="ext_template_template_param_typename" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\MyReversedFold.h" line="16" col="58" msg="template template parameter using &apos;typename&apos; is a C++1z extension" />
+</log>
