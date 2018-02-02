@@ -212,5 +212,8 @@
     <ClCompile Include="PassByValue_decay_CPPTemp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="declval.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

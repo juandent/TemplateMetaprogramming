@@ -188,6 +188,7 @@
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
+    <ClCompile Include="declval.cpp" />
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="DetectionIdiom.cpp" />
     <ClCompile Include="EBCO_CPPTempl.cpp" />

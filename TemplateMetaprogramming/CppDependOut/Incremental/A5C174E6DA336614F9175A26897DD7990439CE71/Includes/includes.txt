@@ -28,6 +28,7 @@ c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\chapter6.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\chapter_2.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\crtp_0.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\declval.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\dependentnames.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\detectionidiom.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\ebco_cpptempl.cpp

@@ -1,83 +1,6 @@
 <Externals>
-<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_76e43d9fa50c2ce16dafa9452550a098" file="4" linestart="389" lineend="479"/>
-<cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639" file="4" linestart="349" lineend="352">
-<base access="public">
-<tss>
-<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_0e14667e7fa909cae787013e4a665cda"/>
-<template_arguments>
-<ttp/>
-<bt name="long"/>
-</template_arguments>
-</tss>
-</base>
-</cr>
-<tm namespace="std" access="none" kind="class" name="allocator" id="ce7d66c4fb37f82f4844d16a4c953408_07566aa809aee0bdf1c0fac16e19fa85" file="4" linestart="482" lineend="483">
-<template_parameters>
-<ttp name="_Ty" id="ce7d66c4fb37f82f4844d16a4c953408_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
-</template_parameters>
-<cr namespace="std" access="none" kind="class" name="allocator" id="ce7d66c4fb37f82f4844d16a4c953408_07566aa809aee0bdf1c0fac16e19fa85" file="4" linestart="483" lineend="483"/>
-</tm>
-<cr namespace="std" access="none" kind="class" name="basic_ostringstream" id="ce7d66c4fb37f82f4844d16a4c953408_95a628997c78cce13a730fe75069da30" file="4" linestart="517" lineend="517"/>
-<cr namespace="std" access="none" depth="0" kind="class" name="allocator" id="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85" file="5" linestart="999" lineend="1082" previous="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85">
-<tm parent="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85" access="none" depth="0" pod="true" kind="struct" name="rebind" id="6110fe54ba3fb31470656e507d722665_38c2be5a786a253bb82af3c54854f921" file="5" linestart="1022" lineend="1026">
-<template_parameters>
-<ttp name="_Other" id="6110fe54ba3fb31470656e507d722665_5cb4d687f09ee7cb5b3575605cef20a8" depth="1" index="0" proto="type-parameter-1-0"/>
-</template_parameters>
-</tm>
-</cr>
-<tm namespace="std" access="none" depth="1" kind="class" name="basic_string" id="0b1fac74b373748f39ef0b1f52fedc63_6ecc822215ca97386606c5e8e95c56fb" file="6" linestart="1840" lineend="3713">
-<template_parameters>
-<ttp name="_Elem" id="0b1fac74b373748f39ef0b1f52fedc63_97d2655bc427b0bca0bf3fd72608091f" depth="0" index="0" proto="type-parameter-0-0"/>
-<ttp name="_Traits" id="0b1fac74b373748f39ef0b1f52fedc63_88cafbb8af4cbe00477f4d0dc5b6f62c" depth="0" index="1" proto="type-parameter-0-1">
-<tss>
-<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
-<template_arguments>
-<ttp/>
-</template_arguments>
-</tss>
-</ttp>
-<ttp name="_Alloc" id="0b1fac74b373748f39ef0b1f52fedc63_636b2981289c18feee5282669fe62e0a" depth="0" index="2" proto="type-parameter-0-2">
-<tss>
-<templatebase id="6110fe54ba3fb31470656e507d722665_07566aa809aee0bdf1c0fac16e19fa85"/>
-<template_arguments>
-<ttp/>
-</template_arguments>
-</tss>
-</ttp>
-</template_parameters>
-<cr namespace="std" access="none" depth="1" kind="class" name="basic_string" id="0b1fac74b373748f39ef0b1f52fedc63_6ecc822215ca97386606c5e8e95c56fb" file="6" linestart="1843" lineend="3713">
-<base access="public">
-<tss>
-<templatebase id="0b1fac74b373748f39ef0b1f52fedc63_fd6b90577893febf1782c3472e44b788"/>
-<template_arguments>
-<tss>
-<templatebase id="0b1fac74b373748f39ef0b1f52fedc63_15e8cc19f33496752ccbe61f65b7379c"/>
-<template_arguments>
-<ttp/>
-<ttp/>
-</template_arguments>
-</tss>
-</template_arguments>
-</tss>
-</base>
-<cr access="public" kind="class" name="basic_string" id="0b1fac74b373748f39ef0b1f52fedc63_7808f3d3e2ddb7f603f560a243578200" file="6" linestart="1843" lineend="1843"/>
-<c name="basic_string&lt;_Elem, _Traits, _Alloc&gt;" id="0b1fac74b373748f39ef0b1f52fedc63_27c29e5ae4008e8e02d1117a50805d4f" file="6" linestart="1960" lineend="1965" access="public" hasbody="true" isdef="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-<p name="_Ptr" proto="const _Elem *const" isPtr="true" const="true" access2="none">
-<QualType const="true">
-<pt>
-<QualType const="true">
-<ttp/>
-</QualType>
-</pt>
-</QualType>
-</p>
-</c>
-</cr>
-</tm>
-<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="7" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_76e43d9fa50c2ce16dafa9452550a098" file="3" linestart="389" lineend="479"/>
+<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="4" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
 <lrf>
 <tss>
@@ -108,11 +31,11 @@
 </pt>
 </p>
 </f>
-<ft name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_3298dfe44ddb6b69da98967bbc11dbef" file="7" linestart="766" lineend="811">
+<ft name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_3298dfe44ddb6b69da98967bbc11dbef" file="4" linestart="766" lineend="811">
 <template_parameters>
 <ttp name="_Traits" id="ac16a765409b3fedcc80ee88e7ce5942_29653cbbe518513f057baf83aeea343a" depth="0" index="0" proto="type-parameter-0-0"/>
 </template_parameters>
-<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="7" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
+<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="4" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
 <lrf>
 <tss>
@@ -144,7 +67,7 @@
 </p>
 </f>
 </ft>
-<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="8" linestart="28" lineend="28" storage="extern" access2="none">
+<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="5" linestart="28" lineend="28" storage="extern" access2="none">
 <Tdef>
 <tss>
 <templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>

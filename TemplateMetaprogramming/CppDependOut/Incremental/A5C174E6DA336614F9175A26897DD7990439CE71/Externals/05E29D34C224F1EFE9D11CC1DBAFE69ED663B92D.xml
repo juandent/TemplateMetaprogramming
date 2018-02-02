@@ -1,7 +1,0 @@
-<Externals>
-<v name="value" proto="const _Ty" const="true" id="ca5adf2e9ebe71e52946c2177ddd81d1_59533a95ed8965943872704845b566cb" file="2" linestart="20" lineend="20" storage="static" init="true" access2="public">
-<QualType const="true">
-<ttp/>
-</QualType>
-</v>
-</Externals>

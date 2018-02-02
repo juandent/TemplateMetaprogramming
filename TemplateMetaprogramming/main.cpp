@@ -1205,10 +1205,26 @@ void PassByValue();
 
 void useDecayT();
 
+void useDeclVal();
+
+void whyRValueInsteadOfLvalue();
+
+void useLambdaInLambda();
+
+void callDeclVal(int* p = nullptr);
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	callDeclVal();
+
+	useLambdaInLambda();
+
+	whyRValueInsteadOfLvalue();
+
+	useDeclVal();
 
 	useDecayT();
 

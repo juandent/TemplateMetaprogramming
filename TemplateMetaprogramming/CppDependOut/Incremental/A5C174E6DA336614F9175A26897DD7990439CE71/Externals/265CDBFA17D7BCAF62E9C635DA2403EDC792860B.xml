@@ -79,6 +79,22 @@
 </fpt>
 </c>
 </cr>
+<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="4" linestart="28" lineend="28" storage="extern" access2="none">
+<Tdef>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</v>
 <f namespace="std" name="endl" id="ac16a765409b3fedcc80ee88e7ce5942_519f22e86fa75f44ad68a8158aae2a36" file="3" linestart="978" lineend="985" access="none" inline="true" hasbody="true" isdef="true">
 <Attributed/>
 <p name="_Ostr" proto="basic_ostream&lt;_Elem, _Traits&gt; &amp;" isRef="true" access2="none">
@@ -113,20 +129,4 @@
 </p>
 </f>
 </ft>
-<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="4" linestart="28" lineend="28" storage="extern" access2="none">
-<Tdef>
-<tss>
-<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>
-<template_arguments>
-<bt name="char"/>
-<tss>
-<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</tss>
-</template_arguments>
-</tss>
-</Tdef>
-</v>
 </Externals>

@@ -1,0 +1,309 @@
+<Externals>
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="ce7d66c4fb37f82f4844d16a4c953408_76e43d9fa50c2ce16dafa9452550a098" file="2" linestart="389" lineend="479"/>
+<tm namespace="std" access="none" depth="3" kind="class" name="basic_ostream" id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243" file="3" linestart="37" lineend="609" previous="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243">
+<template_parameters>
+<ttp name="_Elem" id="ac16a765409b3fedcc80ee88e7ce5942_16f2e94b2b51d2f5dff02392fae903e6" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="_Traits" id="ac16a765409b3fedcc80ee88e7ce5942_e2d9f5b99956b4f9c1c67b1b3209c8f9" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr namespace="std" access="none" depth="3" kind="class" name="basic_ostream" id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243" file="3" linestart="39" lineend="609" previous="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243">
+<base access="public">
+<tss>
+<templatebase id="05c4bedb994d2ee7d8ccbc90234ef0e0_0973aa6d290bf2c44e86c2f58971d880"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="basic_ostream" id="ac16a765409b3fedcc80ee88e7ce5942_5fbde4af169bb278d3e041271eb8fcd4" file="3" linestart="39" lineend="39"/>
+<m name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_9edd3f37c6ea7c68d416a2808aad0962" file="3" linestart="308" lineend="326" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="_Myt &amp;">
+<lrf>
+<Tdef>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</lrf>
+</fpt>
+<p name="_Val" proto="unsigned int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="unsigned int"/>
+</p>
+</m>
+</cr>
+</tm>
+<cr access="none" depth="0" kind="class" name="" id="816e023cbf481b4b34071fe3138bd02c_f551d97c1278af1d56f890707aa1968b" file="1" linestart="86" lineend="86">
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_bc2005c05560da4ec7b7edb1cca2f5e9" file="1" linestart="86" lineend="86" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="(lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:86:16) &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_f551d97c1278af1d56f890707aa1968b"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" kind="class" name="" id="816e023cbf481b4b34071fe3138bd02c_394517f7f9402263aac628d468c88287" file="1" linestart="110" lineend="110">
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_784804389767d23f74e8e4b083dc15a3" file="1" linestart="110" lineend="110" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="(lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:110:16) &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_394517f7f9402263aac628d468c88287"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" kind="class" name="" id="816e023cbf481b4b34071fe3138bd02c_69a7ee787323e5b4086fe513d60db1c6" file="1" linestart="123" lineend="123">
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_bc9cf2d2a4cbfc96079f56df923cc9ba" file="1" linestart="123" lineend="123" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="(lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:123:40) &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_69a7ee787323e5b4086fe513d60db1c6"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" kind="class" name="" id="816e023cbf481b4b34071fe3138bd02c_56ff6ee891fc2cc59c188b9592bcc7d3" file="1" linestart="87" lineend="87">
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_63a7ccdeb089ba9189424063ddb0fdcd" file="1" linestart="87" lineend="87" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="(lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:87:9) &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_56ff6ee891fc2cc59c188b9592bcc7d3"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" kind="class" name="" id="816e023cbf481b4b34071fe3138bd02c_3a97c432e1008938d1498b67326867b3" file="1" linestart="130" lineend="130">
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_678d6c642e78c267b58db4584b59d35e" file="1" linestart="130" lineend="130" copyconst="true" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const (lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:130:19) &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_3a97c432e1008938d1498b67326867b3"/>
+</rt>
+</QualType>
+</lrf>
+</p>
+</c>
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_bf6ae81c68176226fcf6d6edd02402cf" file="1" linestart="130" lineend="130" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="(lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:130:19) &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_3a97c432e1008938d1498b67326867b3"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" kind="class" name="" id="816e023cbf481b4b34071fe3138bd02c_232eec6a851d26b24afde53c3590b53b" file="1" linestart="87" lineend="87">
+<c name="" id="816e023cbf481b4b34071fe3138bd02c_3b4518b27a960da43b757a80b1596b58" file="1" linestart="87" lineend="87" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="(lambda at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:87:9) &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="816e023cbf481b4b34071fe3138bd02c_232eec6a851d26b24afde53c3590b53b"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<v name="value" proto="const _Ty" const="true" id="ca5adf2e9ebe71e52946c2177ddd81d1_59533a95ed8965943872704845b566cb" file="4" linestart="20" lineend="20" storage="static" init="true" access2="public">
+<QualType const="true">
+<ttp/>
+</QualType>
+</v>
+<f namespace="std" name="declval" id="80becb2358c5bef18f32fdfb20ce1895_059bc83cc88660f94b6e4926f7a8d18a" file="5" linestart="247" lineend="247" access="none">
+<fpt cc="cdecl" proto="add_rvalue_reference_t&lt;_Ty&gt;">
+<tss>
+<templatebase id="80becb2358c5bef18f32fdfb20ce1895_27ae4948f2f8dea97656b0de86cb25f4"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</fpt>
+</f>
+<ft name="declval" id="80becb2358c5bef18f32fdfb20ce1895_fad700cba17e73ea9e14aee141cc6c03" file="5" linestart="246" lineend="247">
+<template_parameters>
+<ttp name="_Ty" id="80becb2358c5bef18f32fdfb20ce1895_8adba392a1cafdbc3cf28e1691f4ae76" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<f namespace="std" name="declval" id="80becb2358c5bef18f32fdfb20ce1895_059bc83cc88660f94b6e4926f7a8d18a" file="5" linestart="247" lineend="247" access="none">
+<fpt cc="cdecl" proto="add_rvalue_reference_t&lt;_Ty&gt;">
+<tss>
+<templatebase id="80becb2358c5bef18f32fdfb20ce1895_27ae4948f2f8dea97656b0de86cb25f4"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</fpt>
+</f>
+</ft>
+<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="3" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</fpt>
+<p name="_Ostr" proto="basic_ostream&lt;char, _Traits&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</p>
+<p name="_Val" proto="const char *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+</p>
+</f>
+<ft name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_3298dfe44ddb6b69da98967bbc11dbef" file="3" linestart="766" lineend="811">
+<template_parameters>
+<ttp name="_Traits" id="ac16a765409b3fedcc80ee88e7ce5942_29653cbbe518513f057baf83aeea343a" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_a8b001da139eef9b7b8dd07e8c06f59d" file="3" linestart="766" lineend="811" operator="true" access="none" inline="true" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</fpt>
+<p name="_Ostr" proto="basic_ostream&lt;char, _Traits&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</p>
+<p name="_Val" proto="const char *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+</p>
+</f>
+</ft>
+<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_dee3aef429df9aee004ea7f5e29a8aaf" file="3" linestart="813" lineend="850" operator="true" access="none" inline="true" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</fpt>
+<p name="_Ostr" proto="basic_ostream&lt;char, _Traits&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</p>
+<p name="_Ch" proto="char" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="char"/>
+</p>
+</f>
+<ft name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_3298dfe44ddb6b69da98967bbc11dbef" file="3" linestart="813" lineend="850">
+<template_parameters>
+<ttp name="_Traits" id="ac16a765409b3fedcc80ee88e7ce5942_4b0ad07f29bb555e25e9a46d732c5b0a" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<f namespace="std" name="operator&lt;&lt;" id="ac16a765409b3fedcc80ee88e7ce5942_dee3aef429df9aee004ea7f5e29a8aaf" file="3" linestart="813" lineend="850" operator="true" access="none" inline="true" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="basic_ostream&lt;char, _Traits&gt; &amp;">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</fpt>
+<p name="_Ostr" proto="basic_ostream&lt;char, _Traits&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<tss>
+<templatebase id="ac16a765409b3fedcc80ee88e7ce5942_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</p>
+<p name="_Ch" proto="char" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="char"/>
+</p>
+</f>
+</ft>
+<v namespace="std" name="cout" proto="ostream" id="03563ce523d62f7f8e6931c982b97a2c_fbe8f6ba0143c688ba07f32590d95a55" file="6" linestart="28" lineend="28" storage="extern" access2="none">
+<Tdef>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="ce7d66c4fb37f82f4844d16a4c953408_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</v>
+</Externals>
