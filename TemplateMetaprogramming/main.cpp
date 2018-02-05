@@ -1213,10 +1213,22 @@ void useLambdaInLambda();
 
 void callDeclVal(int* p = nullptr);
 
+void useCompileTimeIf();
+
+void useSumFold();
+
+void useConvertible();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useConvertible();
+
+	useSumFold();
+
+	useCompileTimeIf();
 
 	callDeclVal();
 

@@ -215,5 +215,11 @@
     <ClCompile Include="declval.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="foldingCPP17STL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TraitsCPPTempl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

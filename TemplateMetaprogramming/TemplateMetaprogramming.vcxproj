@@ -198,6 +198,7 @@
     <ClCompile Include="Exercises_4.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
+    <ClCompile Include="foldingCPP17STL.cpp" />
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
@@ -230,6 +231,7 @@
     <ClCompile Include="TestModules.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="void_t.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

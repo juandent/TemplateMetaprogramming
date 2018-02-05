@@ -150,3 +150,15 @@ void callDeclVal(int* p = nullptr)
 	int j = 9;
 	type pp = j;
 }
+
+
+void useCompileTimeIf()
+{
+	using T = int;
+
+	if constexpr (std::is_same_v< decltype(std::declval<T>()), T >)
+		std::cout << "type of std::declval<T>() is T\n";
+	else
+		std::cout << "type of std::declval<T>() is not T\n";
+}
+
