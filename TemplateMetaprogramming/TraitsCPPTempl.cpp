@@ -36,6 +36,7 @@ struct Person
 
 struct Student : Person
 {
+	using size_type = std::size_t;
 };
 
 
@@ -51,3 +52,42 @@ void useConvertible()
 	bool s_is_a_p = isConvertible<Student, Person>;
 	bool p_is_a_s = isConvertible<Person, Student>;
 }
+
+// helper to ignore any number of template parameters: 
+template<typename...> using VoidT = void;
+
+// primary template:
+template<typename T, typename = VoidT<>>
+struct HasSizeTypeT : std::false_type
+{
+	using M = T;
+};
+
+#if 0
+// partial specialization (may be SFINAE'd away):
+template<typename T>
+struct HasSizeTypeT<T, VoidT<typename T::size_type>> : std::true_type
+{
+	using X = T;
+};
+#endif
+
+template<typename T>
+struct HasSizeTypeT<T, typename T::size_type> : std::true_type
+{
+	using Y = T;
+};
+
+
+void useHasSize()
+{
+	auto res = HasSizeTypeT<Person>::value;
+	auto res2 = HasSizeTypeT<Student>::value;
+
+	HasSizeTypeT<Student, std::size_t>::Y student;
+	HasSizeTypeT<Person, std::size_t>::M stu;
+
+	HasSizeTypeT<Student>::M st;
+
+}
+

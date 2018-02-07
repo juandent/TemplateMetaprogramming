@@ -73,9 +73,8 @@ void whyRValueInsteadOfLvalue()
 
 
 // helper: checking validity of f(args...) for F {f} and Args... args:
-template<typename F, typename... Args,
-	typename = decltype(std::declval<F>()(std::declval<Args&&>()...))>
-	std::true_type isValidImpl(void*);
+template<typename F, typename... Args, typename = decltype(std::declval<F>()(std::declval<Args&&>()...))>
+std::true_type  isValidImpl(void*);
 
 // fallback if helper SFINAE'd out:
 template<typename F, typename... Args>
@@ -162,3 +161,22 @@ void useCompileTimeIf()
 		std::cout << "type of std::declval<T>() is not T\n";
 }
 
+
+// 19.6.4 Using Generic Lambdas to Detect Members
+// pg.438
+//define to check for data member first
+
+void detectMembersViaGenericLambdas()
+{
+	// helper to unwrap a wrapped type in unevaluated contexts
+	//template<typename T>
+	//T valueT(TypeT<T>);
+	constexpr auto hasFirst = isValid([](auto x) -> decltype((void)valueT(x).first)) {};
+	
+	// helper to wrap a type as a value
+	//template<typename T>
+	//constexpr auto type = TypeT<T>{};
+	cout << "hasFirst " << hasFirst(type<pair<int, int>>) << endl;
+
+
+}

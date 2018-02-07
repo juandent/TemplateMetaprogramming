@@ -1219,10 +1219,22 @@ void useSumFold();
 
 void useConvertible();
 
+void useHasSize();
+
+void useRestrictionOnReturnType();
+
+void useHasBegin();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useHasBegin();
+
+	useRestrictionOnReturnType();
+
+	useHasSize();
 
 	useConvertible();
 
