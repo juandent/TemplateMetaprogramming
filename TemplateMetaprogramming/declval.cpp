@@ -1,5 +1,6 @@
 #include "stdafx.h"
 
+using namespace std;
 
 using array_type = char[30];
 using function_type = int();
@@ -171,12 +172,77 @@ void detectMembersViaGenericLambdas()
 	// helper to unwrap a wrapped type in unevaluated contexts
 	//template<typename T>
 	//T valueT(TypeT<T>);
-	constexpr auto hasFirst = isValid([](auto x) -> decltype((void)valueT(x).first)) {};
+	constexpr auto hasFirst = isValid([](auto x) -> decltype((void)valueT(x).first) {});
 	
 	// helper to wrap a type as a value
 	//template<typename T>
 	//constexpr auto type = TypeT<T>{};
 	cout << "hasFirst " << hasFirst(type<pair<int, int>>) << endl;
 
+	// define to check for member type size_type:
+	constexpr auto hasTypeSize = isValid([](auto x)-> decltype(typename std::decay_t< decltype(valueT(x))>::size_type()) {});
+	//constexpr auto hasTypeSize = isValid([](auto x)-> typename std::decay_t< decltype(valueT(x))>::size_type {});
 
+
+	struct CX
+	{
+		using size_type = std::size_t;
+	};
+
+	cout << "hasSizeType: " << hasTypeSize(type<CX&>) << endl;
+
+	if constexpr(!hasTypeSize(type<int>))
+	{
+		cout << "int has no size-type\n";
+	}
+
+	// define to check for <
+	constexpr auto hasLess = isValid([](auto x, auto y) -> decltype(valueT(x) < valueT(y)) {});
+
+	cout << "hasLess: " << hasLess(type<int>, type<char>) << endl;
+	cout << "hasLess: " << hasLess(type<string>, type<string>) << endl;
+	cout << "hasLess: " << hasLess(type<string>, type<int>) << endl;
+	cout << "hasLess: " << hasLess(type<string>, type<decltype("Hello")>) << endl;
+
+
+}
+
+namespace GenericSyntax
+{
+	constexpr auto hasFirst = isValid([](auto&& x) -> decltype(&x.first) {});
+	template<typename T>
+	using HasFirstT = decltype(hasFirst(declval<T>()));
+
+//	constexpr auto hasSizeType = isValid([](auto&& x) -> typename decay_t<decltype(x)>::size_type {});
+	constexpr auto hasSizeType = isValid([](auto&& x) -> decltype(typename decay_t<decltype(x)>::size_type()) {});
+
+	template<typename T>
+	using HasSizeT = decltype(hasSizeType(declval<T>()));
+
+	constexpr auto hasLess = isValid([](auto&& x, auto&& y) -> decltype(x < y) {});
+	template<typename T, typename U>
+	using HasLessT = decltype(hasLess(declval<T>(), declval<U>()));
+
+
+
+	void detectMembersViaGenericLambdas()
+	{
+
+		cout << "first: " << HasFirstT<pair<int, int>>::value << endl;
+
+		struct CX
+		{
+			using size_type = size_t;
+		};
+
+		cout << "size_type: " << HasSizeT<CX>::value << endl;
+		cout << "size_type: " << HasSizeT<int>::value << endl;
+
+		cout << HasLessT<int, char>::value << endl;
+		cout << HasLessT<string, string>::value << endl;
+		cout << HasLessT<string, int>::value << endl;
+		cout << HasLessT<string, char*>::value << endl;
+
+
+	}
 }
