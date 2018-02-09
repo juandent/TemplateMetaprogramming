@@ -221,5 +221,8 @@
     <ClCompile Include="TraitsCPPTempl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TypeClassificationCPPTemp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

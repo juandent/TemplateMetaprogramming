@@ -236,6 +236,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
+    <ClCompile Include="TypeClassificationCPPTemp.cpp" />
     <ClCompile Include="void_t.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
