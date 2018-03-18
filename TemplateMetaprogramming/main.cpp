@@ -1232,10 +1232,31 @@ namespace GenericSyntax
 	void detectMembersViaGenericLambdas();
 }
 
+namespace TypeOverload
+{
+	void main();
+}
+
+namespace NotOverconstrained
+{
+	void main();
+}
+
+
+void print_primes();
+
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	print_primes();
+
+
+	NotOverconstrained::main();
+
+	TypeOverload::main();
 
 	GenericSyntax::detectMembersViaGenericLambdas();
 

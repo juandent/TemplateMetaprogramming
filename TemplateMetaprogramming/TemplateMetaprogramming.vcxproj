@@ -189,6 +189,7 @@
     <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
+    <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
     <ClCompile Include="declval.cpp" />
     <ClCompile Include="DependentNames.cpp" />
@@ -201,10 +202,12 @@
     <ClCompile Include="exercise_3_1.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="foldingCPP17STL.cpp" />
+    <ClCompile Include="InstantiationSafeTemplatesCPPTemp.cpp" />
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Meta_ErwinUnruh.cpp" />
     <ClCompile Include="MPLAlgorithms.cpp" />
     <ClCompile Include="MPLFold.cpp" />
     <ClCompile Include="MyFold.cpp" />

@@ -224,5 +224,14 @@
     <ClCompile Include="TypeClassificationCPPTemp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InstantiationSafeTemplatesCPPTemp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPP17_Compliance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Meta_ErwinUnruh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
