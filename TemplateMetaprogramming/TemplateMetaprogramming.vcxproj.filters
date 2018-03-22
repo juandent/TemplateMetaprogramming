@@ -93,6 +93,9 @@
     <ClInclude Include="NamedTemplateArgs_CPPTempl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="IntToStr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -231,6 +234,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Meta_ErwinUnruh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypePrinting_8_3_3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

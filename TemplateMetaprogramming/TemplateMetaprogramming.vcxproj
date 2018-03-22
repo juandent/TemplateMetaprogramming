@@ -95,10 +95,12 @@
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
       <ShowIncludes>false</ShowIncludes>
       <AdditionalIncludeDirectories>$(SourceComp)\loki;$(SourceComp)\boost_1_62_0\boost_1_62_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/external:templates %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/external:templates %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -167,6 +169,7 @@
     <ClInclude Include="Exercises_4.hpp" />
     <ClInclude Include="exercise_3_1.hpp" />
     <ClInclude Include="ExpressionTemplates_Ch_10.h" />
+    <ClInclude Include="IntToStr.h" />
     <ClInclude Include="IteratorFacade.hpp" />
     <ClInclude Include="iteratorfacadeaccess.h" />
     <ClInclude Include="IteratorFacadeByAccess.hpp" />
@@ -240,6 +243,7 @@
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
+    <ClCompile Include="TypePrinting_8_3_3.cpp" />
     <ClCompile Include="void_t.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
