@@ -239,5 +239,8 @@
     <ClCompile Include="TypePrinting_8_3_3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CPP17STLCookbook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

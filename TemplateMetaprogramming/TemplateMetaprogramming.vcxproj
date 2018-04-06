@@ -192,6 +192,7 @@
     <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
+    <ClCompile Include="CPP17STLCookbook.cpp" />
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
     <ClCompile Include="declval.cpp" />

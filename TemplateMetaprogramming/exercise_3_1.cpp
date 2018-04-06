@@ -31,6 +31,7 @@
 #include <boost\mpl\vector.hpp>
 #include <boost\mpl/size.hpp>
 
+
 #include "Debug.h"
 
 // Dimensions (pg 40 -- C++ Template Metaprogramming
@@ -76,6 +77,8 @@ namespace Chapter3 {
 			}
 
 			T value() const { return m_value; }
+
+			using Dims = Dimensions;
 		private:
 			T m_value;
 		};
@@ -164,6 +167,21 @@ namespace Chapter3 {
 			quantity<float, length> l2{ 4.0f };
 			quantity<float, acceleration> a{ 2.0f };
 
+			using multiply_dims = decltype(m*a)::Dims;
+			multiply_dims* pMulti = nullptr;
+			
+			constexpr auto same_dims = mpl::equal<multiply_dims, force>::value;
+
+			// Dimensions for Force = 1,1,-2,0,...
+
+			constexpr auto first = mpl::at<multiply_dims, mpl::int_<0>>::type::value;
+			static_assert(first == 1);
+			constexpr auto second = mpl::at<multiply_dims, mpl::int_<1>>::type::value;
+			static_assert(second == 1);
+			constexpr auto third = mpl::at<multiply_dims, mpl::int_<2>>::type::value;
+			static_assert(third == -2);
+			constexpr auto fourth = mpl::at<multiply_dims, mpl::int_<3>>::type::value;
+			static_assert(fourth == 0);
 
 			std::cout << "force: " << (m*a).value() << std::endl;
 
@@ -178,7 +196,6 @@ namespace Chapter3 {
 
 			auto r = l + l2;
 			r = l - l2;
-			//auto yy = l+m;
 		}
 	}
 

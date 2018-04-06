@@ -1245,11 +1245,21 @@ namespace NotOverconstrained
 
 void print_primes();
 
+void useAddable();
+
+void useSortedInserting();
 
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	// repeat it
+	Chapter3::QuantityStuff::useQuantities();
+
+	useSortedInserting();
+
+	useAddable();
 
 	print_primes();
 
