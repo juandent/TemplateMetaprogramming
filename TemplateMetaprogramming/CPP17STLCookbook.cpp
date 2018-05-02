@@ -2,6 +2,13 @@
 
 #include <utility>
 #include <set>
+#include <deque>
+#include <list>
+#include <vector>
+#include <functional>
+#include <algorithm>
+#include <iterator>
+
 
 void autoDeductionOfTemplate()		// NOT YET in VS 2017
 {
@@ -127,4 +134,150 @@ public:
 			cout << "\"" << key << "\"" << "\":" << value << ", ";
 		}
 		cout << endl;
+	}
+
+
+
+	namespace PolymorphyViaStd_Function
+	{
+		template<typename Container>
+		static auto consumer(Container& container)
+		{
+			return [&](auto value) {
+				container.push_back(value);
+			};
+		}
+
+		template<typename Container>
+		static void print(const Container& c)
+		{
+			for (auto i : c)
+			{
+				std::cout << i << ", ";
+			}
+			std::cout << "\n";
+		}
+
+		void main()
+		{
+			using namespace std;
+
+			deque<int> d;
+			list<int> l;
+			vector<int> v;
+
+
+			const vector<function<void(int)>> consumers
+			{
+				consumer(d), consumer(l), consumer(v)
+			};
+
+			for (auto i = 0u; i < 10u; ++i)
+			{
+				for (auto& consume : consumers)
+				{
+					consume(i);
+				}
+			}
+
+			print(d);
+			print(l);
+			print(v);
+
+		}
+
+
+		// composing functions by concatenation (pg 146)
+
+		template<typename T, typename ...Ts>
+		auto concat(T t, Ts ... ts)
+		{
+			if constexpr(sizeof...(ts) > 0)
+			{
+				return [=](auto... parameters)
+				{
+					return t(concat(ts...)(parameters...));
+				};
+			}
+			else
+			{
+				return [=](auto ... parameters)
+				{
+					return t(parameters...);
+				};
+			}
+		}
+
+		void useConcat()
+		{
+			auto twice([](int i) {return i * 2; });
+			auto thrice([](int i) {return i * 3; });
+			auto combined(concat(twice, thrice, plus<int>{}));
+
+			cout << combined(2, 3) << endl;
+		}
+
+		static bool begins_with_a(const std::string& s)
+		{
+			return s.find("a") == 0;
+		}
+
+		static bool ends_with_b(const std::string& s)
+		{
+			return s.rfind("b") == s.length() - 1;
+		}
+
+		template<typename A, typename B, typename BinaryOp>
+		auto combine(BinaryOp op, A a, B b)
+		{
+			return [=](auto param)
+			{
+				return op(a(param), b(param));
+			};
+		}
+
+		void useCombine()
+		{
+			using namespace std;
+
+			auto a_xxx_b = combine(logical_and<>{}, begins_with_a, ends_with_b);
+
+			//cin.unsetf(ios_base::skipws);
+
+#if 1
+			vector<int> va;
+			copy(istream_iterator<int>{cin}, istream_iterator<int>{},
+				back_inserter(va));
+#endif
+			auto f = cin.flags();
+			auto eof = cin.eof();
+			auto bad = cin.bad();
+			auto fail = cin.fail();
+			auto good = cin.good();
+
+			cin.clear();
+			good = cin.good();
+
+			//cin >> skipws;
+
+			vector<string> v;
+			copy_if(istream_iterator<string>{cin}, istream_iterator<string>{},
+				back_inserter(v), begins_with_a);
+
+			copy(begin(v), end(v), ostream_iterator<string>{cout, ", "});
+			cout << endl;
+
+			cin.clear();
+			cin >> skipws;
+
+
+			copy_if(istream_iterator<string>{cin}, istream_iterator<string>{},
+				ostream_iterator<string>{cout, ", "},
+				a_xxx_b);
+
+			cout << endl;
+		}
+
+
+
 	}

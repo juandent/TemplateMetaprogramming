@@ -207,6 +207,7 @@
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="foldingCPP17STL.cpp" />
     <ClCompile Include="InstantiationSafeTemplatesCPPTemp.cpp" />
+    <ClCompile Include="integer_sequence.cpp" />
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
@@ -227,6 +228,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="RuntimeVersions.cpp" />
     <ClCompile Include="SequenceClasses.cpp" />
     <ClCompile Include="Sqlpp11_fragments.cpp" />
     <ClCompile Include="sqlpp11_mockdb.cpp" />

@@ -1249,10 +1249,21 @@ void useAddable();
 
 void useSortedInserting();
 
+namespace PolymorphyViaStd_Function
+{
+	void main();
+	void useConcat();
+	void useCombine();
+}
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	PolymorphyViaStd_Function::useCombine();
+	PolymorphyViaStd_Function::useConcat();
+	PolymorphyViaStd_Function::main();
 
 	// repeat it
 	Chapter3::QuantityStuff::useQuantities();
