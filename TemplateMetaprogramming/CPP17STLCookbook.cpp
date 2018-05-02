@@ -186,7 +186,9 @@ public:
 
 		}
 
-
+	}
+	namespace FunctionConcat
+	{
 		// composing functions by concatenation (pg 146)
 
 		template<typename T, typename ...Ts>
@@ -216,7 +218,10 @@ public:
 
 			cout << combined(2, 3) << endl;
 		}
+	}
 
+	namespace CombineFunctions
+	{
 		static bool begins_with_a(const std::string& s)
 		{
 			return s.find("a") == 0;
@@ -277,7 +282,52 @@ public:
 
 			cout << endl;
 		}
-
-
-
 	}
+	
+
+	namespace CallingMultipleFunctionsWithSameInput
+	{
+		// calling multiple functions with the same input
+
+		template<typename ...functions>
+		auto multicall(functions...fs)
+		{
+			return [=](auto x)
+			{
+				(void)std::initializer_list<int>{
+					((void)fs(x), 0)...
+				};
+			};
+		}
+
+		template<typename F, typename ...XS>
+		static auto for_each(F f, XS...xs)
+		{
+			(void)std::initializer_list<int>{
+				((void)f(xs), 0)...
+			};
+		}
+		static auto brace_print(char a, char b)
+		{
+			return [=](auto x)
+			{
+				std::cout << a << x << b << ", ";
+			};
+		}
+
+		void useMulti()
+		{
+			// define functions
+
+			auto f(brace_print('(', ')'));
+			auto g(brace_print('[', ']'));
+			auto h(brace_print('{', '}'));
+			auto nl([](auto ) { std::cout << "\n"; });
+
+			auto call_fgh(multicall(f, g , h, nl));
+
+			for_each(call_fgh, 1 , 2, 3, 4, 5);
+
+		}
+	}
+

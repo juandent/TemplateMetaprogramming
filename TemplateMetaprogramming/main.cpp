@@ -1252,8 +1252,20 @@ void useSortedInserting();
 namespace PolymorphyViaStd_Function
 {
 	void main();
+}
+
+namespace FunctionConcat
+{
 	void useConcat();
+}
+namespace CombineFunctions
+{
 	void useCombine();
+}
+
+namespace CallingMultipleFunctionsWithSameInput
+{
+	void useMulti();
 }
 
 /* &main& */
@@ -1261,8 +1273,9 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
 
-	PolymorphyViaStd_Function::useCombine();
-	PolymorphyViaStd_Function::useConcat();
+	CallingMultipleFunctionsWithSameInput::useMulti();
+	CombineFunctions::useCombine();
+	FunctionConcat::useConcat();
 	PolymorphyViaStd_Function::main();
 
 	// repeat it
