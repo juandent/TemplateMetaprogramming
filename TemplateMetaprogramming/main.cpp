@@ -1268,10 +1268,18 @@ namespace CallingMultipleFunctionsWithSameInput
 	void useMulti();
 }
 
+namespace Transform_if_with_lambdas
+{
+	void useTransform_if();
+
+}
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	Transform_if_with_lambdas::useTransform_if();
 
 	CallingMultipleFunctionsWithSameInput::useMulti();
 	CombineFunctions::useCombine();

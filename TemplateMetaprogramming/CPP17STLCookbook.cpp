@@ -8,7 +8,7 @@
 #include <functional>
 #include <algorithm>
 #include <iterator>
-
+#include <numeric>
 
 void autoDeductionOfTemplate()		// NOT YET in VS 2017
 {
@@ -331,3 +331,105 @@ public:
 		}
 	}
 
+
+	namespace Transform_if_with_lambdas
+	{
+		template<typename T>
+		auto map(T fn)
+		{
+			return [=](auto reduce_fn) {
+				return [=](auto accum, auto input)
+				{
+					return reduce_fn(accum, fn(input));
+				};
+			};
+		}
+
+		template<typename T>
+		auto filter(T predicate)
+		{
+			return [=](auto reduce_fn)
+			{
+				return [=](auto accum, auto input)
+				{
+					if (predicate(input))
+					{
+						return reduce_fn(accum, input);
+					}
+					else
+					{
+						return accum;
+					}
+				};
+			};
+		}
+
+		// for easier debugging
+		auto even_fn(int i)
+		{
+			return i % 2 == 0;
+		}
+
+		auto twice_fn(int i)
+		{
+			return i * 2;
+		}
+
+		template<typename T>
+		auto copy_and_advance_fn(T it, int input)
+		{
+			*it = input;	// "accumulates" into iterator
+			return ++it;	// moves to next element
+		}
+
+		void useTransform_if()
+		{
+			istream_iterator<int> it {cin};
+			istream_iterator<int> it_end;
+
+			// filter's predicate
+			auto even = [](int i) { return i % 2 == 0; };
+			// map's transform
+			auto twice = [](int i) { return i * 2; };
+			// 
+			auto copy_and_advance = [](auto it, auto input)
+			{
+				*it = input;	// "accumulates" into iterator
+				return ++it;	// moves to next element
+			};
+
+			/*
+			template<class _InIt,
+				class _Ty,
+				class _Fn>
+				_Ty accumulate(_InIt _First, const _InIt _Last, _Ty _Val, _Fn _Func)
+				*/
+
+#if 1
+			accumulate(it, it_end,
+				ostream_iterator<int>{cout, ", "},
+				filter(even) (			// predicate is even, returns function expecting a reduce_fn
+										// which is filled by return type of map(twice)
+					map(twice) (		// input transforming function is 'twice', 
+										// expecting a reduce_fn which is copy_and_advance
+										
+						copy_and_advance
+						)
+					));
+#else
+			accumulate(it, it_end,
+				ostream_iterator<int>{cout, ", "},
+				filter(even_fn) (			// predicate is even, returns function expecting a reduce_fn
+										// which is filled by return type of map(twice)
+					map(twice_fn) (		// input transforming function is 'twice', 
+										// expecting a reduce_fn which is copy_and_advance
+
+						copy_and_advance
+						)
+					));
+
+#endif
+			cout << "\n";
+
+		}
+	}
