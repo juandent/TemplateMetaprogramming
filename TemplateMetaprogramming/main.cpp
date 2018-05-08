@@ -1274,10 +1274,18 @@ namespace Transform_if_with_lambdas
 
 }
 
+
+namespace Cartesian_product_at_compile_time
+{
+	void useCartesian();
+}
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	Cartesian_product_at_compile_time::useCartesian();
 
 	Transform_if_with_lambdas::useTransform_if();
 

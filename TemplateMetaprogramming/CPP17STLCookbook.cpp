@@ -363,25 +363,6 @@ public:
 				};
 			};
 		}
-
-		// for easier debugging
-		auto even_fn(int i)
-		{
-			return i % 2 == 0;
-		}
-
-		auto twice_fn(int i)
-		{
-			return i * 2;
-		}
-
-		template<typename T>
-		auto copy_and_advance_fn(T it, int input)
-		{
-			*it = input;	// "accumulates" into iterator
-			return ++it;	// moves to next element
-		}
-
 		void useTransform_if()
 		{
 			istream_iterator<int> it {cin};
@@ -405,7 +386,6 @@ public:
 				_Ty accumulate(_InIt _First, const _InIt _Last, _Ty _Val, _Fn _Func)
 				*/
 
-#if 1
 			accumulate(it, it_end,
 				ostream_iterator<int>{cout, ", "},
 				filter(even) (			// predicate is even, returns function expecting a reduce_fn
@@ -416,20 +396,46 @@ public:
 						copy_and_advance
 						)
 					));
-#else
-			accumulate(it, it_end,
-				ostream_iterator<int>{cout, ", "},
-				filter(even_fn) (			// predicate is even, returns function expecting a reduce_fn
-										// which is filled by return type of map(twice)
-					map(twice_fn) (		// input transforming function is 'twice', 
-										// expecting a reduce_fn which is copy_and_advance
-
-						copy_and_advance
-						)
-					));
-
-#endif
 			cout << "\n";
 
 		}
+	}
+
+	// pg 163. C++ 17 STL Cookbook
+	namespace Cartesian_product_at_compile_time
+	{
+		static void print(int x, int y)
+		{
+			cout << "(" << x << ", " << y << ")\n";
+		}
+
+
+		void useCartesian()
+		{
+			constexpr auto call_cart = [=](auto f, auto x, auto ...rest) constexpr
+			{
+				(void)initializer_list<int>{
+					(((x < rest)
+						? (void)f(x, rest)
+						: (void)0), 0)...
+				};
+			};
+
+			constexpr auto cartesian = [=](auto...xs) constexpr
+			{
+				return[=](auto f) constexpr {
+					(void)initializer_list<int>{
+						((void)call_cart(f, xs, xs...), 0)...
+					};
+				};
+			};
+
+
+			constexpr auto print_cartesian(cartesian(1, 2, 3));
+
+			print_cartesian(print);
+
+		}
+
+
 	}
