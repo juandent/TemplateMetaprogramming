@@ -403,7 +403,7 @@ namespace Chapter3 {
 						struct factor
 						{
 						private:
-							static constexpr bool U1Smaller = std::conditional < U1::value < U2::value, std::true_type, std::false_type>::type::value;
+							static constexpr bool U1Smaller = std::conditional < (U1::value < U2::value), std::true_type, std::false_type>::type::value;
 						public:
 							typedef typename std::conditional < U1Smaller, U1, U2>::type smaller_type;
 							typedef typename std::conditional < !U1Smaller, U1, U2>::type larger_type;
@@ -479,7 +479,7 @@ namespace Chapter3 {
 				template<typename A, typename B>
 				struct apply
 				{
-					typedef typename tester_metafunction::type type;
+					typedef typename tester_metafunction<A,B>::type type;
 				};
 			};
 
@@ -892,7 +892,7 @@ namespace Chapter3 {
 						Quantity& operator+= (Quantity<T, OtherDim, SourceUnits> rhs)
 						{
 							static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match");
-							using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
+							using f = typename process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 							auto rhs_factored = f::get(rhs.m_value);
 							m_value += rhs_factored;
 							return *this;
@@ -906,7 +906,7 @@ namespace Chapter3 {
 						operator+(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
 					{
 						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match for addition");
-						using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
+						using f = typename process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 
 						return quantity<T, Dimension, TargetUnits>{ x.value() + f::get(y.value()) };
 					}
@@ -915,7 +915,7 @@ namespace Chapter3 {
 						operator-(Quantity<T, Dimension, TargetUnits> x, Quantity<T, OtherDim, SourceUnits> y)
 					{
 						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match for subtraction");
-						using f = process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
+						using f = typename process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 
 						return quantity<T, Dimension, TargetUnits>{ x.value() - f::get(y.value()) };
 					}

@@ -114,7 +114,7 @@
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)"  /permissive- %(AdditionalOptions)</AdditionalOptions>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>

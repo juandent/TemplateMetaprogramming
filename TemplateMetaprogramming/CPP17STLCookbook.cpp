@@ -10,10 +10,10 @@
 #include <iterator>
 #include <numeric>
 
-void autoDeductionOfTemplate()		// NOT YET in VS 2017
+void autoDeductionOfTemplate()		// READY IN VS 2017 15.7.1
 {
-	//	std::pair my_pair{ 123, "abc" };
-	std::pair<int, char*> other_pair{ 123, "abc" };
+	std::pair my_pair{ 123, "abc" };
+	std::pair<int, char*> other_pair{ 123, (char*)"abc" };
 }
 
 
@@ -289,6 +289,18 @@ public:
 	{
 		// calling multiple functions with the same input
 
+#if 0
+		static auto multicall(auto ...functions)
+		{
+			return [=](auto x)
+			{
+				(void)std::initializer_list<int>{
+					((void)functions(x), 0)...
+				};
+			};
+		}
+#else
+
 		template<typename ...functions>
 		auto multicall(functions...fs)
 		{
@@ -299,6 +311,7 @@ public:
 				};
 			};
 		}
+#endif
 
 		template<typename F, typename ...XS>
 		static auto for_each(F f, XS...xs)
@@ -439,3 +452,5 @@ public:
 
 
 	}
+
+

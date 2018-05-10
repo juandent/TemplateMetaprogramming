@@ -683,7 +683,7 @@ namespace Sqlpp11_Fragments
 	void useSwallow()
 	{
 		int x = 0;
-		operator_<int, double, char*>::_(44, 5.77, "45");
+		operator_<int, double, char*>::_(44, 5.77, (char*)"45");
 	}
 }
 #else
