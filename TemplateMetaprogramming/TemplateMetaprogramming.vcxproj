@@ -114,8 +114,9 @@
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)"  /permissive- %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
       <ShowIncludes>false</ShowIncludes>
+      <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -192,6 +193,9 @@
     <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
+    <ClCompile Include="Conformance.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessToFile>
+    </ClCompile>
     <ClCompile Include="CPP17STLCookbook.cpp" />
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />

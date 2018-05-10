@@ -1280,10 +1280,20 @@ namespace Cartesian_product_at_compile_time
 	void useCartesian();
 }
 
+namespace AmbiguousConditionalOperatorsArguments
+{
+	namespace ConditionalOperatorReturnTypesVary
+	{
+		void seeDifferentResultTypes();
+	}
+}
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	AmbiguousConditionalOperatorsArguments::ConditionalOperatorReturnTypesVary::seeDifferentResultTypes();
 
 	Cartesian_product_at_compile_time::useCartesian();
 
