@@ -61,8 +61,7 @@ namespace LambdaImpl_2
 
 			//The helper method.
 			template<typename X, std::size_t... Is>
-			void do_multicall(X x, const std::tuple<functions...>& tuple,
-				std::index_sequence<Is...>) {
+			void do_multicall(X x, const std::tuple<functions...>& tuple, std::index_sequence<Is...>&& seq) {
 
 				std::initializer_list<int>
 				{
@@ -160,8 +159,14 @@ namespace LambdaImpl_2
 			Multicall(Fs&&... fs) : pfs{ fs... } {}
 
 			template <typename X>
-			void operator() (X&& x) {
-				std::apply([x](auto&&... f) { (..., f(x)); }, pfs);
+			void operator() (X&& x) 
+			{
+				std::apply([x](auto&&...f) {
+					(static_cast<void>(std::forward<decltype(f)>(f)(x)), ...);
+				}, pfs);
+
+
+				///////std::apply([x](auto&&... f) { (..., f(x)); }, pfs);
 			}
 
 		private:
@@ -220,6 +225,12 @@ namespace LambdaImpl_2
 
 		jlbmc('a', 'b', 'c');
 
+		CPP_17::Multicall mc17{ [](int x) { cout << (3 * x) << endl; }, std::function(twice) };
+
+		mc17(20);
+
+
+			
 	}
 
 

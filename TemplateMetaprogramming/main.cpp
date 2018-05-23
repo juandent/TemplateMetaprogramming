@@ -1271,6 +1271,8 @@ namespace CallingMultipleFunctionsWithSameInput
 namespace Transform_if_with_lambdas
 {
 	void useTransform_if();
+	void simplestAccumulate();
+	void accumulateIntoAnOutputIterator();
 
 }
 
@@ -1297,14 +1299,16 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
 
+	Transform_if_with_lambdas::simplestAccumulate();
+	Transform_if_with_lambdas::accumulateIntoAnOutputIterator();
+	Transform_if_with_lambdas::useTransform_if();
+
 
 	LambdaImpl_2::useMulticall();
 
 	AmbiguousConditionalOperatorsArguments::ConditionalOperatorReturnTypesVary::seeDifferentResultTypes();
 
 	Cartesian_product_at_compile_time::useCartesian();
-
-	Transform_if_with_lambdas::useTransform_if();
 
 	CallingMultipleFunctionsWithSameInput::useMulti();
 	CombineFunctions::useCombine();

@@ -13,7 +13,8 @@
 void autoDeductionOfTemplate()		// READY IN VS 2017 15.7.1
 {
 	std::pair my_pair{ 123, "abc" };
-	std::pair<int, char*> other_pair{ 123, (char*)"abc" };
+	std::remove_reference<decltype("abc")>::type xx{"abc" };
+	std::pair<int, const char* const> other_pair{ 123, (char* const)"abc" };
 }
 
 
@@ -376,30 +377,52 @@ public:
 				};
 			};
 		}
-		void useTransform_if()
+
+		istream_iterator<int> it_end;
+
+		// filter's predicate
+		auto even = [](int i) { return i % 2 == 0; };
+		// map's transform
+		auto twice = [](int i) { return i * 2; };
+		// 
+		auto copy_and_advance = [](auto it, auto input)
 		{
-			istream_iterator<int> it {cin};
-			istream_iterator<int> it_end;
+			*it = input;	// "accumulates" into iterator
+			return ++it;	// moves to next element
+		};
 
-			// filter's predicate
-			auto even = [](int i) { return i % 2 == 0; };
-			// map's transform
-			auto twice = [](int i) { return i * 2; };
-			// 
-			auto copy_and_advance = [](auto it, auto input)
-			{
-				*it = input;	// "accumulates" into iterator
-				return ++it;	// moves to next element
-			};
+		void simplestAccumulate()
+		{
+			vector<int> v{ 1,2,3,4,5 };
 
+			auto res = accumulate(v.cbegin(), v.cend(), 0, std::plus<int>{});
+
+			cout << res << endl;
+		}
+		void accumulateIntoAnOutputIterator()
+		{
 			/*
 			template<class _InIt,
-				class _Ty,
-				class _Fn>
-				_Ty accumulate(_InIt _First, const _InIt _Last, _Ty _Val, _Fn _Func)
-				*/
+			class _Ty,
+			class _Fn>
+			_Ty accumulate(_InIt _First, const _InIt _Last, _Ty _Val, _Fn _Func)
+			*/
 
-			accumulate(it, it_end,
+			auto res = accumulate(istream_iterator<int>{ cin }, it_end,
+				ostream_iterator<int>{cout, ", "}, copy_and_advance);
+
+			cout << endl;
+
+		}
+		void useTransform_if()
+		{
+			cin.clear();
+			cin >> skipws;
+			//int integer;
+			//cin >> integer;
+			//cin.getline
+
+			accumulate(istream_iterator<int>{ cin }, it_end,
 				ostream_iterator<int>{cout, ", "},
 				filter(even) (			// predicate is even, returns function expecting a reduce_fn
 										// which is filled by return type of map(twice)
