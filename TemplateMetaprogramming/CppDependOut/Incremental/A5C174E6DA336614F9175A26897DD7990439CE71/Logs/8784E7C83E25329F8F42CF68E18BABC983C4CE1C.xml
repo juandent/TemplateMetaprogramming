@@ -1,5 +1,4 @@
 <log>
- <error level="error" id="err_pp_macro_not_identifier" file="&lt;command line&gt;" line="7" col="9" msg="macro name must be an identifier" />
  <error level="warning" id="pp_pragma_once_in_main_file" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistFront.hpp" line="1" col="9" msg="#pragma once in main file" />
  <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistFront.hpp" line="9" col="16" msg="use of undeclared identifier &apos;Typelist&apos;" />
  <error level="error" id="err_ref_non_value" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistFront.hpp" line="9" col="25" msg="&apos;Head&apos; does not refer to a value" />

@@ -135,6 +135,15 @@
     <ClInclude Include="typelist\typelistPopBack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="typelist\addconst.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelist\transform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelist\accumulate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

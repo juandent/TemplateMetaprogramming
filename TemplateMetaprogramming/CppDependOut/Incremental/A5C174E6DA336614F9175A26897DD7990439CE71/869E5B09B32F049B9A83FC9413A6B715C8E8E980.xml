@@ -11,7 +11,7 @@
 <ttp name="" id="2211efeac1c9bf961bd66f2b37914080_4a7d01d2a73c3b59476163d13553a3dd" depth="0" index="1" proto="type-parameter-0-1">
 <ety>
 <tss>
-<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_81bb434481213cb8d7bd93b879700e7b"/>
+<templatebase id="69702c8186a771bd81c9311e74164d9b_81bb434481213cb8d7bd93b879700e7b"/>
 <template_arguments/>
 </tss>
 </ety>
@@ -22,11 +22,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="33"/>
+<n9 lb="42" cb="34"/>
 
 </Stmt>
 </template_arguments>
@@ -37,16 +36,15 @@
 <cr access="public" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_76d9b13239595737cb87754454dc953a" file="1" linestart="7" lineend="7"/>
 </cr>
 </tm>
-<ctps Spec="&lt;type-parameter-0-0, typename _Param_tester&lt;int type-parameter-0-0::*&gt;::type&gt;" access="none" depth="1" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_35e3e784e95c8faaf2dd01c60fec3193" file="1" linestart="11" lineend="14">
+<ctps Spec="&lt;type-parameter-0-0, void&gt;" access="none" depth="1" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_e1278167df2f57ca7088fa2e09fc1579" file="1" linestart="11" lineend="14">
 <base access="public">
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -54,7 +52,7 @@
 </Tdef>
 </ety>
 </base>
-<cr access="public" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_a3232d84d09706f692fe0325f07eb42d" file="1" linestart="12" lineend="12"/>
+<cr access="public" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_b801e159132b1f9e1ff03854c5c565f8" file="1" linestart="12" lineend="12"/>
 </ctps>
 <cr access="none" depth="0" kind="class" name="AAA" id="2211efeac1c9bf961bd66f2b37914080_8e3828d27448bb88b8f006f0085ed9e9" file="1" linestart="17" lineend="20">
 <cr access="public" kind="class" name="AAA" id="2211efeac1c9bf961bd66f2b37914080_bdf2598e8e3cc7755756dedf2722e7a5" file="1" linestart="17" lineend="17"/>
@@ -79,7 +77,7 @@
 </QualType>
 <Stmt>
 <n32 lb="28" cb="26" le="28" ce="41">
-<drx lb="28" cb="26" le="28" ce="41" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="28" cb="26" le="28" ce="41" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>
@@ -90,7 +88,7 @@
 </QualType>
 <Stmt>
 <n32 lb="30" cb="30" le="30" ce="45">
-<drx lb="30" cb="30" le="30" ce="45" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="30" cb="30" le="30" ce="45" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>
@@ -101,7 +99,7 @@
 </QualType>
 <Stmt>
 <n32 lb="32" cb="32" le="32" ce="46">
-<drx lb="32" cb="32" le="32" ce="46" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="32" cb="32" le="32" ce="46" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>

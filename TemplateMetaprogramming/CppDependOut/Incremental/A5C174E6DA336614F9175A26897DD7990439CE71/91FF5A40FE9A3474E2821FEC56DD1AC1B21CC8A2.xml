@@ -26,11 +26,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -86,7 +85,7 @@
 </p>
 <BaseInit>
 <n10 lb="7" cb="9">
-<typeptr id="1b4acc8dde89899ea77bbd6c536e00d0_a85ee5ac1442266dbe8b383199e5188e">
+<typeptr id="bfa602f8e9b02922d01dda3dc6094b76_a85ee5ac1442266dbe8b383199e5188e">
 <template_arguments>
 <bt name="bool"/>
 <integer value="1"/>
@@ -118,7 +117,7 @@
 </d>
 </cr>
 </ns>
-<ns name="sqlpp" id="85b866788d2ee3de2a6e3d000723a764_02ffde64e9be4238a9dbaca47e1b7b45" file="2" linestart="14" lineend="38" original="0x71c1598">
+<ns name="sqlpp" id="85b866788d2ee3de2a6e3d000723a764_02ffde64e9be4238a9dbaca47e1b7b45" file="2" linestart="14" lineend="38" original="0x9702960">
 <cr namespace="sqlpp" access="none" depth="0" kind="struct" name="MockDB" id="85b866788d2ee3de2a6e3d000723a764_20ac2b3366ec76de26144a0c9f012354" file="2" linestart="17" lineend="37">
 <cr access="public" kind="struct" name="MockDB" id="85b866788d2ee3de2a6e3d000723a764_9f593da9dc5c380258d88bde47e2533e" file="2" linestart="17" lineend="17"/>
 <c name="MockDB" id="85b866788d2ee3de2a6e3d000723a764_380b90f8358e83363e5c56dbb3c27e49" file="2" linestart="19" lineend="19" access="public">

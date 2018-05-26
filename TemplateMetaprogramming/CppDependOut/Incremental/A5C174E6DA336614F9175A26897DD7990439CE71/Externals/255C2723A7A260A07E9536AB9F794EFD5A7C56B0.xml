@@ -1,32 +1,42 @@
 <Externals>
-<tm namespace="std" access="none" depth="0" kind="struct" name="pair" id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49" file="2" linestart="78" lineend="199">
+<tm namespace="std" access="none" depth="0" kind="struct" name="pair" id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49" file="2" linestart="91" lineend="294">
 <template_parameters>
-<ttp name="_Ty1" id="26077801bf83fda834940e84538639b4_54c9f296fcca0f29026ef3edaed525ce" depth="0" index="0" proto="type-parameter-0-0"/>
-<ttp name="_Ty2" id="26077801bf83fda834940e84538639b4_ff854981a39c66acc76e2a6ba2ce8ef5" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="_Ty1" id="b9e4183ee61331ebfdc985678ac87295_54c9f296fcca0f29026ef3edaed525ce" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="_Ty2" id="b9e4183ee61331ebfdc985678ac87295_ff854981a39c66acc76e2a6ba2ce8ef5" depth="0" index="1" proto="type-parameter-0-1"/>
 </template_parameters>
-<cr namespace="std" access="none" depth="0" kind="struct" name="pair" id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49" file="2" linestart="80" lineend="199">
-<cr access="public" kind="struct" name="pair" id="26077801bf83fda834940e84538639b4_12f60c913bd6b534c07f47040150e1ca" file="2" linestart="80" lineend="80"/>
-<c name="pair&lt;_Ty1, _Ty2&gt;" id="26077801bf83fda834940e84538639b4_8478c0ef279fd4e0efe57dc146ac8a62" file="2" linestart="97" lineend="97" access="public">
+<cr namespace="std" access="none" depth="0" kind="struct" name="pair" id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49" file="2" linestart="93" lineend="294">
+<cr access="public" kind="struct" name="pair" id="b9e4183ee61331ebfdc985678ac87295_12f60c913bd6b534c07f47040150e1ca" file="2" linestart="93" lineend="93"/>
+<c name="pair&lt;_Ty1, _Ty2&gt;" id="b9e4183ee61331ebfdc985678ac87295_8478c0ef279fd4e0efe57dc146ac8a62" file="2" linestart="137" lineend="137" access="public">
 <fpt cc="x86_thiscall" proto="void">
 <bt name="void"/>
 </fpt>
 <p name="" proto="pair&lt;_Ty1, _Ty2&gt; &amp;&amp;" isRef="true" access2="none">
 <rrf>
 <InjectedClassName>
-<cr id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49"/>
+<cr id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49"/>
 </InjectedClassName>
 </rrf>
 </p>
 </c>
 </cr>
 </tm>
-<f namespace="std" name="make_pair" id="26077801bf83fda834940e84538639b4_7c81cda5854d9965ae58144ae781d793" file="2" linestart="263" lineend="272" access="none" inline="true" hasbody="true" isdef="true">
-<fpt cc="cdecl" proto="pair&lt;typename _Unrefwrap&lt;_Ty1&gt;::type, typename _Unrefwrap&lt;_Ty2&gt;::type&gt;">
+<f namespace="std" name="make_pair" id="b9e4183ee61331ebfdc985678ac87295_7c81cda5854d9965ae58144ae781d793" file="2" linestart="380" lineend="385" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="pair&lt;_Unrefwrap_t&lt;_Ty1&gt;, _Unrefwrap_t&lt;_Ty2&gt; &gt;">
 <tss>
-<templatebase id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49"/>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49"/>
 <template_arguments>
-<DependentName/>
-<DependentName/>
+<tss>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_78712c66418312f0731dadc4ca0b8899"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_78712c66418312f0731dadc4ca0b8899"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
 </template_arguments>
 </tss>
 </fpt>
@@ -41,18 +51,28 @@
 </rrf>
 </p>
 </f>
-<ft name="make_pair" id="26077801bf83fda834940e84538639b4_b7c345cb1bd499be12f5c7d124f3859d" file="2" linestart="262" lineend="272">
+<ft name="make_pair" id="b9e4183ee61331ebfdc985678ac87295_b7c345cb1bd499be12f5c7d124f3859d" file="2" linestart="378" lineend="385">
 <template_parameters>
-<ttp name="_Ty1" id="26077801bf83fda834940e84538639b4_88039d9fa6d08e94a712faacf0b9fb4d" depth="0" index="0" proto="type-parameter-0-0"/>
-<ttp name="_Ty2" id="26077801bf83fda834940e84538639b4_4ea8bb9886e5cc939da548c5d372abc9" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="_Ty1" id="b9e4183ee61331ebfdc985678ac87295_88039d9fa6d08e94a712faacf0b9fb4d" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="_Ty2" id="b9e4183ee61331ebfdc985678ac87295_4ea8bb9886e5cc939da548c5d372abc9" depth="0" index="1" proto="type-parameter-0-1"/>
 </template_parameters>
-<f namespace="std" name="make_pair" id="26077801bf83fda834940e84538639b4_7c81cda5854d9965ae58144ae781d793" file="2" linestart="263" lineend="272" access="none" inline="true" hasbody="true" isdef="true">
-<fpt cc="cdecl" proto="pair&lt;typename _Unrefwrap&lt;_Ty1&gt;::type, typename _Unrefwrap&lt;_Ty2&gt;::type&gt;">
+<f namespace="std" name="make_pair" id="b9e4183ee61331ebfdc985678ac87295_7c81cda5854d9965ae58144ae781d793" file="2" linestart="380" lineend="385" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="pair&lt;_Unrefwrap_t&lt;_Ty1&gt;, _Unrefwrap_t&lt;_Ty2&gt; &gt;">
 <tss>
-<templatebase id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49"/>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49"/>
 <template_arguments>
-<DependentName/>
-<DependentName/>
+<tss>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_78712c66418312f0731dadc4ca0b8899"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_78712c66418312f0731dadc4ca0b8899"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
 </template_arguments>
 </tss>
 </fpt>

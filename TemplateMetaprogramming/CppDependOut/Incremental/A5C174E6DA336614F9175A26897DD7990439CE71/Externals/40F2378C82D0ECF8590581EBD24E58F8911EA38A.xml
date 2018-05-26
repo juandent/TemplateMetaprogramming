@@ -1,6 +1,5 @@
 <Externals>
-<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="22" lineend="38"/>
-<cr namespace="boost.mpl" access="none" depth="2" kind="struct" name="apply" id="1977ac273449725d320c4be68a5076b9_61b5744a785ee08a213c3108c3dac847" file="3" linestart="133" lineend="136" previous="54273aca8dc441c8811ff3a85e29300a_61b5744a785ee08a213c3108c3dac847">
+<cr namespace="boost.mpl" access="none" depth="2" kind="struct" name="apply" id="1977ac273449725d320c4be68a5076b9_61b5744a785ee08a213c3108c3dac847" file="2" linestart="133" lineend="136" previous="54273aca8dc441c8811ff3a85e29300a_61b5744a785ee08a213c3108c3dac847">
 <base access="public">
 <tss>
 <templatebase id="1977ac273449725d320c4be68a5076b9_a8746bbd9d69ca53517278225155b29a"/>

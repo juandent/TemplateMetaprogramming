@@ -1,5 +1,30 @@
 <Externals>
-<cr namespace="boost.mpl" access="none" depth="1" kind="struct" name="vector" id="e83ff0ae038c27bd8d574a6c295f4a57_db37dab1dbb1bc607352139c19257945" file="2" linestart="313" lineend="320" previous="e83ff0ae038c27bd8d574a6c295f4a57_db37dab1dbb1bc607352139c19257945">
+<tm namespace="mpl_" access="none" kind="struct" name="integral_c" id="9ae2e2f6d833476e044c5448173dba7c_5cb3052e753c2b8d729a751bf7fd025d" file="2" linestart="33" lineend="33">
+<template_parameters>
+<ttp name="I" id="9ae2e2f6d833476e044c5448173dba7c_8dca76d62cb74c0e914a42e326c3906a" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="mpl_" access="none" kind="struct" name="integral_c" id="9ae2e2f6d833476e044c5448173dba7c_acfee596ba73f896e2647e14b1ce8413" file="2" linestart="33" lineend="33"/>
+</tm>
+<cr namespace="mpl_" access="none" kind="struct" name="int_" id="2ade6751fda5309709332f7a55ef208a_168fec48368532d002a1b74227411245" file="3" linestart="22" lineend="22"/>
+<tm namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector3" id="371b28cfc8f6636fcda27a666715d2e1_c08b6e63d191d319a139db910dd13e5f" file="4" linestart="156" lineend="172">
+<template_parameters>
+<ttp name="T0" id="371b28cfc8f6636fcda27a666715d2e1_4ea67e5cfeef06bbfd423bcf1a0d71e0" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="T1" id="371b28cfc8f6636fcda27a666715d2e1_ab90a9a0c7c29ffbb19b431fc1fbabc4" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="T2" id="371b28cfc8f6636fcda27a666715d2e1_624185326994525af01467107c6dc8e3" depth="0" index="2" proto="type-parameter-0-2"/>
+</template_parameters>
+<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector3" id="371b28cfc8f6636fcda27a666715d2e1_0c12380c0c66769f43ed0e0728b01580" file="4" linestart="159" lineend="172">
+<cr access="public" kind="struct" name="vector3" id="371b28cfc8f6636fcda27a666715d2e1_a57969afd5ff588d4e59e9c26431130a" file="4" linestart="159" lineend="159"/>
+</cr>
+</tm>
+<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector4" id="371b28cfc8f6636fcda27a666715d2e1_0abe890320c5abc9d95236b82e5dfc64" file="4" linestart="231" lineend="245"/>
+<tm namespace="boost.mpl" access="none" kind="struct" name="vector_c" id="3043eee1947d5668ddc5e878dfcf0d43_9c7642dd4752dd0114989ce21caf2132" file="5" linestart="14" lineend="23">
+<template_parameters>
+<ttp name="T" id="3043eee1947d5668ddc5e878dfcf0d43_44f123383abd0a5c2f763ee0c5b871d7" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="boost.mpl" access="none" kind="struct" name="vector_c" id="3043eee1947d5668ddc5e878dfcf0d43_a026a8a9ed6b995e983da52f72085301" file="5" linestart="23" lineend="23"/>
+</tm>
+<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="deref" id="089c2cebec7f0a249bcb3ec61880ecaf_3b6fe07aeba8baabb7e275f417668cdb" file="6" linestart="27" lineend="35"/>
+<cr namespace="boost.mpl" access="none" depth="1" kind="struct" name="vector" id="e83ff0ae038c27bd8d574a6c295f4a57_db37dab1dbb1bc607352139c19257945" file="7" linestart="313" lineend="320" previous="e83ff0ae038c27bd8d574a6c295f4a57_db37dab1dbb1bc607352139c19257945">
 <base access="public">
 <tss>
 <templatebase id="80611d50be47a780a6bf40d7074f3724_dedc5668eca7d34ac11a582114c55c94"/>
@@ -28,31 +53,6 @@
 </tss>
 </base>
 </cr>
-<tm namespace="mpl_" access="none" kind="struct" name="integral_c" id="9ae2e2f6d833476e044c5448173dba7c_5cb3052e753c2b8d729a751bf7fd025d" file="3" linestart="33" lineend="33">
-<template_parameters>
-<ttp name="I" id="9ae2e2f6d833476e044c5448173dba7c_8dca76d62cb74c0e914a42e326c3906a" depth="0" index="0" proto="type-parameter-0-0"/>
-</template_parameters>
-<cr namespace="mpl_" access="none" kind="struct" name="integral_c" id="9ae2e2f6d833476e044c5448173dba7c_acfee596ba73f896e2647e14b1ce8413" file="3" linestart="33" lineend="33"/>
-</tm>
-<cr namespace="mpl_" access="none" kind="struct" name="int_" id="2ade6751fda5309709332f7a55ef208a_168fec48368532d002a1b74227411245" file="4" linestart="22" lineend="22"/>
-<tm namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector3" id="371b28cfc8f6636fcda27a666715d2e1_c08b6e63d191d319a139db910dd13e5f" file="5" linestart="156" lineend="172">
-<template_parameters>
-<ttp name="T0" id="371b28cfc8f6636fcda27a666715d2e1_4ea67e5cfeef06bbfd423bcf1a0d71e0" depth="0" index="0" proto="type-parameter-0-0"/>
-<ttp name="T1" id="371b28cfc8f6636fcda27a666715d2e1_ab90a9a0c7c29ffbb19b431fc1fbabc4" depth="0" index="1" proto="type-parameter-0-1"/>
-<ttp name="T2" id="371b28cfc8f6636fcda27a666715d2e1_624185326994525af01467107c6dc8e3" depth="0" index="2" proto="type-parameter-0-2"/>
-</template_parameters>
-<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector3" id="371b28cfc8f6636fcda27a666715d2e1_0c12380c0c66769f43ed0e0728b01580" file="5" linestart="159" lineend="172">
-<cr access="public" kind="struct" name="vector3" id="371b28cfc8f6636fcda27a666715d2e1_a57969afd5ff588d4e59e9c26431130a" file="5" linestart="159" lineend="159"/>
-</cr>
-</tm>
-<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector4" id="371b28cfc8f6636fcda27a666715d2e1_0abe890320c5abc9d95236b82e5dfc64" file="5" linestart="231" lineend="245"/>
-<tm namespace="boost.mpl" access="none" kind="struct" name="vector_c" id="3043eee1947d5668ddc5e878dfcf0d43_9c7642dd4752dd0114989ce21caf2132" file="6" linestart="14" lineend="23">
-<template_parameters>
-<ttp name="T" id="3043eee1947d5668ddc5e878dfcf0d43_44f123383abd0a5c2f763ee0c5b871d7" depth="0" index="0" proto="type-parameter-0-0"/>
-</template_parameters>
-<cr namespace="boost.mpl" access="none" kind="struct" name="vector_c" id="3043eee1947d5668ddc5e878dfcf0d43_a026a8a9ed6b995e983da52f72085301" file="6" linestart="23" lineend="23"/>
-</tm>
-<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="deref" id="089c2cebec7f0a249bcb3ec61880ecaf_3b6fe07aeba8baabb7e275f417668cdb" file="7" linestart="27" lineend="35"/>
 <v name="value" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="205440d2ac3f650c8de19c453b8549a1_37cc37f70b72de1e2e2c23d17260fb86" file="8" linestart="25" lineend="25" storage="static" init="true" access2="public">
 <QualType const="true">
 <bt name="bool"/>

@@ -1,24 +1,19 @@
 <Externals>
-<cr namespace="std" access="none" depth="1" kind="struct" name="forward_iterator_tag" id="b08c89033375a7836d715d392b71174f_ee977fdb01655ef3c2580f0692a44276" file="6" linestart="466" lineend="469">
+<cr namespace="std" access="none" depth="1" kind="struct" name="forward_iterator_tag" id="28ba67d128ae8a616589bfc1314abfd6_ee977fdb01655ef3c2580f0692a44276" file="6" linestart="562" lineend="565">
 <base access="public">
 <rt>
-<cr id="b08c89033375a7836d715d392b71174f_c98cf9b1d0709d4ff8c9e1029d63b90f"/>
-</rt>
-</base>
-<base access="public">
-<rt>
-<cr id="b08c89033375a7836d715d392b71174f_3e6338fe159abfaf31ef9f13b1128659"/>
+<cr id="28ba67d128ae8a616589bfc1314abfd6_c98cf9b1d0709d4ff8c9e1029d63b90f"/>
 </rt>
 </base>
 </cr>
-<v namespace="std" name="cout" proto="ostream" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" file="7" linestart="27" lineend="27" storage="extern" access2="none">
+<v namespace="std" name="cout" proto="ostream" id="5131c71ee40d11b72d9dddd1808344ee_fbe8f6ba0143c688ba07f32590d95a55" file="7" linestart="29" lineend="29" storage="extern" access2="none">
 <Tdef>
 <tss>
-<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_7df99f34c778205aaa2e1759bec30243"/>
+<templatebase id="249b4c0096e6d1394c81e46f6fb193b8_7df99f34c778205aaa2e1759bec30243"/>
 <template_arguments>
 <bt name="char"/>
 <tss>
-<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<templatebase id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639"/>
 <template_arguments>
 <bt name="char"/>
 </template_arguments>

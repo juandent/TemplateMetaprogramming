@@ -1,5 +1,4 @@
 <Externals>
-<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="22" lineend="38"/>
 <cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="X1" id="de147941232f8b428fcfa4da8de9971e_8ebf33b9b0266f890cb6e8618bde74d6" file="1" linestart="55" lineend="55">
 <c name="X1" id="de147941232f8b428fcfa4da8de9971e_754002d4e59f04110f4a134dac409f83" file="1" linestart="55" lineend="55" implicit="true" access="public" inline="true">
 <fpt cc="x86_thiscall" proto="void">

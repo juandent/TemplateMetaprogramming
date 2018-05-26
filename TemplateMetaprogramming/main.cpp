@@ -1294,10 +1294,15 @@ namespace LambdaImpl_2
 {
 	void useMulticall();
 }
+
+void testAccumulate();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	testAccumulate();
 
 	Transform_if_with_lambdas::simplestAccumulate();
 	Transform_if_with_lambdas::accumulateIntoAnOutputIterator();

@@ -10,7 +10,7 @@
 <fpt cc="cdecl" proto="std::pair&lt;int, bool&gt;">
 <ety>
 <tss>
-<templatebase id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49"/>
+<templatebase id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49"/>
 <template_arguments>
 <bt name="int"/>
 <bt name="bool"/>
@@ -31,7 +31,7 @@
 <Var nm="ret" value="true">
 <auto/>
 <n10 lb="10" cb="14" le="10" ce="37">
-<typeptr id="26077801bf83fda834940e84538639b4_8478c0ef279fd4e0efe57dc146ac8a62">
+<typeptr id="b9e4183ee61331ebfdc985678ac87295_8478c0ef279fd4e0efe57dc146ac8a62">
 <template_arguments>
 <bt name="int"/>
 <bt name="bool"/>
@@ -40,10 +40,10 @@
 <temp/>
 <mte lb="10" cb="14" le="10" ce="37">
 <exp pvirg="true"/>
-<ce lb="10" cb="14" le="10" ce="37" nbparm="2" id="26077801bf83fda834940e84538639b4_7c81cda5854d9965ae58144ae781d793">
+<ce lb="10" cb="14" le="10" ce="37" nbparm="2" id="b9e4183ee61331ebfdc985678ac87295_7c81cda5854d9965ae58144ae781d793">
 <exp pvirg="true"/>
 <n32 lb="10" cb="14" le="10" ce="19">
-<drx lb="10" cb="14" le="10" ce="19" kind="lvalue" id="26077801bf83fda834940e84538639b4_7c81cda5854d9965ae58144ae781d793" nm="make_pair">
+<drx lb="10" cb="14" le="10" ce="19" kind="lvalue" id="b9e4183ee61331ebfdc985678ac87295_7c81cda5854d9965ae58144ae781d793" nm="make_pair">
 <template_arguments>
 <bt name="int"/>
 <bt name="bool"/>
@@ -67,7 +67,7 @@
 </dst>
 <rx lb="11" cb="3" le="11" ce="10" pvirg="true">
 <n10 lb="11" cb="10">
-<typeptr id="26077801bf83fda834940e84538639b4_8478c0ef279fd4e0efe57dc146ac8a62">
+<typeptr id="b9e4183ee61331ebfdc985678ac87295_8478c0ef279fd4e0efe57dc146ac8a62">
 <template_arguments>
 <bt name="int"/>
 <bt name="bool"/>

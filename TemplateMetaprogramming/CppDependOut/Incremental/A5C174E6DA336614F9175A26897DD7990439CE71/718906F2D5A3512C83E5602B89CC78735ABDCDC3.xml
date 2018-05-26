@@ -49,11 +49,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -80,11 +79,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="33"/>
+<n9 lb="42" cb="34"/>
 
 </Stmt>
 </template_arguments>
@@ -428,11 +426,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="33"/>
+<n9 lb="42" cb="34"/>
 
 </Stmt>
 </template_arguments>
@@ -451,11 +448,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -479,7 +475,7 @@
 <Var nm="res" value="true">
 <auto/>
 <n32 lb="84" cb="13" le="84" ce="35">
-<drx lb="84" cb="13" le="84" ce="35" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="84" cb="13" le="84" ce="35" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 </Var>
 </dst>
@@ -488,7 +484,7 @@
 <Var nm="res2" value="true">
 <auto/>
 <n32 lb="85" cb="14" le="85" ce="37">
-<drx lb="85" cb="14" le="85" ce="37" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="85" cb="14" le="85" ce="37" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 </Var>
 </dst>

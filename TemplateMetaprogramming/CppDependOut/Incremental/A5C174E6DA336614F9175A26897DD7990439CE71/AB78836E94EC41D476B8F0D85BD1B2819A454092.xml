@@ -23,6 +23,12 @@
 <m f="1" bl="11" bc="1"/>
 <m f="1" bl="12" bc="1"/>
 <m f="1" bl="13" bc="1"/>
+<m f="1" bl="43" bc="1"/>
+<m f="1" bl="51" bc="1"/>
+<m f="1" bl="61" bc="1"/>
+<m f="1" bl="68" bc="1"/>
+<m f="1" bl="69" bc="1"/>
+<m f="1" bl="75" bc="1"/>
 </Directives>
 <tun>
 <tm access="none" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_28c3300bda3b9ba9a3567b45a90411a6" file="2" linestart="5" lineend="6">
@@ -408,7 +414,7 @@
 </QualType>
 <Stmt>
 <n32 lb="23" cb="23" le="23" ce="108">
-<drx lb="23" cb="23" le="23" ce="108" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="23" cb="23" le="23" ce="108" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>
@@ -420,7 +426,7 @@
 </QualType>
 <Stmt>
 <n32 lb="30" cb="34" le="30" ce="144">
-<drx lb="30" cb="34" le="30" ce="144" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="30" cb="34" le="30" ce="144" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>
@@ -474,11 +480,454 @@
 </QualType>
 <Stmt>
 <n32 lb="39" cb="31" le="39" ce="80">
-<drx lb="39" cb="31" le="39" ce="80" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="39" cb="31" le="39" ce="80" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>
 </v>
 <sas/>
+<tm access="none" kind="class" name="PushBackRecT" id="ac1a8d6ec1fea3816e07b4c42c399cc0_e2119ec9b1e0482365c989e703ec6420" file="9" linestart="10" lineend="11">
+<template_parameters>
+<ttp name="List" id="ac1a8d6ec1fea3816e07b4c42c399cc0_574f8e9fe7d269c206fc11d4731dd132" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="NewElement" id="ac1a8d6ec1fea3816e07b4c42c399cc0_dd2a50944f8fcb78aa7114c5a66e3efe" depth="0" index="1" proto="type-parameter-0-1"/>
+<DeclaratorDecl name="Empty" id="ac1a8d6ec1fea3816e07b4c42c399cc0_40288f560794c77f6d9d22f10c2f6ba7" file="9" linestart="10" lineend="10" depth="0" index="2">
+<bt name="bool"/>
+<Stmt>
+<n35 lb="10" cb="59" le="10" ce="74">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" kind="class" name="PushBackRecT" id="ac1a8d6ec1fea3816e07b4c42c399cc0_e2119ec9b1e0482365c989e703ec6420" file="9" linestart="11" lineend="11"/>
+</tm>
+<ctps Spec="&lt;type-parameter-0-0, type-parameter-0-1, false&gt;" access="none" depth="0" pod="true" kind="class" name="PushBackRecT" id="ac1a8d6ec1fea3816e07b4c42c399cc0_1db3405ac665a77d84a0c66fe8d815c7" file="9" linestart="13" lineend="22">
+<cr access="public" kind="class" name="PushBackRecT" id="ac1a8d6ec1fea3816e07b4c42c399cc0_d22cce47383312ccfef858221bac7992" file="9" linestart="14" lineend="14"/>
+<asd access="public"/>
+<TypedefNameDecl name="Head" id="ac1a8d6ec1fea3816e07b4c42c399cc0_fef1f1db507f7f50592396695958de18" file="9" linestart="17" lineend="17">
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="Tail" id="ac1a8d6ec1fea3816e07b4c42c399cc0_9415937dacfab56d4fff7fdd623d56d8" file="9" linestart="18" lineend="18">
+<tss>
+<templatebase id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="NewTail" id="ac1a8d6ec1fea3816e07b4c42c399cc0_d8e8ad790e8027ef5ecba8c0e325c7f0" file="9" linestart="19" lineend="19">
+<DependentName/>
+</TypedefNameDecl>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="ac1a8d6ec1fea3816e07b4c42c399cc0_0e1748568d787c440cedde004d99be2b" file="9" linestart="21" lineend="21">
+<tss>
+<templatebase id="de50ef945dc614ee106ec1ed1e3066ab_4fe0e69194d522ffc7f3f13173e91a2f"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+<Tdef>
+<DependentName/>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<ctps Spec="&lt;type-parameter-0-0, type-parameter-0-1, true&gt;" access="none" depth="0" pod="true" kind="class" name="PushBackRecT" id="ac1a8d6ec1fea3816e07b4c42c399cc0_c3ea49a91e4c2f0924eb9e1302e3f908" file="9" linestart="25" lineend="30">
+<cr access="public" kind="class" name="PushBackRecT" id="ac1a8d6ec1fea3816e07b4c42c399cc0_67f30a3f81c64c861212d64461fb70da" file="9" linestart="26" lineend="26"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="ac1a8d6ec1fea3816e07b4c42c399cc0_b12d137011a898f24afd4cc6279c7162" file="9" linestart="29" lineend="29">
+<tss>
+<templatebase id="de50ef945dc614ee106ec1ed1e3066ab_4fe0e69194d522ffc7f3f13173e91a2f"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="PushBackRec" id="ac1a8d6ec1fea3816e07b4c42c399cc0_57dfb53b7f07f6c63480e38d240b2dca" file="9" linestart="33" lineend="34">
+<template_parameters>
+<ttp name="List" id="ac1a8d6ec1fea3816e07b4c42c399cc0_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="NewElement" id="ac1a8d6ec1fea3816e07b4c42c399cc0_22c829af5e74bf5aee5a9edb3e8e212c" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<TypedefNameDecl name="PushBackRec" id="ac1a8d6ec1fea3816e07b4c42c399cc0_57dfb53b7f07f6c63480e38d240b2dca" file="9" linestart="34" lineend="34">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<TypedefNameDecl name="integers" id="565445ad6805dee2e10213420f49ae06_f3ac6bff08c3571e9551ca96d85733bf" file="1" linestart="47" lineend="47">
+<tss>
+<templatebase id="ac1a8d6ec1fea3816e07b4c42c399cc0_57dfb53b7f07f6c63480e38d240b2dca"/>
+<template_arguments>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="short"/>
+<bt name="int"/>
+</template_arguments>
+</tss>
+<bt name="long"/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<v name="push_back_rec" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_6dcf33dbc25701c806a32ac1cd0d9b7c" file="1" linestart="49" lineend="49" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="49" cb="32" le="49" ce="84">
+<drx lb="49" cb="32" le="49" ce="84" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<tm access="none" kind="class" name="ReverseT" id="2d18e140d13028323361a2cd417f4d17_6993b0e57c87c454efcf8984009a586c" file="10" linestart="9" lineend="10">
+<template_parameters>
+<ttp name="List" id="2d18e140d13028323361a2cd417f4d17_9320c067b354392effa1700450239825" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="Empty" id="2d18e140d13028323361a2cd417f4d17_ab18559c51375daca220ef09e7a24e2a" file="10" linestart="9" lineend="9" depth="0" index="1">
+<bt name="bool"/>
+<Stmt>
+<n35 lb="9" cb="38" le="9" ce="53">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" kind="class" name="ReverseT" id="2d18e140d13028323361a2cd417f4d17_6993b0e57c87c454efcf8984009a586c" file="10" linestart="10" lineend="10"/>
+</tm>
+<RedeclarableTemplateDecl name="Reverse" id="2d18e140d13028323361a2cd417f4d17_eb6fce6f2843d29a38bce9ac40e08434" file="10" linestart="12" lineend="13">
+<template_parameters>
+<ttp name="List" id="2d18e140d13028323361a2cd417f4d17_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="Reverse" id="2d18e140d13028323361a2cd417f4d17_eb6fce6f2843d29a38bce9ac40e08434" file="10" linestart="13" lineend="13">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<ctps Spec="&lt;type-parameter-0-0, false&gt;" access="none" depth="0" kind="class" name="ReverseT" id="2d18e140d13028323361a2cd417f4d17_37677a68259df7dff41e430b17a9a85e" file="10" linestart="15" lineend="17">
+<base access="public">
+<tss>
+<templatebase id="d46841d447da826a841754692812e586_c86ea15008aaf0a2b049c641082c4e9e"/>
+<template_arguments>
+<tss>
+<templatebase id="2d18e140d13028323361a2cd417f4d17_eb6fce6f2843d29a38bce9ac40e08434"/>
+<template_arguments>
+<tss>
+<templatebase id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="ReverseT" id="2d18e140d13028323361a2cd417f4d17_dbc18e9b7d23c33b0ca0bbea083e7ded" file="10" linestart="16" lineend="16"/>
+</ctps>
+<ctps Spec="&lt;type-parameter-0-0, true&gt;" access="none" depth="0" pod="true" kind="class" name="ReverseT" id="2d18e140d13028323361a2cd417f4d17_3b0d8cc60edd2cc90a5fe55cc47c91c1" file="10" linestart="19" lineend="24">
+<cr access="public" kind="class" name="ReverseT" id="2d18e140d13028323361a2cd417f4d17_de3bd0f7243f2b50c776adc6ef2aaf7c" file="10" linestart="20" lineend="20"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="2d18e140d13028323361a2cd417f4d17_b1ff9feac7a5898a69ec9d605ed891ee" file="10" linestart="23" lineend="23">
+<ttp/>
+</TypedefNameDecl>
+</ctps>
+<TypedefNameDecl name="straight" id="565445ad6805dee2e10213420f49ae06_3e5fc0abe4ca4c40264fda23005afbe2" file="1" linestart="54" lineend="54">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="char"/>
+<bt name="int"/>
+<bt name="long"/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="inverted" id="565445ad6805dee2e10213420f49ae06_557dc6e0763704c96ed4d7860be5714b" file="1" linestart="56" lineend="56">
+<tss>
+<templatebase id="2d18e140d13028323361a2cd417f4d17_eb6fce6f2843d29a38bce9ac40e08434"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="char"/>
+<bt name="int"/>
+<bt name="long"/>
+</template_arguments>
+</tss>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<v name="reversed" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_00eb8b6180a25a66c88078ac184cebfd" file="1" linestart="58" lineend="58" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="58" cb="27" le="58" ce="78">
+<drx lb="58" cb="27" le="58" ce="78" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<tm access="none" depth="0" pod="true" kind="class" name="PopBackT" id="aad0940789cddce4a0613b8ade1d7816_08d33fcd266e3fde7e1a174c619daa99" file="11" linestart="11" lineend="16">
+<template_parameters>
+<ttp name="List" id="aad0940789cddce4a0613b8ade1d7816_55fe2c0113330c421be676c2f925880c" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="class" name="PopBackT" id="aad0940789cddce4a0613b8ade1d7816_08d33fcd266e3fde7e1a174c619daa99" file="11" linestart="12" lineend="16">
+<cr access="public" kind="class" name="PopBackT" id="aad0940789cddce4a0613b8ade1d7816_04e530f9885d42006108aafd967ddef3" file="11" linestart="12" lineend="12"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="aad0940789cddce4a0613b8ade1d7816_8dce4cf8273d03de72802a9e270e1a67" file="11" linestart="15" lineend="15">
+<tss>
+<templatebase id="2d18e140d13028323361a2cd417f4d17_eb6fce6f2843d29a38bce9ac40e08434"/>
+<template_arguments>
+<tss>
+<templatebase id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9"/>
+<template_arguments>
+<tss>
+<templatebase id="2d18e140d13028323361a2cd417f4d17_eb6fce6f2843d29a38bce9ac40e08434"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</cr>
+</tm>
+<RedeclarableTemplateDecl name="PopBack" id="aad0940789cddce4a0613b8ade1d7816_65f288974eecd421f5759ebd8713ed2d" file="11" linestart="18" lineend="19">
+<template_parameters>
+<ttp name="List" id="aad0940789cddce4a0613b8ade1d7816_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="PopBack" id="aad0940789cddce4a0613b8ade1d7816_65f288974eecd421f5759ebd8713ed2d" file="11" linestart="19" lineend="19">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<TypedefNameDecl name="poppedBack" id="565445ad6805dee2e10213420f49ae06_bf7da3a15dfaf5d709fa1ac4aa63a812" file="1" linestart="63" lineend="63">
+<tss>
+<templatebase id="aad0940789cddce4a0613b8ade1d7816_65f288974eecd421f5759ebd8713ed2d"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="char"/>
+<bt name="int"/>
+<bt name="long"/>
+</template_arguments>
+</tss>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<v name="popped_back" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_377d146072e9fca1987592629381bed8" file="1" linestart="65" lineend="65" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="65" cb="30" le="65" ce="77">
+<drx lb="65" cb="30" le="65" ce="77" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<tm access="none" kind="class" name="TransformT" id="dfa082e9ec6bac176d975774a464133d_66f594af4bf38ae607a6c13de734f969" file="12" linestart="9" lineend="10">
+<template_parameters>
+<ttp name="List" id="dfa082e9ec6bac176d975774a464133d_bd6f2ddd2c75bb3efc96ddd192c9e792" depth="0" index="0" proto="type-parameter-0-0"/>
+<tpm name="MetaFun" id="dfa082e9ec6bac176d975774a464133d_eb1618f3af6c4827fd74f73341dbbc8e" file="12" linestart="9" lineend="9" depth="0" index="1">
+<template_parameters>
+<ttp name="T" id="dfa082e9ec6bac176d975774a464133d_23f29dab0a6b96729420041b39d2d60e" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+</tpm>
+<DeclaratorDecl name="Empty" id="dfa082e9ec6bac176d975774a464133d_2ae4c88a9b9cba5838060f6413903d17" file="12" linestart="9" lineend="9" depth="0" index="2">
+<bt name="bool"/>
+<Stmt>
+<n35 lb="9" cb="74" le="9" ce="89">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" kind="class" name="TransformT" id="dfa082e9ec6bac176d975774a464133d_66f594af4bf38ae607a6c13de734f969" file="12" linestart="10" lineend="10"/>
+</tm>
+<ctps Spec="&lt;type-parameter-0-0, MetaFun, false&gt;" access="none" depth="0" kind="class" name="TransformT" id="dfa082e9ec6bac176d975774a464133d_7edadaa1ff7b750a60243a0817152a6d" file="12" linestart="13" lineend="16">
+<base access="public">
+<tss>
+<templatebase id="de50ef945dc614ee106ec1ed1e3066ab_6c9e4ffb82fd6a21cba4ae137d58671e"/>
+<template_arguments>
+<DependentName/>
+<DependentName/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="TransformT" id="dfa082e9ec6bac176d975774a464133d_a4a4cff613dd670ac3d3632664568ec2" file="12" linestart="14" lineend="14"/>
+</ctps>
+<ctps Spec="&lt;type-parameter-0-0, MetaFun, true&gt;" access="none" depth="0" pod="true" kind="class" name="TransformT" id="dfa082e9ec6bac176d975774a464133d_b8703ed77763322606b8717d7fbddf0c" file="12" linestart="18" lineend="23">
+<cr access="public" kind="class" name="TransformT" id="dfa082e9ec6bac176d975774a464133d_3f66d3c4c42ae11c9f5c68e3fd328ede" file="12" linestart="19" lineend="19"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="dfa082e9ec6bac176d975774a464133d_44a975fd67d0fc262e3bc81808a03e54" file="12" linestart="22" lineend="22">
+<ttp/>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="Transform" id="dfa082e9ec6bac176d975774a464133d_402467683b605476fcab03b7f6caa787" file="12" linestart="25" lineend="26">
+<template_parameters>
+<ttp name="List" id="dfa082e9ec6bac176d975774a464133d_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+<tpm name="MetaFun" id="dfa082e9ec6bac176d975774a464133d_b84bafea79dd2be23a4c1d98b4d3484f" file="12" linestart="25" lineend="25" depth="0" index="1">
+<template_parameters>
+<ttp name="T" id="dfa082e9ec6bac176d975774a464133d_758cee7a865ac07050f87902c1a0aa1f" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+</tpm>
+</template_parameters>
+<TypedefNameDecl name="Transform" id="dfa082e9ec6bac176d975774a464133d_402467683b605476fcab03b7f6caa787" file="12" linestart="26" lineend="26">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<tm access="none" depth="0" pod="true" kind="struct" name="AddConstT" id="00bfc9e2033399498a8c093b71fb2e54_3f96c2ab09c2561149cb192cfdb74aa8" file="13" linestart="3" lineend="7">
+<template_parameters>
+<ttp name="T" id="00bfc9e2033399498a8c093b71fb2e54_a123801a090d6629427c4bdce3417d07" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="AddConstT" id="00bfc9e2033399498a8c093b71fb2e54_3f96c2ab09c2561149cb192cfdb74aa8" file="13" linestart="4" lineend="7">
+<cr access="public" kind="struct" name="AddConstT" id="00bfc9e2033399498a8c093b71fb2e54_e2f0ff614c9621f6bfb34f0252aead06" file="13" linestart="4" lineend="4"/>
+<TypedefNameDecl name="Type" id="00bfc9e2033399498a8c093b71fb2e54_e444b47e96b7e36e508719319c33999e" file="13" linestart="6" lineend="6">
+<QualType const="true">
+<ttp/>
+</QualType>
+</TypedefNameDecl>
+</cr>
+</tm>
+<RedeclarableTemplateDecl name="AddConst" id="00bfc9e2033399498a8c093b71fb2e54_6d5640de38432922051806b6f19be9a9" file="13" linestart="9" lineend="10">
+<template_parameters>
+<ttp name="T" id="00bfc9e2033399498a8c093b71fb2e54_758cee7a865ac07050f87902c1a0aa1f" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="AddConst" id="00bfc9e2033399498a8c093b71fb2e54_6d5640de38432922051806b6f19be9a9" file="13" linestart="10" lineend="10">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<TypedefNameDecl name="const_straight" id="565445ad6805dee2e10213420f49ae06_9848275fe4832e8f5159c2d97976adea" file="1" linestart="71" lineend="71">
+<tss>
+<templatebase id="dfa082e9ec6bac176d975774a464133d_402467683b605476fcab03b7f6caa787"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="char"/>
+<bt name="int"/>
+<bt name="long"/>
+</template_arguments>
+</tss>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<v name="transformed_ok" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_c554e5933c36636a2f1d64d8181db81a" file="1" linestart="73" lineend="73" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="73" cb="33" le="73" ce="108">
+<drx lb="73" cb="33" le="73" ce="108" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<tm access="none" kind="class" name="AccumulateT" id="6a322ddc739fc164075f07c9060b2670_c4b7ad4605cb7e39d0713325a4c4bb85" file="14" linestart="8" lineend="12">
+<template_parameters>
+<ttp name="List" id="6a322ddc739fc164075f07c9060b2670_794ff377420ddaa8ff455d029c4465e4" depth="0" index="0" proto="type-parameter-0-0"/>
+<tpm name="F" id="6a322ddc739fc164075f07c9060b2670_14af486a45d18975fc63baa66fe00d5e" file="14" linestart="9" lineend="9" depth="0" index="1">
+<template_parameters>
+<ttp name="X" id="6a322ddc739fc164075f07c9060b2670_80e8ed650237db794f69f151e975132f" depth="1" index="0" proto="type-parameter-1-0"/>
+<ttp name="Y" id="6a322ddc739fc164075f07c9060b2670_f13b420a0919e06c123438b5992bb3a5" depth="1" index="1" proto="type-parameter-1-1"/>
+</template_parameters>
+</tpm>
+<ttp name="I" id="6a322ddc739fc164075f07c9060b2670_4da7e42deb5b809c505ab6695e290a52" depth="0" index="2" proto="type-parameter-0-2"/>
+<DeclaratorDecl name="" id="6a322ddc739fc164075f07c9060b2670_303fd22ae6a6eed5bc58b8359166dfb8" file="14" linestart="11" lineend="11" depth="0" index="3">
+<bt name="bool"/>
+<Stmt>
+<n35 lb="11" cb="9" le="11" ce="24">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" kind="class" name="AccumulateT" id="6a322ddc739fc164075f07c9060b2670_c4b7ad4605cb7e39d0713325a4c4bb85" file="14" linestart="12" lineend="12"/>
+</tm>
+<ctps Spec="&lt;type-parameter-0-0, F, type-parameter-0-2, false&gt;" access="none" depth="0" kind="class" name="AccumulateT" id="6a322ddc739fc164075f07c9060b2670_f9dea4ebaf662bd5cee72c2de2302833" file="14" linestart="15" lineend="20">
+<base access="public">
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_c4b7ad4605cb7e39d0713325a4c4bb85"/>
+<template_arguments>
+<tss>
+<templatebase id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+<DependentName/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="AccumulateT" id="6a322ddc739fc164075f07c9060b2670_aed40ebbf763d5a03f4d34ad69127d5d" file="14" linestart="18" lineend="18"/>
+</ctps>
+<ctps Spec="&lt;type-parameter-0-0, F, type-parameter-0-2, true&gt;" access="none" depth="0" pod="true" kind="class" name="AccumulateT" id="6a322ddc739fc164075f07c9060b2670_7950c90fdb25a60673ef939efdc2eb3e" file="14" linestart="22" lineend="29">
+<cr access="public" kind="class" name="AccumulateT" id="6a322ddc739fc164075f07c9060b2670_8c9c79b4210a3f21092fc56f15289d42" file="14" linestart="25" lineend="25"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="6a322ddc739fc164075f07c9060b2670_077c90cdca094ce3ca8060cb7728b7be" file="14" linestart="28" lineend="28">
+<ttp/>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="Accumulate" id="6a322ddc739fc164075f07c9060b2670_dff60c5d9926b5e43e7357fb11248ff5" file="14" linestart="32" lineend="35">
+<template_parameters>
+<ttp name="List" id="6a322ddc739fc164075f07c9060b2670_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+<tpm name="F" id="6a322ddc739fc164075f07c9060b2670_d5d58b72b2925dbb0b2b86015a7a536d" file="14" linestart="33" lineend="33" depth="0" index="1">
+<template_parameters>
+<ttp name="X" id="6a322ddc739fc164075f07c9060b2670_831c5b416bc3d9e0ab41419cbedb38a9" depth="1" index="0" proto="type-parameter-1-0"/>
+<ttp name="Y" id="6a322ddc739fc164075f07c9060b2670_e4d2cd9220b86f0e6e154557eb2e3069" depth="1" index="1" proto="type-parameter-1-1"/>
+</template_parameters>
+</tpm>
+<ttp name="I" id="6a322ddc739fc164075f07c9060b2670_c266a256a86b2a4f6f0ec8c3f1d42121" depth="0" index="2" proto="type-parameter-0-2"/>
+</template_parameters>
+<TypedefNameDecl name="Accumulate" id="6a322ddc739fc164075f07c9060b2670_dff60c5d9926b5e43e7357fb11248ff5" file="14" linestart="35" lineend="35">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<RedeclarableTemplateDecl name="Reverse_via_accumulate" id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5" file="14" linestart="43" lineend="44">
+<template_parameters>
+<ttp name="List" id="6a322ddc739fc164075f07c9060b2670_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="Reverse_via_accumulate" id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5" file="14" linestart="44" lineend="44">
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_dff60c5d9926b5e43e7357fb11248ff5"/>
+<template_arguments>
+<ttp/>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments/>
+</tss>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
 </tun>
 </Root>

@@ -1,9 +1,7 @@
 <Externals>
-<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="22" lineend="38">
-<v name="value" proto="const _Ty" const="true" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" file="2" linestart="24" lineend="24" storage="static" init="true" access2="public">
+<v name="value" proto="const _Ty" const="true" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" file="2" linestart="21" lineend="21" storage="static" init="true" access2="public">
 <QualType const="true">
 <ttp/>
 </QualType>
 </v>
-</cr>
 </Externals>

@@ -713,27 +713,27 @@
 </fpt>
 <Stmt>
 <u lb="104" cb="2" le="108" ce="2">
-<ocx lb="105" cb="3" le="107" ce="30" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870">
+<ocx lb="105" cb="3" le="107" ce="30" nbparm="2" id="e42aa348eeebf30726e27e68f224f8b0_d33445cdb753f92a6c0b97ecb40fd870">
 <exp pvirg="true"/>
 <n32 lb="107" cb="27">
-<drx lb="107" cb="27" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
+<drx lb="107" cb="27" kind="lvalue" id="e42aa348eeebf30726e27e68f224f8b0_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
 </n32>
-<ocx lb="105" cb="3" le="107" ce="25" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d">
+<ocx lb="105" cb="3" le="107" ce="25" nbparm="2" id="e42aa348eeebf30726e27e68f224f8b0_b80c76f34b048b1a98ab13314350861d">
 <exp pvirg="true"/>
 <n32 lb="106" cb="28">
-<drx lb="106" cb="28" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
+<drx lb="106" cb="28" kind="lvalue" id="e42aa348eeebf30726e27e68f224f8b0_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
 </n32>
-<ocx lb="105" cb="3" le="106" ce="26" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d">
+<ocx lb="105" cb="3" le="106" ce="26" nbparm="2" id="e42aa348eeebf30726e27e68f224f8b0_b80c76f34b048b1a98ab13314350861d">
 <exp pvirg="true"/>
 <n32 lb="105" cb="33">
-<drx lb="105" cb="33" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
+<drx lb="105" cb="33" kind="lvalue" id="e42aa348eeebf30726e27e68f224f8b0_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
 </n32>
-<ocx lb="105" cb="3" le="105" ce="31" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d">
+<ocx lb="105" cb="3" le="105" ce="31" nbparm="2" id="e42aa348eeebf30726e27e68f224f8b0_b80c76f34b048b1a98ab13314350861d">
 <exp pvirg="true"/>
 <n32 lb="105" cb="8">
-<drx lb="105" cb="8" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
+<drx lb="105" cb="8" kind="lvalue" id="e42aa348eeebf30726e27e68f224f8b0_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
 </n32>
-<drx lb="105" cb="3" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<drx lb="105" cb="3" kind="lvalue" id="5131c71ee40d11b72d9dddd1808344ee_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
 <scast lb="105" cb="11" le="105" ce="31">
 <cast cast="NoOp">
 <bt name="int"/>
@@ -774,11 +774,11 @@
 </scast>
 </ocx>
 <n32 lb="107" cb="30">
-<drx lb="107" cb="30" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
+<drx lb="107" cb="30" kind="lvalue" id="e42aa348eeebf30726e27e68f224f8b0_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
 <template_arguments>
 <bt name="char"/>
 <rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<cts id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098">
 <template_arguments>
 <bt name="char"/>
 </template_arguments>
@@ -829,70 +829,24 @@
 
 </Stmt>
 </m>
-<c name="Color" id="ac116dfd15c8dcb8ff661200eb6aa37e_362e173d8fa173a5c648a6336c99575d" file="1" linestart="100" lineend="100" copyconst="true" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-<p name="" proto="const Color &amp;" isRef="true" isLiteral="true" access2="none">
-<lrf>
-<QualType const="true">
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_e38aee7bf5f7bf91997e7ba8227336fa"/>
-</rt>
-</QualType>
-</lrf>
-<Stmt>
-
-</Stmt>
-</p>
-<Stmt>
-<u lb="100" cb="8"/>
-
-</Stmt>
-</c>
-<c name="Color" id="ac116dfd15c8dcb8ff661200eb6aa37e_5b6805485064c5858b1a82068085fdcd" file="1" linestart="100" lineend="100" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-<p name="" proto="Color &amp;&amp;" isRef="true" isLiteral="true" access2="none">
-<rrf>
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_e38aee7bf5f7bf91997e7ba8227336fa"/>
-</rt>
-</rrf>
-<Stmt>
-
-</Stmt>
-</p>
-</c>
-<d name="~Color" id="ac116dfd15c8dcb8ff661200eb6aa37e_c1b02fd8ec749d7edc2bf6e160adc6e4" file="1" linestart="100" lineend="100" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-</d>
-<c name="Color" id="ac116dfd15c8dcb8ff661200eb6aa37e_4b8ff29d4a887f73aca77d122615b4cb" file="1" linestart="100" lineend="100" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-</c>
 </cr>
-<cr access="none" depth="0" kind="struct" name="Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1" file="1" linestart="115" lineend="122">
+<cr access="public" depth="0" pod="true" kind="struct" name="Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1" file="1" linestart="115" lineend="122">
 <cr access="public" kind="struct" name="Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_c9d7f23db06b41e70998cf7f67bab2f7" file="1" linestart="115" lineend="115"/>
 <fl name="name" id="ac116dfd15c8dcb8ff661200eb6aa37e_e894f79b811593a74cca7034bbbcd70b" file="1" linestart="117" lineend="117" access="public" proto="std::string">
 <ety>
 <Tdef>
 <tss>
-<templatebase id="43e57e2314d98c3481e7c5229eab5466_6ecc822215ca97386606c5e8e95c56fb"/>
+<templatebase id="28dd744ec3dfa81fec2edb508c0ec0dd_6ecc822215ca97386606c5e8e95c56fb"/>
 <template_arguments>
 <bt name="char"/>
 <tss>
-<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<templatebase id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639"/>
 <template_arguments>
 <bt name="char"/>
 </template_arguments>
 </tss>
 <tss>
-<templatebase id="6296f70cc969544ce1f87c96145b57ec_07566aa809aee0bdf1c0fac16e19fa85"/>
+<templatebase id="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85"/>
 <template_arguments>
 <bt name="char"/>
 </template_arguments>
@@ -907,130 +861,10 @@
 <bt name="void"/>
 </fpt>
 <Stmt>
-<u lb="119" cb="2" le="121" ce="2">
-<ocx lb="120" cb="3" le="120" ce="19" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870">
-<exp pvirg="true"/>
-<n32 lb="120" cb="16">
-<drx lb="120" cb="16" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
-</n32>
-<ocx lb="120" cb="3" le="120" ce="11" nbparm="2" id="2f970d76565556801342c56cd3f70739_b80fc58520a6f91294a5020bb40669a5">
-<exp pvirg="true"/>
-<n32 lb="120" cb="8">
-<drx lb="120" cb="8" kind="lvalue" id="2f970d76565556801342c56cd3f70739_b80fc58520a6f91294a5020bb40669a5" nm="operator&lt;&lt;">
-<template_arguments>
-<bt name="char"/>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-</template_arguments>
-</drx>
-</n32>
-<drx lb="120" cb="3" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
-<n32 lb="120" cb="11">
-<mex lb="120" cb="11" kind="lvalue" id="ac116dfd15c8dcb8ff661200eb6aa37e_e894f79b811593a74cca7034bbbcd70b" nm="name" arrow="1">
-<n19 lb="120" cb="11"/>
-</mex>
-</n32>
-</ocx>
-<n32 lb="120" cb="19">
-<drx lb="120" cb="19" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
-<template_arguments>
-<bt name="char"/>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-</template_arguments>
-</drx>
-</n32>
-</ocx>
-</u>
+<u lb="119" cb="2" le="121" ce="2"/>
 
 </Stmt>
 </m>
-<c name="Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_c8f90a3855f611931663d3b7be7bbbb5" file="1" linestart="115" lineend="115" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-<p name="" proto="Label &amp;&amp;" isRef="true" isLiteral="true" access2="none">
-<rrf>
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1"/>
-</rt>
-</rrf>
-<Stmt>
-
-</Stmt>
-</p>
-</c>
-<m name="operator=" id="ac116dfd15c8dcb8ff661200eb6aa37e_b8a88c0f002a399e8afe29f75b909f77" file="1" linestart="115" implicit="true" operator="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="Label &amp;">
-<lrf>
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1"/>
-</rt>
-</lrf>
-</fpt>
-<p name="" proto="Label &amp;&amp;" isRef="true" isLiteral="true" access2="none">
-<rrf>
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1"/>
-</rt>
-</rrf>
-<Stmt>
-
-</Stmt>
-</p>
-</m>
-<d name="~Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_eea3d2834a83b748b41e8a89ee725562" file="1" linestart="115" lineend="115" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-<Stmt>
-<u lb="115" cb="8"/>
-
-</Stmt>
-</d>
-<c name="Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_1fb03342df955e9bef14fd5373deb6f2" file="1" linestart="115" lineend="115" copyconst="true" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-<p name="" proto="const Label &amp;" isRef="true" isLiteral="true" access2="none">
-<lrf>
-<QualType const="true">
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1"/>
-</rt>
-</QualType>
-</lrf>
-<Stmt>
-
-</Stmt>
-</p>
-<Stmt>
-<u lb="115" cb="8"/>
-
-</Stmt>
-</c>
-<c name="Label" id="ac116dfd15c8dcb8ff661200eb6aa37e_9a603c16f997e7ed73bd36d78abaccb6" file="1" linestart="115" lineend="115" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-</c>
 </cr>
 <ft name="print" id="ac116dfd15c8dcb8ff661200eb6aa37e_180f3edef5a4e96470e56d31a80c761e" file="1" linestart="126" lineend="130">
 <template_parameters>
@@ -1074,7 +908,7 @@
 <ocx lb="135" cb="2" le="135" ce="10" nbparm="2">
 <exp pvirg="true"/>
 <n44 lb="135" cb="7"/>
-<drx lb="135" cb="2" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<drx lb="135" cb="2" kind="lvalue" id="5131c71ee40d11b72d9dddd1808344ee_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
 <drx lb="135" cb="10" kind="lvalue" nm="val"/>
 </ocx>
 <n44 lb="135" cb="17"/>
@@ -1090,7 +924,7 @@
 <ttp name="Tail" id="ac116dfd15c8dcb8ff661200eb6aa37e_01a0143ce447ed3e76843499be89cf7d" depth="0" index="1" proto="type-parameter-0-1"/>
 <ttp name="" id="ac116dfd15c8dcb8ff661200eb6aa37e_067b9e776a970751f06d3c588cd0aabb" depth="0" index="2" proto="type-parameter-0-2">
 <tss>
-<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_4894206844b690fb9c92770e0dfc1a2c"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_4894206844b690fb9c92770e0dfc1a2c"/>
 <template_arguments>
 <Stmt>
 <n46 lb="138" cb="66" le="138" ce="86">
@@ -1214,7 +1048,7 @@
 
 </Stmt>
 </c>
-<c name="ColorLabelVisitor" id="ac116dfd15c8dcb8ff661200eb6aa37e_627781bd046f3e86ad0215262cf8de69" file="1" linestart="147" lineend="147" copyconst="true" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<c name="ColorLabelVisitor" id="ac116dfd15c8dcb8ff661200eb6aa37e_627781bd046f3e86ad0215262cf8de69" file="1" linestart="147" lineend="147" copyconst="true" implicit="true" access="public" inline="true">
 <fpt cc="x86_thiscall" proto="void">
 <bt name="void"/>
 </fpt>
@@ -1230,10 +1064,6 @@
 
 </Stmt>
 </p>
-<Stmt>
-<u lb="147" cb="9"/>
-
-</Stmt>
 </c>
 <c name="ColorLabelVisitor" id="ac116dfd15c8dcb8ff661200eb6aa37e_ebdfc7d57661a8c7d667a39a6eb5e59d" file="1" linestart="147" lineend="147" implicit="true" access="public" inline="true">
 <fpt cc="x86_thiscall" proto="void">
@@ -1250,11 +1080,6 @@
 </Stmt>
 </p>
 </c>
-<d name="~ColorLabelVisitor" id="ac116dfd15c8dcb8ff661200eb6aa37e_3383577b911c377ca659fd311954f59a" file="1" linestart="147" lineend="147" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-</d>
 </cr>
 <f namespace="Non_Type_Parameters" name="usePrint" id="ac116dfd15c8dcb8ff661200eb6aa37e_4ec45be6c76ab708d0e702a9fd20c56a" file="1" linestart="157" lineend="165" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
@@ -1316,119 +1141,12 @@
 </rt>
 </template_arguments>
 </tss>
-<n37 lb="163" cb="23" le="163" ce="56">
-<n10 lb="163" cb="23" le="163" ce="56">
-<typeptr id="ac116dfd15c8dcb8ff661200eb6aa37e_e8bb52d6cc3821016f842456b9cd41f8">
-<template_arguments>
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_e38aee7bf5f7bf91997e7ba8227336fa"/>
-</rt>
-<rt>
-<cr id="ac116dfd15c8dcb8ff661200eb6aa37e_0adb5befe13daffe7d0425c524eaa1a1"/>
-</rt>
-</template_arguments>
-</typeptr>
-<temp/>
-<il lb="163" cb="28" le="163" ce="42">
-<exp pvirg="true"/>
-<n32 lb="163" cb="29">
-<n45 lb="163" cb="29">
-<flit/>
-</n45>
-</n32>
-<n32 lb="163" cb="35">
-<n45 lb="163" cb="35">
-<flit/>
-</n45>
-</n32>
-<n32 lb="163" cb="38">
-<n45 lb="163" cb="38"/>
-</n32>
-</il>
-<n8 lb="163" cb="45" le="163" ce="54" >
-<temp/>
-<il lb="163" cb="45" le="163" ce="54">
-<exp pvirg="true"/>
-<n10 lb="163" cb="46">
-<typeptr id="43e57e2314d98c3481e7c5229eab5466_e3eb16c4c3462a2d9004e988dec04a31">
-<template_arguments>
-<bt name="char"/>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-</template_arguments>
-</typeptr>
-<temp/>
-<mte lb="163" cb="46">
-<exp pvirg="true"/>
-<n8 lb="163" cb="46" >
-<temp/>
-<n32 lb="163" cb="46">
-<n10 lb="163" cb="46">
-<typeptr id="43e57e2314d98c3481e7c5229eab5466_27c29e5ae4008e8e02d1117a50805d4f">
-<template_arguments>
-<bt name="char"/>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-<rt>
-<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
-<template_arguments>
-<bt name="char"/>
-</template_arguments>
-</cts>
-</rt>
-</template_arguments>
-</typeptr>
-<temp/>
-<n32 lb="163" cb="46">
-<n52 lb="163" cb="46">
-<slit/>
-</n52>
-</n32>
-</n10>
-</n32>
-</n8>
-</mte>
-</n10>
-</il>
-</n8>
-</n10>
-</n37>
 </Var>
 </dst>
 <dst lb="164" cb="3" le="164" ce="38">
 <exp pvirg="true"/>
 <Var nm="ret" value="true">
 <auto/>
-<mce lb="164" cb="14" le="164" ce="37" nbparm="1" id="ac116dfd15c8dcb8ff661200eb6aa37e_fc5a8d7b8a007d626cc343bc44ee1d5c">
-<exp pvirg="true"/>
-<mex lb="164" cb="14" le="164" ce="18" id="ac116dfd15c8dcb8ff661200eb6aa37e_fc5a8d7b8a007d626cc343bc44ee1d5c" nm="visitMixins" point="1">
-<drx lb="164" cb="14" kind="lvalue" nm="pcl"/>
-</mex>
-<n10 lb="164" cb="30">
-<typeptr id="ac116dfd15c8dcb8ff661200eb6aa37e_627781bd046f3e86ad0215262cf8de69"/>
-<temp/>
-<n32 lb="164" cb="30">
-<drx lb="164" cb="30" kind="lvalue" nm="visitor"/>
-</n32>
-</n10>
-</mce>
 </Var>
 </dst>
 </u>

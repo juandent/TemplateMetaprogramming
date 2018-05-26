@@ -63,3 +63,28 @@ constexpr bool reversed = std::is_same<inverted, Typelist<long, int, char>>::val
 using poppedBack = PopBack<straight>;
 
 constexpr bool popped_back = std::is_same<poppedBack, Typelist<char, int>>::value;
+
+
+#include "typelist/transform.hpp"
+#include "typelist/addconst.hpp"
+
+using const_straight = Transform<straight, AddConstT>;
+
+constexpr bool transformed_ok = std::is_same<const_straight, Typelist<const char, const int, const long>>::value;
+
+#include "typelist/accumulate.hpp"
+
+using result = Accumulate<Typelist<int, char>, PushFrontT, Typelist<>>;
+
+
+using reversed_accum = Reverse_via_accumulate<Typelist<int,char>>;
+
+constexpr bool reversed_accum_ok = std::is_same<reversed_accum, Typelist<char, int>>::value;
+
+
+void testAccumulate()
+{
+	result* p = nullptr;
+	reversed_accum* pp = nullptr;
+
+}

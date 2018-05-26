@@ -56,11 +56,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -93,11 +92,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="33"/>
+<n9 lb="42" cb="34"/>
 
 </Stmt>
 </template_arguments>
@@ -178,9 +176,24 @@
 <template_parameters>
 <ttp name="T" id="de147941232f8b428fcfa4da8de9971e_c78ec15cd7fde7c38790a00c730fbd8f" depth="0" index="0" proto="type-parameter-0-0"/>
 </template_parameters>
-<f namespace="FirstMin" name="min" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b" file="1" linestart="43" lineend="49" access="public" hasbody="true" isdef="true">
-<fpt cc="cdecl" proto="int">
-<bt name="int"/>
+<f namespace="FirstMin" name="min" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b" file="1" linestart="43" lineend="49" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="std::enable_if_t&lt;std::is_convertible_v&lt;LessResult&lt;const T &amp;, const T &amp;&gt;, bool&gt;, const T &amp;&gt;">
+<ety>
+<tss>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_4894206844b690fb9c92770e0dfc1a2c"/>
+<template_arguments>
+<Stmt>
+<n44 lb="43" cb="19" le="43" ce="77"/>
+
+</Stmt>
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+</template_arguments>
+</tss>
+</ety>
 </fpt>
 <p name="x" proto="const T &amp;" isRef="true" access2="none">
 <lrf>
@@ -918,6 +931,96 @@
 <exp pvirg="true"/>
 <Var nm="&lt;using-directive&gt;"/>
 </dst>
+<ce lb="105" cb="3" le="105" ce="17" nbparm="2" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b">
+<exp pvirg="true"/>
+<n32 lb="105" cb="3">
+<drx lb="105" cb="3" kind="lvalue" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b" nm="min">
+<template_arguments>
+<rt>
+<cr id="de147941232f8b428fcfa4da8de9971e_8ebf33b9b0266f890cb6e8618bde74d6"/>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<mte lb="105" cb="7" le="105" ce="10">
+<exp pvirg="true"/>
+<n32 lb="105" cb="7" le="105" ce="10">
+<n11 lb="105" cb="7" le="105" ce="10">
+<typeptr id="de147941232f8b428fcfa4da8de9971e_754002d4e59f04110f4a134dac409f83"/>
+<temp/>
+</n11>
+</n32>
+</mte>
+<mte lb="105" cb="13" le="105" ce="16">
+<exp pvirg="true"/>
+<n32 lb="105" cb="13" le="105" ce="16">
+<n11 lb="105" cb="13" le="105" ce="16">
+<typeptr id="de147941232f8b428fcfa4da8de9971e_754002d4e59f04110f4a134dac409f83"/>
+<temp/>
+</n11>
+</n32>
+</mte>
+</ce>
+<ce lb="106" cb="3" le="106" ce="17" nbparm="2" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b">
+<exp pvirg="true"/>
+<n32 lb="106" cb="3">
+<drx lb="106" cb="3" kind="lvalue" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b" nm="min">
+<template_arguments>
+<rt>
+<cr id="de147941232f8b428fcfa4da8de9971e_f1ee6e75c21304a8ea19322897055c50"/>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<mte lb="106" cb="7" le="106" ce="10">
+<exp pvirg="true"/>
+<n32 lb="106" cb="7" le="106" ce="10">
+<n11 lb="106" cb="7" le="106" ce="10">
+<typeptr id="de147941232f8b428fcfa4da8de9971e_73e707ef24598cd281f7abf952154f1b"/>
+<temp/>
+</n11>
+</n32>
+</mte>
+<mte lb="106" cb="13" le="106" ce="16">
+<exp pvirg="true"/>
+<n32 lb="106" cb="13" le="106" ce="16">
+<n11 lb="106" cb="13" le="106" ce="16">
+<typeptr id="de147941232f8b428fcfa4da8de9971e_73e707ef24598cd281f7abf952154f1b"/>
+<temp/>
+</n11>
+</n32>
+</mte>
+</ce>
+<ce lb="109" cb="3" le="109" ce="17" nbparm="2" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b">
+<exp pvirg="true"/>
+<n32 lb="109" cb="3">
+<drx lb="109" cb="3" kind="lvalue" id="de147941232f8b428fcfa4da8de9971e_b8d45fccfed50f4e887c43b8c3ea290b" nm="min">
+<template_arguments>
+<rt>
+<cr id="de147941232f8b428fcfa4da8de9971e_0979930ecae30a7a0cf6b54645254ea6"/>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<mte lb="109" cb="7" le="109" ce="10">
+<exp pvirg="true"/>
+<n32 lb="109" cb="7" le="109" ce="10">
+<n11 lb="109" cb="7" le="109" ce="10">
+<typeptr id="de147941232f8b428fcfa4da8de9971e_1a788f39e7eac84582f7dd44cd5c68c7"/>
+<temp/>
+</n11>
+</n32>
+</mte>
+<mte lb="109" cb="13" le="109" ce="16">
+<exp pvirg="true"/>
+<n32 lb="109" cb="13" le="109" ce="16">
+<n11 lb="109" cb="13" le="109" ce="16">
+<typeptr id="de147941232f8b428fcfa4da8de9971e_1a788f39e7eac84582f7dd44cd5c68c7"/>
+<temp/>
+</n11>
+</n32>
+</mte>
+</ce>
 </u>
 
 </Stmt>
@@ -1004,11 +1107,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -1043,11 +1145,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="33"/>
+<n9 lb="42" cb="34"/>
 
 </Stmt>
 </template_arguments>
@@ -1079,7 +1180,7 @@
 <fpt cc="cdecl" proto="std::enable_if_t&lt;IsContextualBoolT&lt;LessResult&lt;const T &amp;, const T &amp;&gt; &gt;::value, const T &amp;&gt;">
 <ety>
 <tss>
-<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_4894206844b690fb9c92770e0dfc1a2c"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_4894206844b690fb9c92770e0dfc1a2c"/>
 <template_arguments>
 <Stmt>
 <n35 lb="143" cb="19" le="143" ce="70">
@@ -1150,11 +1251,10 @@
 <ety>
 <Tdef>
 <tss>
-<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_84a6953c26582fecb01761a3189184d1"/>
 <template_arguments>
-<bt name="bool"/>
 <Stmt>
-<n9 lb="40" cb="33"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -1190,7 +1290,7 @@
 <pt>
 <ety>
 <tss>
-<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_5d3751a41d0609676e9e5a6dc44ce886"/>
+<templatebase id="bfa602f8e9b02922d01dda3dc6094b76_5d3751a41d0609676e9e5a6dc44ce886"/>
 <template_arguments>
 <Tdef>
 <decltype/>
@@ -1203,7 +1303,7 @@
 </dst>
 <rx lb="157" cb="3" le="157" ce="25" pvirg="true">
 <n10 lb="157" cb="10" le="157" ce="25">
-<typeptr id="1b4acc8dde89899ea77bbd6c536e00d0_a85ee5ac1442266dbe8b383199e5188e">
+<typeptr id="bfa602f8e9b02922d01dda3dc6094b76_a85ee5ac1442266dbe8b383199e5188e">
 <template_arguments>
 <bt name="bool"/>
 <integer value="1"/>
@@ -1239,7 +1339,7 @@
 <Var nm="r" value="true">
 <auto/>
 <n10 lb="163" cb="12" le="163" ce="41">
-<typeptr id="1b4acc8dde89899ea77bbd6c536e00d0_a85ee5ac1442266dbe8b383199e5188e">
+<typeptr id="bfa602f8e9b02922d01dda3dc6094b76_a85ee5ac1442266dbe8b383199e5188e">
 <template_arguments>
 <bt name="bool"/>
 <integer value="1"/>
