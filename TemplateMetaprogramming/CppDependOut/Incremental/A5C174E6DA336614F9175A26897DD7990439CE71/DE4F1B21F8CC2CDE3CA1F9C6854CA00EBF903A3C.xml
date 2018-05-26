@@ -1,0 +1,456 @@
+<Root>
+<Comments>
+<c f="1" b="1" e="1"/>
+<c f="1" b="2" e="2"/>
+<c f="1" b="3" e="3"/>
+<c f="1" b="4" e="4"/>
+<c f="1" b="5" e="5"/>
+<c f="1" b="7" e="7"/>
+<c f="1" b="8" e="7"/>
+<c f="1" b="9" e="9"/>
+<c f="1" b="11" e="11"/>
+<c f="1" b="12" e="12"/>
+<c f="1" b="13" e="13"/>
+<c f="1" b="14" e="14"/>
+<c f="1" b="15" e="15"/>
+<c f="1" b="16" e="16"/>
+<c f="1" b="17" e="17"/>
+<c f="1" b="18" e="18"/>
+<c f="1" b="19" e="19"/>
+<c f="1" b="21" e="19"/>
+<c f="1" b="39" e="39"/>
+<c f="1" b="40" e="40"/>
+<c f="1" b="41" e="41"/>
+<c f="1" b="42" e="42"/>
+<c f="1" b="43" e="43"/>
+<c f="1" b="44" e="44"/>
+<c f="1" b="45" e="45"/>
+<c f="1" b="46" e="46"/>
+<c f="1" b="47" e="47"/>
+<c f="1" b="49" e="47"/>
+<c f="1" b="74" e="74"/>
+<c f="1" b="75" e="74"/>
+<c f="1" b="82" e="82"/>
+<c f="1" b="83" e="82"/>
+<c f="1" b="89" e="89"/>
+<c f="1" b="90" e="89"/>
+<c f="1" b="91" e="91"/>
+<c f="1" b="92" e="91"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="8" bc="1"/>
+</Directives>
+<tun>
+<tm access="none" depth="0" pod="true" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_966c3c4776ef1805551800fb33b61564" file="1" linestart="21" lineend="25">
+<template_parameters>
+<DeclaratorDecl name="p" id="6af05795423416a139ab12b3b2d814c7_2f4b0a5c0396ece49706c7f77b750332" file="1" linestart="21" lineend="21" depth="0" index="0">
+<bt name="int"/>
+</DeclaratorDecl>
+<DeclaratorDecl name="i" id="6af05795423416a139ab12b3b2d814c7_8a5434092ecf0fd17d55f6a66124076a" file="1" linestart="21" lineend="21" depth="0" index="1">
+<bt name="int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_966c3c4776ef1805551800fb33b61564" file="1" linestart="22" lineend="25">
+<cr access="public" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_a3c690af66b758af0d13dcccca46c3b5" file="1" linestart="22" lineend="22"/>
+<e parent="6af05795423416a139ab12b3b2d814c7_966c3c4776ef1805551800fb33b61564" access="public" name="" id="6af05795423416a139ab12b3b2d814c7_4e36fd4ec0aec0b30d3f1d7d17738443" file="1" linestart="24" lineend="24" fixed="true">
+<promotion_type>
+<bt name="&lt;dependent type&gt;"/>
+</promotion_type>
+<integer_type>
+<bt name="int"/>
+</integer_type>
+<ec name="pri" id="6af05795423416a139ab12b3b2d814c7_cec477c4c0e4f28cb6eed4d3b87aa3ad" file="1" linestart="24" lineend="24">
+<et>
+<e id="6af05795423416a139ab12b3b2d814c7_4e36fd4ec0aec0b30d3f1d7d17738443"/>
+</et>
+<Stmt>
+<xop lb="24" cb="15" le="24" ce="78" kind="||">
+<n46 lb="24" cb="15" le="24" ce="22">
+<exp pvirg="true"/>
+<xop lb="24" cb="16" le="24" ce="21" kind="==">
+<drx lb="24" cb="16" id="6af05795423416a139ab12b3b2d814c7_2f4b0a5c0396ece49706c7f77b750332" nm="p"/>
+<n45 lb="24" cb="21">
+<flit/>
+</n45>
+</xop>
+</n46>
+<n46 lb="24" cb="27" le="24" ce="78">
+<exp pvirg="true"/>
+<xop lb="24" cb="28" le="24" ce="75" kind="&amp;&amp;">
+<n46 lb="24" cb="28" le="24" ce="32">
+<exp pvirg="true"/>
+<xop lb="24" cb="29" le="24" ce="31" kind="%">
+<drx lb="24" cb="29" id="6af05795423416a139ab12b3b2d814c7_2f4b0a5c0396ece49706c7f77b750332" nm="p"/>
+<drx lb="24" cb="31" id="6af05795423416a139ab12b3b2d814c7_8a5434092ecf0fd17d55f6a66124076a" nm="i"/>
+</xop>
+</n46>
+<n35 lb="24" cb="37" le="24" ce="75">
+<exp pvirg="true"/>
+</n35>
+</xop>
+</n46>
+</xop>
+
+</Stmt>
+</ec>
+</e>
+</cr>
+</tm>
+<cts Spec="&lt;0, 0&gt;" access="none" depth="0" pod="true" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_23acc2af70d10023d34315bf89656225" file="1" linestart="27" lineend="31">
+<cr access="public" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_a48c9af9d8cdbc322c98b6c024f01e4c" file="1" linestart="28" lineend="28"/>
+<e parent="6af05795423416a139ab12b3b2d814c7_23acc2af70d10023d34315bf89656225" access="public" name="" id="6af05795423416a139ab12b3b2d814c7_dcaa8377be5923f246a09af6df1713cf" file="1" linestart="30" lineend="30" fixed="true">
+<promotion_type>
+<bt name="int"/>
+</promotion_type>
+<integer_type>
+<bt name="int"/>
+</integer_type>
+<ec name="pri" id="6af05795423416a139ab12b3b2d814c7_cec477c4c0e4f28cb6eed4d3b87aa3ad" file="1" linestart="30" lineend="30">
+<et>
+<e id="6af05795423416a139ab12b3b2d814c7_dcaa8377be5923f246a09af6df1713cf"/>
+</et>
+<Stmt>
+<n45 lb="30" cb="15">
+<flit/>
+</n45>
+
+</Stmt>
+</ec>
+</e>
+</cts>
+<cts Spec="&lt;0, 1&gt;" access="none" depth="0" pod="true" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_fec491e500c8512898ea0240a39c0aaf" file="1" linestart="33" lineend="37">
+<cr access="public" kind="struct" name="is_prime" id="6af05795423416a139ab12b3b2d814c7_ad1ce61e8f3cf7a9f557875fb186ff14" file="1" linestart="34" lineend="34"/>
+<e parent="6af05795423416a139ab12b3b2d814c7_fec491e500c8512898ea0240a39c0aaf" access="public" name="" id="6af05795423416a139ab12b3b2d814c7_6cf537abfc223194c248d75eb62afd5f" file="1" linestart="36" lineend="36" fixed="true">
+<promotion_type>
+<bt name="int"/>
+</promotion_type>
+<integer_type>
+<bt name="int"/>
+</integer_type>
+<ec name="pri" id="6af05795423416a139ab12b3b2d814c7_cec477c4c0e4f28cb6eed4d3b87aa3ad" file="1" linestart="36" lineend="36">
+<et>
+<e id="6af05795423416a139ab12b3b2d814c7_6cf537abfc223194c248d75eb62afd5f"/>
+</et>
+<Stmt>
+<n45 lb="36" cb="15"/>
+
+</Stmt>
+</ec>
+</e>
+</cts>
+<tm access="none" depth="0" kind="struct" name="D" id="6af05795423416a139ab12b3b2d814c7_536e39292d6081fa962b91fcd7c0c8ab" file="1" linestart="49" lineend="53">
+<template_parameters>
+<DeclaratorDecl name="i" id="6af05795423416a139ab12b3b2d814c7_ca22198ed7b73b80173df1dd1d95a7db" file="1" linestart="49" lineend="49" depth="0" index="0">
+<bt name="int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" kind="struct" name="D" id="6af05795423416a139ab12b3b2d814c7_536e39292d6081fa962b91fcd7c0c8ab" file="1" linestart="50" lineend="53">
+<cr access="public" kind="struct" name="D" id="6af05795423416a139ab12b3b2d814c7_f1f2d405eb539cf40db396e9871ebb02" file="1" linestart="50" lineend="50"/>
+<c name="D&lt;i&gt;" id="6af05795423416a139ab12b3b2d814c7_22c7a99d4b4260e9c1a10aecac7388c1" file="1" linestart="52" lineend="52" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="void *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<bt name="void"/>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="52" cb="11" le="52" ce="12"/>
+
+</Stmt>
+</c>
+</cr>
+</tm>
+<tm access="none" depth="0" pod="true" kind="struct" name="CondNull" id="6af05795423416a139ab12b3b2d814c7_46d4dd452d568c79c2078141aee9fceb" file="1" linestart="55" lineend="59">
+<template_parameters>
+<DeclaratorDecl name="i" id="6af05795423416a139ab12b3b2d814c7_c88807550382179e8167a39c2cdb5ec3" file="1" linestart="55" lineend="55" depth="0" index="0">
+<bt name="int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="CondNull" id="6af05795423416a139ab12b3b2d814c7_46d4dd452d568c79c2078141aee9fceb" file="1" linestart="56" lineend="59">
+<cr access="public" kind="struct" name="CondNull" id="6af05795423416a139ab12b3b2d814c7_720ff8db4d7c8fb386ea144e8d76512b" file="1" linestart="56" lineend="56"/>
+<v name="value" proto="const int" const="true" isLiteral="true" isPrimitive="true" id="6af05795423416a139ab12b3b2d814c7_247612683942c787c1071becdefcc21e" file="1" linestart="58" lineend="58" storage="static" init="true" access2="public">
+<QualType const="true">
+<bt name="int"/>
+</QualType>
+<Stmt>
+<n45 lb="58" cb="27">
+<flit/>
+</n45>
+
+</Stmt>
+</v>
+</cr>
+</tm>
+<cts Spec="&lt;0&gt;" access="none" depth="0" pod="true" kind="struct" name="CondNull" id="6af05795423416a139ab12b3b2d814c7_29b48e665eca0889781823a8c7ec4943" file="1" linestart="61" lineend="65">
+<cr access="public" kind="struct" name="CondNull" id="6af05795423416a139ab12b3b2d814c7_2dc7dfa53292c239709b6efd78315782" file="1" linestart="62" lineend="62"/>
+<v name="value" proto="void *" isPtr="true" isLiteral="true" id="6af05795423416a139ab12b3b2d814c7_adfcbf4b0458a5cca94c7219a07e2ef5" file="1" linestart="64" lineend="64" storage="static" access2="public">
+<pt>
+<bt name="void"/>
+</pt>
+<Stmt>
+
+</Stmt>
+</v>
+</cts>
+<v name="value" proto="void *" isPtr="true" isLiteral="true" id="6af05795423416a139ab12b3b2d814c7_adfcbf4b0458a5cca94c7219a07e2ef5" file="1" linestart="67" lineend="67" previous="6af05795423416a139ab12b3b2d814c7_adfcbf4b0458a5cca94c7219a07e2ef5" init="true" access2="public">
+<pt>
+<bt name="void"/>
+</pt>
+<Stmt>
+<n32 lb="67" cb="28">
+<n45 lb="67" cb="28">
+<flit/>
+</n45>
+</n32>
+
+</Stmt>
+</v>
+<tm access="none" depth="0" kind="struct" name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_67cfc25b7bda5f8d8cd81aa7106cf63a" file="1" linestart="71" lineend="86">
+<template_parameters>
+<DeclaratorDecl name="i" id="6af05795423416a139ab12b3b2d814c7_5133d37ede101cae5b5d71deba71be9f" file="1" linestart="71" lineend="71" depth="0" index="0">
+<bt name="int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" kind="struct" name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_67cfc25b7bda5f8d8cd81aa7106cf63a" file="1" linestart="72" lineend="86">
+<cr access="public" kind="struct" name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_dd72a9bd5b94574f7a524a288a641a1c" file="1" linestart="72" lineend="72"/>
+<fl name="a" id="6af05795423416a139ab12b3b2d814c7_ca96a63c8d52baa7127c6cc78fc7fc44" file="1" linestart="74" lineend="74" access="public" proto="Prime_print&lt;i - 1&gt;">
+<tss>
+<templatebase id="6af05795423416a139ab12b3b2d814c7_67cfc25b7bda5f8d8cd81aa7106cf63a"/>
+<template_arguments>
+<Stmt>
+<xop lb="74" cb="14" le="74" ce="18" kind="-">
+<drx lb="74" cb="14" id="6af05795423416a139ab12b3b2d814c7_5133d37ede101cae5b5d71deba71be9f" nm="i"/>
+<n45 lb="74" cb="18"/>
+</xop>
+
+</Stmt>
+</template_arguments>
+</tss>
+</fl>
+<e parent="6af05795423416a139ab12b3b2d814c7_67cfc25b7bda5f8d8cd81aa7106cf63a" access="public" name="" id="6af05795423416a139ab12b3b2d814c7_a1311e1d3aacc3f83e212ce061db7d18" file="1" linestart="75" lineend="75" fixed="true">
+<promotion_type>
+<bt name="&lt;dependent type&gt;"/>
+</promotion_type>
+<integer_type>
+<bt name="int"/>
+</integer_type>
+<ec name="pri" id="6af05795423416a139ab12b3b2d814c7_f251011a52698439bf6dece936d8c8f6" file="1" linestart="75" lineend="75">
+<et>
+<e id="6af05795423416a139ab12b3b2d814c7_a1311e1d3aacc3f83e212ce061db7d18"/>
+</et>
+<Stmt>
+<n35 lb="75" cb="15" le="75" ce="35">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</ec>
+</e>
+<m name="f" id="6af05795423416a139ab12b3b2d814c7_e2e38129843ac965a4fadff0b6f8055d" file="1" linestart="76" lineend="85" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="77" cb="2" le="85" ce="2">
+<ce lb="84" cb="3" le="84" ce="7" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="84" cb="3" le="84" ce="5">
+<exp pvirg="true"/>
+<mex lb="84" cb="3" kind="lvalue" id="6af05795423416a139ab12b3b2d814c7_ca96a63c8d52baa7127c6cc78fc7fc44" nm="a" arrow="1">
+<n19 lb="84" cb="3"/>
+</mex>
+</n14>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</cr>
+</tm>
+<cts Spec="&lt;1&gt;" access="none" depth="0" pod="true" kind="struct" name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_95183d91fd8e4ae14c8ae3e2f79f90ad" file="1" linestart="88" lineend="96">
+<cr access="public" kind="struct" name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_01d48ce4edd90a73b5a9c637f029967e" file="1" linestart="89" lineend="89"/>
+<e parent="6af05795423416a139ab12b3b2d814c7_95183d91fd8e4ae14c8ae3e2f79f90ad" access="public" name="" id="6af05795423416a139ab12b3b2d814c7_0f32937366034b9eae45aca54fffcbe8" file="1" linestart="91" lineend="91" fixed="true">
+<promotion_type>
+<bt name="int"/>
+</promotion_type>
+<integer_type>
+<bt name="int"/>
+</integer_type>
+<ec name="pri" id="6af05795423416a139ab12b3b2d814c7_f251011a52698439bf6dece936d8c8f6" file="1" linestart="91" lineend="91">
+<et>
+<e id="6af05795423416a139ab12b3b2d814c7_0f32937366034b9eae45aca54fffcbe8"/>
+</et>
+<Stmt>
+<n45 lb="91" cb="15">
+<flit/>
+</n45>
+
+</Stmt>
+</ec>
+</e>
+<m name="f" id="6af05795423416a139ab12b3b2d814c7_2d354ca3d148727714482d83a66870f2" file="1" linestart="92" lineend="95" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="93" cb="2" le="95" ce="2">
+<dst lb="94" cb="3" le="94" ce="13">
+<exp pvirg="true"/>
+<Var nm="d" value="true">
+<tss>
+<templatebase id="6af05795423416a139ab12b3b2d814c7_536e39292d6081fa962b91fcd7c0c8ab"/>
+<template_arguments>
+<Stmt>
+<n45 lb="94" cb="5">
+<flit/>
+</n45>
+
+</Stmt>
+</template_arguments>
+</tss>
+<n10 lb="94" cb="8" le="94" ce="12">
+<typeptr id="6af05795423416a139ab12b3b2d814c7_c20c308caeee18be60105baf119639c5">
+<template_arguments>
+<integer value="1"/>
+</template_arguments>
+</typeptr>
+<temp/>
+<mte lb="94" cb="12">
+<exp pvirg="true"/>
+<n32 lb="94" cb="12">
+<n10 lb="94" cb="12">
+<typeptr id="6af05795423416a139ab12b3b2d814c7_22c7a99d4b4260e9c1a10aecac7388c1">
+<template_arguments>
+<integer value="1"/>
+</template_arguments>
+</typeptr>
+<temp/>
+<n32 lb="94" cb="12">
+<n45 lb="94" cb="12">
+<flit/>
+</n45>
+</n32>
+</n10>
+</n32>
+</mte>
+</n10>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</m>
+<c name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_ddd8692e35e64fa716f5a108ee335747" file="1" linestart="89" lineend="89" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="89" cb="8"/>
+
+</Stmt>
+</c>
+<d name="~Prime_print" id="6af05795423416a139ab12b3b2d814c7_30ec92acffa6c10405a58fcc285cdfd8" file="1" linestart="89" lineend="89" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</d>
+<c name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_8dda129e125d0959b8f4550d97147b71" file="1" linestart="89" lineend="89" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const Prime_print&lt;1&gt; &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cts id="6af05795423416a139ab12b3b2d814c7_95183d91fd8e4ae14c8ae3e2f79f90ad">
+<template_arguments>
+<integer value="1"/>
+</template_arguments>
+</cts>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<c name="Prime_print" id="6af05795423416a139ab12b3b2d814c7_e249781b12e08a38e4e61735932cdada" file="1" linestart="89" lineend="89" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="Prime_print&lt;1&gt; &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cts id="6af05795423416a139ab12b3b2d814c7_95183d91fd8e4ae14c8ae3e2f79f90ad">
+<template_arguments>
+<integer value="1"/>
+</template_arguments>
+</cts>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cts>
+<v name="LAST" proto="const int" const="true" isLiteral="true" isPrimitive="true" id="6af05795423416a139ab12b3b2d814c7_d569f7939d3cbb6733109320e5308c18" file="1" linestart="103" lineend="103" init="true" access2="none">
+<QualType const="true">
+<bt name="int"/>
+</QualType>
+<Stmt>
+<n45 lb="103" cb="28">
+<flit/>
+</n45>
+
+</Stmt>
+</v>
+<f name="print_primes" id="6af05795423416a139ab12b3b2d814c7_9e2eb31e08fe6748b898bcd1c27ba1d4" file="1" linestart="106" lineend="116" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="107" cb="1" le="116" ce="1">
+<dst lb="114" cb="2" le="114" ce="21">
+<exp pvirg="true"/>
+<Var nm="a" value="true">
+<tss>
+<templatebase id="6af05795423416a139ab12b3b2d814c7_67cfc25b7bda5f8d8cd81aa7106cf63a"/>
+<template_arguments>
+<Stmt>
+<n32 lb="114" cb="14">
+<drx lb="114" cb="14" kind="lvalue" id="6af05795423416a139ab12b3b2d814c7_d569f7939d3cbb6733109320e5308c18" nm="LAST"/>
+</n32>
+
+</Stmt>
+</template_arguments>
+</tss>
+<n10 lb="114" cb="20">
+<typeptr id="6af05795423416a139ab12b3b2d814c7_3f540798957a6c4986234eba77de94b3">
+<template_arguments>
+<integer value="18"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<mce lb="115" cb="2" le="115" ce="6" nbparm="0" id="6af05795423416a139ab12b3b2d814c7_e2e38129843ac965a4fadff0b6f8055d">
+<exp pvirg="true"/>
+<mex lb="115" cb="2" le="115" ce="4" id="6af05795423416a139ab12b3b2d814c7_e2e38129843ac965a4fadff0b6f8055d" nm="f" point="1">
+<drx lb="115" cb="2" kind="lvalue" nm="a"/>
+</mex>
+</mce>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

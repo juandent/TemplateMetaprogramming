@@ -1,0 +1,178 @@
+<Root>
+<Comments>
+<c f="1" b="2" e="2"/>
+<c f="1" b="3" e="2"/>
+<c f="1" b="57" e="57"/>
+<c f="1" b="59" e="57"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="37" bc="1"/>
+<m f="1" bl="38" bc="1"/>
+</Directives>
+<tun>
+<f name="testAssignmentOfIntToPointer" id="0e7f3789f4d991a3a7b74329dde1131d_6d4bd7976df8322a6843b167b02b91a8" file="1" linestart="40" lineend="48" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="41" cb="1" le="48" ce="1">
+<dst lb="42" cb="2" le="42" ce="17">
+<exp pvirg="true"/>
+<Var nm="ival" value="true">
+<bt name="int"/>
+</Var>
+<Var nm="pval" virg="true">
+<pt>
+<bt name="int"/>
+</pt>
+</Var>
+</dst>
+<xop lb="43" cb="2" le="43" ce="13" kind="=">
+<drx lb="43" cb="2" kind="lvalue" nm="pval"/>
+<il lb="43" cb="9" le="43" ce="13">
+<exp pvirg="true"/>
+<n32 lb="43" cb="11">
+<n45 lb="43" cb="11">
+<flit/>
+</n45>
+</n32>
+</il>
+</xop>
+<if lb="44" cb="2" le="47" ce="2">
+<xop lb="44" cb="6" le="44" ce="14" kind="==">
+<n32 lb="44" cb="6">
+<drx lb="44" cb="6" kind="lvalue" nm="pval"/>
+</n32>
+<n32 lb="44" cb="14">
+<n16 lb="44" cb="14">
+<exp pvirg="true"/>
+</n16>
+</n32>
+</xop>
+<u lb="45" cb="2" le="47" ce="2">
+<xop lb="46" cb="3" le="46" ce="10" kind="=">
+<drx lb="46" cb="3" kind="lvalue" nm="ival"/>
+<n45 lb="46" cb="10">
+<flit/>
+</n45>
+</xop>
+</u>
+</if>
+</u>
+
+</Stmt>
+</f>
+<f name="testConditionalOperator" id="0e7f3789f4d991a3a7b74329dde1131d_6972090275a63673c771bc3819cabee3" file="1" linestart="50" lineend="59" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="51" cb="1" le="59" ce="1">
+<dst lb="52" cb="2" le="52" ce="16">
+<exp pvirg="true"/>
+<Var nm="grade" value="true">
+<bt name="int"/>
+<n45 lb="52" cb="14">
+<flit/>
+</n45>
+</Var>
+</dst>
+<ocx lb="53" cb="2" le="53" ce="56" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870">
+<exp pvirg="true"/>
+<n32 lb="53" cb="48">
+<drx lb="53" cb="48" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
+</n32>
+<ocx lb="53" cb="2" le="53" ce="46" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_a8b001da139eef9b7b8dd07e8c06f59d">
+<exp pvirg="true"/>
+<n32 lb="53" cb="12">
+<drx lb="53" cb="12" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_a8b001da139eef9b7b8dd07e8c06f59d" nm="operator&lt;&lt;">
+<template_arguments>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<drx lb="53" cb="2" le="53" ce="7" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<n32 lb="53" cb="15" le="53" ce="46">
+<n46 lb="53" cb="15" le="53" ce="46">
+<exp pvirg="true"/>
+<co lb="53" cb="16" le="53" ce="40">
+<exp pvirg="true"/>
+<n46 lb="53" cb="16" le="53" ce="27">
+<exp pvirg="true"/>
+<xop lb="53" cb="17" le="53" ce="25" kind="&lt;">
+<n32 lb="53" cb="17">
+<drx lb="53" cb="17" kind="lvalue" nm="grade"/>
+</n32>
+<n45 lb="53" cb="25">
+<flit/>
+</n45>
+</xop>
+</n46>
+<n52 lb="53" cb="31">
+<slit/>
+</n52>
+<n52 lb="53" cb="40">
+<slit/>
+</n52>
+</co>
+</n46>
+</n32>
+</ocx>
+<n32 lb="53" cb="51" le="53" ce="56">
+<drx lb="53" cb="51" le="53" ce="56" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+</ocx>
+<co lb="55" cb="2" le="55" ce="39">
+<exp pvirg="true"/>
+<n32 lb="55" cb="2" le="55" ce="26">
+<mce lb="55" cb="2" le="55" ce="26" nbparm="0" id="24fd84c9caf7c17cc988d0138b966fb3_aef54ef47523df1d0bea480f21df5fcb">
+<exp pvirg="true"/>
+<mex lb="55" cb="2" le="55" ce="26" id="24fd84c9caf7c17cc988d0138b966fb3_aef54ef47523df1d0bea480f21df5fcb" nm="operator bool" point="1">
+<n32 lb="55" cb="2" le="55" ce="26">
+<ocx lb="55" cb="2" le="55" ce="26" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_a5cbfd851309986a15805981390fd9b5">
+<exp pvirg="true"/>
+<n32 lb="55" cb="12">
+<drx lb="55" cb="12" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_a5cbfd851309986a15805981390fd9b5" nm="operator&lt;&lt;"/>
+</n32>
+<drx lb="55" cb="2" le="55" ce="7" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<n46 lb="55" cb="15" le="55" ce="26">
+<exp pvirg="true"/>
+<xop lb="55" cb="16" le="55" ce="24" kind="&lt;">
+<n32 lb="55" cb="16">
+<drx lb="55" cb="16" kind="lvalue" nm="grade"/>
+</n32>
+<n45 lb="55" cb="24"/>
+</xop>
+</n46>
+</ocx>
+</n32>
+</mex>
+</mce>
+</n32>
+<n52 lb="55" cb="30"/>
+<n52 lb="55" cb="39"/>
+</co>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

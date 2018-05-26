@@ -1,0 +1,206 @@
+<Externals>
+<cr namespace="boost.mpl" access="none" depth="0" kind="struct" name="at" id="04902d803e5811e68b1b4b7676dd9aa7_591110df42d84ff6a0198163655024fa" file="2" linestart="31" lineend="36" previous="4272fd2a97ec0356427b1f5db70b7467_591110df42d84ff6a0198163655024fa">
+<base access="public">
+<dtsp/>
+</base>
+</cr>
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098" file="3" linestart="505" lineend="608"/>
+<tm namespace="std" access="none" depth="3" kind="class" name="basic_ostream" id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243" file="4" linestart="38" lineend="619" previous="1b9b5f13fc50919fc1cbcbc41c4276ce_7df99f34c778205aaa2e1759bec30243">
+<template_parameters>
+<ttp name="_Elem" id="8b87011946485c1b08b5457c0a17b599_16f2e94b2b51d2f5dff02392fae903e6" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="_Traits" id="8b87011946485c1b08b5457c0a17b599_e2d9f5b99956b4f9c1c67b1b3209c8f9" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr namespace="std" access="none" depth="3" kind="class" name="basic_ostream" id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243" file="4" linestart="40" lineend="619" previous="1b9b5f13fc50919fc1cbcbc41c4276ce_7df99f34c778205aaa2e1759bec30243">
+<base access="public">
+<tss>
+<templatebase id="aafb470fd944bd3f3c7c06c248c806a6_0973aa6d290bf2c44e86c2f58971d880"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="basic_ostream" id="8b87011946485c1b08b5457c0a17b599_5fbde4af169bb278d3e041271eb8fcd4" file="4" linestart="40" lineend="40"/>
+<m name="operator&lt;&lt;" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" file="4" linestart="196" lineend="200" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="_Myt &amp;">
+<lrf>
+<Tdef>
+<tss>
+<templatebase id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</lrf>
+</fpt>
+<p name="_Pfn" proto="_Myt &amp;(*)(_Myt &amp;) __attribute__((cdecl))" isPtr="true" access2="none">
+<pt>
+<Attributed/>
+</pt>
+</p>
+</m>
+<m name="operator&lt;&lt;" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d" file="4" linestart="290" lineend="313" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="_Myt &amp;">
+<lrf>
+<Tdef>
+<tss>
+<templatebase id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</lrf>
+</fpt>
+<p name="_Val" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+</p>
+</m>
+</cr>
+</tm>
+<tm namespace="mpl_" access="none" kind="struct" name="integral_c" id="9ae2e2f6d833476e044c5448173dba7c_5cb3052e753c2b8d729a751bf7fd025d" file="5" linestart="33" lineend="33">
+<template_parameters>
+<ttp name="I" id="9ae2e2f6d833476e044c5448173dba7c_8dca76d62cb74c0e914a42e326c3906a" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="mpl_" access="none" kind="struct" name="integral_c" id="9ae2e2f6d833476e044c5448173dba7c_acfee596ba73f896e2647e14b1ce8413" file="5" linestart="33" lineend="33"/>
+</tm>
+<cr namespace="boost" access="none" depth="1" kind="struct" name="is_same" id="fbe8654d55f7236d5b7ade492464760b_ec1aa3d00e2a095f7fd8823d2950dbea" file="6" linestart="29" lineend="29">
+<base access="public">
+<Tdef>
+<tss>
+<templatebase id="9ae2e2f6d833476e044c5448173dba7c_85a0faf894c2c967ffbe6e8a7634a3ca"/>
+<template_arguments>
+<bt name="bool"/>
+</template_arguments>
+</tss>
+</Tdef>
+</base>
+</cr>
+<tm namespace="mpl_" access="none" kind="struct" name="int_" id="2ade6751fda5309709332f7a55ef208a_898abc1c757a8bce14a1e31e55d72976" file="7" linestart="22" lineend="22">
+<template_parameters/>
+<cr namespace="mpl_" access="none" kind="struct" name="int_" id="2ade6751fda5309709332f7a55ef208a_168fec48368532d002a1b74227411245" file="7" linestart="22" lineend="22"/>
+</tm>
+<tm namespace="mpl_" access="none" depth="0" pod="true" kind="struct" name="int_" id="8b09212faab4d14efae0910035074f17_898abc1c757a8bce14a1e31e55d72976" file="8" linestart="42" lineend="81" previous="2ade6751fda5309709332f7a55ef208a_898abc1c757a8bce14a1e31e55d72976">
+<template_parameters/>
+<cr namespace="mpl_" access="none" depth="0" pod="true" kind="struct" name="int_" id="8b09212faab4d14efae0910035074f17_168fec48368532d002a1b74227411245" file="8" linestart="43" lineend="81" previous="2ade6751fda5309709332f7a55ef208a_168fec48368532d002a1b74227411245">
+<cr access="public" kind="struct" name="int_" id="8b09212faab4d14efae0910035074f17_2ff5872b6f837dc7da0f93884417a858" file="8" linestart="43" lineend="43"/>
+<v name="value" proto="const int" const="true" isLiteral="true" isPrimitive="true" id="8b09212faab4d14efae0910035074f17_7c945936c1010e25674a4f9b41babcce" file="8" linestart="45" lineend="45" storage="static" init="true" access2="public">
+<QualType const="true">
+<bt name="int"/>
+</QualType>
+</v>
+</cr>
+</tm>
+<cr namespace="boost.mpl" access="none" depth="1" kind="struct" name="random_access_iterator_tag" id="9a240df7723138e514f904540b956821_14e31acae5b50c307f8915bf5a135b1a" file="9" linestart="23" lineend="23">
+<base access="public">
+<tss>
+<templatebase id="2ade6751fda5309709332f7a55ef208a_168fec48368532d002a1b74227411245"/>
+<template_arguments/>
+</tss>
+</base>
+</cr>
+<cr namespace="boost.mpl" access="none" depth="0" kind="struct" name="minus" id="55a5ff2215a627743226a9f46b5590c8_cc943da3a2a9d017b77014d5e0863d4d" file="10" linestart="68" lineend="71">
+<base access="public">
+<tss>
+<templatebase id="55a5ff2215a627743226a9f46b5590c8_cc943da3a2a9d017b77014d5e0863d4d"/>
+<template_arguments>
+<tss>
+<templatebase id="55a5ff2215a627743226a9f46b5590c8_cc943da3a2a9d017b77014d5e0863d4d"/>
+<template_arguments>
+<tss>
+<templatebase id="55a5ff2215a627743226a9f46b5590c8_cc943da3a2a9d017b77014d5e0863d4d"/>
+<template_arguments>
+<tss>
+<templatebase id="55a5ff2215a627743226a9f46b5590c8_cc943da3a2a9d017b77014d5e0863d4d"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+<ttp/>
+</template_arguments>
+</tss>
+<ttp/>
+</template_arguments>
+</tss>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+</cr>
+<cr namespace="boost.mpl" access="none" depth="0" pod="true" kind="struct" name="vector10" id="371b28cfc8f6636fcda27a666715d2e1_1dce87ad52bd48631054046ae14ae486" file="11" linestart="737" lineend="757"/>
+<cr namespace="boost.mpl" access="none" depth="2" kind="struct" name="vector_c" id="3043eee1947d5668ddc5e878dfcf0d43_a026a8a9ed6b995e983da52f72085301" file="12" linestart="302" lineend="306" previous="3043eee1947d5668ddc5e878dfcf0d43_a026a8a9ed6b995e983da52f72085301">
+<base access="public">
+<tss>
+<templatebase id="0936a6aafeb4b289da943e5ae0481771_ae8ac0fa634ef6b952348b14f2ea0c69"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+</cr>
+<cr namespace="boost.mpl" access="none" kind="struct" name="eval_if" id="bced15c8a17407f8db64273a126ee12a_f2de311b4f34e629950114411f69140d" file="13" linestart="517" lineend="517" previous="9a98cc56e65f7aa57c7b8dcf5a8a8d47_f2de311b4f34e629950114411f69140d"/>
+<v name="value" proto="const _Ty" const="true" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" file="14" linestart="24" lineend="24" storage="static" init="true" access2="public">
+<QualType const="true">
+<ttp/>
+</QualType>
+</v>
+<f namespace="std" name="endl" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" file="4" linestart="990" lineend="997" access="none" inline="true" hasbody="true" isdef="true">
+<Attributed/>
+<p name="_Ostr" proto="basic_ostream&lt;_Elem, _Traits&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<tss>
+<templatebase id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</p>
+</f>
+<ft name="endl" id="8b87011946485c1b08b5457c0a17b599_74537f44d6cd7a95f2b060cedb35e9d9" file="4" linestart="989" lineend="997">
+<template_parameters>
+<ttp name="_Elem" id="8b87011946485c1b08b5457c0a17b599_3ebe6248f47274de228e7ab1d4c7f696" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="_Traits" id="8b87011946485c1b08b5457c0a17b599_8a9fe01f4f41f3e2862becdd6b274d11" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<f namespace="std" name="endl" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" file="4" linestart="990" lineend="997" access="none" inline="true" hasbody="true" isdef="true">
+<Attributed/>
+<p name="_Ostr" proto="basic_ostream&lt;_Elem, _Traits&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<tss>
+<templatebase id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</lrf>
+</p>
+</f>
+</ft>
+<v namespace="std" name="cout" proto="ostream" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" file="15" linestart="27" lineend="27" storage="extern" access2="none">
+<Tdef>
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</v>
+<v name="value" proto="const T" const="true" id="8b09212faab4d14efae0910035074f17_2d0fc1e64be873d437240c1f592c2ea0" file="8" linestart="45" lineend="45" storage="static" init="true" access2="public">
+<QualType const="true">
+<ttp/>
+</QualType>
+</v>
+</Externals>

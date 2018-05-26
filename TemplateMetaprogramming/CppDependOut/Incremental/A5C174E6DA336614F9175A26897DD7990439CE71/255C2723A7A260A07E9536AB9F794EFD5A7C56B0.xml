@@ -1,0 +1,160 @@
+<Root>
+<Comments/>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+</Directives>
+<tun>
+<ns name="CPP17_Compliance" id="11d30a74abd657d498145d4f9aff3e8d_f7f58c21c473d9e888e3654a2db16978" file="1" linestart="6" lineend="46">
+<f namespace="CPP17_Compliance" name="getResult" id="11d30a74abd657d498145d4f9aff3e8d_7868695082a5b60a0d774502b78c9054" file="1" linestart="8" lineend="12" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="std::pair&lt;int, bool&gt;">
+<ety>
+<tss>
+<templatebase id="26077801bf83fda834940e84538639b4_588c02fb583a80daabf4c37e3fd82a49"/>
+<template_arguments>
+<bt name="int"/>
+<bt name="bool"/>
+</template_arguments>
+</tss>
+</ety>
+</fpt>
+<p name="val" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="9" cb="2" le="12" ce="2">
+<dst lb="10" cb="3" le="10" ce="38">
+<exp pvirg="true"/>
+<Var nm="ret" value="true">
+<auto/>
+<n10 lb="10" cb="14" le="10" ce="37">
+<typeptr id="26077801bf83fda834940e84538639b4_8478c0ef279fd4e0efe57dc146ac8a62">
+<template_arguments>
+<bt name="int"/>
+<bt name="bool"/>
+</template_arguments>
+</typeptr>
+<temp/>
+<mte lb="10" cb="14" le="10" ce="37">
+<exp pvirg="true"/>
+<ce lb="10" cb="14" le="10" ce="37" nbparm="2" id="26077801bf83fda834940e84538639b4_7c81cda5854d9965ae58144ae781d793">
+<exp pvirg="true"/>
+<n32 lb="10" cb="14" le="10" ce="19">
+<drx lb="10" cb="14" le="10" ce="19" kind="lvalue" id="26077801bf83fda834940e84538639b4_7c81cda5854d9965ae58144ae781d793" nm="make_pair">
+<template_arguments>
+<bt name="int"/>
+<bt name="bool"/>
+</template_arguments>
+</drx>
+</n32>
+<mte lb="10" cb="29">
+<exp pvirg="true"/>
+<n45 lb="10" cb="29">
+<flit/>
+</n45>
+</mte>
+<mte lb="10" cb="33">
+<exp pvirg="true"/>
+<n9 lb="10" cb="33"/>
+</mte>
+</ce>
+</mte>
+</n10>
+</Var>
+</dst>
+<rx lb="11" cb="3" le="11" ce="10" pvirg="true">
+<n10 lb="11" cb="10">
+<typeptr id="26077801bf83fda834940e84538639b4_8478c0ef279fd4e0efe57dc146ac8a62">
+<template_arguments>
+<bt name="int"/>
+<bt name="bool"/>
+</template_arguments>
+</typeptr>
+<temp/>
+<n32 lb="11" cb="10">
+<drx lb="11" cb="10" kind="lvalue" nm="ret"/>
+</n32>
+</n10>
+</rx>
+</u>
+
+</Stmt>
+</f>
+<f namespace="CPP17_Compliance" name="testReducedScopes" id="11d30a74abd657d498145d4f9aff3e8d_926368d6dfe28659b31b2a85851a1d87" file="1" linestart="14" lineend="31" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="15" cb="2" le="31" ce="2"/>
+
+</Stmt>
+</f>
+<f namespace="CPP17_Compliance" name="bracketInitialization" id="11d30a74abd657d498145d4f9aff3e8d_754932a917685bf6b1d29b7eddaefd21" file="1" linestart="33" lineend="37" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="34" cb="2" le="37" ce="2">
+<dst lb="35" cb="3" le="35" ce="17">
+<exp pvirg="true"/>
+<Var nm="x" value="true">
+<auto/>
+<n180 lb="35" cb="12" le="35" ce="16">
+<exp pvirg="true"/>
+<mte lb="35" cb="12" le="35" ce="16">
+<exp pvirg="true"/>
+<il lb="35" cb="12" le="35" ce="16">
+<exp pvirg="true"/>
+<n45 lb="35" cb="14">
+<flit/>
+</n45>
+</il>
+</mte>
+</n180>
+</Var>
+</dst>
+<dst lb="36" cb="3" le="36" ce="19">
+<exp pvirg="true"/>
+<Var nm="y" value="true">
+<auto/>
+<n180 lb="36" cb="12" le="36" ce="18">
+<exp pvirg="true"/>
+<mte lb="36" cb="12" le="36" ce="18">
+<exp pvirg="true"/>
+<il lb="36" cb="12" le="36" ce="18">
+<exp pvirg="true"/>
+<n45 lb="36" cb="14"/>
+<n45 lb="36" cb="16">
+<flit/>
+</n45>
+</il>
+</mte>
+</n180>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+<f namespace="CPP17_Compliance" name="main" id="11d30a74abd657d498145d4f9aff3e8d_975a60803b8a0d38c907e3f10dd00243" file="1" linestart="39" lineend="45" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="40" cb="2" le="45" ce="2">
+<ce lb="43" cb="3" le="43" ce="21" nbparm="0" id="11d30a74abd657d498145d4f9aff3e8d_926368d6dfe28659b31b2a85851a1d87">
+<exp pvirg="true"/>
+<n32 lb="43" cb="3">
+<drx lb="43" cb="3" kind="lvalue" id="11d30a74abd657d498145d4f9aff3e8d_926368d6dfe28659b31b2a85851a1d87" nm="testReducedScopes"/>
+</n32>
+</ce>
+</u>
+
+</Stmt>
+</f>
+</ns>
+</tun>
+</Root>

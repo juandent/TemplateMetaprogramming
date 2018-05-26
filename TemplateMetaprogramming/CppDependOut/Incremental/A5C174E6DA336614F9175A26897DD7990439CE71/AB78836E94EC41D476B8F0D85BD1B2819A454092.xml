@@ -1,0 +1,484 @@
+<Root>
+<Comments>
+<c f="1" b="1" e="1"/>
+<c f="1" b="2" e="1"/>
+<c f="1" b="14" e="14"/>
+<c f="1" b="16" e="16"/>
+<c f="1" b="18" e="16"/>
+<c f="1" b="21" e="21"/>
+<c f="1" b="23" e="21"/>
+<c f="1" b="28" e="28"/>
+<c f="1" b="30" e="28"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="2" bc="1"/>
+<m f="1" bl="4" bc="1"/>
+<m f="1" bl="5" bc="1"/>
+<m f="1" bl="6" bc="1"/>
+<m f="1" bl="7" bc="1"/>
+<m f="1" bl="8" bc="1"/>
+<m f="1" bl="9" bc="1"/>
+<m f="1" bl="10" bc="1"/>
+<m f="1" bl="11" bc="1"/>
+<m f="1" bl="12" bc="1"/>
+<m f="1" bl="13" bc="1"/>
+</Directives>
+<tun>
+<tm access="none" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_28c3300bda3b9ba9a3567b45a90411a6" file="2" linestart="5" lineend="6">
+<template_parameters>
+<ttp name="List" id="90db8a69a405c0fb263754a534e17939_f4d3c7fd3a52ab0eccc1473759abbcca" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_28c3300bda3b9ba9a3567b45a90411a6" file="2" linestart="6" lineend="6"/>
+</tm>
+<ctps Spec="&lt;Typelist&lt;type-parameter-0-0, type-parameter-0-1...&gt; &gt;" access="none" depth="0" pod="true" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_4902c38660a4382db220c1d5dfe39dcd" file="2" linestart="8" lineend="13">
+<cr access="public" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_8c2a1d99edfd57465f5487a40df44bee" file="2" linestart="9" lineend="9"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="90db8a69a405c0fb263754a534e17939_a3b1d56396d79558ff4ad85a23fd6adc" file="2" linestart="12" lineend="12">
+<ttp/>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="Front" id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116" file="2" linestart="15" lineend="16">
+<template_parameters>
+<ttp name="List" id="90db8a69a405c0fb263754a534e17939_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="Front" id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116" file="2" linestart="16" lineend="16">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<tm access="none" kind="class" name="PopFrontT" id="1e56fee2c1f4818d5ddd2bda1fbb760e_a22ebef71148fc7cf8c9bfd2e4336d54" file="3" linestart="6" lineend="7">
+<template_parameters>
+<ttp name="List" id="1e56fee2c1f4818d5ddd2bda1fbb760e_c6296b7153a4a5d5c343e70767e5a68e" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" kind="class" name="PopFrontT" id="1e56fee2c1f4818d5ddd2bda1fbb760e_a22ebef71148fc7cf8c9bfd2e4336d54" file="3" linestart="7" lineend="7"/>
+</tm>
+<ctps Spec="&lt;Typelist&lt;type-parameter-0-0, type-parameter-0-1...&gt; &gt;" access="none" depth="0" pod="true" kind="class" name="PopFrontT" id="1e56fee2c1f4818d5ddd2bda1fbb760e_c823f6448717e196cbb0dc690ca7ed23" file="3" linestart="9" lineend="14">
+<cr access="public" kind="class" name="PopFrontT" id="1e56fee2c1f4818d5ddd2bda1fbb760e_a5d08ecb8b6a78e9714089cf71cf904a" file="3" linestart="10" lineend="10"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="1e56fee2c1f4818d5ddd2bda1fbb760e_be77d9b3e426f41197377fa47d1bdad3" file="3" linestart="13" lineend="13">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="PopFront" id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9" file="3" linestart="16" lineend="17">
+<template_parameters>
+<ttp name="List" id="1e56fee2c1f4818d5ddd2bda1fbb760e_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="PopFront" id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9" file="3" linestart="17" lineend="17">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<tm access="none" kind="class" name="PushFrontT" id="de50ef945dc614ee106ec1ed1e3066ab_6c9e4ffb82fd6a21cba4ae137d58671e" file="4" linestart="4" lineend="5">
+<template_parameters>
+<ttp name="List" id="de50ef945dc614ee106ec1ed1e3066ab_d731e0447336462f585293aa2b99c86b" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="NewElement" id="de50ef945dc614ee106ec1ed1e3066ab_fa57bb8dd66d332d203f4866803aa8dc" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr access="none" kind="class" name="PushFrontT" id="de50ef945dc614ee106ec1ed1e3066ab_6c9e4ffb82fd6a21cba4ae137d58671e" file="4" linestart="5" lineend="5"/>
+</tm>
+<ctps Spec="&lt;Typelist&lt;type-parameter-0-0...&gt;, type-parameter-0-1&gt;" access="none" depth="0" pod="true" kind="class" name="PushFrontT" id="de50ef945dc614ee106ec1ed1e3066ab_6d7fd9754255ec8e8b350dd5037cc147" file="4" linestart="7" lineend="12">
+<cr access="public" kind="class" name="PushFrontT" id="de50ef945dc614ee106ec1ed1e3066ab_799faa6928c9ab1a01909d025f6e2f31" file="4" linestart="8" lineend="8"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="de50ef945dc614ee106ec1ed1e3066ab_429b515cf2d74a8249292436d2579849" file="4" linestart="11" lineend="11">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<ttp/>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<ctps Spec="&lt;type-parameter-0-1, Typelist&lt;type-parameter-0-0...&gt; &gt;" access="none" depth="0" pod="true" kind="class" name="PushFrontT" id="de50ef945dc614ee106ec1ed1e3066ab_953920b50c2effb62f457ffcaeb28eab" file="4" linestart="14" lineend="19">
+<cr access="public" kind="class" name="PushFrontT" id="de50ef945dc614ee106ec1ed1e3066ab_671c1d34bba140a22e53b18d1c23e74f" file="4" linestart="15" lineend="15"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="de50ef945dc614ee106ec1ed1e3066ab_b0d90791a6ef1cfb3ee01d72a9899a28" file="4" linestart="18" lineend="18">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<ttp/>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="PushFront" id="de50ef945dc614ee106ec1ed1e3066ab_4fe0e69194d522ffc7f3f13173e91a2f" file="4" linestart="22" lineend="23">
+<template_parameters>
+<ttp name="List" id="de50ef945dc614ee106ec1ed1e3066ab_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="NewElement" id="de50ef945dc614ee106ec1ed1e3066ab_22c829af5e74bf5aee5a9edb3e8e212c" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<TypedefNameDecl name="PushFront" id="de50ef945dc614ee106ec1ed1e3066ab_4fe0e69194d522ffc7f3f13173e91a2f" file="4" linestart="23" lineend="23">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<tm access="none" depth="0" kind="class" name="NthElementT" id="bf6503a8f52bb8f460bd9f5a64eeef09_59fbb84e2922ad4739b91dddd9244a3e" file="5" linestart="5" lineend="7">
+<template_parameters>
+<ttp name="List" id="bf6503a8f52bb8f460bd9f5a64eeef09_3c29982be544ffc9eee7d8334ca1ce82" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="N" id="bf6503a8f52bb8f460bd9f5a64eeef09_4b7581c616250d657755c72eb5689efb" file="5" linestart="5" lineend="5" depth="0" index="1">
+<bt name="unsigned int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" kind="class" name="NthElementT" id="bf6503a8f52bb8f460bd9f5a64eeef09_59fbb84e2922ad4739b91dddd9244a3e" file="5" linestart="6" lineend="7">
+<base access="public">
+<tss>
+<templatebase id="bf6503a8f52bb8f460bd9f5a64eeef09_59fbb84e2922ad4739b91dddd9244a3e"/>
+<template_arguments>
+<tss>
+<templatebase id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+<Stmt>
+<xop lb="6" cb="58" le="6" ce="62" kind="-">
+<drx lb="6" cb="58" id="bf6503a8f52bb8f460bd9f5a64eeef09_4b7581c616250d657755c72eb5689efb" nm="N"/>
+<n32 lb="6" cb="62">
+<n45 lb="6" cb="62">
+<flit/>
+</n45>
+</n32>
+</xop>
+
+</Stmt>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="NthElementT" id="bf6503a8f52bb8f460bd9f5a64eeef09_a9e06707866dd166561253c4c9068588" file="5" linestart="6" lineend="6"/>
+</cr>
+</tm>
+<ctps Spec="&lt;type-parameter-0-0, 0&gt;" access="none" depth="0" kind="class" name="NthElementT" id="bf6503a8f52bb8f460bd9f5a64eeef09_755f6dcda003e5bc226fed63a42cd498" file="5" linestart="9" lineend="11">
+<base access="public">
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_28c3300bda3b9ba9a3567b45a90411a6"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="NthElementT" id="bf6503a8f52bb8f460bd9f5a64eeef09_4336462e25eae0e05cdd215ea36e685f" file="5" linestart="10" lineend="10"/>
+</ctps>
+<RedeclarableTemplateDecl name="NthElement" id="bf6503a8f52bb8f460bd9f5a64eeef09_cbbb17199678a96177eaadc4cad3e033" file="5" linestart="13" lineend="14">
+<template_parameters>
+<ttp name="List" id="bf6503a8f52bb8f460bd9f5a64eeef09_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="N" id="bf6503a8f52bb8f460bd9f5a64eeef09_fdc800aace88ff70fb3aaedb80f072c1" file="5" linestart="13" lineend="13" depth="0" index="1">
+<bt name="unsigned int"/>
+</DeclaratorDecl>
+</template_parameters>
+<TypedefNameDecl name="NthElement" id="bf6503a8f52bb8f460bd9f5a64eeef09_cbbb17199678a96177eaadc4cad3e033" file="5" linestart="14" lineend="14">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<Comments>
+<c f="6" b="3" e="3"/>
+<c f="6" b="5" e="3"/>
+<c f="6" b="23" e="23"/>
+<c f="6" b="24" e="23"/>
+</Comments>
+<Macros/>
+<Directives/>
+<ns name="LowLevel" id="6ff4535a7ed41f675fbbf5d68e4087c4_c1b496f6d98e1bc02473153c8f7ec87a" file="6" linestart="5" lineend="32">
+<tm namespace="LowLevel" access="none" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_3a4dcaa758ecc1e8c5c7f38ea445cf07" file="6" linestart="8" lineend="9">
+<template_parameters>
+<ttp name="List" id="6ff4535a7ed41f675fbbf5d68e4087c4_f2f926409db10cb035e1e4410ddb91a7" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LowLevel" access="none" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_57901826f76233191224297d4c19fbb0" file="6" linestart="9" lineend="9"/>
+</tm>
+<tm namespace="LowLevel" access="none" depth="0" pod="true" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_3a4dcaa758ecc1e8c5c7f38ea445cf07" file="6" linestart="12" lineend="20" previous="6ff4535a7ed41f675fbbf5d68e4087c4_3a4dcaa758ecc1e8c5c7f38ea445cf07">
+<template_parameters>
+<ttp name="List" id="6ff4535a7ed41f675fbbf5d68e4087c4_f2f926409db10cb035e1e4410ddb91a7" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LowLevel" access="none" depth="0" pod="true" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_57901826f76233191224297d4c19fbb0" file="6" linestart="13" lineend="20" previous="6ff4535a7ed41f675fbbf5d68e4087c4_57901826f76233191224297d4c19fbb0">
+<cr access="public" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_8678254ec2e71f3ad08dd683199dc1e4" file="6" linestart="13" lineend="13"/>
+<asd access="private"/>
+<TypedefNameDecl name="First" id="6ff4535a7ed41f675fbbf5d68e4087c4_09c892ece8c3111063c43ea31f20e6dc" file="6" linestart="16" lineend="16">
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="Rest" id="6ff4535a7ed41f675fbbf5d68e4087c4_11b379229b0cbbab72b2e5e086823314" file="6" linestart="17" lineend="17">
+<DependentName/>
+</TypedefNameDecl>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="6ff4535a7ed41f675fbbf5d68e4087c4_ab896afd41661d7096d6668141dffe4a" file="6" linestart="19" lineend="19">
+<tss>
+<templatebase id="167351b72b24e25e7699baaaebead9de_c72b2bc5cdf80b4402d97287c3c8cefb"/>
+<template_arguments>
+<Stmt>
+<xop lb="19" cb="28" le="19" ce="56" kind="&gt;=">
+<n55 lb="19" cb="28" le="19" ce="40">
+<sizeof>
+<Tdef>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</sizeof>
+</n55>
+<n55 lb="19" cb="45" le="19" ce="56">
+<sizeof>
+<Tdef>
+<DependentName/>
+</Tdef>
+</sizeof>
+</n55>
+</xop>
+
+</Stmt>
+<Tdef>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+<Tdef>
+<DependentName/>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</cr>
+</tm>
+<cts Spec="&lt;Typelist&lt;&gt; &gt;" namespace="LowLevel" access="none" depth="0" pod="true" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_a4efa8e45ebd515584e80d9ad41eb1d7" file="6" linestart="22" lineend="27">
+<cr access="public" kind="class" name="LargestTypeT" id="6ff4535a7ed41f675fbbf5d68e4087c4_05e6bf31b9c9011d08051186e384ac85" file="6" linestart="23" lineend="23"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="6ff4535a7ed41f675fbbf5d68e4087c4_5a0c3e86d143c6d7515c54542abc5d35" file="6" linestart="26" lineend="26">
+<bt name="char"/>
+</TypedefNameDecl>
+</cts>
+<RedeclarableTemplateDecl name="LargestType" id="6ff4535a7ed41f675fbbf5d68e4087c4_2377a6df727dce0135bcc03e75f4e6e8" file="6" linestart="29" lineend="30">
+<template_parameters>
+<ttp name="List" id="6ff4535a7ed41f675fbbf5d68e4087c4_3553f3c6dd7904df9d58466260006d35" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="LargestType" id="6ff4535a7ed41f675fbbf5d68e4087c4_2377a6df727dce0135bcc03e75f4e6e8" file="6" linestart="30" lineend="30">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+</ns>
+<Comments/>
+<Macros/>
+<Directives>
+<m f="7" bl="3" bc="1"/>
+<m f="7" bl="4" bc="1"/>
+</Directives>
+<ns name="HighLevel" id="453d294f41320e7ad815ecd8f2037540_330c33cbb2902d275e142279a9e07f13" file="7" linestart="6" lineend="31">
+<tm namespace="HighLevel" access="none" kind="class" name="LargestTypeT" id="453d294f41320e7ad815ecd8f2037540_140b7e69847ea5f03dfc7ea98f54b59c" file="7" linestart="8" lineend="9">
+<template_parameters>
+<ttp name="List" id="453d294f41320e7ad815ecd8f2037540_8816ac8da586310bd215bd714c193922" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="Empty" id="453d294f41320e7ad815ecd8f2037540_c29a6c1e729410afaf7a46a443197a28" file="7" linestart="8" lineend="8" depth="0" index="1">
+<bt name="bool"/>
+<Stmt>
+<n35 lb="8" cb="39" le="8" ce="54">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</DeclaratorDecl>
+</template_parameters>
+<cr namespace="HighLevel" access="none" kind="class" name="LargestTypeT" id="453d294f41320e7ad815ecd8f2037540_44346a7caa8e5800e7d4d6e29475ceba" file="7" linestart="9" lineend="9"/>
+</tm>
+<ctps Spec="&lt;type-parameter-0-0, false&gt;" namespace="HighLevel" access="none" depth="0" pod="true" kind="class" name="LargestTypeT" id="453d294f41320e7ad815ecd8f2037540_49ad5d9ac7f8fe68af15c84784123f16" file="7" linestart="11" lineend="19">
+<cr access="public" kind="class" name="LargestTypeT" id="453d294f41320e7ad815ecd8f2037540_3151819aee10282c697dc30867844684" file="7" linestart="12" lineend="12"/>
+<asd access="private"/>
+<TypedefNameDecl name="Contender" id="453d294f41320e7ad815ecd8f2037540_9f394c7851987075f4e39eee0f31ef2f" file="7" linestart="15" lineend="15">
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="Best" id="453d294f41320e7ad815ecd8f2037540_c5a0d7a44529897ee4e8fed912ea582d" file="7" linestart="16" lineend="16">
+<DependentName/>
+</TypedefNameDecl>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="453d294f41320e7ad815ecd8f2037540_a22ee9f0bbd834d7fdbde5dce3943421" file="7" linestart="18" lineend="18">
+<tss>
+<templatebase id="167351b72b24e25e7699baaaebead9de_c72b2bc5cdf80b4402d97287c3c8cefb"/>
+<template_arguments>
+<Stmt>
+<xop lb="18" cb="27" le="18" ce="59" kind="&gt;=">
+<n55 lb="18" cb="27" le="18" ce="43">
+<sizeof>
+<Tdef>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+</sizeof>
+</n55>
+<n55 lb="18" cb="48" le="18" ce="59">
+<sizeof>
+<Tdef>
+<DependentName/>
+</Tdef>
+</sizeof>
+</n55>
+</xop>
+
+</Stmt>
+<Tdef>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</Tdef>
+<Tdef>
+<DependentName/>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<ctps Spec="&lt;type-parameter-0-0, true&gt;" namespace="HighLevel" access="none" depth="0" pod="true" kind="class" name="LargestTypeT" id="453d294f41320e7ad815ecd8f2037540_f910d8925ec45fd236ae53490638824f" file="7" linestart="21" lineend="26">
+<cr access="public" kind="class" name="LargestTypeT" id="453d294f41320e7ad815ecd8f2037540_1ef2115542e6d152f9e105f8475b4be4" file="7" linestart="22" lineend="22"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="453d294f41320e7ad815ecd8f2037540_229a18cc7383fd3ab65777377fb6e2b6" file="7" linestart="25" lineend="25">
+<bt name="char"/>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="LargestType" id="453d294f41320e7ad815ecd8f2037540_c123a4783e1ed51b677af92c3e3ee4bd" file="7" linestart="28" lineend="29">
+<template_parameters>
+<ttp name="List" id="453d294f41320e7ad815ecd8f2037540_ffbe9474285368ddc1586cbc33d3ec9b" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="LargestType" id="453d294f41320e7ad815ecd8f2037540_c123a4783e1ed51b677af92c3e3ee4bd" file="7" linestart="29" lineend="29">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+</ns>
+<tm access="none" kind="class" name="PushBackT" id="d46841d447da826a841754692812e586_c86ea15008aaf0a2b049c641082c4e9e" file="8" linestart="5" lineend="6">
+<template_parameters>
+<ttp name="List" id="d46841d447da826a841754692812e586_1760bc940c77d4a5a2595f09eb826675" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="NewElement" id="d46841d447da826a841754692812e586_1eb911eb5a8e9eb6a0c83b77533d209a" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr access="none" kind="class" name="PushBackT" id="d46841d447da826a841754692812e586_c86ea15008aaf0a2b049c641082c4e9e" file="8" linestart="6" lineend="6"/>
+</tm>
+<ctps Spec="&lt;Typelist&lt;type-parameter-0-0...&gt;, type-parameter-0-1&gt;" access="none" depth="0" pod="true" kind="class" name="PushBackT" id="d46841d447da826a841754692812e586_11c5760a18efc6c9be554bd970de588d" file="8" linestart="8" lineend="13">
+<cr access="public" kind="class" name="PushBackT" id="d46841d447da826a841754692812e586_e67dece327faf2b4e02e6940b4f5ea06" file="8" linestart="9" lineend="9"/>
+<asd access="public"/>
+<TypedefNameDecl name="Type" id="d46841d447da826a841754692812e586_a82038b38139415de3b548b9a8b9e883" file="8" linestart="12" lineend="12">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<PackExpansion/>
+<ttp/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="PushBack" id="d46841d447da826a841754692812e586_3b3b31ca06387d61db82fccba4f0d4c9" file="8" linestart="15" lineend="16">
+<template_parameters>
+<ttp name="List" id="d46841d447da826a841754692812e586_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="NewElement" id="d46841d447da826a841754692812e586_22c829af5e74bf5aee5a9edb3e8e212c" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<TypedefNameDecl name="PushBack" id="d46841d447da826a841754692812e586_3b3b31ca06387d61db82fccba4f0d4c9" file="8" linestart="16" lineend="16">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<TypedefNameDecl name="SignedIntegralTypes" id="565445ad6805dee2e10213420f49ae06_fa705b73231060ea86ab7fc39bf15013" file="1" linestart="18" lineend="18">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="signed char"/>
+<bt name="short"/>
+<bt name="int"/>
+<bt name="long"/>
+<bt name="long long"/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<v name="same" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_3ddb51a567a653bb1563566493b8182f" file="1" linestart="23" lineend="23" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="23" cb="23" le="23" ce="108">
+<drx lb="23" cb="23" le="23" ce="108" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<sas/>
+<v name="push_front_same" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_f6787e079e371c55759bad62a91ff694" file="1" linestart="30" lineend="30" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="30" cb="34" le="30" ce="144">
+<drx lb="30" cb="34" le="30" ce="144" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<sas/>
+<TypedefNameDecl name="lowlevelLargest" id="565445ad6805dee2e10213420f49ae06_6966376d2e3337c187142600dd13e841" file="1" linestart="35" lineend="35">
+<ety>
+<tss>
+<templatebase id="6ff4535a7ed41f675fbbf5d68e4087c4_2377a6df727dce0135bcc03e75f4e6e8"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="signed char"/>
+<bt name="short"/>
+<bt name="int"/>
+<bt name="long"/>
+<bt name="long long"/>
+</template_arguments>
+</tss>
+</Tdef>
+</template_arguments>
+</tss>
+</ety>
+</TypedefNameDecl>
+<TypedefNameDecl name="highlevelLargest" id="565445ad6805dee2e10213420f49ae06_a661eebdec4eacd41dc25c5e7105b538" file="1" linestart="37" lineend="37">
+<ety>
+<tss>
+<templatebase id="453d294f41320e7ad815ecd8f2037540_c123a4783e1ed51b677af92c3e3ee4bd"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="signed char"/>
+<bt name="short"/>
+<bt name="int"/>
+<bt name="long"/>
+<bt name="long long"/>
+</template_arguments>
+</tss>
+</Tdef>
+</template_arguments>
+</tss>
+</ety>
+</TypedefNameDecl>
+<v name="same_largest" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_1cd91dce5492d09d72e8ec2923d42cb6" file="1" linestart="39" lineend="39" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="39" cb="31" le="39" ce="80">
+<drx lb="39" cb="31" le="39" ce="80" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<sas/>
+</tun>
+</Root>

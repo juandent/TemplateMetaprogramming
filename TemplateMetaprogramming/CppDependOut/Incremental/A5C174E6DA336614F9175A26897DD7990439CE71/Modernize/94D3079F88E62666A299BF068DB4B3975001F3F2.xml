@@ -1,0 +1,3 @@
+<log>
+ <error msg="macro name must be an identifier [clang-diagnostic-error]" />
+</log>

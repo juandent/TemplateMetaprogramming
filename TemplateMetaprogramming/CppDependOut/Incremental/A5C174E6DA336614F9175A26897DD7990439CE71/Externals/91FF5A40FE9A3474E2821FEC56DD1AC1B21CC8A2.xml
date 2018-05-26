@@ -1,0 +1,41 @@
+<Externals>
+<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="3" linestart="22" lineend="38"/>
+<cr namespace="sqlpp" access="none" depth="1" kind="struct" name="consistent_t" id="85b866788d2ee3de2a6e3d000723a764_1b45461c930ee8d0bcac7d030fb714e2" file="2" linestart="7" lineend="10">
+<base access="public">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<template_arguments>
+<bt name="bool"/>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</base>
+<c name="consistent_t" id="85b866788d2ee3de2a6e3d000723a764_654614ed5cde0d51b701679296bc06fc" file="2" linestart="7" lineend="7" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+<c name="consistent_t" id="85b866788d2ee3de2a6e3d000723a764_6d8f6e44e002057c108668802d7aa9f3" file="2" linestart="7" lineend="7" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="sqlpp::consistent_t &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="85b866788d2ee3de2a6e3d000723a764_1b45461c930ee8d0bcac7d030fb714e2"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" pod="true" kind="struct" name="Runnable" id="85b866788d2ee3de2a6e3d000723a764_6b93c03a50eee74cc14b822abf763911" file="2" linestart="41" lineend="47">
+<c name="Runnable" id="85b866788d2ee3de2a6e3d000723a764_64d7dd8c879da35590c52e24fbcd565e" file="2" linestart="41" lineend="41" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+</Externals>

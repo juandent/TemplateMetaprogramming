@@ -1,0 +1,108 @@
+<Externals>
+<cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639" file="2" linestart="260" lineend="263">
+<base access="public">
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_0e14667e7fa909cae787013e4a665cda"/>
+<template_arguments>
+<ttp/>
+<bt name="long"/>
+</template_arguments>
+</tss>
+</base>
+</cr>
+<tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="3" linestart="20" lineend="38">
+<template_parameters>
+<ttp name="_Ty" id="1b4acc8dde89899ea77bbd6c536e00d0_3ddd43b4e6565475f3b9a7df82f4d2fb" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="3" linestart="22" lineend="38">
+<cr access="public" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_4c5c2990e41a98fc113cc7fdbc481727" file="3" linestart="22" lineend="22"/>
+<v name="value" proto="const _Ty" const="true" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" file="3" linestart="24" lineend="24" storage="static" init="true" access2="public">
+<QualType const="true">
+<ttp/>
+</QualType>
+</v>
+</cr>
+</tm>
+<cr namespace="std" access="none" depth="1" kind="struct" name="is_same" id="1b4acc8dde89899ea77bbd6c536e00d0_256c50d0405499789a249828b6bb411e" file="3" linestart="86" lineend="89">
+<base access="public">
+<Tdef>
+<tss>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<template_arguments>
+<bt name="bool"/>
+</template_arguments>
+</tss>
+</Tdef>
+</base>
+</cr>
+<cr parent="b4ef6484950c9f628c38ba1e6fbeddfc_6dd638bbe3d7760dcacd77de639c1119" access="public" depth="1" kind="struct" name="_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_5379966609bdf88dbac2c971bbd8604e" file="1" linestart="294" lineend="296">
+<base access="public">
+<tss>
+<templatebase id="b4ef6484950c9f628c38ba1e6fbeddfc_131485102825a8cf24bcc9bb2d191735"/>
+<template_arguments>
+<sttp/>
+</template_arguments>
+</tss>
+</base>
+<base access="public">
+<tss>
+<templatebase id="b4ef6484950c9f628c38ba1e6fbeddfc_131485102825a8cf24bcc9bb2d191735"/>
+<template_arguments>
+<sttp/>
+</template_arguments>
+</tss>
+</base>
+<base access="public">
+<tss>
+<templatebase id="b4ef6484950c9f628c38ba1e6fbeddfc_131485102825a8cf24bcc9bb2d191735"/>
+<template_arguments>
+<sttp/>
+</template_arguments>
+</tss>
+</base>
+<c name="_impl" id="b4ef6484950c9f628c38ba1e6fbeddfc_36355eb19a5909d3590e0a54330a4712" file="1" linestart="294" lineend="294" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+<cr namespace="std" access="none" depth="0" kind="class" name="allocator" id="6296f70cc969544ce1f87c96145b57ec_07566aa809aee0bdf1c0fac16e19fa85" file="4" linestart="582" lineend="671" previous="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<tm parent="6296f70cc969544ce1f87c96145b57ec_07566aa809aee0bdf1c0fac16e19fa85" access="none" depth="0" pod="true" kind="struct" name="rebind" id="6296f70cc969544ce1f87c96145b57ec_38c2be5a786a253bb82af3c54854f921" file="4" linestart="603" lineend="607">
+<template_parameters>
+<ttp name="_Other" id="6296f70cc969544ce1f87c96145b57ec_5cb4d687f09ee7cb5b3575605cef20a8" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+</tm>
+</cr>
+<cr namespace="std" access="none" depth="1" kind="class" name="basic_string" id="43e57e2314d98c3481e7c5229eab5466_6ecc822215ca97386606c5e8e95c56fb" file="5" linestart="738" lineend="2254" previous="43e57e2314d98c3481e7c5229eab5466_6ecc822215ca97386606c5e8e95c56fb">
+<base access="public">
+<tss>
+<templatebase id="43e57e2314d98c3481e7c5229eab5466_fd6b90577893febf1782c3472e44b788"/>
+<template_arguments>
+<tss>
+<templatebase id="43e57e2314d98c3481e7c5229eab5466_15e8cc19f33496752ccbe61f65b7379c"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</base>
+</cr>
+<v namespace="std" name="cout" proto="ostream" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" file="6" linestart="27" lineend="27" storage="extern" access2="none">
+<Tdef>
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</v>
+</Externals>

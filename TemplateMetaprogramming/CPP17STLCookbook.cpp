@@ -333,12 +333,12 @@ public:
 		{
 			// define functions
 
-			auto f(brace_print('(', ')'));
-			auto g(brace_print('[', ']'));
-			auto h(brace_print('{', '}'));
-			auto nl([](auto ) { std::cout << "\n"; });
+			auto f = brace_print('(', ')');
+			auto g = brace_print('[', ']');
+			auto h = brace_print('{', '}');
+			auto nl = [](auto ) { std::cout << "\n"; };
 
-			auto call_fgh(multicall(f, g , h, nl));
+			auto call_fgh = multicall(f, g , h, nl);
 
 			for_each(call_fgh, 1 , 2, 3, 4, 5);
 

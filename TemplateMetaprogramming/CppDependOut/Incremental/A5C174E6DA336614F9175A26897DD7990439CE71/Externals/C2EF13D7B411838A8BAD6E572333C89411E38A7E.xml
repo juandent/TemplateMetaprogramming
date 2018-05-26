@@ -1,0 +1,95 @@
+<Externals>
+<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="22" lineend="38"/>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="X1" id="de147941232f8b428fcfa4da8de9971e_8ebf33b9b0266f890cb6e8618bde74d6" file="1" linestart="55" lineend="55">
+<c name="X1" id="de147941232f8b428fcfa4da8de9971e_754002d4e59f04110f4a134dac409f83" file="1" linestart="55" lineend="55" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="X2" id="de147941232f8b428fcfa4da8de9971e_f1ee6e75c21304a8ea19322897055c50" file="1" linestart="58" lineend="58">
+<c name="X2" id="de147941232f8b428fcfa4da8de9971e_73e707ef24598cd281f7abf952154f1b" file="1" linestart="58" lineend="58" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="BoolConvertible" id="de147941232f8b428fcfa4da8de9971e_7534a22f0f5eca6662413d3328d1da66" file="1" linestart="66" lineend="71">
+<c name="BoolConvertible" id="de147941232f8b428fcfa4da8de9971e_02fc3414c97ce31108cbea4086b0e2ac" file="1" linestart="66" lineend="66" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+<c name="BoolConvertible" id="de147941232f8b428fcfa4da8de9971e_e6879b2bc5407fc3b29f324da4a41c48" file="1" linestart="66" lineend="66" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="TypeOverload::BoolConvertible &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="de147941232f8b428fcfa4da8de9971e_7534a22f0f5eca6662413d3328d1da66"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="X5" id="de147941232f8b428fcfa4da8de9971e_0979930ecae30a7a0cf6b54645254ea6" file="1" linestart="73" lineend="73">
+<c name="X5" id="de147941232f8b428fcfa4da8de9971e_1a788f39e7eac84582f7dd44cd5c68c7" file="1" linestart="73" lineend="73" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="NotBoolConvertible" id="de147941232f8b428fcfa4da8de9971e_4f1b9aa8bea60223cdddd00363b6348a" file="1" linestart="80" lineend="80">
+<c name="NotBoolConvertible" id="de147941232f8b428fcfa4da8de9971e_5a0de62b8cfad3eeabbbef2b2437214e" file="1" linestart="80" lineend="80" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+<c name="NotBoolConvertible" id="de147941232f8b428fcfa4da8de9971e_8bc9301623438b6ee7d24aed7ed5f885" file="1" linestart="80" lineend="80" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="TypeOverload::NotBoolConvertible &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="de147941232f8b428fcfa4da8de9971e_4f1b9aa8bea60223cdddd00363b6348a"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="BoolLike" id="de147941232f8b428fcfa4da8de9971e_c56092351a8a79dafd5a2d0335a8c38d" file="1" linestart="89" lineend="92">
+<c name="BoolLike" id="de147941232f8b428fcfa4da8de9971e_4795a0c82367d5dadc400e4932371f55" file="1" linestart="89" lineend="89" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+<c name="BoolLike" id="de147941232f8b428fcfa4da8de9971e_013d81d3443dee2fea789938e3aed5db" file="1" linestart="89" lineend="89" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="TypeOverload::BoolLike &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="de147941232f8b428fcfa4da8de9971e_c56092351a8a79dafd5a2d0335a8c38d"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+<cr namespace="TypeOverload" access="none" depth="0" pod="true" kind="struct" name="X7" id="de147941232f8b428fcfa4da8de9971e_b76a16b789c9fa3c72b8ff473df8579b" file="1" linestart="94" lineend="94">
+<c name="X7" id="de147941232f8b428fcfa4da8de9971e_889f2a9b3e3d751b1ea790115db39079" file="1" linestart="94" lineend="94" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+<cr namespace="NotOverconstrained" access="none" depth="0" pod="true" kind="class" name="HasBoolOperator" id="de147941232f8b428fcfa4da8de9971e_6dbf6bf326df72adbcdf18a1cd73e4cf" file="1" linestart="121" lineend="125">
+<c name="HasBoolOperator" id="de147941232f8b428fcfa4da8de9971e_238234a5e014406d53e22cf4432d18c5" file="1" linestart="121" lineend="121" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+</Externals>

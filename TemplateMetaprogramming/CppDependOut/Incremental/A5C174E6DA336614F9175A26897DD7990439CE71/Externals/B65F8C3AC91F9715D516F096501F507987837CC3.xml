@@ -1,0 +1,30 @@
+<Externals>
+<cr namespace="AmbiguousConditionalOperatorsArguments" access="none" depth="0" kind="struct" name="A" id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe" file="1" linestart="98" lineend="102">
+<c name="A" id="dbdc49e537b108889e8b671b97a9f7e3_c21bb222d7848bd8030bab21c8de66eb" file="1" linestart="98" lineend="98" copyconst="true" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const AmbiguousConditionalOperatorsArguments::A &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe"/>
+</rt>
+</QualType>
+</lrf>
+</p>
+</c>
+<c name="A" id="dbdc49e537b108889e8b671b97a9f7e3_c3a7d5e6533b9a5403dc51aeec47c8e9" file="1" linestart="98" lineend="98" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="AmbiguousConditionalOperatorsArguments::A &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe"/>
+</rt>
+</rrf>
+</p>
+</c>
+</cr>
+</Externals>

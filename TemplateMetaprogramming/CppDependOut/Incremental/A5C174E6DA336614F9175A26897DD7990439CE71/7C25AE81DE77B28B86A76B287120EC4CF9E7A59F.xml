@@ -1,0 +1,292 @@
+<Root>
+<Comments>
+<c f="1" b="11" e="11"/>
+<c f="1" b="12" e="11"/>
+<c f="1" b="12" e="12"/>
+<c f="1" b="13" e="12"/>
+<c f="1" b="19" e="19"/>
+<c f="1" b="20" e="19"/>
+<c f="1" b="28" e="28"/>
+<c f="1" b="29" e="29"/>
+<c f="1" b="30" e="29"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="4" bc="1"/>
+<m f="1" bl="5" bc="1"/>
+<m f="1" bl="26" bc="1"/>
+</Directives>
+<tun>
+<tm access="none" depth="0" pod="true" kind="class" name="IsEqualityComparable" id="793899b30321e9cd3330c85ee9c322d3_ac4faabb999bc6b5478668a030caa411" file="1" linestart="7" lineend="33">
+<template_parameters>
+<ttp name="T" id="793899b30321e9cd3330c85ee9c322d3_8bd8a6c1caca053ec000d1ee194e054e" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="class" name="IsEqualityComparable" id="793899b30321e9cd3330c85ee9c322d3_ac4faabb999bc6b5478668a030caa411" file="1" linestart="8" lineend="33">
+<cr access="public" kind="class" name="IsEqualityComparable" id="793899b30321e9cd3330c85ee9c322d3_74d1a2e7a13d72b3fcdd9a9063c14bdd" file="1" linestart="8" lineend="8"/>
+<asd access="private"/>
+<m name="conv" id="793899b30321e9cd3330c85ee9c322d3_5ae648c324667e34ddbb57e3b6cda23d" file="1" linestart="12" lineend="12" access="private" storage="static">
+<fpt cc="cdecl" proto="void *">
+<pt>
+<bt name="void"/>
+</pt>
+</fpt>
+<p name="" proto="bool" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="bool"/>
+<Stmt>
+
+</Stmt>
+</p>
+</m>
+<ft name="test" id="793899b30321e9cd3330c85ee9c322d3_37297a96fc47b46e4dc90a320cd3fd20" file="1" linestart="13" lineend="18">
+<template_parameters>
+<ttp name="U" id="793899b30321e9cd3330c85ee9c322d3_80883091df9f86167766ad6442b34a5e" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="test" id="793899b30321e9cd3330c85ee9c322d3_e1c90a53ec648d7e8850fc28bd06f59f" file="1" linestart="14" lineend="18" access="private" storage="static">
+<fpt cc="cdecl" proto="std::true_type">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<template_arguments>
+<bt name="bool"/>
+<Stmt>
+<n9 lb="40" cb="33"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</fpt>
+<p name="" proto="decltype(conv(std::declval&lt;const U &amp;&gt;() == std::declval&lt;const U &amp;&gt;()))" access2="none">
+<decltype/>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="" proto="decltype(conv(!(std::declval&lt;const U &amp;&gt;() == std::declval&lt;const U &amp;&gt;())))" access2="none">
+<decltype/>
+<Stmt>
+
+</Stmt>
+</p>
+</m>
+</ft>
+<ft name="test" id="793899b30321e9cd3330c85ee9c322d3_37297a96fc47b46e4dc90a320cd3fd20" file="1" linestart="20" lineend="21">
+<template_parameters>
+<ttp name="U" id="793899b30321e9cd3330c85ee9c322d3_d634028a52222cfa64143f090fe9431d" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="test" id="793899b30321e9cd3330c85ee9c322d3_23c95bf48aaa4f1d245a79292267462d" file="1" linestart="21" lineend="21" variadic="true" access="private" storage="static">
+<fpt cc="cdecl" proto="std::false_type">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<template_arguments>
+<bt name="bool"/>
+<Stmt>
+<n9 lb="41" cb="33"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</fpt>
+</m>
+</ft>
+<asd access="public"/>
+<v name="value" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="793899b30321e9cd3330c85ee9c322d3_698981177e7db9e905ceb403678c1d79" file="1" linestart="23" lineend="24" storage="static" init="true" access2="public">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n35 lb="23" cb="32" le="24" ce="14">
+<exp pvirg="true"/>
+</n35>
+
+</Stmt>
+</v>
+<RedeclarableTemplateDecl name="type" id="793899b30321e9cd3330c85ee9c322d3_86d26bc8dbbe22180ac20ad51a70030f" file="1" linestart="30" lineend="31">
+<template_parameters>
+<ttp name="U" id="793899b30321e9cd3330c85ee9c322d3_a2029f8c729a2843f430bab5fbf0e10f" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<TypedefNameDecl name="type" id="793899b30321e9cd3330c85ee9c322d3_86d26bc8dbbe22180ac20ad51a70030f" file="1" linestart="31" lineend="31">
+<decltype/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+</cr>
+</tm>
+<cr access="none" depth="0" kind="class" name="XT" id="793899b30321e9cd3330c85ee9c322d3_b80baace5462703dd513665b8c19212d" file="1" linestart="36" lineend="46">
+<cr access="public" kind="class" name="XT" id="793899b30321e9cd3330c85ee9c322d3_a047af9f8fb861cd8657a9c0aece839f" file="1" linestart="36" lineend="36"/>
+<fl name="a" id="793899b30321e9cd3330c85ee9c322d3_1bc0f02062405bf92dc7ccd68d913887" file="1" linestart="38" lineend="38" isLiteral="true" access="private" proto="int">
+<bt name="int"/>
+</fl>
+<fl name="b" id="793899b30321e9cd3330c85ee9c322d3_6bae9318450cf69b5f490c64565a0c20" file="1" linestart="38" lineend="38" isLiteral="true" access="private" proto="int">
+<bt name="int"/>
+</fl>
+<asd access="public"/>
+<c name="XT" id="793899b30321e9cd3330c85ee9c322d3_6ddf78cd9135077fa55d95d3d3789066" file="1" linestart="40" lineend="40" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="a" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="b" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="793899b30321e9cd3330c85ee9c322d3_1bc0f02062405bf92dc7ccd68d913887">
+<Stmt>
+<il lb="40" cb="22" le="40" ce="26">
+<exp pvirg="true"/>
+<n32 lb="40" cb="24">
+<drx lb="40" cb="24" kind="lvalue" nm="a"/>
+</n32>
+</il>
+
+</Stmt>
+</initlist>
+<initlist id="793899b30321e9cd3330c85ee9c322d3_6bae9318450cf69b5f490c64565a0c20">
+<Stmt>
+<il lb="40" cb="30" le="40" ce="34">
+<exp pvirg="true"/>
+<n32 lb="40" cb="32">
+<drx lb="40" cb="32" kind="lvalue" nm="b"/>
+</n32>
+</il>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="40" cb="36" le="40" ce="37"/>
+
+</Stmt>
+</c>
+<frDecl>
+<f name="operator==" id="793899b30321e9cd3330c85ee9c322d3_e40c0e3d1f550d321f943425ce69cab6" file="1" linestart="42" lineend="45" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="bool">
+<bt name="bool"/>
+</fpt>
+<p name="lhs" proto="const XT &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="793899b30321e9cd3330c85ee9c322d3_b80baace5462703dd513665b8c19212d"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="rhs" proto="const XT &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="793899b30321e9cd3330c85ee9c322d3_b80baace5462703dd513665b8c19212d"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="43" cb="2" le="45" ce="2">
+<rx lb="44" cb="3" le="44" ce="41" pvirg="true">
+<xop lb="44" cb="10" le="44" ce="41" kind="&amp;&amp;">
+<xop lb="44" cb="10" le="44" ce="23" kind="==">
+<n32 lb="44" cb="10" le="44" ce="14">
+<mex lb="44" cb="10" le="44" ce="14" kind="lvalue" id="793899b30321e9cd3330c85ee9c322d3_1bc0f02062405bf92dc7ccd68d913887" nm="a" point="1">
+<drx lb="44" cb="10" kind="lvalue" nm="lhs"/>
+</mex>
+</n32>
+<n32 lb="44" cb="19" le="44" ce="23">
+<mex lb="44" cb="19" le="44" ce="23" kind="lvalue" id="793899b30321e9cd3330c85ee9c322d3_1bc0f02062405bf92dc7ccd68d913887" nm="a" point="1">
+<drx lb="44" cb="19" kind="lvalue" nm="rhs"/>
+</mex>
+</n32>
+</xop>
+<xop lb="44" cb="28" le="44" ce="41" kind="==">
+<n32 lb="44" cb="28" le="44" ce="32">
+<mex lb="44" cb="28" le="44" ce="32" kind="lvalue" id="793899b30321e9cd3330c85ee9c322d3_6bae9318450cf69b5f490c64565a0c20" nm="b" point="1">
+<drx lb="44" cb="28" kind="lvalue" nm="lhs"/>
+</mex>
+</n32>
+<n32 lb="44" cb="37" le="44" ce="41">
+<mex lb="44" cb="37" le="44" ce="41" kind="lvalue" id="793899b30321e9cd3330c85ee9c322d3_6bae9318450cf69b5f490c64565a0c20" nm="b" point="1">
+<drx lb="44" cb="37" kind="lvalue" nm="rhs"/>
+</mex>
+</n32>
+</xop>
+</xop>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</frDecl>
+</cr>
+<f name="useEqualityComparable" id="793899b30321e9cd3330c85ee9c322d3_566b391c269d42c391dbea30aa2cb694" file="1" linestart="49" lineend="55" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="50" cb="1" le="55" ce="1">
+<dst lb="51" cb="2" le="51" ce="57">
+<exp pvirg="true"/>
+<Var nm="res"/>
+</dst>
+<dst lb="52" cb="2" le="52" ce="11">
+<exp pvirg="true"/>
+<Var nm="pRes">
+<pt>
+<Tdef>
+<ety>
+<tss>
+<templatebase id="793899b30321e9cd3330c85ee9c322d3_0b90fc3e43bb1b330b2798a77c013936"/>
+<template_arguments>
+<rt>
+<cr id="793899b30321e9cd3330c85ee9c322d3_b80baace5462703dd513665b8c19212d"/>
+</rt>
+</template_arguments>
+</tss>
+</ety>
+</Tdef>
+</pt>
+</Var>
+</dst>
+<dst lb="53" cb="2" le="53" ce="67">
+<exp pvirg="true"/>
+<Var nm="hasEqualOperator" value="true">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<n32 lb="53" cb="36" le="53" ce="62">
+<drx lb="53" cb="36" le="53" ce="62" kind="lvalue" id="793899b30321e9cd3330c85ee9c322d3_698981177e7db9e905ceb403678c1d79" nm="value"/>
+</n32>
+</Var>
+</dst>
+<dst lb="54" cb="2" le="54" ce="29">
+<exp pvirg="true"/>
+<Var nm="has" value="true">
+<bt name="bool"/>
+<n32 lb="54" cb="13">
+<drx lb="54" cb="13" kind="lvalue" nm="hasEqualOperator"/>
+</n32>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

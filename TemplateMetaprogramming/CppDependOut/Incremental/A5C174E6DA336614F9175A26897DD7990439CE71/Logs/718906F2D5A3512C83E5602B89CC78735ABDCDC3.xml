@@ -1,0 +1,18 @@
+<log>
+ <error level="error" id="err_pp_macro_not_identifier" file="&lt;command line&gt;" line="7" col="9" msg="macro name must be an identifier" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1117" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1180" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1243" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="53" col="7" msg="unused variable &apos;p_is_a_s&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="49" col="9" msg="unused variable &apos;p&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="47" col="7" msg="unused variable &apos;is&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="46" col="7" msg="unused variable &apos;pisT&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="50" col="10" msg="unused variable &apos;s&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="48" col="7" msg="unused variable &apos;ischar&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="52" col="7" msg="unused variable &apos;s_is_a_p&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="85" col="7" msg="unused variable &apos;res2&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="87" col="40" msg="unused variable &apos;student&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="90" col="27" msg="unused variable &apos;st&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="88" col="39" msg="unused variable &apos;stu&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TraitsCPPTempl.cpp" line="84" col="7" msg="unused variable &apos;res&apos;" />
+</log>

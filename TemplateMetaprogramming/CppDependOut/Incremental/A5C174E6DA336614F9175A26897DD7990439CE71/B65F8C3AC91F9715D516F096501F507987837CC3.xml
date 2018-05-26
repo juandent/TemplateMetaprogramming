@@ -1,0 +1,1089 @@
+<Root>
+<Comments>
+<c f="1" b="12" e="12"/>
+<c f="1" b="13" e="13"/>
+<c f="1" b="14" e="13"/>
+<c f="1" b="15" e="15"/>
+<c f="1" b="16" e="16"/>
+<c f="1" b="17" e="16"/>
+<c f="1" b="20" e="20"/>
+<c f="1" b="21" e="21"/>
+<c f="1" b="22" e="21"/>
+<c f="1" b="37" e="37"/>
+<c f="1" b="38" e="38"/>
+<c f="1" b="39" e="39"/>
+<c f="1" b="40" e="39"/>
+<c f="1" b="48" e="48"/>
+<c f="1" b="49" e="48"/>
+<c f="1" b="52" e="52"/>
+<c f="1" b="53" e="52"/>
+<c f="1" b="53" e="53"/>
+<c f="1" b="55" e="53"/>
+<c f="1" b="56" e="56"/>
+<c f="1" b="59" e="59"/>
+<c f="1" b="60" e="59"/>
+<c f="1" b="64" e="64"/>
+<c f="1" b="65" e="65"/>
+<c f="1" b="67" e="65"/>
+<c f="1" b="68" e="68"/>
+<c f="1" b="69" e="68"/>
+<c f="1" b="78" e="78"/>
+<c f="1" b="79" e="79"/>
+<c f="1" b="80" e="80"/>
+<c f="1" b="81" e="80"/>
+<c f="1" b="85" e="85"/>
+<c f="1" b="86" e="86"/>
+<c f="1" b="87" e="86"/>
+<c f="1" b="89" e="89"/>
+<c f="1" b="90" e="89"/>
+<c f="1" b="97" e="97"/>
+<c f="1" b="98" e="97"/>
+<c f="1" b="107" e="107"/>
+<c f="1" b="108" e="108"/>
+<c f="1" b="109" e="109"/>
+<c f="1" b="110" e="109"/>
+<c f="1" b="115" e="115"/>
+<c f="1" b="116" e="115"/>
+<c f="1" b="118" e="118"/>
+<c f="1" b="119" e="118"/>
+<c f="1" b="119" e="119"/>
+<c f="1" b="120" e="119"/>
+<c f="1" b="125" e="125"/>
+<c f="1" b="126" e="126"/>
+<c f="1" b="127" e="127"/>
+<c f="1" b="128" e="128"/>
+<c f="1" b="129" e="129"/>
+<c f="1" b="130" e="129"/>
+<c f="1" b="134" e="134"/>
+<c f="1" b="135" e="134"/>
+<c f="1" b="136" e="136"/>
+<c f="1" b="137" e="136"/>
+<c f="1" b="138" e="138"/>
+<c f="1" b="139" e="138"/>
+<c f="1" b="144" e="144"/>
+<c f="1" b="145" e="144"/>
+<c f="1" b="155" e="155"/>
+<c f="1" b="156" e="155"/>
+<c f="1" b="158" e="158"/>
+<c f="1" b="159" e="158"/>
+<c f="1" b="159" e="159"/>
+<c f="1" b="160" e="159"/>
+<c f="1" b="166" e="166"/>
+<c f="1" b="167" e="166"/>
+<c f="1" b="176" e="176"/>
+<c f="1" b="177" e="176"/>
+<c f="1" b="177" e="177"/>
+<c f="1" b="178" e="178"/>
+<c f="1" b="179" e="179"/>
+<c f="1" b="180" e="180"/>
+<c f="1" b="181" e="180"/>
+</Comments>
+<Macros>
+<m f="1" bl="145" bc="4" el="145" ec="14"/>
+</Macros>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="137" bc="1"/>
+<m f="1" bl="139" bc="1"/>
+</Directives>
+<Comments>
+<c f="1" b="12" e="12"/>
+<c f="1" b="13" e="13"/>
+<c f="1" b="14" e="13"/>
+<c f="1" b="15" e="15"/>
+<c f="1" b="16" e="16"/>
+<c f="1" b="17" e="16"/>
+<c f="1" b="20" e="20"/>
+<c f="1" b="21" e="21"/>
+<c f="1" b="22" e="21"/>
+<c f="1" b="37" e="37"/>
+<c f="1" b="38" e="38"/>
+<c f="1" b="39" e="39"/>
+<c f="1" b="40" e="39"/>
+<c f="1" b="48" e="48"/>
+<c f="1" b="49" e="48"/>
+<c f="1" b="52" e="52"/>
+<c f="1" b="53" e="52"/>
+<c f="1" b="53" e="53"/>
+<c f="1" b="55" e="53"/>
+<c f="1" b="56" e="56"/>
+<c f="1" b="59" e="59"/>
+<c f="1" b="60" e="59"/>
+<c f="1" b="64" e="64"/>
+<c f="1" b="65" e="65"/>
+<c f="1" b="67" e="65"/>
+<c f="1" b="68" e="68"/>
+<c f="1" b="69" e="68"/>
+<c f="1" b="78" e="78"/>
+<c f="1" b="79" e="79"/>
+<c f="1" b="80" e="80"/>
+<c f="1" b="81" e="80"/>
+<c f="1" b="85" e="85"/>
+<c f="1" b="86" e="86"/>
+<c f="1" b="87" e="86"/>
+<c f="1" b="89" e="89"/>
+<c f="1" b="90" e="89"/>
+<c f="1" b="97" e="97"/>
+<c f="1" b="98" e="97"/>
+<c f="1" b="107" e="107"/>
+<c f="1" b="108" e="108"/>
+<c f="1" b="109" e="109"/>
+<c f="1" b="110" e="109"/>
+<c f="1" b="115" e="115"/>
+<c f="1" b="116" e="115"/>
+<c f="1" b="118" e="118"/>
+<c f="1" b="119" e="118"/>
+<c f="1" b="119" e="119"/>
+<c f="1" b="120" e="119"/>
+<c f="1" b="125" e="125"/>
+<c f="1" b="126" e="126"/>
+<c f="1" b="127" e="127"/>
+<c f="1" b="128" e="128"/>
+<c f="1" b="129" e="129"/>
+<c f="1" b="130" e="129"/>
+<c f="1" b="134" e="134"/>
+<c f="1" b="135" e="134"/>
+<c f="1" b="136" e="136"/>
+<c f="1" b="137" e="136"/>
+<c f="1" b="138" e="138"/>
+<c f="1" b="139" e="138"/>
+<c f="1" b="144" e="144"/>
+<c f="1" b="145" e="144"/>
+<c f="1" b="155" e="155"/>
+<c f="1" b="156" e="155"/>
+<c f="1" b="158" e="158"/>
+<c f="1" b="159" e="158"/>
+<c f="1" b="159" e="159"/>
+<c f="1" b="160" e="159"/>
+<c f="1" b="166" e="166"/>
+<c f="1" b="167" e="166"/>
+<c f="1" b="176" e="176"/>
+<c f="1" b="177" e="176"/>
+<c f="1" b="177" e="177"/>
+<c f="1" b="178" e="178"/>
+<c f="1" b="179" e="179"/>
+<c f="1" b="180" e="180"/>
+<c f="1" b="181" e="180"/>
+</Comments>
+<Macros>
+<m f="1" bl="145" bc="4" el="145" ec="14"/>
+</Macros>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="137" bc="1"/>
+<m f="1" bl="139" bc="1"/>
+</Directives>
+<tun>
+<ns name="Lookup_members_in_dependent_base" id="dbdc49e537b108889e8b671b97a9f7e3_41f535e94bfd99da6084f234ad62f533" file="1" linestart="3" lineend="30">
+<tm namespace="Lookup_members_in_dependent_base" access="none" depth="0" pod="true" kind="struct" name="B" id="dbdc49e537b108889e8b671b97a9f7e3_67d0188b7c712179f121aaf5b0da1ae8" file="1" linestart="6" lineend="9">
+<template_parameters>
+<ttp name="T" id="dbdc49e537b108889e8b671b97a9f7e3_9b912983fa256df1c87abd3531339e9e" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="Lookup_members_in_dependent_base" access="none" depth="0" pod="true" kind="struct" name="B" id="dbdc49e537b108889e8b671b97a9f7e3_e8965c88303896569c78240284bef793" file="1" linestart="7" lineend="9">
+<cr access="public" kind="struct" name="B" id="dbdc49e537b108889e8b671b97a9f7e3_338465ebbdbee11a86c5d4c057640848" file="1" linestart="7" lineend="7"/>
+<m name="f" id="dbdc49e537b108889e8b671b97a9f7e3_0b48418cd3c17976fa76b39f4f682e77" file="1" linestart="8" lineend="8" access="public">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</m>
+</cr>
+</tm>
+<tm namespace="Lookup_members_in_dependent_base" access="none" depth="1" kind="struct" name="D" id="dbdc49e537b108889e8b671b97a9f7e3_a8b14daf3033130b5b8974b851fab1b6" file="1" linestart="11" lineend="23">
+<template_parameters>
+<ttp name="T" id="dbdc49e537b108889e8b671b97a9f7e3_0fa0ae2167a7bdd32da4792aeef581ae" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="Lookup_members_in_dependent_base" access="none" depth="1" kind="struct" name="D" id="dbdc49e537b108889e8b671b97a9f7e3_955f25a6b7f4b023c25e5c51adf55149" file="1" linestart="12" lineend="23">
+<base access="public">
+<tss>
+<templatebase id="dbdc49e537b108889e8b671b97a9f7e3_e8965c88303896569c78240284bef793"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="struct" name="D" id="dbdc49e537b108889e8b671b97a9f7e3_cff4bc92589836d21b4379360a5abfc1" file="1" linestart="12" lineend="12"/>
+<ValueDecl name="f" id="dbdc49e537b108889e8b671b97a9f7e3_7a4a09d5489b03f97e49fa0454708b45" file="1" linestart="17" lineend="17">
+<bt name="&lt;dependent type&gt;"/>
+</ValueDecl>
+<m name="g" id="dbdc49e537b108889e8b671b97a9f7e3_d4e8a739579dffb7c0fda88ce7fcc0d2" file="1" linestart="19" lineend="22" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="19" cb="12" le="22" ce="3">
+<ce lb="20" cb="4" le="20" ce="6" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="20" cb="4">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</cr>
+</tm>
+<f namespace="Lookup_members_in_dependent_base" name="h" id="dbdc49e537b108889e8b671b97a9f7e3_948ac3636203805af61c0b126d09c2d6" file="1" linestart="25" lineend="28" access="none" storage="static" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="25" cb="18" le="28" ce="2">
+<dst lb="26" cb="3" le="26" ce="11">
+<exp pvirg="true"/>
+<Var nm="d" value="true">
+<tss>
+<templatebase id="dbdc49e537b108889e8b671b97a9f7e3_955f25a6b7f4b023c25e5c51adf55149"/>
+<template_arguments>
+<bt name="int"/>
+</template_arguments>
+</tss>
+<n10 lb="26" cb="10">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_939d699a87abce33593bf0d4535a0fb9">
+<template_arguments>
+<bt name="int"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<mce lb="27" cb="3" le="27" ce="7" nbparm="0" id="dbdc49e537b108889e8b671b97a9f7e3_d4e8a739579dffb7c0fda88ce7fcc0d2">
+<exp pvirg="true"/>
+<mex lb="27" cb="3" le="27" ce="5" id="dbdc49e537b108889e8b671b97a9f7e3_d4e8a739579dffb7c0fda88ce7fcc0d2" nm="g" point="1">
+<drx lb="27" cb="3" kind="lvalue" nm="d"/>
+</mex>
+</mce>
+</u>
+
+</Stmt>
+</f>
+</ns>
+<ns name="Initializing_multiple_members_of_union_in_member_initializer" id="dbdc49e537b108889e8b671b97a9f7e3_46e0b0c40507a4f088cfc971792c2da3" file="1" linestart="32" lineend="44">
+<cr namespace="Initializing_multiple_members_of_union_in_member_initializer" access="none" depth="0" kind="union" name="U" id="dbdc49e537b108889e8b671b97a9f7e3_f63e5c7ff0a39438ada803f90210dfde" file="1" linestart="34" lineend="43">
+<cr access="public" kind="union" name="U" id="dbdc49e537b108889e8b671b97a9f7e3_6f1a4f1b7201720387b63dda74d3585f" file="1" linestart="34" lineend="34"/>
+<c name="U" id="dbdc49e537b108889e8b671b97a9f7e3_0fa76b062603ff1bff70ff675056eab8" file="1" linestart="36" lineend="40" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<initlist id="dbdc49e537b108889e8b671b97a9f7e3_fa70d1c317689ec74ed644a010fc2ce4">
+<Stmt>
+<n45 lb="37" cb="8">
+<flit/>
+</n45>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="40" cb="3" le="40" ce="4"/>
+
+</Stmt>
+</c>
+<fl name="i" id="dbdc49e537b108889e8b671b97a9f7e3_fa70d1c317689ec74ed644a010fc2ce4" file="1" linestart="41" lineend="41" isLiteral="true" access="public" proto="int">
+<bt name="int"/>
+</fl>
+<fl name="j" id="dbdc49e537b108889e8b671b97a9f7e3_0419eaf9ccf2f87afb87c9fc9430c448" file="1" linestart="42" lineend="42" isLiteral="true" access="public" proto="int">
+<bt name="int"/>
+</fl>
+</cr>
+</ns>
+<ns name="Hidden_friend_name_lookup_rules" id="dbdc49e537b108889e8b671b97a9f7e3_7b2028f4ca44c542fe34138afae5940d" file="1" linestart="46" lineend="70">
+<cr namespace="Hidden_friend_name_lookup_rules" access="none" depth="0" pod="true" kind="struct" name="S" id="dbdc49e537b108889e8b671b97a9f7e3_5166259493c7940ad5aced47c1ef588a" file="1" linestart="49" lineend="51">
+<cr access="public" kind="struct" name="S" id="dbdc49e537b108889e8b671b97a9f7e3_0123b09aa212a67ae6b90636854f7ebe" file="1" linestart="49" lineend="49"/>
+<frDecl>
+<f namespace="Hidden_friend_name_lookup_rules" name="f" id="dbdc49e537b108889e8b671b97a9f7e3_dc2d184c3b0d68a6628e4f4457191460" file="1" linestart="50" lineend="50" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="Hidden_friend_name_lookup_rules::S *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_5166259493c7940ad5aced47c1ef588a"/>
+</rt>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="50" cb="22" le="50" ce="35">
+<dst lb="50" cb="24" le="50" ce="33">
+<exp pvirg="true"/>
+<Var nm="a" value="true">
+<bt name="int"/>
+<n45 lb="50" cb="32">
+<flit/>
+</n45>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</frDecl>
+</cr>
+<f namespace="Hidden_friend_name_lookup_rules" name="f" id="dbdc49e537b108889e8b671b97a9f7e3_dc2d184c3b0d68a6628e4f4457191460" file="1" linestart="53" lineend="53" previous="dbdc49e537b108889e8b671b97a9f7e3_dc2d184c3b0d68a6628e4f4457191460" access="none" hasbody="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="Hidden_friend_name_lookup_rules::S *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_5166259493c7940ad5aced47c1ef588a"/>
+</rt>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+</f>
+<TypedefNameDecl name="type" id="dbdc49e537b108889e8b671b97a9f7e3_1e930e44452725830ff2a285f74ce60f" file="1" linestart="55" lineend="55">
+<pt>
+<Paren/>
+</pt>
+</TypedefNameDecl>
+<v namespace="Hidden_friend_name_lookup_rules" name="p" proto="type" isPtr="true" isLiteral="true" id="dbdc49e537b108889e8b671b97a9f7e3_7df34c26290f3513b7cef1d4531f7de9" file="1" linestart="56" lineend="56" init="true" access2="none">
+<Tdef>
+<pt>
+<Paren/>
+</pt>
+</Tdef>
+<Stmt>
+<uo lb="56" cb="11" le="56" ce="12" kind="&amp;">
+<drx lb="56" cb="12" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_dc2d184c3b0d68a6628e4f4457191460" nm="f"/>
+</uo>
+
+</Stmt>
+</v>
+<cr namespace="Hidden_friend_name_lookup_rules" access="none" depth="0" pod="true" kind="struct" name="T" id="dbdc49e537b108889e8b671b97a9f7e3_db823ad8a7ca3135bc1fe4d8811dacf8" file="1" linestart="60" lineend="62">
+<cr access="public" kind="struct" name="T" id="dbdc49e537b108889e8b671b97a9f7e3_e1168d9f3484eb40a568b7b0c1d5830b" file="1" linestart="60" lineend="60"/>
+<frDecl>
+<f namespace="Hidden_friend_name_lookup_rules" name="h" id="dbdc49e537b108889e8b671b97a9f7e3_f2fb9622224400b42483d796ff947f18" file="1" linestart="61" lineend="61" access="public" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="Hidden_friend_name_lookup_rules::T *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_db823ad8a7ca3135bc1fe4d8811dacf8"/>
+</rt>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="61" cb="22" le="61" ce="23"/>
+
+</Stmt>
+</f>
+</frDecl>
+</cr>
+<f namespace="Hidden_friend_name_lookup_rules" name="g" id="dbdc49e537b108889e8b671b97a9f7e3_b3a5d41b11f09fd56ef6b2a233d2d7de" file="1" linestart="63" lineend="69" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="63" cb="11" le="69" ce="2">
+<dst lb="67" cb="3" le="67" ce="17">
+<exp pvirg="true"/>
+<Var nm="p">
+<pt>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_db823ad8a7ca3135bc1fe4d8811dacf8"/>
+</rt>
+</pt>
+<n32 lb="67" cb="10">
+<n16 lb="67" cb="10">
+<exp pvirg="true"/>
+</n16>
+</n32>
+</Var>
+</dst>
+<ce lb="68" cb="3" le="68" ce="6" nbparm="1" id="dbdc49e537b108889e8b671b97a9f7e3_f2fb9622224400b42483d796ff947f18">
+<exp pvirg="true"/>
+<n32 lb="68" cb="3">
+<drx lb="68" cb="3" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_f2fb9622224400b42483d796ff947f18" nm="h"/>
+</n32>
+<n32 lb="68" cb="5">
+<drx lb="68" cb="5" kind="lvalue" nm="p"/>
+</n32>
+</ce>
+</u>
+
+</Stmt>
+</f>
+</ns>
+<ns name="UseScopedEnumInArrayBounds" id="dbdc49e537b108889e8b671b97a9f7e3_2ebbace27e97ac2a6d6cf1606345701d" file="1" linestart="72" lineend="81">
+<e namespace="UseScopedEnumInArrayBounds" access="none" name="Color" id="dbdc49e537b108889e8b671b97a9f7e3_803b12335f5e3606e98bbbaac1a4b68b" file="1" linestart="74" lineend="76" scoped="true" fixed="true">
+<promotion_type>
+<bt name="int"/>
+</promotion_type>
+<integer_type>
+<bt name="int"/>
+</integer_type>
+<ec name="Red" id="dbdc49e537b108889e8b671b97a9f7e3_5fe0f4f3c09ed8dc1c683545eb6ece17" file="1" linestart="75" lineend="75">
+<et>
+<e id="dbdc49e537b108889e8b671b97a9f7e3_803b12335f5e3606e98bbbaac1a4b68b"/>
+</et>
+</ec>
+<ec name="Green" id="dbdc49e537b108889e8b671b97a9f7e3_6bd1941f537654fbaf2aaa8b2f64b601" file="1" linestart="75" lineend="75">
+<et>
+<e id="dbdc49e537b108889e8b671b97a9f7e3_803b12335f5e3606e98bbbaac1a4b68b"/>
+</et>
+</ec>
+<ec name="Blue" id="dbdc49e537b108889e8b671b97a9f7e3_3f03ca8ac0cb45210e1bc37a84a3dbef" file="1" linestart="75" lineend="75">
+<et>
+<e id="dbdc49e537b108889e8b671b97a9f7e3_803b12335f5e3606e98bbbaac1a4b68b"/>
+</et>
+</ec>
+</e>
+<v namespace="UseScopedEnumInArrayBounds" name="data" proto="int [2]" isArray="true" isLiteral="true" id="dbdc49e537b108889e8b671b97a9f7e3_725bacedccd35a6133e361514de582ab" file="1" linestart="78" lineend="78" access2="none">
+<cat>
+<bt name="int"/>
+</cat>
+<Stmt>
+
+</Stmt>
+</v>
+</ns>
+<ns name="UseOfATLAttributes" id="dbdc49e537b108889e8b671b97a9f7e3_9b0170341380636aa34922f27d4d31de" file="1" linestart="83" lineend="92">
+<cr namespace="UseOfATLAttributes" access="none" depth="0" pod="true" kind="class" name="A" id="dbdc49e537b108889e8b671b97a9f7e3_8030271a8aa1a441be852a5d03ce9bc1" file="1" linestart="87" lineend="87">
+<cr access="public" kind="class" name="A" id="dbdc49e537b108889e8b671b97a9f7e3_87af3fcd1693b00a7302207e9f3595cb" file="1" linestart="87" lineend="87"/>
+</cr>
+<cr namespace="UseOfATLAttributes" access="none" depth="0" pod="true" kind="class" name="B" id="dbdc49e537b108889e8b671b97a9f7e3_a499e2283e8d54bd76b771fe982c62ae" file="1" linestart="90" lineend="90">
+<cr access="public" kind="class" name="B" id="dbdc49e537b108889e8b671b97a9f7e3_a7f56f4fca2a2bd149dc9d7d80f484e1" file="1" linestart="90" lineend="90"/>
+</cr>
+</ns>
+<ns name="AmbiguousConditionalOperatorsArguments" id="dbdc49e537b108889e8b671b97a9f7e3_ed490ae810066a8542f60bdfef325436" file="1" linestart="95" lineend="162">
+<cr namespace="AmbiguousConditionalOperatorsArguments" access="none" depth="0" kind="struct" name="A" id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe" file="1" linestart="98" lineend="102">
+<cr access="public" kind="struct" name="A" id="dbdc49e537b108889e8b671b97a9f7e3_1d7468ffa9a8b148c92ce3a6752f475c" file="1" linestart="98" lineend="98"/>
+<c name="A" id="dbdc49e537b108889e8b671b97a9f7e3_d6f0ab07e50775e645649bd35ade1a4c" file="1" linestart="100" lineend="100" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="100" cb="10" le="100" ce="11"/>
+
+</Stmt>
+</c>
+<cv name="operator int" id="dbdc49e537b108889e8b671b97a9f7e3_81df69c6110f9a22c5d416aadf61f847" file="1" linestart="101" lineend="101" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="int">
+<bt name="int"/>
+</fpt>
+<Stmt>
+<u lb="101" cb="24" le="101" ce="37">
+<rx lb="101" cb="26" le="101" ce="33" pvirg="true">
+<n45 lb="101" cb="33">
+<flit/>
+</n45>
+</rx>
+</u>
+
+</Stmt>
+</cv>
+<c name="A" id="dbdc49e537b108889e8b671b97a9f7e3_c21bb222d7848bd8030bab21c8de66eb" file="1" linestart="98" lineend="98" copyconst="true" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const AmbiguousConditionalOperatorsArguments::A &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="98" cb="9"/>
+
+</Stmt>
+</c>
+<c name="A" id="dbdc49e537b108889e8b671b97a9f7e3_c3a7d5e6533b9a5403dc51aeec47c8e9" file="1" linestart="98" lineend="98" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="AmbiguousConditionalOperatorsArguments::A &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="98" cb="9"/>
+
+</Stmt>
+</c>
+<d name="~A" id="dbdc49e537b108889e8b671b97a9f7e3_e361ef9be3a650a31bf7ea1318cd2a52" file="1" linestart="98" lineend="98" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</d>
+</cr>
+<v namespace="AmbiguousConditionalOperatorsArguments" name="cond" proto="bool" isLiteral="true" isPrimitive="true" id="dbdc49e537b108889e8b671b97a9f7e3_74e513515b2a80802885e1f49dce9aaa" file="1" linestart="104" lineend="104" storage="extern" init="true" access2="none">
+<bt name="bool"/>
+<Stmt>
+<n9 lb="104" cb="21"/>
+
+</Stmt>
+</v>
+<v namespace="AmbiguousConditionalOperatorsArguments" name="a" proto="AmbiguousConditionalOperatorsArguments::A" id="dbdc49e537b108889e8b671b97a9f7e3_adc47f43c54235577d64308d6577c5b5" file="1" linestart="106" lineend="106" init="true" access2="none">
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_dd83bb8ed440e498cd964de33abe2cbe"/>
+</rt>
+<Stmt>
+<n10 lb="106" cb="4" le="106" ce="8">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_d6f0ab07e50775e645649bd35ade1a4c"/>
+<temp/>
+<n45 lb="106" cb="6">
+<flit/>
+</n45>
+</n10>
+
+</Stmt>
+</v>
+<v namespace="AmbiguousConditionalOperatorsArguments" name="y" proto="int" isLiteral="true" isPrimitive="true" id="dbdc49e537b108889e8b671b97a9f7e3_370570377c1def86ef30ed5f2c685edc" file="1" linestart="110" lineend="110" init="true" access2="none">
+<auto/>
+<Stmt>
+<co lb="110" cb="11" le="110" ce="27">
+<exp pvirg="true"/>
+<n32 lb="110" cb="11">
+<drx lb="110" cb="11" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_74e513515b2a80802885e1f49dce9aaa" nm="cond"/>
+</n32>
+<n45 lb="110" cb="18">
+<flit/>
+</n45>
+<n26 lb="110" cb="22" le="110" ce="27">
+<n32 lb="110" cb="26">
+<mce lb="110" cb="26" nbparm="0" id="dbdc49e537b108889e8b671b97a9f7e3_81df69c6110f9a22c5d416aadf61f847">
+<exp pvirg="true"/>
+<mex lb="110" cb="26" id="dbdc49e537b108889e8b671b97a9f7e3_81df69c6110f9a22c5d416aadf61f847" nm="operator int" point="1">
+<n32 lb="110" cb="26">
+<drx lb="110" cb="26" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_adc47f43c54235577d64308d6577c5b5" nm="a"/>
+</n32>
+</mex>
+</mce>
+</n32>
+</n26>
+</co>
+
+</Stmt>
+</v>
+<v namespace="AmbiguousConditionalOperatorsArguments" name="z" proto="AmbiguousConditionalOperatorsArguments::A" id="dbdc49e537b108889e8b671b97a9f7e3_f5bffb78ae1f2c35e8a5ca75e2a1b962" file="1" linestart="111" lineend="111" init="true" access2="none">
+<auto/>
+<Stmt>
+<n10 lb="111" cb="11" le="111" ce="25">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_c3a7d5e6533b9a5403dc51aeec47c8e9"/>
+<temp/>
+<mte lb="111" cb="11" le="111" ce="25">
+<exp pvirg="true"/>
+<co lb="111" cb="11" le="111" ce="25">
+<exp pvirg="true"/>
+<n32 lb="111" cb="11">
+<drx lb="111" cb="11" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_74e513515b2a80802885e1f49dce9aaa" nm="cond"/>
+</n32>
+<n10 lb="111" cb="18" le="111" ce="21">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_c3a7d5e6533b9a5403dc51aeec47c8e9"/>
+<temp/>
+<mte lb="111" cb="18" le="111" ce="21">
+<exp pvirg="true"/>
+<n26 lb="111" cb="18" le="111" ce="21">
+<n10 lb="111" cb="18" le="111" ce="21">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_d6f0ab07e50775e645649bd35ade1a4c"/>
+<temp/>
+<n45 lb="111" cb="20"/>
+</n10>
+</n26>
+</mte>
+</n10>
+<n10 lb="111" cb="25">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_c21bb222d7848bd8030bab21c8de66eb"/>
+<temp/>
+<n32 lb="111" cb="25">
+<drx lb="111" cb="25" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_adc47f43c54235577d64308d6577c5b5" nm="a"/>
+</n32>
+</n10>
+</co>
+</mte>
+</n10>
+
+</Stmt>
+</v>
+<ns name="ExceptionFromAbove" id="dbdc49e537b108889e8b671b97a9f7e3_e04889ef68dd4f610a1a2f1bc9a0ac7b" file="1" linestart="113" lineend="131">
+<cr namespace="AmbiguousConditionalOperatorsArguments.ExceptionFromAbove" access="none" depth="0" kind="struct" name="MyString" id="dbdc49e537b108889e8b671b97a9f7e3_8a4774e719da70c1d3e558f4fc74432d" file="1" linestart="116" lineend="120">
+<cr access="public" kind="struct" name="MyString" id="dbdc49e537b108889e8b671b97a9f7e3_acf2330742d9049aab53dbb7f348256f" file="1" linestart="116" lineend="116"/>
+<c name="MyString" id="dbdc49e537b108889e8b671b97a9f7e3_feb7e516290a5fee2ecf647ce214ef04" file="1" linestart="118" lineend="118" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="s" proto="const char *" isPtr="true" isLiteral="true" init="true" access2="none">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+<Stmt>
+<n32 lb="118" cb="29">
+<n52 lb="118" cb="29">
+<slit/>
+</n52>
+</n32>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="118" cb="42" le="118" ce="43"/>
+
+</Stmt>
+</c>
+<cv name="operator const char *" id="dbdc49e537b108889e8b671b97a9f7e3_dc132786d5d1b07390d976af9e7a4f93" file="1" linestart="119" lineend="119" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="const char *">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+</fpt>
+<Stmt>
+<u lb="119" cb="43" le="119" ce="56">
+<rx lb="119" cb="45" le="119" ce="52" pvirg="true">
+<n32 lb="119" cb="52">
+<n52 lb="119" cb="52">
+<slit/>
+</n52>
+</n32>
+</rx>
+</u>
+
+</Stmt>
+</cv>
+<c name="MyString" id="dbdc49e537b108889e8b671b97a9f7e3_da34d916cad8e9af46111235f40f4952" file="1" linestart="116" lineend="116" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const AmbiguousConditionalOperatorsArguments::ExceptionFromAbove::MyString &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_8a4774e719da70c1d3e558f4fc74432d"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<c name="MyString" id="dbdc49e537b108889e8b671b97a9f7e3_9ae4c6633ad33a8b9e89f5822a44284d" file="1" linestart="116" lineend="116" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="AmbiguousConditionalOperatorsArguments::ExceptionFromAbove::MyString &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_8a4774e719da70c1d3e558f4fc74432d"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cr>
+<v namespace="AmbiguousConditionalOperatorsArguments.ExceptionFromAbove" name="cond" proto="bool" isLiteral="true" isPrimitive="true" id="dbdc49e537b108889e8b671b97a9f7e3_3571b2a6e4d67cbd45313275d16aca91" file="1" linestart="122" lineend="122" storage="extern" init="true" access2="none">
+<bt name="bool"/>
+<Stmt>
+<n9 lb="122" cb="22"/>
+
+</Stmt>
+</v>
+<v namespace="AmbiguousConditionalOperatorsArguments.ExceptionFromAbove" name="s" proto="AmbiguousConditionalOperatorsArguments::ExceptionFromAbove::MyString" id="dbdc49e537b108889e8b671b97a9f7e3_452c4d4856bf5c7e7814037acfc7bf41" file="1" linestart="124" lineend="124" init="true" access2="none">
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_8a4774e719da70c1d3e558f4fc74432d"/>
+</rt>
+<Stmt>
+<n10 lb="124" cb="12">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_feb7e516290a5fee2ecf647ce214ef04"/>
+<temp/>
+<n12>
+<exp pvirg="true"/>
+</n12>
+</n10>
+
+</Stmt>
+</v>
+<v namespace="AmbiguousConditionalOperatorsArguments.ExceptionFromAbove" name="y" proto="const char *" isPtr="true" isLiteral="true" id="dbdc49e537b108889e8b671b97a9f7e3_c984b1b485877654c803e7b5078ba8f5" file="1" linestart="130" lineend="130" init="true" access2="none">
+<auto/>
+<Stmt>
+<co lb="130" cb="12" le="130" ce="51">
+<exp pvirg="true"/>
+<n32 lb="130" cb="12">
+<drx lb="130" cb="12" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_3571b2a6e4d67cbd45313275d16aca91" nm="cond"/>
+</n32>
+<n32 lb="130" cb="19">
+<n52 lb="130" cb="19">
+<slit/>
+</n52>
+</n32>
+<scast lb="130" cb="25" le="130" ce="51">
+<cast cast="NoOp">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+</cast>
+<n32 lb="130" cb="50">
+<mce lb="130" cb="50" nbparm="0" id="dbdc49e537b108889e8b671b97a9f7e3_dc132786d5d1b07390d976af9e7a4f93">
+<exp pvirg="true"/>
+<mex lb="130" cb="50" id="dbdc49e537b108889e8b671b97a9f7e3_dc132786d5d1b07390d976af9e7a4f93" nm="operator const char *" point="1">
+<n32 lb="130" cb="50">
+<drx lb="130" cb="50" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_452c4d4856bf5c7e7814037acfc7bf41" nm="s"/>
+</n32>
+</mex>
+</mce>
+</n32>
+</scast>
+</co>
+
+</Stmt>
+</v>
+</ns>
+<ns name="UsingVoid" id="dbdc49e537b108889e8b671b97a9f7e3_35e20622875da863c803c2b8eed3a950" file="1" linestart="132" lineend="147">
+<f namespace="AmbiguousConditionalOperatorsArguments.UsingVoid" name="myassert" id="dbdc49e537b108889e8b671b97a9f7e3_98918d52a4dc435b05cab3d5fe94548e" file="1" linestart="135" lineend="135" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="text" proto="const char *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="file" proto="const char *" isPtr="true" isLiteral="true" access2="none">
+<pt>
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+</pt>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="line" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="135" cb="63" le="135" ce="73">
+<rx lb="135" cb="65" pvirg="true"/>
+</u>
+
+</Stmt>
+</f>
+<empty/>
+<f namespace="AmbiguousConditionalOperatorsArguments.UsingVoid" name="testASSERTS" id="dbdc49e537b108889e8b671b97a9f7e3_b98b3cc1a51670c835455ffcd6a45037" file="1" linestart="141" lineend="146" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="142" cb="3" le="146" ce="3">
+<dst lb="143" cb="4" le="143" ce="13">
+<exp pvirg="true"/>
+<Var nm="x" value="true">
+<bt name="int"/>
+<n45 lb="143" cb="12">
+<flit/>
+</n45>
+</Var>
+</dst>
+<ocast lb="145" cb="4" le="145" ce="4">
+<bt name="void"/>
+<n46 lb="145" cb="4" le="145" ce="4">
+<exp pvirg="true"/>
+<co lb="145" cb="4" le="145" ce="4">
+<exp pvirg="true"/>
+<n32 lb="145" cb="4" le="145" ce="4">
+<n32 lb="145" cb="4" le="145" ce="4">
+<n46 lb="145" cb="4" le="145" ce="4">
+<exp pvirg="true"/>
+<drx lb="145" cb="4" kind="lvalue" nm="x"/>
+</n46>
+</n32>
+</n32>
+<n18 lb="145" cb="4" le="145" ce="4">
+<exp pvirg="true"/>
+</n18>
+<ce lb="145" cb="4" le="145" ce="4" nbparm="3" id="dbdc49e537b108889e8b671b97a9f7e3_98918d52a4dc435b05cab3d5fe94548e">
+<exp pvirg="true"/>
+<n32 lb="145" cb="4">
+<drx lb="145" cb="4" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_98918d52a4dc435b05cab3d5fe94548e" nm="myassert"/>
+</n32>
+<n32 lb="145" cb="4">
+<n52 lb="145" cb="4">
+<slit/>
+</n52>
+</n32>
+<n32 lb="145" cb="4">
+<n52 lb="145" cb="4">
+<slit/>
+</n52>
+</n32>
+<n45 lb="145" cb="4">
+<flit/>
+</n45>
+</ce>
+</co>
+</n46>
+</ocast>
+</u>
+
+</Stmt>
+</f>
+</ns>
+<ns name="ConditionalOperatorReturnTypesVary" id="dbdc49e537b108889e8b671b97a9f7e3_409d5151fe8f053817b4c56c479a0a08" file="1" linestart="149" lineend="161">
+<v namespace="AmbiguousConditionalOperatorsArguments.ConditionalOperatorReturnTypesVary" name="cond" proto="bool" isLiteral="true" isPrimitive="true" id="dbdc49e537b108889e8b671b97a9f7e3_32071900558e4b74cfc031bde4f514e1" file="1" linestart="151" lineend="151" init="true" access2="none">
+<bt name="bool"/>
+<Stmt>
+<n9 lb="151" cb="15"/>
+
+</Stmt>
+</v>
+<v namespace="AmbiguousConditionalOperatorsArguments.ConditionalOperatorReturnTypesVary" name="count" proto="int" isLiteral="true" isPrimitive="true" id="dbdc49e537b108889e8b671b97a9f7e3_ef20e9e5e64543b97b7d2b014bb3b8e3" file="1" linestart="152" lineend="152" init="true" access2="none">
+<bt name="int"/>
+<Stmt>
+<n45 lb="152" cb="15">
+<flit/>
+</n45>
+
+</Stmt>
+</v>
+<f namespace="AmbiguousConditionalOperatorsArguments.ConditionalOperatorReturnTypesVary" name="seeDifferentResultTypes" id="dbdc49e537b108889e8b671b97a9f7e3_915828fe9ba8e4b8c8c20fc7dd5c76a1" file="1" linestart="153" lineend="160" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="154" cb="3" le="160" ce="3">
+<dst lb="156" cb="4" le="156" ce="17">
+<exp pvirg="true"/>
+<Var nm="a" value="true">
+<bt name="char"/>
+<lt lb="156" cb="14">
+<slit/>
+</lt>
+</Var>
+</dst>
+<dst lb="157" cb="4" le="157" ce="23">
+<exp pvirg="true"/>
+<Var nm="b" value="true">
+<QualType const="true">
+<bt name="char"/>
+</QualType>
+<lt lb="157" cb="20">
+<slit/>
+</lt>
+</Var>
+</dst>
+<dst lb="158" cb="4" le="158" ce="35">
+<exp pvirg="true"/>
+<Var nm="x">
+<auto/>
+<co lb="158" cb="23" le="158" ce="34">
+<exp pvirg="true"/>
+<n32 lb="158" cb="23">
+<drx lb="158" cb="23" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_32071900558e4b74cfc031bde4f514e1" nm="cond"/>
+</n32>
+<n32 lb="158" cb="30">
+<drx lb="158" cb="30" kind="lvalue" nm="a"/>
+</n32>
+<drx lb="158" cb="34" kind="lvalue" nm="b"/>
+</co>
+</Var>
+</dst>
+<dst lb="159" cb="4" le="159" ce="45">
+<exp pvirg="true"/>
+<Var nm="z">
+<lrf>
+<Paren/>
+</lrf>
+<co lb="159" cb="24" le="159" ce="42">
+<exp pvirg="true"/>
+<xop lb="159" cb="24" le="159" ce="32" kind="&gt;">
+<n32 lb="159" cb="24">
+<drx lb="159" cb="24" kind="lvalue" id="dbdc49e537b108889e8b671b97a9f7e3_ef20e9e5e64543b97b7d2b014bb3b8e3" nm="count"/>
+</n32>
+<n45 lb="159" cb="32">
+<flit/>
+</n45>
+</xop>
+<n52 lb="159" cb="36">
+<slit/>
+</n52>
+<n52 lb="159" cb="42">
+<slit/>
+</n52>
+</co>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</ns>
+</ns>
+<ns name="TwoPhaseNameLookup" id="dbdc49e537b108889e8b671b97a9f7e3_9fa1a93925e03dee9f152d4176ae15c8" file="1" linestart="164" lineend="190">
+<cr namespace="TwoPhaseNameLookup" access="none" depth="0" pod="true" kind="struct" name="ZZ" id="dbdc49e537b108889e8b671b97a9f7e3_d9efe86a7e123854dba7ce56c7ecf58c" file="1" linestart="167" lineend="169">
+<cr access="public" kind="struct" name="ZZ" id="dbdc49e537b108889e8b671b97a9f7e3_dd37626ef4a4c4836485c923b620b6ba" file="1" linestart="167" lineend="167"/>
+<m name="g" id="dbdc49e537b108889e8b671b97a9f7e3_1c38675e32983098e9eb5575afcfc38c" file="1" linestart="168" lineend="168" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="168" cb="12" le="168" ce="13"/>
+
+</Stmt>
+</m>
+<c name="ZZ" id="dbdc49e537b108889e8b671b97a9f7e3_20c655fee2cd20e767411185eea87f26" file="1" linestart="167" lineend="167" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="167" cb="9"/>
+
+</Stmt>
+</c>
+<d name="~ZZ" id="dbdc49e537b108889e8b671b97a9f7e3_892b640f6d32bcd19db4527c93b79e15" file="1" linestart="167" lineend="167" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</d>
+<c name="ZZ" id="dbdc49e537b108889e8b671b97a9f7e3_1dcf427718586613231e2dd21152678c" file="1" linestart="167" lineend="167" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const TwoPhaseNameLookup::ZZ &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_d9efe86a7e123854dba7ce56c7ecf58c"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<c name="ZZ" id="dbdc49e537b108889e8b671b97a9f7e3_4d8e0244190e059566fa2e5bef66044d" file="1" linestart="167" lineend="167" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="TwoPhaseNameLookup::ZZ &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_d9efe86a7e123854dba7ce56c7ecf58c"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cr>
+<tm namespace="TwoPhaseNameLookup" access="none" depth="0" kind="struct" name="D" id="dbdc49e537b108889e8b671b97a9f7e3_62c7d9829cee5863261c13f3e2d6f930" file="1" linestart="171" lineend="182">
+<template_parameters>
+<ttp name="T" id="dbdc49e537b108889e8b671b97a9f7e3_5c83d1331e084b29ac9bfebeb29fd851" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="TwoPhaseNameLookup" access="none" depth="0" kind="struct" name="D" id="dbdc49e537b108889e8b671b97a9f7e3_ec8673c2a6e95702e60fa6c891f84325" file="1" linestart="172" lineend="182">
+<base access="public">
+<ttp/>
+</base>
+<cr access="public" kind="struct" name="D" id="dbdc49e537b108889e8b671b97a9f7e3_41eadc17d2e6ab99b0a4c1b1516d4a05" file="1" linestart="172" lineend="172"/>
+<ValueDecl name="g" id="dbdc49e537b108889e8b671b97a9f7e3_b5c9b8225ca8f0bf934f2b7b32e2e155" file="1" linestart="173" lineend="173">
+<bt name="&lt;dependent type&gt;"/>
+</ValueDecl>
+<m name="f" id="dbdc49e537b108889e8b671b97a9f7e3_b63b46ca232b2eb99a3dba133ba16a77" file="1" linestart="175" lineend="181" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="175" cb="12" le="181" ce="3">
+<ce lb="177" cb="4" le="177" ce="6" nbparm="0">
+<exp pvirg="true"/>
+<umex lb="177" cb="4">
+<exp pvirg="true"/>
+</umex>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</cr>
+</tm>
+<f namespace="TwoPhaseNameLookup" name="main" id="dbdc49e537b108889e8b671b97a9f7e3_dfe2233469172cdc3392660b256d8182" file="1" linestart="184" lineend="189" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="int">
+<bt name="int"/>
+</fpt>
+<Stmt>
+<u lb="185" cb="2" le="189" ce="2">
+<dst lb="186" cb="3" le="186" ce="10">
+<exp pvirg="true"/>
+<Var nm="d" value="true">
+<tss>
+<templatebase id="dbdc49e537b108889e8b671b97a9f7e3_ec8673c2a6e95702e60fa6c891f84325"/>
+<template_arguments>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_d9efe86a7e123854dba7ce56c7ecf58c"/>
+</rt>
+</template_arguments>
+</tss>
+<n10 lb="186" cb="9">
+<typeptr id="dbdc49e537b108889e8b671b97a9f7e3_aac82c31ecb346bee8a82efcfa476bba">
+<template_arguments>
+<rt>
+<cr id="dbdc49e537b108889e8b671b97a9f7e3_d9efe86a7e123854dba7ce56c7ecf58c"/>
+</rt>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<mce lb="187" cb="3" le="187" ce="7" nbparm="0" id="dbdc49e537b108889e8b671b97a9f7e3_b63b46ca232b2eb99a3dba133ba16a77">
+<exp pvirg="true"/>
+<mex lb="187" cb="3" le="187" ce="5" id="dbdc49e537b108889e8b671b97a9f7e3_b63b46ca232b2eb99a3dba133ba16a77" nm="f" point="1">
+<drx lb="187" cb="3" kind="lvalue" nm="d"/>
+</mex>
+</mce>
+<rx lb="188" cb="3" le="188" ce="10" pvirg="true">
+<n45 lb="188" cb="10">
+<flit/>
+</n45>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</ns>
+</tun>
+</Root>

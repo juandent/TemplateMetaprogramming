@@ -170,7 +170,9 @@
     <ClInclude Include="Exercises_4.hpp" />
     <ClInclude Include="exercise_3_1.hpp" />
     <ClInclude Include="ExpressionTemplates_Ch_10.h" />
+    <ClInclude Include="IfThenElse.hpp" />
     <ClInclude Include="IntToStr.h" />
+    <ClInclude Include="IsEmpty.hpp" />
     <ClInclude Include="IteratorFacade.hpp" />
     <ClInclude Include="iteratorfacadeaccess.h" />
     <ClInclude Include="IteratorFacadeByAccess.hpp" />
@@ -185,6 +187,17 @@
     <ClInclude Include="sqlpp11_mockdb.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Typelist.hpp" />
+    <ClInclude Include="typelist\typelistFront.hpp" />
+    <ClInclude Include="typelist\typelistGenericLargestType.hpp" />
+    <ClInclude Include="typelist\typelistGenericPushBack.hpp" />
+    <ClInclude Include="typelist\typelistLargestType.hpp" />
+    <ClInclude Include="typelist\typelistNthElement.hpp" />
+    <ClInclude Include="typelist\typelistPopBack.hpp" />
+    <ClInclude Include="typelist\typelistPopFront.hpp" />
+    <ClInclude Include="typelist\typelistPushBack.hpp" />
+    <ClInclude Include="typelist\typelistPushFront.hpp" />
+    <ClInclude Include="typelist\typelistReverse.hpp" />
     <ClInclude Include="UtilsForMyFold.h" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +217,7 @@
     <ClCompile Include="DetectionIdiom.cpp" />
     <ClCompile Include="EBCO_CPPTempl.cpp" />
     <ClCompile Include="Enable_if.cpp" />
+    <ClCompile Include="equivalent_interfaces.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="Exercises_4.cpp" />
@@ -251,6 +265,12 @@
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
+    <ClCompile Include="TypelistsCPPTemplates2ndEd.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="typelist\TypelistTester.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="TypePrinting_8_3_3.cpp" />
     <ClCompile Include="void_t.cpp" />
   </ItemGroup>

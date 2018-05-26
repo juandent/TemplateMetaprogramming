@@ -6,12 +6,12 @@ namespace LambdaImpl_1
 {
 	class ALambda
 	{
-		std::string name;
+		std::string name;	// "captured values"
 	public:
 		ALambda(const std::string name) : name{ name } {}
 
 
-		auto operator()(char a, char b)
+		auto operator()(char a, char b)	// function operator
 		{
 			return a + name + b;
 		}

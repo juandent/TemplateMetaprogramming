@@ -1,0 +1,1376 @@
+<Root>
+<Comments>
+<c f="1" b="9" e="9"/>
+<c f="1" b="10" e="9"/>
+<c f="1" b="14" e="14"/>
+<c f="1" b="15" e="14"/>
+<c f="1" b="62" e="62"/>
+<c f="1" b="63" e="62"/>
+<c f="1" b="94" e="94"/>
+<c f="1" b="95" e="94"/>
+<c f="1" b="127" e="127"/>
+<c f="1" b="128" e="127"/>
+<c f="1" b="169" e="169"/>
+<c f="1" b="170" e="169"/>
+<c f="1" b="194" e="194"/>
+<c f="1" b="195" e="194"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+</Directives>
+<tun>
+<NamedDecl name="&lt;using-directive&gt;" id="06add56b311c275381388b1dacfb34fb_6728b6b0f829183eb7bbd3d3d987c87d" file="1" linestart="3" lineend="3"/>
+<ns name="LambdaImpl_1" id="06add56b311c275381388b1dacfb34fb_8cbd2497c35aed5076546567723051fb" file="1" linestart="5" lineend="28">
+<cr namespace="LambdaImpl_1" access="none" depth="0" kind="class" name="ALambda" id="06add56b311c275381388b1dacfb34fb_0c21c3bc58c9b042d45b9f07806e5a02" file="1" linestart="7" lineend="18">
+<cr access="public" kind="class" name="ALambda" id="06add56b311c275381388b1dacfb34fb_5cdad41a09e711ac816607378f76c60f" file="1" linestart="7" lineend="7"/>
+<fl name="name" id="06add56b311c275381388b1dacfb34fb_e2d7fc5e465b9abbb853cc328c9431c8" file="1" linestart="9" lineend="9" access="private" proto="std::string">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="43e57e2314d98c3481e7c5229eab5466_6ecc822215ca97386606c5e8e95c56fb"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="6296f70cc969544ce1f87c96145b57ec_07566aa809aee0bdf1c0fac16e19fa85"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</fl>
+<asd access="public"/>
+<c name="ALambda" id="06add56b311c275381388b1dacfb34fb_4e91f3ca21390e79685aa2df9b7c2306" file="1" linestart="11" lineend="11" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="name" proto="const std::string" const="true" access2="none">
+<QualType const="true">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="43e57e2314d98c3481e7c5229eab5466_6ecc822215ca97386606c5e8e95c56fb"/>
+<template_arguments>
+<bt name="char"/>
+<tss>
+<templatebase id="1b9b5f13fc50919fc1cbcbc41c4276ce_bf3447e13ccfc57e5fa847f5d78e7639"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="6296f70cc969544ce1f87c96145b57ec_07566aa809aee0bdf1c0fac16e19fa85"/>
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</QualType>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="06add56b311c275381388b1dacfb34fb_e2d7fc5e465b9abbb853cc328c9431c8">
+<Stmt>
+<n10 lb="11" cb="37" le="11" ce="48">
+<typeptr id="43e57e2314d98c3481e7c5229eab5466_3053f3db86d2b4d3af8b039438cb09cc">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</typeptr>
+<temp/>
+<drx lb="11" cb="43" kind="lvalue" nm="name"/>
+</n10>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="11" cb="50" le="11" ce="51"/>
+
+</Stmt>
+</c>
+<m name="operator()" id="06add56b311c275381388b1dacfb34fb_cf62a4a91fe7a482767cfad85c51d1fc" file="1" linestart="14" lineend="17" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;">
+<auto/>
+</fpt>
+<p name="a" proto="char" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="char"/>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="b" proto="char" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="char"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="15" cb="3" le="17" ce="3">
+<rx lb="16" cb="4" le="16" ce="22" pvirg="true">
+<n37 lb="16" cb="11" le="16" ce="22">
+<n10 lb="16" cb="11" le="16" ce="22">
+<typeptr id="43e57e2314d98c3481e7c5229eab5466_e3eb16c4c3462a2d9004e988dec04a31">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</typeptr>
+<temp/>
+<mte lb="16" cb="11" le="16" ce="22">
+<exp pvirg="true"/>
+<n8 lb="16" cb="11" le="16" ce="22" >
+<temp/>
+<ocx lb="16" cb="11" le="16" ce="22" nbparm="2" id="43e57e2314d98c3481e7c5229eab5466_d3dec488d09e56a2be44a2a73a0d0a51">
+<exp pvirg="true"/>
+<n32 lb="16" cb="20">
+<drx lb="16" cb="20" kind="lvalue" id="43e57e2314d98c3481e7c5229eab5466_d3dec488d09e56a2be44a2a73a0d0a51" nm="operator+">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<mte lb="16" cb="11" le="16" ce="15">
+<exp pvirg="true"/>
+<n8 lb="16" cb="11" le="16" ce="15" >
+<temp/>
+<ocx lb="16" cb="11" le="16" ce="15" nbparm="2" id="43e57e2314d98c3481e7c5229eab5466_e35a0ac6e1dfda14d57f112c81f85ed1">
+<exp pvirg="true"/>
+<n32 lb="16" cb="13">
+<drx lb="16" cb="13" kind="lvalue" id="43e57e2314d98c3481e7c5229eab5466_e35a0ac6e1dfda14d57f112c81f85ed1" nm="operator+">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<n32 lb="16" cb="11">
+<drx lb="16" cb="11" kind="lvalue" nm="a"/>
+</n32>
+<n32 lb="16" cb="15">
+<mex lb="16" cb="15" kind="lvalue" id="06add56b311c275381388b1dacfb34fb_e2d7fc5e465b9abbb853cc328c9431c8" nm="name" arrow="1">
+<n19 lb="16" cb="15"/>
+</mex>
+</n32>
+</ocx>
+</n8>
+</mte>
+<n32 lb="16" cb="22">
+<drx lb="16" cb="22" kind="lvalue" nm="b"/>
+</n32>
+</ocx>
+</n8>
+</mte>
+</n10>
+</n37>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<c name="ALambda" id="06add56b311c275381388b1dacfb34fb_345c672aafa462171987f620aa8d9cac" file="1" linestart="7" lineend="7" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="LambdaImpl_1::ALambda &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="06add56b311c275381388b1dacfb34fb_0c21c3bc58c9b042d45b9f07806e5a02"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<m name="operator=" id="06add56b311c275381388b1dacfb34fb_9450564e611547fe1e99ebb30e4dd95c" file="1" linestart="7" implicit="true" operator="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="LambdaImpl_1::ALambda &amp;">
+<lrf>
+<rt>
+<cr id="06add56b311c275381388b1dacfb34fb_0c21c3bc58c9b042d45b9f07806e5a02"/>
+</rt>
+</lrf>
+</fpt>
+<p name="" proto="LambdaImpl_1::ALambda &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="06add56b311c275381388b1dacfb34fb_0c21c3bc58c9b042d45b9f07806e5a02"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</m>
+<d name="~ALambda" id="06add56b311c275381388b1dacfb34fb_d008e94f0f8a96f4c7eb3b28c669f73f" file="1" linestart="7" lineend="7" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="7" cb="8"/>
+
+</Stmt>
+</d>
+<c name="ALambda" id="06add56b311c275381388b1dacfb34fb_f5f54d61dfce16c985ebc7294abaccf9" file="1" linestart="7" lineend="7" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const LambdaImpl_1::ALambda &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="06add56b311c275381388b1dacfb34fb_0c21c3bc58c9b042d45b9f07806e5a02"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cr>
+<f namespace="LambdaImpl_1" name="useALambda" id="06add56b311c275381388b1dacfb34fb_bef9a56e22aa971426a7f6bce7e16882" file="1" linestart="21" lineend="27" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="22" cb="2" le="27" ce="2">
+<dst lb="23" cb="3" le="23" ce="24">
+<exp pvirg="true"/>
+<Var nm="lam" value="true">
+<rt>
+<cr id="06add56b311c275381388b1dacfb34fb_0c21c3bc58c9b042d45b9f07806e5a02"/>
+</rt>
+<n37 lb="23" cb="11" le="23" ce="23">
+<n10 lb="23" cb="11" le="23" ce="23">
+<typeptr id="06add56b311c275381388b1dacfb34fb_4e91f3ca21390e79685aa2df9b7c2306"/>
+<temp/>
+<n8 lb="23" cb="16" >
+<temp/>
+<n10 lb="23" cb="16">
+<typeptr id="43e57e2314d98c3481e7c5229eab5466_e3eb16c4c3462a2d9004e988dec04a31">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</typeptr>
+<temp/>
+<mte lb="23" cb="16">
+<exp pvirg="true"/>
+<n8 lb="23" cb="16" >
+<temp/>
+<n32 lb="23" cb="16">
+<n10 lb="23" cb="16">
+<typeptr id="43e57e2314d98c3481e7c5229eab5466_27c29e5ae4008e8e02d1117a50805d4f">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</typeptr>
+<temp/>
+<n32 lb="23" cb="16">
+<n52 lb="23" cb="16">
+<slit/>
+</n52>
+</n32>
+</n10>
+</n32>
+</n8>
+</mte>
+</n10>
+</n8>
+</n10>
+</n37>
+</Var>
+</dst>
+<n37 lb="25" cb="3" le="25" ce="38">
+<ocx lb="25" cb="3" le="25" ce="38" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870">
+<exp pvirg="true"/>
+<n32 lb="25" cb="30">
+<drx lb="25" cb="30" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
+</n32>
+<ocx lb="25" cb="3" le="25" ce="28" nbparm="2" id="2f970d76565556801342c56cd3f70739_b80fc58520a6f91294a5020bb40669a5">
+<exp pvirg="true"/>
+<n32 lb="25" cb="13">
+<drx lb="25" cb="13" kind="lvalue" id="2f970d76565556801342c56cd3f70739_b80fc58520a6f91294a5020bb40669a5" nm="operator&lt;&lt;">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_07566aa809aee0bdf1c0fac16e19fa85">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<drx lb="25" cb="3" le="25" ce="8" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<mte lb="25" cb="16" le="25" ce="28">
+<exp pvirg="true"/>
+<n32 lb="25" cb="16" le="25" ce="28">
+<n8 lb="25" cb="16" le="25" ce="28" >
+<temp/>
+<ocx lb="25" cb="16" le="25" ce="28" nbparm="3" id="06add56b311c275381388b1dacfb34fb_cf62a4a91fe7a482767cfad85c51d1fc">
+<exp pvirg="true"/>
+<n32 lb="25" cb="19" le="25" ce="28">
+<drx lb="25" cb="19" le="25" ce="28" kind="lvalue" id="06add56b311c275381388b1dacfb34fb_cf62a4a91fe7a482767cfad85c51d1fc" nm="operator()"/>
+</n32>
+<drx lb="25" cb="16" kind="lvalue" nm="lam"/>
+<lt lb="25" cb="20">
+<slit/>
+</lt>
+<lt lb="25" cb="25">
+<slit/>
+</lt>
+</ocx>
+</n8>
+</n32>
+</mte>
+</ocx>
+<n32 lb="25" cb="33" le="25" ce="38">
+<drx lb="25" cb="33" le="25" ce="38" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+</ocx>
+</n37>
+</u>
+
+</Stmt>
+</f>
+</ns>
+<ns name="LambdaImpl_2" id="06add56b311c275381388b1dacfb34fb_c9dd68358ba70243e78ee7490cf136de" file="1" linestart="29" lineend="240">
+<ns name="UsingInitializerList" id="06add56b311c275381388b1dacfb34fb_272fa3c90fba46bb2643ef79bf8f89c5" file="1" linestart="44" lineend="73">
+<tm namespace="LambdaImpl_2.UsingInitializerList" access="none" depth="0" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_0fb8c7edcab04ce4a49b7b125491156e" file="1" linestart="47" lineend="71">
+<template_parameters>
+<ttp name="functions" id="06add56b311c275381388b1dacfb34fb_7aaf89e28c0498cd68b888a7c4599624" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LambdaImpl_2.UsingInitializerList" access="none" depth="0" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_726568ce6ff1eb2385306f834c3426cb" file="1" linestart="48" lineend="71">
+<cr access="public" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_c03c33dd2cef3771c55e7a208fa5fc19" file="1" linestart="48" lineend="48"/>
+<fl name="pfs" id="06add56b311c275381388b1dacfb34fb_fbed997c6799462af76792f7d63f2d7c" file="1" linestart="50" lineend="50" access="private" proto="std::tuple&lt;functions...&gt;">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</fl>
+<asd access="public"/>
+<c name="Multicall&lt;functions...&gt;" id="06add56b311c275381388b1dacfb34fb_884dd1641ca3527eb6c1d90d429291ca" file="1" linestart="52" lineend="54" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="fs" proto="functions..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="06add56b311c275381388b1dacfb34fb_fbed997c6799462af76792f7d63f2d7c">
+<Stmt>
+<il lb="52" cb="35" le="52" ce="69">
+<exp pvirg="true"/>
+<n21 lb="52" cb="37" le="52" ce="67">
+<unresolvedconst>
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</unresolvedconst>
+<exp pvirg="true"/>
+<PackExpansionExpr lb="52" cb="62" le="52" ce="64">
+<exp pvirg="true"/>
+<drx lb="52" cb="62" kind="lvalue" nm="fs"/>
+</PackExpansionExpr>
+</n21>
+</il>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="53" cb="4" le="54" ce="4"/>
+
+</Stmt>
+</c>
+<ft name="operator()" id="06add56b311c275381388b1dacfb34fb_2baba86a9b88f0a62cdd93ab5de86b18" file="1" linestart="56" lineend="60">
+<template_parameters>
+<ttp name="X" id="06add56b311c275381388b1dacfb34fb_c2bca060e07bd09a77b87119093f7be3" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="operator()" id="06add56b311c275381388b1dacfb34fb_bce941a1d2a772b1afe5d57234fc91a3" file="1" linestart="57" lineend="60" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="x" proto="X" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="58" cb="4" le="60" ce="4">
+<ce lb="59" cb="5" le="59" ce="65" nbparm="3">
+<exp pvirg="true"/>
+<umex lb="59" cb="5">
+<exp pvirg="true"/>
+</umex>
+<drx lb="59" cb="18" kind="lvalue" nm="x"/>
+<mex lb="59" cb="21" kind="lvalue" id="06add56b311c275381388b1dacfb34fb_fbed997c6799462af76792f7d63f2d7c" nm="pfs" arrow="1">
+<n19 lb="59" cb="21"/>
+</mex>
+<n11 lb="59" cb="26" le="59" ce="64">
+<typeptr id="c3076f10aa22f384dadfc4ecf1c7fccd_18b69d5296689313ab77d7e035921135">
+<template_arguments>
+<bt name="unsigned int"/>
+<integer value="0"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n11>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<ft name="do_multicall" id="06add56b311c275381388b1dacfb34fb_5be036c7b43cf24af0f62102e81cf870" file="1" linestart="63" lineend="70">
+<template_parameters>
+<ttp name="X" id="06add56b311c275381388b1dacfb34fb_2ba5e523631e032405771a91f381ba52" depth="1" index="0" proto="type-parameter-1-0"/>
+<DeclaratorDecl name="Is" id="06add56b311c275381388b1dacfb34fb_1bdd3f1e044d2f4f7e26f890fd51cd24" file="1" linestart="63" lineend="63" depth="1" index="1">
+<ety>
+<Tdef>
+<bt name="unsigned int"/>
+</Tdef>
+</ety>
+</DeclaratorDecl>
+</template_parameters>
+<m name="do_multicall" id="06add56b311c275381388b1dacfb34fb_5390638b46d169b0505d69b14cd4e290" file="1" linestart="64" lineend="70" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="x" proto="X" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="tuple" proto="const std::tuple&lt;functions...&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="seq" proto="std::index_sequence&lt;Is...&gt; &amp;&amp;" isRef="true" access2="none">
+<rrf>
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_a1130f32d3d424e74ae11ea19f309c7e"/>
+<template_arguments>
+<Stmt>
+<PackExpansionExpr lb="64" cb="86" le="64" ce="88">
+<exp pvirg="true"/>
+<drx lb="64" cb="86" id="06add56b311c275381388b1dacfb34fb_1bdd3f1e044d2f4f7e26f890fd51cd24" nm="Is"/>
+</PackExpansionExpr>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="64" cb="100" le="70" ce="4">
+<n21 lb="66" cb="5" le="69" ce="5">
+<unresolvedconst>
+<ety>
+<tss>
+<templatebase id="0c2706b33efbc2eb4907612cac5183fd_d0df8863f0ca3fe8bec9984b396fa3d7"/>
+<template_arguments>
+<bt name="int"/>
+</template_arguments>
+</tss>
+</ety>
+</unresolvedconst>
+<exp pvirg="true"/>
+<il lb="67" cb="5" le="69" ce="5">
+<exp pvirg="true"/>
+<PackExpansionExpr lb="68" cb="6" le="68" ce="33">
+<exp pvirg="true"/>
+<n46 lb="68" cb="6" le="68" ce="32">
+<exp pvirg="true"/>
+<xop lb="68" cb="7" le="68" ce="31" kind=",">
+<ce lb="68" cb="7" le="68" ce="28" nbparm="1">
+<exp pvirg="true"/>
+<ce lb="68" cb="7" le="68" ce="25" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="68" cb="7" le="68" ce="18"/>
+<drx lb="68" cb="20" kind="lvalue" nm="tuple"/>
+</ce>
+<drx lb="68" cb="27" kind="lvalue" nm="x"/>
+</ce>
+<n45 lb="68" cb="31">
+<flit/>
+</n45>
+</xop>
+</n46>
+</PackExpansionExpr>
+</il>
+</n21>
+</u>
+
+</Stmt>
+</m>
+</ft>
+</cr>
+</tm>
+</ns>
+<ns name="UsingRecursion" id="06add56b311c275381388b1dacfb34fb_3975799a157d5d236721ac6d1dc33bdc" file="1" linestart="75" lineend="107">
+<tm namespace="LambdaImpl_2.UsingRecursion" access="none" depth="0" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_bfed964f3bad5b7c4066ba29971c9e70" file="1" linestart="78" lineend="104">
+<template_parameters>
+<ttp name="functions" id="06add56b311c275381388b1dacfb34fb_d93990947bbf237b2c2ea7dfceed00e7" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LambdaImpl_2.UsingRecursion" access="none" depth="0" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_711bf2cd0b6ec774c8003eb7a223c47e" file="1" linestart="79" lineend="104">
+<cr access="public" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_15eda3a59d0c3aeb99574d6c07cea4c2" file="1" linestart="79" lineend="79"/>
+<fl name="pfs" id="06add56b311c275381388b1dacfb34fb_23ca10ffabc3099f069bb24b5e1674ec" file="1" linestart="81" lineend="81" access="private" proto="std::tuple&lt;functions...&gt;">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</fl>
+<asd access="public"/>
+<c name="Multicall&lt;functions...&gt;" id="06add56b311c275381388b1dacfb34fb_aacd3907ae0c209877c02b92c5f33e79" file="1" linestart="83" lineend="85" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="fs" proto="functions..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="06add56b311c275381388b1dacfb34fb_23ca10ffabc3099f069bb24b5e1674ec">
+<Stmt>
+<il lb="83" cb="35" le="83" ce="69">
+<exp pvirg="true"/>
+<n21 lb="83" cb="37" le="83" ce="67">
+<unresolvedconst>
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</unresolvedconst>
+<exp pvirg="true"/>
+<PackExpansionExpr lb="83" cb="62" le="83" ce="64">
+<exp pvirg="true"/>
+<drx lb="83" cb="62" kind="lvalue" nm="fs"/>
+</PackExpansionExpr>
+</n21>
+</il>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="84" cb="4" le="85" ce="4"/>
+
+</Stmt>
+</c>
+<ft name="operator()" id="06add56b311c275381388b1dacfb34fb_2605fac90d7a9e923229dcc78cc1df78" file="1" linestart="87" lineend="91">
+<template_parameters>
+<ttp name="X" id="06add56b311c275381388b1dacfb34fb_aa0c2919d57cebb16abc9652d730c791" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="operator()" id="06add56b311c275381388b1dacfb34fb_3ee09a467c32cdcded4cfa77d44c3e3f" file="1" linestart="88" lineend="91" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="x" proto="X" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="89" cb="4" le="91" ce="4">
+<ce lb="90" cb="5" le="90" ce="20" nbparm="1">
+<exp pvirg="true"/>
+<umex lb="90" cb="5" le="90" ce="17">
+<exp pvirg="true"/>
+</umex>
+<drx lb="90" cb="19" kind="lvalue" nm="x"/>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<asd access="private"/>
+<ft name="invoke_pfs" id="06add56b311c275381388b1dacfb34fb_2831a8cbd3340a17000b069d4441ef18" file="1" linestart="95" lineend="103">
+<template_parameters>
+<DeclaratorDecl name="I" id="06add56b311c275381388b1dacfb34fb_a5d06afae8d1e8f1f52fa9a6ec3b11a4" file="1" linestart="95" lineend="95" depth="1" index="0">
+<Tdef>
+<bt name="unsigned int"/>
+</Tdef>
+</DeclaratorDecl>
+<ttp name="X" id="06add56b311c275381388b1dacfb34fb_517069be56fb517fd06648998b341ef0" depth="1" index="1" proto="type-parameter-1-1"/>
+</template_parameters>
+<m name="invoke_pfs" id="06add56b311c275381388b1dacfb34fb_eb534bd206ebe0a87343bcdd7dac3c36" file="1" linestart="96" lineend="103" access="private" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="x" proto="X" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="96" cb="25" le="103" ce="4">
+<ce lb="97" cb="5" le="97" ce="18" nbparm="1">
+<exp pvirg="true"/>
+<ce lb="97" cb="5" le="97" ce="15" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="97" cb="5" le="97" ce="10"/>
+<mex lb="97" cb="12" kind="lvalue" id="06add56b311c275381388b1dacfb34fb_23ca10ffabc3099f069bb24b5e1674ec" nm="pfs" arrow="1">
+<n19 lb="97" cb="12"/>
+</mex>
+</ce>
+<drx lb="97" cb="17" kind="lvalue" nm="x"/>
+</ce>
+</u>
+
+</Stmt>
+</m>
+</ft>
+</cr>
+</tm>
+</ns>
+<ns name="JLBorges" id="06add56b311c275381388b1dacfb34fb_411b64016cea58297db8d7ae40e348fd" file="1" linestart="109" lineend="152">
+<tm namespace="LambdaImpl_2.JLBorges" access="none" depth="0" kind="struct" name="multi_call" id="06add56b311c275381388b1dacfb34fb_6260c64d81ab6709ebdb441a70a25199" file="1" linestart="111" lineend="150">
+<template_parameters>
+<ttp name="FN" id="06add56b311c275381388b1dacfb34fb_9f9fc1eab412181d6b7dfbae834bbad0" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LambdaImpl_2.JLBorges" access="none" depth="0" kind="struct" name="multi_call" id="06add56b311c275381388b1dacfb34fb_9c5680575e1fe6b3b1c308dc34beaa96" file="1" linestart="111" lineend="150">
+<cr access="public" kind="struct" name="multi_call" id="06add56b311c275381388b1dacfb34fb_9194e0f3952941f722ba2ed827ec7d0b" file="1" linestart="111" lineend="111"/>
+<c name="multi_call&lt;FN...&gt;" id="06add56b311c275381388b1dacfb34fb_1f867ea9bb9d66628f808e932129122b" file="1" linestart="113" lineend="113" access="public" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+<c name="multi_call&lt;FN...&gt;" id="06add56b311c275381388b1dacfb34fb_b6a1348303da249c9d4f17cd101c53b1" file="1" linestart="114" lineend="114" explicit="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="fn" proto="FN..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="06add56b311c275381388b1dacfb34fb_d4a595fae56e737868f3025cb4864d4f">
+<Stmt>
+<il lb="114" cb="45" le="114" ce="53">
+<exp pvirg="true"/>
+<PackExpansionExpr lb="114" cb="47" le="114" ce="49">
+<exp pvirg="true"/>
+<drx lb="114" cb="47" kind="lvalue" nm="fn"/>
+</PackExpansionExpr>
+</il>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="114" cb="55" le="114" ce="56"/>
+
+</Stmt>
+</c>
+<ft name="operator()" id="06add56b311c275381388b1dacfb34fb_8be2975a212817f2c8460a725a2d93e3" file="1" linestart="116" lineend="121">
+<template_parameters>
+<ttp name="ARGS" id="06add56b311c275381388b1dacfb34fb_065862f83f1b5a3c199940c2b2c0ada5" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="operator()" id="06add56b311c275381388b1dacfb34fb_271a2ab62cfe77697c3f960c3842b824" file="1" linestart="117" lineend="121" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="args" proto="ARGS &amp;&amp;..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="118" cb="4" le="121" ce="4">
+<n21 lb="119" cb="5" le="120" ce="46">
+<unresolvedconst>
+<tss>
+<templatebase id="06add56b311c275381388b1dacfb34fb_0daa3ac06553e11add9d2a34a1a27e47"/>
+<template_arguments>
+<bt name="void"/>
+<Stmt>
+<ocx lb="119" cb="17" le="119" ce="65" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="119" cb="63"/>
+<n14 lb="119" cb="17" le="119" ce="57">
+<exp pvirg="true"/>
+</n14>
+<n45 lb="119" cb="65">
+<flit/>
+</n45>
+</ocx>
+
+</Stmt>
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</template_arguments>
+</tss>
+</unresolvedconst>
+<exp pvirg="true"/>
+<il lb="120" cb="5" le="120" ce="46">
+<exp pvirg="true"/>
+<mex lb="120" cb="7" kind="lvalue" id="06add56b311c275381388b1dacfb34fb_d4a595fae56e737868f3025cb4864d4f" nm="functions" arrow="1">
+<n19 lb="120" cb="7"/>
+</mex>
+<PackExpansionExpr lb="120" cb="18" le="120" ce="42">
+<exp pvirg="true"/>
+<ce lb="120" cb="18" le="120" ce="41" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="120" cb="18" le="120" ce="35"/>
+<drx lb="120" cb="37" kind="lvalue" nm="args"/>
+</ce>
+</PackExpansionExpr>
+</il>
+</n21>
+</u>
+
+</Stmt>
+</m>
+</ft>
+<asd access="private"/>
+<fl name="functions" id="06add56b311c275381388b1dacfb34fb_d4a595fae56e737868f3025cb4864d4f" file="1" linestart="125" lineend="125" const="true" access="private" proto="const std::tuple&lt;FN...&gt;">
+<QualType const="true">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</QualType>
+</fl>
+<tm access="none" kind="struct" name="call" id="06add56b311c275381388b1dacfb34fb_3bd6013ace9603f42a50c1b1403ff6da" file="1" linestart="128" lineend="128">
+<template_parameters>
+<ttp name="" id="06add56b311c275381388b1dacfb34fb_3bd6013ace9603f42a50c1b1403ff6da" depth="1" index="0" proto="type-parameter-1-0"/>
+<DeclaratorDecl name="" id="06add56b311c275381388b1dacfb34fb_3bd6013ace9603f42a50c1b1403ff6da" file="1" linestart="128" lineend="128" depth="1" index="1">
+<ety>
+<Tdef>
+<bt name="unsigned int"/>
+</Tdef>
+</ety>
+</DeclaratorDecl>
+<ttp name="" id="06add56b311c275381388b1dacfb34fb_3bd6013ace9603f42a50c1b1403ff6da" depth="1" index="2" proto="type-parameter-1-2"/>
+</template_parameters>
+<cr access="none" kind="struct" name="call" id="06add56b311c275381388b1dacfb34fb_0daa3ac06553e11add9d2a34a1a27e47" file="1" linestart="128" lineend="128"/>
+</tm>
+<ctps Spec="&lt;type-parameter-1-0, N, tuple&lt;type-parameter-1-2...&gt; &gt;" parent="06add56b311c275381388b1dacfb34fb_9c5680575e1fe6b3b1c308dc34beaa96" access="none" depth="0" kind="struct" name="call" id="06add56b311c275381388b1dacfb34fb_9d295a909a36238b2e4e1574589f4e8c" file="1" linestart="130" lineend="139">
+<base access="public">
+<tss>
+<templatebase id="06add56b311c275381388b1dacfb34fb_0daa3ac06553e11add9d2a34a1a27e47"/>
+<template_arguments>
+<ttp/>
+<Stmt>
+<xop lb="131" cb="57" le="131" ce="61" kind="-">
+<drx lb="131" cb="57" id="06add56b311c275381388b1dacfb34fb_b6865f1876eec0480ac50bb3cb17b398" nm="N"/>
+<n32 lb="131" cb="61">
+<n45 lb="131" cb="61"/>
+</n32>
+</xop>
+
+</Stmt>
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="struct" name="call" id="06add56b311c275381388b1dacfb34fb_00d6f2b5ddc715cd2ea829d7306b4f0a" file="1" linestart="131" lineend="131"/>
+<ft name="call&lt;type-parameter-1-0, N, tuple&lt;type-parameter-1-2...&gt; &gt;" id="06add56b311c275381388b1dacfb34fb_e4e2efba381f7e3dc5dd93b40c823b54" file="1" linestart="133" lineend="138">
+<template_parameters>
+<ttp name="ARGS" id="06add56b311c275381388b1dacfb34fb_53f9a075bd2add7d19be38c52ededce1" depth="2" index="0" proto="type-parameter-2-0"/>
+</template_parameters>
+<c name="call&lt;type-parameter-1-0, N, tuple&lt;type-parameter-1-2...&gt; &gt;" id="06add56b311c275381388b1dacfb34fb_aaa71aab676785eedb3f3a9ebe96b956" file="1" linestart="134" lineend="138" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="tup" proto="const std::tuple&lt;ITEMS...&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="args" proto="ARGS &amp;&amp;..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<BaseInit>
+<n47 lb="135" cb="46" le="135" ce="79">
+<exp pvirg="true"/>
+<drx lb="135" cb="47" kind="lvalue" nm="tup"/>
+<PackExpansionExpr lb="135" cb="52" le="135" ce="76">
+<exp pvirg="true"/>
+<ce lb="135" cb="52" le="135" ce="75" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="135" cb="52" le="135" ce="69"/>
+<drx lb="135" cb="71" kind="lvalue" nm="args"/>
+</ce>
+</PackExpansionExpr>
+</n47>
+
+</BaseInit>
+<Stmt>
+<u lb="136" cb="5" le="138" ce="5">
+<ce lb="137" cb="6" le="137" ce="50" nbparm="1">
+<exp pvirg="true"/>
+<ce lb="137" cb="6" le="137" ce="21" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="137" cb="6" le="137" ce="16"/>
+<drx lb="137" cb="18" kind="lvalue" nm="tup"/>
+</ce>
+<PackExpansionExpr lb="137" cb="23" le="137" ce="47">
+<exp pvirg="true"/>
+<ce lb="137" cb="23" le="137" ce="46" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="137" cb="23" le="137" ce="40"/>
+<drx lb="137" cb="42" kind="lvalue" nm="args"/>
+</ce>
+</PackExpansionExpr>
+</ce>
+</u>
+
+</Stmt>
+</c>
+</ft>
+</ctps>
+<ctps Spec="&lt;type-parameter-1-0, 0, tuple&lt;type-parameter-1-1...&gt; &gt;" parent="06add56b311c275381388b1dacfb34fb_9c5680575e1fe6b3b1c308dc34beaa96" access="none" depth="0" kind="struct" name="call" id="06add56b311c275381388b1dacfb34fb_985a5e6b90215ecac39c0c82134f67a0" file="1" linestart="141" lineend="149">
+<cr access="public" kind="struct" name="call" id="06add56b311c275381388b1dacfb34fb_8feeb4990da8940ebe3b856b61603725" file="1" linestart="142" lineend="142"/>
+<ft name="call&lt;type-parameter-1-0, 0, tuple&lt;type-parameter-1-1...&gt; &gt;" id="06add56b311c275381388b1dacfb34fb_e1cb230b196cc890c4d3a79a43983481" file="1" linestart="144" lineend="148">
+<template_parameters>
+<ttp name="ARGS" id="06add56b311c275381388b1dacfb34fb_d72e9a5e1c4feface46f228f9cbc265d" depth="2" index="0" proto="type-parameter-2-0"/>
+</template_parameters>
+<c name="call&lt;type-parameter-1-0, 0, tuple&lt;type-parameter-1-1...&gt; &gt;" id="06add56b311c275381388b1dacfb34fb_f3360ce693e49b36b98ffc412afafcde" file="1" linestart="145" lineend="148" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="tup" proto="const std::tuple&lt;ITEMS...&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="args" proto="ARGS &amp;&amp;..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="146" cb="5" le="148" ce="5">
+<ce lb="147" cb="6" le="147" ce="50" nbparm="1">
+<exp pvirg="true"/>
+<ce lb="147" cb="6" le="147" ce="21" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="147" cb="6" le="147" ce="16"/>
+<drx lb="147" cb="18" kind="lvalue" nm="tup"/>
+</ce>
+<PackExpansionExpr lb="147" cb="23" le="147" ce="47">
+<exp pvirg="true"/>
+<ce lb="147" cb="23" le="147" ce="46" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="147" cb="23" le="147" ce="40"/>
+<drx lb="147" cb="42" kind="lvalue" nm="args"/>
+</ce>
+</PackExpansionExpr>
+</ce>
+</u>
+
+</Stmt>
+</c>
+</ft>
+</ctps>
+</cr>
+</tm>
+</ns>
+<ns name="CPP_17" id="06add56b311c275381388b1dacfb34fb_dd879e0aac20807cc19e3c6258176ecc" file="1" linestart="154" lineend="175">
+<tm namespace="LambdaImpl_2.CPP_17" access="none" depth="0" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_4a115a203573300b7567d09bc64e6cb4" file="1" linestart="156" lineend="174">
+<template_parameters>
+<ttp name="Fs" id="06add56b311c275381388b1dacfb34fb_5501d10e1bb0c3fcfedb50fc3141dfd6" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LambdaImpl_2.CPP_17" access="none" depth="0" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_15caf50e10ad6975be1d0fde2c8814e3" file="1" linestart="157" lineend="174">
+<cr access="public" kind="class" name="Multicall" id="06add56b311c275381388b1dacfb34fb_0274302315938d772ceb4adb26570f75" file="1" linestart="157" lineend="157"/>
+<asd access="public"/>
+<c name="Multicall&lt;Fs...&gt;" id="06add56b311c275381388b1dacfb34fb_09a2c32ee666df7f4f33bd38ff0028f7" file="1" linestart="159" lineend="159" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="fs" proto="Fs &amp;&amp;..." access2="none">
+<PackExpansion/>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="06add56b311c275381388b1dacfb34fb_6ffba2688d00f4f3d2afbb0196c1d7b3">
+<Stmt>
+<il lb="159" cb="31" le="159" ce="39">
+<exp pvirg="true"/>
+<PackExpansionExpr lb="159" cb="33" le="159" ce="35">
+<exp pvirg="true"/>
+<drx lb="159" cb="33" kind="lvalue" nm="fs"/>
+</PackExpansionExpr>
+</il>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="159" cb="41" le="159" ce="42"/>
+
+</Stmt>
+</c>
+<ft name="operator()" id="06add56b311c275381388b1dacfb34fb_def58693ab436523496cae41006f4a52" file="1" linestart="161" lineend="170">
+<template_parameters>
+<ttp name="X" id="06add56b311c275381388b1dacfb34fb_22d67ffb19183f3ea02dfdb0f7e68b95" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="operator()" id="06add56b311c275381388b1dacfb34fb_7ea7a5714d4c40f4d4252934d6c5812b" file="1" linestart="162" lineend="170" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="x" proto="X &amp;&amp;" isRef="true" access2="none">
+<rrf>
+<ttp/>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="163" cb="4" le="170" ce="4"/>
+
+</Stmt>
+</m>
+</ft>
+<asd access="private"/>
+<fl name="pfs" id="06add56b311c275381388b1dacfb34fb_6ffba2688d00f4f3d2afbb0196c1d7b3" file="1" linestart="173" lineend="173" access="private" proto="std::tuple&lt;Fs...&gt;">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</fl>
+</cr>
+</tm>
+</ns>
+<tm namespace="LambdaImpl_2" access="none" depth="0" kind="class" name="SingleCall" id="06add56b311c275381388b1dacfb34fb_f70fd3dae3d0567aa98bf6f597d630fe" file="1" linestart="177" lineend="191">
+<template_parameters>
+<ttp name="function" id="06add56b311c275381388b1dacfb34fb_25b70996d532e97ea0d75dc262fc6595" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="LambdaImpl_2" access="none" depth="0" kind="class" name="SingleCall" id="06add56b311c275381388b1dacfb34fb_ced2d16cc0b005aa0e2b09fba92dbdcb" file="1" linestart="178" lineend="191">
+<cr access="public" kind="class" name="SingleCall" id="06add56b311c275381388b1dacfb34fb_a214291299140624c361dd53a220b75d" file="1" linestart="178" lineend="178"/>
+<fl name="fs" id="06add56b311c275381388b1dacfb34fb_0f79f41d9bd0792a76c6ce2eb1b326fb" file="1" linestart="180" lineend="180" access="private" proto="function">
+<ttp/>
+</fl>
+<asd access="public"/>
+<c name="SingleCall&lt;function&gt;" id="06add56b311c275381388b1dacfb34fb_a3f2c4bc1a2e6ca78bb0885d0de77c2f" file="1" linestart="183" lineend="183" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="fs" proto="function" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<initlist id="06add56b311c275381388b1dacfb34fb_0f79f41d9bd0792a76c6ce2eb1b326fb">
+<Stmt>
+<il lb="183" cb="31" le="183" ce="36">
+<exp pvirg="true"/>
+<drx lb="183" cb="33" kind="lvalue" nm="fs"/>
+</il>
+
+</Stmt>
+</initlist>
+<Stmt>
+<u lb="183" cb="38" le="183" ce="39"/>
+
+</Stmt>
+</c>
+<ft name="operator()" id="06add56b311c275381388b1dacfb34fb_c591b205cbf5b5f62eafb028efd82123" file="1" linestart="185" lineend="189">
+<template_parameters>
+<ttp name="X" id="06add56b311c275381388b1dacfb34fb_465d6e0ae61a034b1fdd174b8eb81f55" depth="1" index="0" proto="type-parameter-1-0"/>
+</template_parameters>
+<m name="operator()" id="06add56b311c275381388b1dacfb34fb_46c1a442d13b193e80a3c6c98ef20ca6" file="1" linestart="186" lineend="189" operator="true" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="auto">
+<auto/>
+</fpt>
+<p name="x" proto="X" access2="none">
+<ttp/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="187" cb="3" le="189" ce="3">
+<rx lb="188" cb="4" le="188" ce="15" pvirg="true">
+<ce lb="188" cb="11" le="188" ce="15" nbparm="1" id="06add56b311c275381388b1dacfb34fb_0f79f41d9bd0792a76c6ce2eb1b326fb">
+<exp pvirg="true"/>
+<mex lb="188" cb="11" kind="lvalue" id="06add56b311c275381388b1dacfb34fb_0f79f41d9bd0792a76c6ce2eb1b326fb" nm="fs" arrow="1">
+<n19 lb="188" cb="11"/>
+</mex>
+<drx lb="188" cb="14" kind="lvalue" nm="x"/>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</m>
+</ft>
+</cr>
+</tm>
+<f namespace="LambdaImpl_2" name="twice" id="06add56b311c275381388b1dacfb34fb_e2192834b3be031a450ee81efae1e976" file="1" linestart="195" lineend="198" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="int">
+<bt name="int"/>
+</fpt>
+<p name="x" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="195" cb="19" le="198" ce="2">
+<ocx lb="196" cb="3" le="196" ce="21" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870">
+<exp pvirg="true"/>
+<n32 lb="196" cb="18">
+<drx lb="196" cb="18" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
+</n32>
+<ocx lb="196" cb="3" le="196" ce="16" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d">
+<exp pvirg="true"/>
+<n32 lb="196" cb="13">
+<drx lb="196" cb="13" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
+</n32>
+<drx lb="196" cb="3" le="196" ce="8" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<n32 lb="196" cb="16">
+<drx lb="196" cb="16" kind="lvalue" nm="x"/>
+</n32>
+</ocx>
+<n32 lb="196" cb="21">
+<drx lb="196" cb="21" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+</ocx>
+<rx lb="197" cb="3" le="197" ce="14" pvirg="true">
+<xop lb="197" cb="10" le="197" ce="14" kind="*">
+<n32 lb="197" cb="10">
+<drx lb="197" cb="10" kind="lvalue" nm="x"/>
+</n32>
+<n32 lb="197" cb="14">
+<drx lb="197" cb="14" kind="lvalue" nm="x"/>
+</n32>
+</xop>
+</rx>
+</u>
+
+</Stmt>
+</f>
+<f namespace="LambdaImpl_2" name="thrice" id="06add56b311c275381388b1dacfb34fb_8d8a639dbf234dd53dc8da043b72fcde" file="1" linestart="199" lineend="202" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="int">
+<bt name="int"/>
+</fpt>
+<p name="x" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="199" cb="20" le="202" ce="2">
+<ocx lb="200" cb="3" le="200" ce="21" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870">
+<exp pvirg="true"/>
+<n32 lb="200" cb="18">
+<drx lb="200" cb="18" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_d33445cdb753f92a6c0b97ecb40fd870" nm="operator&lt;&lt;"/>
+</n32>
+<ocx lb="200" cb="3" le="200" ce="16" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d">
+<exp pvirg="true"/>
+<n32 lb="200" cb="13">
+<drx lb="200" cb="13" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_b80c76f34b048b1a98ab13314350861d" nm="operator&lt;&lt;"/>
+</n32>
+<drx lb="200" cb="3" le="200" ce="8" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<n32 lb="200" cb="16">
+<drx lb="200" cb="16" kind="lvalue" nm="x"/>
+</n32>
+</ocx>
+<n32 lb="200" cb="21">
+<drx lb="200" cb="21" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_519f22e86fa75f44ad68a8158aae2a36" nm="endl">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+</ocx>
+<rx lb="201" cb="3" le="201" ce="16" pvirg="true">
+<xop lb="201" cb="10" le="201" ce="16" kind="*">
+<xop lb="201" cb="10" le="201" ce="14" kind="*">
+<n32 lb="201" cb="10">
+<drx lb="201" cb="10" kind="lvalue" nm="x"/>
+</n32>
+<n32 lb="201" cb="14">
+<drx lb="201" cb="14" kind="lvalue" nm="x"/>
+</n32>
+</xop>
+<n32 lb="201" cb="16">
+<drx lb="201" cb="16" kind="lvalue" nm="x"/>
+</n32>
+</xop>
+</rx>
+</u>
+
+</Stmt>
+</f>
+<f namespace="LambdaImpl_2" name="useMulticall" id="06add56b311c275381388b1dacfb34fb_98ba75afcdcc879afc467f7665bdaa63" file="1" linestart="205" lineend="234" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="206" cb="2" le="234" ce="2">
+<dst lb="207" cb="3" le="207" ce="52">
+<exp pvirg="true"/>
+<Var nm="mc" value="true">
+<bt name="int"/>
+</Var>
+</dst>
+<dst lb="210" cb="3" le="210" ce="26">
+<exp pvirg="true"/>
+<Var nm="scall" value="true">
+<bt name="int"/>
+</Var>
+</dst>
+<dst lb="211" cb="3" le="211" ce="22">
+<exp pvirg="true"/>
+<Var nm="res" value="true">
+<auto/>
+</Var>
+</dst>
+<dst lb="214" cb="3" le="214" ce="47">
+<exp pvirg="true"/>
+<Var nm="mcr" value="true">
+<bt name="int"/>
+</Var>
+</dst>
+<dst lb="218" cb="3" le="224" ce="4">
+<exp pvirg="true"/>
+<Var nm="jlbmc" value="true">
+<QualType const="true">
+<bt name="int"/>
+</QualType>
+</Var>
+</dst>
+<dst lb="228" cb="3" le="228" ce="89">
+<exp pvirg="true"/>
+<Var nm="mc17" value="true">
+<bt name="int"/>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</ns>
+</tun>
+</Root>

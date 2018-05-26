@@ -42,7 +42,7 @@
 <ttp name="T" id="379fca9b57ed0a7910f9e8132972ee3a_bfbf46dcf65a30d5effd642b8d2a6ed4" depth="0" index="0" proto="type-parameter-0-0"/>
 <ttp name="" id="379fca9b57ed0a7910f9e8132972ee3a_c61cf6fcc457dc0c8f1128c14a6efa47" depth="0" index="1" proto="type-parameter-0-1">
 <tss>
-<templatebase id="80becb2358c5bef18f32fdfb20ce1895_81bb434481213cb8d7bd93b879700e7b"/>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_81bb434481213cb8d7bd93b879700e7b"/>
 <template_arguments/>
 </tss>
 </ttp>
@@ -51,10 +51,11 @@
 <base access="public">
 <Tdef>
 <tss>
-<templatebase id="ca5adf2e9ebe71e52946c2177ddd81d1_84a6953c26582fecb01761a3189184d1"/>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
 <template_arguments>
+<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="34"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -64,12 +65,13 @@
 <cr access="public" kind="struct" name="has_apply_member" id="379fca9b57ed0a7910f9e8132972ee3a_1f23dd517f3c5cf4475443b4b8d252af" file="1" linestart="14" lineend="14"/>
 </cr>
 </tm>
-<ctps Spec="&lt;type-parameter-0-0, void&gt;" access="none" depth="1" kind="struct" name="has_apply_member" id="379fca9b57ed0a7910f9e8132972ee3a_29b0bc13aeddb7738fb9c46674dd18c0" file="1" linestart="19" lineend="20">
+<ctps Spec="&lt;type-parameter-0-0, typename _Param_tester&lt;typename type-parameter-0-0::apply&lt;type-parameter-0-0&gt; &gt;::type&gt;" access="none" depth="1" kind="struct" name="has_apply_member" id="379fca9b57ed0a7910f9e8132972ee3a_8f0e1550c460e6661c502dae5cd6b20b" file="1" linestart="19" lineend="20">
 <base access="public">
 <Tdef>
 <tss>
-<templatebase id="ca5adf2e9ebe71e52946c2177ddd81d1_84a6953c26582fecb01761a3189184d1"/>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
 <template_arguments>
+<bt name="bool"/>
 <Stmt>
 <n9 lb="40" cb="33"/>
 
@@ -78,7 +80,7 @@
 </tss>
 </Tdef>
 </base>
-<cr access="public" kind="struct" name="has_apply_member" id="379fca9b57ed0a7910f9e8132972ee3a_0298dd972bd243e21eeefad32802f14e" file="1" linestart="20" lineend="20"/>
+<cr access="public" kind="struct" name="has_apply_member" id="379fca9b57ed0a7910f9e8132972ee3a_5e3f323d73b1510624cbaf4de0a60be6" file="1" linestart="20" lineend="20"/>
 </ctps>
 <tm access="none" depth="1" kind="struct" name="detect" id="379fca9b57ed0a7910f9e8132972ee3a_07d487d282263dfe6d344259a6d52235" file="1" linestart="29" lineend="30">
 <template_parameters>
@@ -90,7 +92,7 @@
 </tpm>
 <ttp name="" id="379fca9b57ed0a7910f9e8132972ee3a_c33b2e80f91b98079aea4701a014592f" depth="0" index="2" proto="type-parameter-0-2">
 <tss>
-<templatebase id="80becb2358c5bef18f32fdfb20ce1895_81bb434481213cb8d7bd93b879700e7b"/>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_81bb434481213cb8d7bd93b879700e7b"/>
 <template_arguments/>
 </tss>
 </ttp>
@@ -99,10 +101,11 @@
 <base access="public">
 <Tdef>
 <tss>
-<templatebase id="ca5adf2e9ebe71e52946c2177ddd81d1_84a6953c26582fecb01761a3189184d1"/>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
 <template_arguments>
+<bt name="bool"/>
 <Stmt>
-<n9 lb="41" cb="34"/>
+<n9 lb="41" cb="33"/>
 
 </Stmt>
 </template_arguments>
@@ -112,12 +115,13 @@
 <cr access="public" kind="struct" name="detect" id="379fca9b57ed0a7910f9e8132972ee3a_5375f2b4304c065537e64311aef8bd31" file="1" linestart="30" lineend="30"/>
 </cr>
 </tm>
-<ctps Spec="&lt;type-parameter-0-0, Op, void&gt;" access="none" depth="1" kind="struct" name="detect" id="379fca9b57ed0a7910f9e8132972ee3a_7ce650e81942f6a23cc4e490c1744803" file="1" linestart="33" lineend="34">
+<ctps Spec="&lt;type-parameter-0-0, Op, typename _Param_tester&lt;&lt;type-parameter-0-0&gt; &gt;::type&gt;" access="none" depth="1" kind="struct" name="detect" id="379fca9b57ed0a7910f9e8132972ee3a_8fa876173a5590cf01007c8c0c059e25" file="1" linestart="33" lineend="34">
 <base access="public">
 <Tdef>
 <tss>
-<templatebase id="ca5adf2e9ebe71e52946c2177ddd81d1_84a6953c26582fecb01761a3189184d1"/>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
 <template_arguments>
+<bt name="bool"/>
 <Stmt>
 <n9 lb="40" cb="33"/>
 
@@ -126,7 +130,7 @@
 </tss>
 </Tdef>
 </base>
-<cr access="public" kind="struct" name="detect" id="379fca9b57ed0a7910f9e8132972ee3a_e8340d4adf219503c6ca7b223e20f3de" file="1" linestart="34" lineend="34"/>
+<cr access="public" kind="struct" name="detect" id="379fca9b57ed0a7910f9e8132972ee3a_b9b347ce5adec4818fa081fc757841b3" file="1" linestart="34" lineend="34"/>
 </ctps>
 <RedeclarableTemplateDecl name="assign_t" id="379fca9b57ed0a7910f9e8132972ee3a_40ee6807511bc7ab522fd5bc7fedfb8a" file="1" linestart="41" lineend="42">
 <template_parameters>
@@ -174,7 +178,7 @@
 </QualType>
 <Stmt>
 <n32 lb="64" cb="30" le="64" ce="51">
-<drx lb="64" cb="30" le="64" ce="51" kind="lvalue" id="ca5adf2e9ebe71e52946c2177ddd81d1_59533a95ed8965943872704845b566cb" nm="value"/>
+<drx lb="64" cb="30" le="64" ce="51" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
 </n32>
 
 </Stmt>

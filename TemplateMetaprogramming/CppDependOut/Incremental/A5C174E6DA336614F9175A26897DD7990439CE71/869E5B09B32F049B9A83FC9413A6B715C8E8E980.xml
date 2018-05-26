@@ -1,0 +1,110 @@
+<Root>
+<Comments/>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+</Directives>
+<tun>
+<tm access="none" depth="1" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_51fcebace57920481b16494d9dc69ad2" file="1" linestart="6" lineend="9">
+<template_parameters>
+<ttp name="T" id="2211efeac1c9bf961bd66f2b37914080_22e149a9b6c9b08f0d9f8ea2b090b749" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="" id="2211efeac1c9bf961bd66f2b37914080_4a7d01d2a73c3b59476163d13553a3dd" depth="0" index="1" proto="type-parameter-0-1">
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_81bb434481213cb8d7bd93b879700e7b"/>
+<template_arguments/>
+</tss>
+</ety>
+</ttp>
+</template_parameters>
+<cr access="none" depth="1" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_51fcebace57920481b16494d9dc69ad2" file="1" linestart="7" lineend="9">
+<base access="public">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<template_arguments>
+<bt name="bool"/>
+<Stmt>
+<n9 lb="41" cb="33"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</base>
+<cr access="public" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_76d9b13239595737cb87754454dc953a" file="1" linestart="7" lineend="7"/>
+</cr>
+</tm>
+<ctps Spec="&lt;type-parameter-0-0, typename _Param_tester&lt;int type-parameter-0-0::*&gt;::type&gt;" access="none" depth="1" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_35e3e784e95c8faaf2dd01c60fec3193" file="1" linestart="11" lineend="14">
+<base access="public">
+<ety>
+<Tdef>
+<tss>
+<templatebase id="1b4acc8dde89899ea77bbd6c536e00d0_9f608860ac47c736aa9e7255f3b2c38a"/>
+<template_arguments>
+<bt name="bool"/>
+<Stmt>
+<n9 lb="40" cb="33"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</Tdef>
+</ety>
+</base>
+<cr access="public" kind="struct" name="IsClassT" id="2211efeac1c9bf961bd66f2b37914080_a3232d84d09706f692fe0325f07eb42d" file="1" linestart="12" lineend="12"/>
+</ctps>
+<cr access="none" depth="0" kind="class" name="AAA" id="2211efeac1c9bf961bd66f2b37914080_8e3828d27448bb88b8f006f0085ed9e9" file="1" linestart="17" lineend="20">
+<cr access="public" kind="class" name="AAA" id="2211efeac1c9bf961bd66f2b37914080_bdf2598e8e3cc7755756dedf2722e7a5" file="1" linestart="17" lineend="17"/>
+<fl name="val" id="2211efeac1c9bf961bd66f2b37914080_92574744ddb0fe4ad6a5db7f335ed42f" file="1" linestart="19" lineend="19" isLiteral="true" access="private" proto="int">
+<bt name="int"/>
+</fl>
+</cr>
+<cr access="none" depth="0" pod="true" kind="union" name="UU" id="2211efeac1c9bf961bd66f2b37914080_0df4da94f3c2da136767864d6fd0f5a2" file="1" linestart="22" lineend="26">
+<cr access="public" kind="union" name="UU" id="2211efeac1c9bf961bd66f2b37914080_857f29f7ff1bd18a78e4fe9e1652c5ef" file="1" linestart="22" lineend="22"/>
+<fl name="x" id="2211efeac1c9bf961bd66f2b37914080_850ec54c7550a38bb21ca2fb5d76fc28" file="1" linestart="24" lineend="24" isLiteral="true" access="public" proto="int">
+<bt name="int"/>
+</fl>
+<fl name="y" id="2211efeac1c9bf961bd66f2b37914080_f5e428a928f9040f4b051163079da4db" file="1" linestart="25" lineend="25" isArray="true" isLiteral="true" access="public" proto="char [4]">
+<cat>
+<bt name="char"/>
+</cat>
+</fl>
+</cr>
+<v name="isClass" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="2211efeac1c9bf961bd66f2b37914080_8947faab362e2cbad8bdfd891361e798" file="1" linestart="28" lineend="28" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="28" cb="26" le="28" ce="41">
+<drx lb="28" cb="26" le="28" ce="41" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<v name="isIntAClass" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="2211efeac1c9bf961bd66f2b37914080_e16d12f6ea9820d8b01241eb2746e818" file="1" linestart="30" lineend="30" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="30" cb="30" le="30" ce="45">
+<drx lb="30" cb="30" le="30" ce="45" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<v name="isUnionAClass" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="2211efeac1c9bf961bd66f2b37914080_fe17269d63c83c76568923cfd4a6bb6a" file="1" linestart="32" lineend="32" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="32" cb="32" le="32" ce="46">
+<drx lb="32" cb="32" le="32" ce="46" kind="lvalue" id="1b4acc8dde89899ea77bbd6c536e00d0_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+</tun>
+</Root>

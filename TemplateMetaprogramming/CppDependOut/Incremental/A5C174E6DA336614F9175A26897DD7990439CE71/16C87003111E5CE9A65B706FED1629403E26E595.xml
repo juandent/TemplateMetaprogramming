@@ -1,0 +1,135 @@
+<Root>
+<Comments>
+<c f="1" b="3" e="3"/>
+<c f="1" b="5" e="3"/>
+<c f="1" b="23" e="23"/>
+<c f="1" b="24" e="23"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+</Directives>
+<tun>
+<f name="fac" id="bd7aba3f4398bfd6b07495fa28ee49e1_e44ce985c2eb68938ad5870404314f8e" file="1" linestart="5" lineend="10" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="int">
+<bt name="int"/>
+</fpt>
+<p name="f" proto="int" isLiteral="true" isPrimitive="true" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="6" cb="1" le="10" ce="1">
+<if lb="7" cb="2" le="8" ce="10">
+<xop lb="7" cb="6" le="7" ce="11" kind="==">
+<n32 lb="7" cb="6">
+<drx lb="7" cb="6" kind="lvalue" nm="f"/>
+</n32>
+<n45 lb="7" cb="11">
+<flit/>
+</n45>
+</xop>
+<rx lb="8" cb="3" le="8" ce="10" pvirg="true">
+<n45 lb="8" cb="10"/>
+</rx>
+</if>
+<rx lb="9" cb="2" le="9" ce="22" pvirg="true">
+<xop lb="9" cb="9" le="9" ce="22" kind="*">
+<n32 lb="9" cb="9">
+<drx lb="9" cb="9" kind="lvalue" nm="f"/>
+</n32>
+<ce lb="9" cb="13" le="9" ce="22" nbparm="1" id="bd7aba3f4398bfd6b07495fa28ee49e1_e44ce985c2eb68938ad5870404314f8e">
+<exp pvirg="true"/>
+<n32 lb="9" cb="13">
+<drx lb="9" cb="13" kind="lvalue" id="bd7aba3f4398bfd6b07495fa28ee49e1_e44ce985c2eb68938ad5870404314f8e" nm="fac"/>
+</n32>
+<xop lb="9" cb="17" le="9" ce="21" kind="-">
+<n32 lb="9" cb="17">
+<drx lb="9" cb="17" kind="lvalue" nm="f"/>
+</n32>
+<n45 lb="9" cb="21"/>
+</xop>
+</ce>
+</xop>
+</rx>
+</u>
+
+</Stmt>
+</f>
+<tm access="none" depth="0" pod="true" kind="struct" name="A" id="bd7aba3f4398bfd6b07495fa28ee49e1_64cecaff51f5707d379a5b955ac06de0" file="1" linestart="13" lineend="15">
+<template_parameters>
+<DeclaratorDecl name="pInt" id="bd7aba3f4398bfd6b07495fa28ee49e1_ae3b7c6192a35fc132276bedbf16c740" file="1" linestart="13" lineend="13" depth="0" index="0">
+<pt>
+<bt name="int"/>
+</pt>
+</DeclaratorDecl>
+<DeclaratorDecl name="Val" id="bd7aba3f4398bfd6b07495fa28ee49e1_d744efd7070dbc915cea9f7920f6dcce" file="1" linestart="13" lineend="13" depth="0" index="1">
+<bt name="int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="A" id="bd7aba3f4398bfd6b07495fa28ee49e1_64cecaff51f5707d379a5b955ac06de0" file="1" linestart="14" lineend="15">
+<cr access="public" kind="struct" name="A" id="bd7aba3f4398bfd6b07495fa28ee49e1_f292a6ec99e2b852e336ca5573c4129e" file="1" linestart="14" lineend="14"/>
+</cr>
+</tm>
+<v name="number" proto="int" isLiteral="true" isPrimitive="true" id="bd7aba3f4398bfd6b07495fa28ee49e1_b96b26b4a198894169012252489d2f96" file="1" linestart="17" lineend="17" access2="none">
+<bt name="int"/>
+<Stmt>
+
+</Stmt>
+</v>
+<f name="useA" id="bd7aba3f4398bfd6b07495fa28ee49e1_8509553320fdcf073d153999f627ba96" file="1" linestart="19" lineend="24" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="20" cb="1" le="24" ce="1">
+<dst lb="21" cb="2" le="21" ce="19">
+<exp pvirg="true"/>
+<Var nm="xx" value="true">
+<QualType const="true">
+<bt name="int"/>
+</QualType>
+<n45 lb="21" cb="17">
+<flit/>
+</n45>
+</Var>
+</dst>
+<dst lb="22" cb="2" le="22" ce="18">
+<exp pvirg="true"/>
+<Var nm="a" value="true">
+<tss>
+<templatebase id="bd7aba3f4398bfd6b07495fa28ee49e1_64cecaff51f5707d379a5b955ac06de0"/>
+<template_arguments>
+<Stmt>
+<uo lb="22" cb="4" le="22" ce="5" kind="&amp;">
+<drx lb="22" cb="5" kind="lvalue" id="bd7aba3f4398bfd6b07495fa28ee49e1_b96b26b4a198894169012252489d2f96" nm="number"/>
+</uo>
+
+</Stmt>
+<Stmt>
+<n45 lb="22" cb="13">
+<flit/>
+</n45>
+
+</Stmt>
+</template_arguments>
+</tss>
+<n10 lb="22" cb="17">
+<typeptr id="bd7aba3f4398bfd6b07495fa28ee49e1_cfe202ac7b3acccd4d66ed6484ec7704">
+<template_arguments>
+<v id="bd7aba3f4398bfd6b07495fa28ee49e1_b96b26b4a198894169012252489d2f96"/>
+<integer value="12"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

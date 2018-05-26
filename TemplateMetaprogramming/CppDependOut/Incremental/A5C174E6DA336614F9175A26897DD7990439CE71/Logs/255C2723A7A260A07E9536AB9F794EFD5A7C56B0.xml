@@ -1,0 +1,15 @@
+<log>
+ <error level="error" id="err_pp_macro_not_identifier" file="&lt;command line&gt;" line="7" col="9" msg="macro name must be an identifier" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1117" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1180" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1243" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="warning" id="warn_unused_parameter" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="8" col="37" msg="unused parameter &apos;val&apos;" />
+ <error level="error" id="err_expected_init_in_condition_lparen" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="16" col="12" msg="variable declaration in condition cannot have a parenthesized initializer" />
+ <error level="error" id="err_expected" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="16" col="27" msg="expected &apos;)&apos;" />
+ <error level="note" id="note_matching" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="16" col="6" msg="to match this &apos;(&apos;" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="16" col="29" msg="use of undeclared identifier &apos;p&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="36" col="8" msg="unused variable &apos;y&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="35" col="8" msg="unused variable &apos;x&apos;" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="41" col="8" msg="use of undeclared identifier &apos;val&apos;" />
+ <error level="error" id="err_expected_unqualified_id" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp" line="41" col="22" msg="expected unqualified-id" />
+</log>

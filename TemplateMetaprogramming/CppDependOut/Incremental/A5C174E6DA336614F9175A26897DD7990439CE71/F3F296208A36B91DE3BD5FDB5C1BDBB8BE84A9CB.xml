@@ -1,0 +1,559 @@
+<Root>
+<Comments>
+<c f="1" b="11" e="11"/>
+<c f="1" b="12" e="11"/>
+<c f="1" b="24" e="24"/>
+<c f="1" b="26" e="24"/>
+<c f="1" b="49" e="49"/>
+<c f="1" b="50" e="49"/>
+<c f="1" b="51" e="51"/>
+<c f="1" b="54" e="51"/>
+<c f="1" b="57" e="57"/>
+<c f="1" b="58" e="57"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="4" bc="1"/>
+<m f="1" bl="5" bc="1"/>
+<m f="1" bl="6" bc="1"/>
+<m f="1" bl="7" bc="1"/>
+</Directives>
+<tun>
+<ns name="sequence" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a5614e27a58cc13655338c28e3cc2b5d" file="1" linestart="9" lineend="60">
+<ft name="a2t_impl" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_f044981622a48ed7e516ba2580639abc" file="1" linestart="12" lineend="16">
+<template_parameters>
+<ttp name="Array" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_dcd8e4399ef0d02c38f2b97edc5c005c" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="I" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a7f1745debcdcd6e04bfa706895e47b1" file="1" linestart="12" lineend="12" depth="0" index="1">
+<ety>
+<Tdef>
+<bt name="unsigned int"/>
+</Tdef>
+</ety>
+</DeclaratorDecl>
+</template_parameters>
+<f namespace="sequence" name="a2t_impl" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_71f80b9472ca75e6faf068ee1a32f857" file="1" linestart="13" lineend="16" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="auto">
+<auto/>
+</fpt>
+<p name="a" proto="const Array &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="" proto="std::index_sequence&lt;I...&gt;" access2="none">
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_a1130f32d3d424e74ae11ea19f309c7e"/>
+<template_arguments>
+<Stmt>
+<PackExpansionExpr lb="13" cb="52" le="13" ce="53">
+<exp pvirg="true"/>
+<drx lb="13" cb="52" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a7f1745debcdcd6e04bfa706895e47b1" nm="I"/>
+</PackExpansionExpr>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="14" cb="2" le="16" ce="2">
+<rx lb="15" cb="3" le="15" ce="33" pvirg="true">
+<ce lb="15" cb="10" le="15" ce="33" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="15" cb="10" le="15" ce="15"/>
+<PackExpansionExpr lb="15" cb="26" le="15" ce="30">
+<exp pvirg="true"/>
+<n2 lb="15" cb="26" le="15" ce="29">
+<exp pvirg="true"/>
+<drx lb="15" cb="26" kind="lvalue" nm="a"/>
+<drx lb="15" cb="28" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a7f1745debcdcd6e04bfa706895e47b1" nm="I"/>
+</n2>
+</PackExpansionExpr>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</ft>
+<ft name="a2t" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a5f48e562774b70b3827082a4ad24bc9" file="1" linestart="18" lineend="22">
+<template_parameters>
+<ttp name="T" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_fb787dfbf9a9033099d4d4d3daafa0de" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="N" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_f0f0735a125975f483c9d088bf1dc46f" file="1" linestart="18" lineend="18" depth="0" index="1">
+<ety>
+<Tdef>
+<bt name="unsigned int"/>
+</Tdef>
+</ety>
+</DeclaratorDecl>
+<ttp name="Indices" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_d426773373f147910b885c05477ff734" depth="0" index="2" proto="type-parameter-0-2">
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_54102d4da876aac14e9ac40a6b191983"/>
+<template_arguments>
+<Stmt>
+<drx lb="18" cb="82" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_f0f0735a125975f483c9d088bf1dc46f" nm="N"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+</ttp>
+</template_parameters>
+<f namespace="sequence" name="a2t" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_9d71ad5b99ca3fbbf7d424992298dd26" file="1" linestart="19" lineend="22" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="auto">
+<auto/>
+</fpt>
+<p name="a" proto="const std::array&lt;T, N&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ety>
+<tss>
+<templatebase id="87f0d368a5ab0ab2575b331035ec2b42_84a90e834ae7d02ef8914e4081166ea5"/>
+<template_arguments>
+<ttp/>
+<Stmt>
+<drx lb="19" cb="31" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_f0f0735a125975f483c9d088bf1dc46f" nm="N"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="20" cb="2" le="22" ce="2">
+<rx lb="21" cb="3" le="21" ce="31" pvirg="true">
+<ce lb="21" cb="10" le="21" ce="31" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="21" cb="10"/>
+<drx lb="21" cb="19" kind="lvalue" nm="a"/>
+<n21 lb="21" cb="22" le="21" ce="30">
+<unresolvedconst>
+<ttp/>
+</unresolvedconst>
+<exp pvirg="true"/>
+<il lb="21" cb="29" le="21" ce="30">
+<exp pvirg="true"/>
+</il>
+</n21>
+</ce>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</ft>
+<ft name="print_tuple_impl" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_f457146699696b4a6fb4feec409efabe" file="1" linestart="26" lineend="32">
+<template_parameters>
+<ttp name="Ch" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_2942a26d3cbdf7c2b8e2431ed5f142ec" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Tr" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_9f569c9fc9cf73571880cdf87ad3f320" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="Tuple" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_536b32ff383e8f38979d23128a42a7ce" depth="0" index="2" proto="type-parameter-0-2"/>
+<DeclaratorDecl name="Is" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_7c266c31b3eaae3be503b8a5abba7e58" file="1" linestart="26" lineend="26" depth="0" index="3">
+<ety>
+<Tdef>
+<bt name="unsigned int"/>
+</Tdef>
+</ety>
+</DeclaratorDecl>
+</template_parameters>
+<f namespace="sequence" name="print_tuple_impl" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_91a0573e3a7bc86762b8cf0e54119f22" file="1" linestart="27" lineend="32" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="os" proto="std::basic_ostream&lt;Ch, Tr&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<ety>
+<tss>
+<templatebase id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</ety>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="t" proto="const Tuple &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="" proto="std::index_sequence&lt;Is...&gt;" access2="none">
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_a1130f32d3d424e74ae11ea19f309c7e"/>
+<template_arguments>
+<Stmt>
+<PackExpansionExpr lb="29" cb="23" le="29" ce="25">
+<exp pvirg="true"/>
+<drx lb="29" cb="23" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_7c266c31b3eaae3be503b8a5abba7e58" nm="Is"/>
+</PackExpansionExpr>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="30" cb="2" le="32" ce="2">
+<Expr lb="31" cb="3" le="31" ce="57">
+<exp pvirg="true"/>
+<n46 lb="31" cb="4" le="31" ce="51">
+<exp pvirg="true"/>
+<xop lb="31" cb="5" le="31" ce="50" kind="&lt;&lt;">
+<xop lb="31" cb="5" le="31" ce="31" kind="&lt;&lt;">
+<drx lb="31" cb="5" kind="lvalue" nm="os"/>
+<n46 lb="31" cb="11" le="31" ce="31">
+<exp pvirg="true"/>
+<co lb="31" cb="12" le="31" ce="27">
+<exp pvirg="true"/>
+<xop lb="31" cb="12" le="31" ce="18" kind="==">
+<drx lb="31" cb="12" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_7c266c31b3eaae3be503b8a5abba7e58" nm="Is"/>
+<n32 lb="31" cb="18">
+<n45 lb="31" cb="18">
+<flit/>
+</n45>
+</n32>
+</xop>
+<n32 lb="31" cb="22">
+<n52 lb="31" cb="22">
+<slit/>
+</n52>
+</n32>
+<n32 lb="31" cb="27">
+<n52 lb="31" cb="27">
+<slit/>
+</n52>
+</n32>
+</co>
+</n46>
+</xop>
+<ce lb="31" cb="36" le="31" ce="50" nbparm="1">
+<exp pvirg="true"/>
+<n44 lb="31" cb="36" le="31" ce="47"/>
+<drx lb="31" cb="49" kind="lvalue" nm="t"/>
+</ce>
+</xop>
+</n46>
+</Expr>
+</u>
+
+</Stmt>
+</f>
+</ft>
+<ft name="operator&lt;&lt;" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_0641345cbf9e026161a53dd4d059176f" file="1" linestart="34" lineend="41">
+<template_parameters>
+<ttp name="Ch" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a213a294a3065f3dfcc76d04d701f290" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="Tr" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a54f260af0fa87de47cf8693a06d9bc5" depth="0" index="1" proto="type-parameter-0-1"/>
+<ttp name="Args" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_566413e188bb7fa3c07726d705405a15" depth="0" index="2" proto="type-parameter-0-2"/>
+</template_parameters>
+<f namespace="sequence" name="operator&lt;&lt;" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a4a8e4a1523847825933ac2f6ef6a400" file="1" linestart="35" lineend="41" operator="true" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="auto &amp;">
+<lrf>
+<auto/>
+</lrf>
+</fpt>
+<p name="os" proto="std::basic_ostream&lt;Ch, Tr&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<ety>
+<tss>
+<templatebase id="8b87011946485c1b08b5457c0a17b599_7df99f34c778205aaa2e1759bec30243"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</ety>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<p name="t" proto="const std::tuple&lt;Args...&gt; &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ety>
+<tss>
+<templatebase id="9f34429f764aee8b74257d60b000f53a_5ab0714b12d42040efd46a2047f80569"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</ety>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="37" cb="2" le="41" ce="2">
+<ocx lb="38" cb="3" le="38" ce="9" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="38" cb="6"/>
+<drx lb="38" cb="3" kind="lvalue" nm="os"/>
+<n52 lb="38" cb="9">
+<slit/>
+</n52>
+</ocx>
+<ce lb="39" cb="3" le="39" ce="61" nbparm="3">
+<exp pvirg="true"/>
+<n44 lb="39" cb="3"/>
+<drx lb="39" cb="20" kind="lvalue" nm="os"/>
+<drx lb="39" cb="24" kind="lvalue" nm="t"/>
+<n26 lb="39" cb="27" le="39" ce="60">
+<il lb="39" cb="59" le="39" ce="60">
+<exp pvirg="true"/>
+</il>
+</n26>
+</ce>
+<rx lb="40" cb="3" le="40" ce="16" pvirg="true">
+<ocx lb="40" cb="10" le="40" ce="16" nbparm="2">
+<exp pvirg="true"/>
+<n44 lb="40" cb="13"/>
+<drx lb="40" cb="10" kind="lvalue" nm="os"/>
+<n52 lb="40" cb="16">
+<slit/>
+</n52>
+</ocx>
+</rx>
+</u>
+
+</Stmt>
+</f>
+</ft>
+<TypedefNameDecl name="square_sequence" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_1719e42b346ec31506969abb04d128ac" file="1" linestart="43" lineend="43">
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_bdc331e08e849e1bdc54894cae88d098"/>
+<template_arguments>
+<bt name="int"/>
+<Stmt>
+<n45 lb="43" cb="53">
+<flit/>
+</n45>
+
+</Stmt>
+<Stmt>
+<n45 lb="43" cb="56">
+<flit/>
+</n45>
+
+</Stmt>
+<Stmt>
+<n45 lb="43" cb="59">
+<flit/>
+</n45>
+
+</Stmt>
+<Stmt>
+<n45 lb="43" cb="62">
+<flit/>
+</n45>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+</TypedefNameDecl>
+<f namespace="sequence" name="main" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_79399727576657fda11bd03d8d3366fe" file="1" linestart="45" lineend="59" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="46" cb="2" le="59" ce="2">
+<dst lb="47" cb="3" le="47" ce="41">
+<exp pvirg="true"/>
+<Var nm="array" value="true">
+<ety>
+<tss>
+<templatebase id="87f0d368a5ab0ab2575b331035ec2b42_84a90e834ae7d02ef8914e4081166ea5"/>
+<template_arguments>
+<bt name="int"/>
+<Stmt>
+<n32 lb="47" cb="19">
+<n45 lb="47" cb="19">
+<flit/>
+</n45>
+</n32>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+<il lb="47" cb="30" le="47" ce="40">
+<exp pvirg="true"/>
+<il lb="47" cb="32" le="47" ce="38">
+<exp pvirg="true"/>
+<n45 lb="47" cb="32">
+<flit/>
+</n45>
+<n45 lb="47" cb="34">
+<flit/>
+</n45>
+<n45 lb="47" cb="36">
+<flit/>
+</n45>
+<n45 lb="47" cb="38"/>
+</il>
+</il>
+</Var>
+</dst>
+<dst lb="50" cb="3" le="50" ce="26">
+<exp pvirg="true"/>
+<Var nm="tuple" value="true">
+<auto/>
+<n10 lb="50" cb="16" le="50" ce="25">
+<typeptr id="9f34429f764aee8b74257d60b000f53a_ecc048b0db8a1ff4629d67e862534fb0">
+<template_arguments>
+<bt name="int"/>
+<bt name="int"/>
+<bt name="int"/>
+<bt name="int"/>
+</template_arguments>
+</typeptr>
+<temp/>
+<mte lb="50" cb="16" le="50" ce="25">
+<exp pvirg="true"/>
+<ce lb="50" cb="16" le="50" ce="25" nbparm="1" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_9d71ad5b99ca3fbbf7d424992298dd26">
+<exp pvirg="true"/>
+<n32 lb="50" cb="16">
+<drx lb="50" cb="16" kind="lvalue" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_9d71ad5b99ca3fbbf7d424992298dd26" nm="a2t">
+<template_arguments>
+<bt name="int"/>
+<integer value="4"/>
+<rt>
+<cts id="c3076f10aa22f384dadfc4ecf1c7fccd_bdc331e08e849e1bdc54894cae88d098">
+<template_arguments>
+<bt name="unsigned int"/>
+<integer value="0"/>
+<integer value="1"/>
+<integer value="2"/>
+<integer value="3"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<n32 lb="50" cb="20">
+<drx lb="50" cb="20" kind="lvalue" nm="array"/>
+</n32>
+</ce>
+</mte>
+</n10>
+</Var>
+</dst>
+<dst lb="54" cb="3" le="54" ce="41">
+<exp pvirg="true"/>
+<Var nm="ss"/>
+</dst>
+<dst lb="55" cb="3" le="55" ce="10">
+<exp pvirg="true"/>
+<Var nm="anSS" value="true">
+<Tdef>
+<ety>
+<tss>
+<templatebase id="c3076f10aa22f384dadfc4ecf1c7fccd_54102d4da876aac14e9ac40a6b191983"/>
+<template_arguments>
+<Stmt>
+<n32 lb="54" cb="39">
+<n45 lb="54" cb="39"/>
+</n32>
+
+</Stmt>
+</template_arguments>
+</tss>
+</ety>
+</Tdef>
+<n10 lb="55" cb="6">
+<typeptr id="c3076f10aa22f384dadfc4ecf1c7fccd_8ed8789fcc20e15da54ba000e3a89ad8">
+<template_arguments>
+<bt name="unsigned int"/>
+<integer value="0"/>
+<integer value="1"/>
+<integer value="2"/>
+<integer value="3"/>
+</template_arguments>
+</typeptr>
+<temp/>
+</n10>
+</Var>
+</dst>
+<ocx lb="58" cb="3" le="58" ce="25" nbparm="2" id="8b87011946485c1b08b5457c0a17b599_dee3aef429df9aee004ea7f5e29a8aaf">
+<exp pvirg="true"/>
+<n32 lb="58" cb="22">
+<drx lb="58" cb="22" kind="lvalue" id="8b87011946485c1b08b5457c0a17b599_dee3aef429df9aee004ea7f5e29a8aaf" nm="operator&lt;&lt;">
+<template_arguments>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<ocx lb="58" cb="3" le="58" ce="16" nbparm="2" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a4a8e4a1523847825933ac2f6ef6a400">
+<exp pvirg="true"/>
+<n32 lb="58" cb="13">
+<drx lb="58" cb="13" kind="lvalue" id="03cd9e801e0f0d6b6cc81db6e8f32d6a_a4a8e4a1523847825933ac2f6ef6a400" nm="operator&lt;&lt;">
+<template_arguments>
+<bt name="char"/>
+<rt>
+<cts id="1b9b5f13fc50919fc1cbcbc41c4276ce_76e43d9fa50c2ce16dafa9452550a098">
+<template_arguments>
+<bt name="char"/>
+</template_arguments>
+</cts>
+</rt>
+<bt name="int"/>
+<bt name="int"/>
+<bt name="int"/>
+<bt name="int"/>
+</template_arguments>
+</drx>
+</n32>
+<drx lb="58" cb="3" le="58" ce="8" kind="lvalue" id="c91f05a696e2667c8ee47ccfafe8e7bf_fbe8f6ba0143c688ba07f32590d95a55" nm="cout"/>
+<n32 lb="58" cb="16">
+<drx lb="58" cb="16" kind="lvalue" nm="tuple"/>
+</n32>
+</ocx>
+<lt lb="58" cb="25">
+<slit/>
+</lt>
+</ocx>
+</u>
+
+</Stmt>
+</f>
+</ns>
+</tun>
+</Root>

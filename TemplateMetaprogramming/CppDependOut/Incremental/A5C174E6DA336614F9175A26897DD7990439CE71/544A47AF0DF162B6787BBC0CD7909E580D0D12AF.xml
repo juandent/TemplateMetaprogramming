@@ -26,6 +26,8 @@
 <m f="1" bl="20" bc="1"/>
 </Directives>
 <tun>
+<Namedalias name="mpl" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_ee7bd0d4b6818df0741baa3fdf006cd3" file="1" linestart="22" lineend="22"/>
+<NamedDecl name="&lt;using-directive&gt;" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_6728b6b0f829183eb7bbd3d3d987c87d" file="1" linestart="24" lineend="24"/>
 <ns name="Section_2_5" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_467a27692d95b9028c7858e418028b5d" file="1" linestart="26" lineend="40">
 <f namespace="Section_2_5" name="aVoidFunction" id="8cee5bbd4b7db9ebb6e9abcfecd5a467_1e4596c5ec6686006c38d9d3b164c427" file="1" linestart="28" lineend="31" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
@@ -69,6 +71,9 @@
 <QualType const="true">
 <bt name="bool"/>
 </QualType>
+<n32 lb="36" cb="28" le="36" ce="57">
+<drx lb="36" cb="28" le="36" ce="57" kind="lvalue" id="9ae2e2f6d833476e044c5448173dba7c_aa19906f5ab83a6b0b26c7f0bdf12ee1" nm="value"/>
+</n32>
 </Var>
 </dst>
 <dst lb="37" cb="3" le="37" ce="78">
@@ -77,6 +82,9 @@
 <QualType const="true">
 <bt name="bool"/>
 </QualType>
+<n32 lb="37" cb="28" le="37" ce="73">
+<drx lb="37" cb="28" le="37" ce="73" kind="lvalue" id="9ae2e2f6d833476e044c5448173dba7c_aa19906f5ab83a6b0b26c7f0bdf12ee1" nm="value"/>
+</n32>
 </Var>
 </dst>
 </u>

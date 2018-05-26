@@ -1,0 +1,16 @@
+<Externals>
+<cr access="none" depth="0" pod="true" kind="class" name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_ceb41d22652c476872a3099792329da8" file="1" linestart="10" lineend="17">
+<c name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_5189d16d858c301e79356118ffec76fa" file="1" linestart="10" lineend="10" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+<cr access="none" depth="0" pod="true" kind="class" name="Square" id="6251af570b35d934d7ebe831e4c241d9_43af3cd1ebf5853213a7e7dcc49b09b1" file="1" linestart="19" lineend="27">
+<c name="Square" id="6251af570b35d934d7ebe831e4c241d9_d8b5fa7a99896fa36a55c6362c774d48" file="1" linestart="19" lineend="19" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cr>
+</Externals>

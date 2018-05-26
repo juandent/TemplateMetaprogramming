@@ -1,0 +1,13 @@
+<log>
+ <error level="error" id="err_pp_macro_not_identifier" file="&lt;command line&gt;" line="7" col="9" msg="macro name must be an identifier" />
+ <error level="warning" id="pp_pragma_once_in_main_file" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="1" col="9" msg="#pragma once in main file" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="8" col="20" msg="use of undeclared identifier &apos;Typelist&apos;" />
+ <error level="error" id="err_ref_non_value" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="8" col="29" msg="&apos;Elements&apos; does not refer to a value" />
+ <error level="note" id="note_declared_at" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="7" col="21" msg="declared here" />
+ <error level="error" id="err_template_param_pack_must_be_last_template_parameter" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="7" col="21" msg="template parameter pack must be the last template parameter" />
+ <error level="error" id="err_expected_semi_declaration" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="8" col="53" msg="expected &apos;;&apos; at end of declaration" />
+ <error level="error" id="err_expected_unqualified_id" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="8" col="53" msg="expected unqualified-id" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="15" col="32" msg="use of undeclared identifier &apos;Typelist&apos;" />
+ <error level="error" id="err_ref_non_value" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="15" col="41" msg="&apos;Elements&apos; does not refer to a value" />
+ <error level="note" id="note_declared_at" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistPushFront.hpp" line="14" col="21" msg="declared here" />
+</log>

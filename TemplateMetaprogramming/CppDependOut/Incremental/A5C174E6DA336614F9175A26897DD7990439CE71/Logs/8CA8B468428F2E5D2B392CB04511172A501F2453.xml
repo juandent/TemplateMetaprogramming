@@ -1,0 +1,9 @@
+<log>
+ <error level="error" id="err_pp_macro_not_identifier" file="&lt;command line&gt;" line="7" col="9" msg="macro name must be an identifier" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1117" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1180" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="ext_constexpr_function_never_constant_expr" file="c:\program files (x86)\microsoft visual studio 14.0\vc\include\limits" line="1243" col="24" msg="constexpr function never produces a constant expression" />
+ <error level="error" id="err_no_member" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\ListNodeIterator.cpp" line="17" col="19" msg="no member named &apos;unique_ptr&apos; in namespace &apos;std&apos;" />
+ <error level="error" id="err_expected_lparen_after_type" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\ListNodeIterator.cpp" line="17" col="41" msg="expected &apos;(&apos; for function-style cast or type construction" />
+ <error level="error" id="err_init_list_bin_op" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\ListNodeIterator.cpp" line="17" col="41" msg="initializer list cannot be used on the right hand side of operator &apos;&gt;&apos;" />
+</log>

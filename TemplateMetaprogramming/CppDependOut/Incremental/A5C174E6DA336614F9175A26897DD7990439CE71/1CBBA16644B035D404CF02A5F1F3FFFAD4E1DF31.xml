@@ -1,0 +1,240 @@
+<Root>
+<Comments>
+<c f="1" b="15" e="15"/>
+<c f="1" b="16" e="15"/>
+<c f="1" b="24" e="24"/>
+<c f="1" b="25" e="24"/>
+</Comments>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+</Directives>
+<tun>
+<ft name="myDraw" id="6251af570b35d934d7ebe831e4c241d9_7d8a39f94a1d67693d56eac4daf5de61" file="1" linestart="3" lineend="7">
+<template_parameters>
+<ttp name="GeoObj" id="6251af570b35d934d7ebe831e4c241d9_89e96df1e71ea4ee1b7b09166fe45049" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<f name="myDraw" id="6251af570b35d934d7ebe831e4c241d9_3999bd096f1b32a8969ada25801e2f4a" file="1" linestart="4" lineend="7" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="obj" proto="const GeoObj &amp;" isRef="true" access2="none">
+<lrf>
+<QualType const="true">
+<ttp/>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="5" cb="1" le="7" ce="1">
+<ce lb="6" cb="2" le="6" ce="11" nbparm="0">
+<exp pvirg="true"/>
+<n14 lb="6" cb="2" le="6" ce="6">
+<exp pvirg="true"/>
+<drx lb="6" cb="2" kind="lvalue" nm="obj"/>
+</n14>
+</ce>
+</u>
+
+</Stmt>
+</f>
+</ft>
+<cr access="none" depth="0" pod="true" kind="class" name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_ceb41d22652c476872a3099792329da8" file="1" linestart="10" lineend="17">
+<cr access="public" kind="class" name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_8722c64d8b7b6eac29ecd76f138654df" file="1" linestart="10" lineend="10"/>
+<asd access="public"/>
+<m name="draw" id="6251af570b35d934d7ebe831e4c241d9_bcdbf3d17bceb1ab21b3eade61575321" file="1" linestart="13" lineend="16" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="14" cb="2" le="16" ce="2"/>
+
+</Stmt>
+</m>
+<c name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_5189d16d858c301e79356118ffec76fa" file="1" linestart="10" lineend="10" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="10" cb="7"/>
+
+</Stmt>
+</c>
+<c name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_be7697301f2fbd07ec67ac1c494f9973" file="1" linestart="10" lineend="10" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const Triangle &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_ceb41d22652c476872a3099792329da8"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<c name="Triangle" id="6251af570b35d934d7ebe831e4c241d9_7499505355dac8e7d5a384ac4432c2f3" file="1" linestart="10" lineend="10" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="Triangle &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_ceb41d22652c476872a3099792329da8"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cr>
+<cr access="none" depth="0" pod="true" kind="class" name="Square" id="6251af570b35d934d7ebe831e4c241d9_43af3cd1ebf5853213a7e7dcc49b09b1" file="1" linestart="19" lineend="27">
+<cr access="public" kind="class" name="Square" id="6251af570b35d934d7ebe831e4c241d9_0bfefd125a34c8be5e471efdc2bece91" file="1" linestart="19" lineend="19"/>
+<asd access="public"/>
+<m name="draw" id="6251af570b35d934d7ebe831e4c241d9_b812a3c75f689c1703ccd146cda2ff10" file="1" linestart="22" lineend="26" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="unsigned int">
+<bt name="unsigned int"/>
+</fpt>
+<p name="x" proto="int" isLiteral="true" isPrimitive="true" init="true" access2="none">
+<bt name="int"/>
+<Stmt>
+<n45 lb="22" cb="22">
+<flit/>
+</n45>
+
+</Stmt>
+</p>
+<p name="y" proto="int" isLiteral="true" isPrimitive="true" init="true" access2="none">
+<bt name="int"/>
+<Stmt>
+<n45 lb="22" cb="31"/>
+
+</Stmt>
+</p>
+<Stmt>
+<u lb="23" cb="2" le="26" ce="2">
+<rx lb="25" cb="3" le="25" ce="10" pvirg="true">
+<n32 lb="25" cb="10">
+<n45 lb="25" cb="10"/>
+</n32>
+</rx>
+</u>
+
+</Stmt>
+</m>
+<c name="Square" id="6251af570b35d934d7ebe831e4c241d9_d8b5fa7a99896fa36a55c6362c774d48" file="1" linestart="19" lineend="19" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="19" cb="7"/>
+
+</Stmt>
+</c>
+<c name="Square" id="6251af570b35d934d7ebe831e4c241d9_7c57e5e06f859df3a483f2f53886a63f" file="1" linestart="19" lineend="19" copyconst="true" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="const Square &amp;" isRef="true" isLiteral="true" access2="none">
+<lrf>
+<QualType const="true">
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_43af3cd1ebf5853213a7e7dcc49b09b1"/>
+</rt>
+</QualType>
+</lrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+<c name="Square" id="6251af570b35d934d7ebe831e4c241d9_0d703e41078aa10e7a003ea31b9a60d1" file="1" linestart="19" lineend="19" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+<p name="" proto="Square &amp;&amp;" isRef="true" isLiteral="true" access2="none">
+<rrf>
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_43af3cd1ebf5853213a7e7dcc49b09b1"/>
+</rt>
+</rrf>
+<Stmt>
+
+</Stmt>
+</p>
+</c>
+</cr>
+<f name="useStaticPolymorphism" id="6251af570b35d934d7ebe831e4c241d9_f9cebbb39ccdc2bd6e70a630401ab955" file="1" linestart="29" lineend="36" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="30" cb="1" le="36" ce="1">
+<dst lb="31" cb="2" le="31" ce="12">
+<exp pvirg="true"/>
+<Var nm="t" value="true">
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_ceb41d22652c476872a3099792329da8"/>
+</rt>
+<n10 lb="31" cb="11">
+<typeptr id="6251af570b35d934d7ebe831e4c241d9_5189d16d858c301e79356118ffec76fa"/>
+<temp/>
+</n10>
+</Var>
+</dst>
+<dst lb="32" cb="2" le="32" ce="10">
+<exp pvirg="true"/>
+<Var nm="s" value="true">
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_43af3cd1ebf5853213a7e7dcc49b09b1"/>
+</rt>
+<n10 lb="32" cb="9">
+<typeptr id="6251af570b35d934d7ebe831e4c241d9_d8b5fa7a99896fa36a55c6362c774d48"/>
+<temp/>
+</n10>
+</Var>
+</dst>
+<ce lb="34" cb="2" le="34" ce="10" nbparm="1" id="6251af570b35d934d7ebe831e4c241d9_3999bd096f1b32a8969ada25801e2f4a">
+<exp pvirg="true"/>
+<n32 lb="34" cb="2">
+<drx lb="34" cb="2" kind="lvalue" id="6251af570b35d934d7ebe831e4c241d9_3999bd096f1b32a8969ada25801e2f4a" nm="myDraw">
+<template_arguments>
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_ceb41d22652c476872a3099792329da8"/>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<n32 lb="34" cb="9">
+<drx lb="34" cb="9" kind="lvalue" nm="t"/>
+</n32>
+</ce>
+<ce lb="35" cb="2" le="35" ce="10" nbparm="1" id="6251af570b35d934d7ebe831e4c241d9_3999bd096f1b32a8969ada25801e2f4a">
+<exp pvirg="true"/>
+<n32 lb="35" cb="2">
+<drx lb="35" cb="2" kind="lvalue" id="6251af570b35d934d7ebe831e4c241d9_3999bd096f1b32a8969ada25801e2f4a" nm="myDraw">
+<template_arguments>
+<rt>
+<cr id="6251af570b35d934d7ebe831e4c241d9_43af3cd1ebf5853213a7e7dcc49b09b1"/>
+</rt>
+</template_arguments>
+</drx>
+</n32>
+<n32 lb="35" cb="9">
+<drx lb="35" cb="9" kind="lvalue" nm="s"/>
+</n32>
+</ce>
+</u>
+
+</Stmt>
+</f>
+</tun>
+</Root>

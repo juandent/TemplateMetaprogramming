@@ -1,0 +1,57 @@
+<Root>
+<Comments/>
+<Macros/>
+<Directives>
+<m f="1" bl="1" bc="1"/>
+<m f="1" bl="3" bc="1"/>
+<m f="1" bl="4" bc="1"/>
+<m f="1" bl="5" bc="1"/>
+<m f="1" bl="6" bc="1"/>
+<m f="1" bl="7" bc="1"/>
+</Directives>
+<tun>
+<Namedalias name="mpl" id="b5666fd5da2fe03fc3e8081099a0dd11_ee7bd0d4b6818df0741baa3fdf006cd3" file="1" linestart="10" lineend="10"/>
+<NamedDecl name="&lt;using-directive&gt;" id="b5666fd5da2fe03fc3e8081099a0dd11_6728b6b0f829183eb7bbd3d3d987c87d" file="1" linestart="11" lineend="11"/>
+<tm access="none" depth="0" pod="true" kind="struct" name="plus_dbg" id="b5666fd5da2fe03fc3e8081099a0dd11_9709558e230147a6281bc4258a00a9d5" file="1" linestart="39" lineend="43">
+<template_parameters>
+<ttp name="T" id="b5666fd5da2fe03fc3e8081099a0dd11_4aa595687e3764c4282d278a4b5a656d" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="U" id="b5666fd5da2fe03fc3e8081099a0dd11_c5c647266b9fe50de35fb023a6bd3c14" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="plus_dbg" id="b5666fd5da2fe03fc3e8081099a0dd11_9709558e230147a6281bc4258a00a9d5" file="1" linestart="40" lineend="43">
+<cr access="public" kind="struct" name="plus_dbg" id="b5666fd5da2fe03fc3e8081099a0dd11_1b1fa31421d1b37fb75d173624b72072" file="1" linestart="40" lineend="40"/>
+<tyd name="type" id="b5666fd5da2fe03fc3e8081099a0dd11_89b755261707e05cb643028d4cb9084c" file="1" linestart="42" lineend="42">
+<DependentName/>
+</tyd>
+</cr>
+</tm>
+<tyd name="sum" id="b5666fd5da2fe03fc3e8081099a0dd11_e164b32813b5deb0e068004b5b4c98fb" file="1" linestart="45" lineend="49">
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<ety>
+<Tdef>
+<sttp/>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</Tdef>
+</ety>
+</tyd>
+</tun>
+</Root>

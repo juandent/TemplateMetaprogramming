@@ -1,0 +1,11 @@
+<log>
+ <error level="error" id="err_pp_macro_not_identifier" file="&lt;command line&gt;" line="7" col="9" msg="macro name must be an identifier" />
+ <error level="warning" id="pp_pragma_once_in_main_file" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="1" col="9" msg="#pragma once in main file" />
+ <error level="error" id="err_expected_after" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="16" col="22" msg="expected &apos;;&apos; after alias declaration" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="17" col="39" msg="use of undeclared identifier &apos;PopFront&apos;" />
+ <error level="error" id="err_ref_non_value" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="17" col="48" msg="&apos;List&apos; does not refer to a value" />
+ <error level="note" id="note_declared_at" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="12" col="20" msg="declared here" />
+ <error level="error" id="err_expected_after" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="19" col="26" msg="expected &apos;;&apos; after alias declaration" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="23" col="21" msg="use of undeclared identifier &apos;Typelist&apos;" />
+ <error level="error" id="err_expected_expression" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\typelistLargestType.hpp" line="23" col="30" msg="expected expression" />
+</log>
