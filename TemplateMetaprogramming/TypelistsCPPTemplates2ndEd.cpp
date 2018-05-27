@@ -82,9 +82,24 @@ using reversed_accum = Reverse_via_accumulate<Typelist<int,char>>;
 constexpr bool reversed_accum_ok = std::is_same<reversed_accum, Typelist<char, int>>::value;
 
 
+#include "typelist/largesttypeaccum0.hpp"
+
+using types = Typelist<bool, char, double, long double, long long>;
+
+using largest = LargestTypeAcc<types>;
+
+#include "typelist/largesttypeacc.hpp"
+
+using largest_accum = LargestTypeAccOkNull<types>;
+//using largest_accum_null_list = LargestTypeAccOkNull<Typelist<>>;
+
+
 void testAccumulate()
 {
+	auto ld = sizeof(long double);
+	auto ll = sizeof(long long);
 	result* p = nullptr;
 	reversed_accum* pp = nullptr;
-
+	largest* l = nullptr;
+	largest_accum* la = nullptr;
 }

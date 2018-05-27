@@ -1,4 +1,5 @@
 <Externals>
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="3" linestart="423" lineend="526"/>
 <cts Spec="&lt;wchar_t&gt;" namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_7d637fda5b9c2af11eaf2c7631b154c8" file="3" linestart="407" lineend="411">
 <base access="public">
 <tss>
@@ -9,7 +10,6 @@
 </tss>
 </base>
 </cts>
-<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="3" linestart="423" lineend="526"/>
 <tm namespace="std" access="none" depth="3" kind="class" name="basic_ostream" id="e42aa348eeebf30726e27e68f224f8b0_7df99f34c778205aaa2e1759bec30243" file="4" linestart="38" lineend="621" previous="249b4c0096e6d1394c81e46f6fb193b8_7df99f34c778205aaa2e1759bec30243">
 <template_parameters>
 <ttp name="_Elem" id="e42aa348eeebf30726e27e68f224f8b0_16f2e94b2b51d2f5dff02392fae903e6" depth="0" index="0" proto="type-parameter-0-0"/>

@@ -29,6 +29,7 @@
 <m f="1" bl="68" bc="1"/>
 <m f="1" bl="69" bc="1"/>
 <m f="1" bl="75" bc="1"/>
+<m f="1" bl="93" bc="1"/>
 </Directives>
 <tun>
 <tm access="none" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_28c3300bda3b9ba9a3567b45a90411a6" file="2" linestart="5" lineend="6">
@@ -912,11 +913,11 @@
 <DependentName/>
 </TypedefNameDecl>
 </RedeclarableTemplateDecl>
-<RedeclarableTemplateDecl name="Reverse_via_accumulate" id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5" file="14" linestart="43" lineend="44">
+<RedeclarableTemplateDecl name="Reverse_via_accumulate" id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5" file="14" linestart="44" lineend="45">
 <template_parameters>
 <ttp name="List" id="6a322ddc739fc164075f07c9060b2670_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
 </template_parameters>
-<TypedefNameDecl name="Reverse_via_accumulate" id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5" file="14" linestart="44" lineend="44">
+<TypedefNameDecl name="Reverse_via_accumulate" id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5" file="14" linestart="45" lineend="45">
 <tss>
 <templatebase id="6a322ddc739fc164075f07c9060b2670_dff60c5d9926b5e43e7357fb11248ff5"/>
 <template_arguments>
@@ -929,5 +930,213 @@
 </tss>
 </TypedefNameDecl>
 </RedeclarableTemplateDecl>
+<TypedefNameDecl name="result" id="565445ad6805dee2e10213420f49ae06_7c067448d4bb8a12df6c0fe760a4212e" file="1" linestart="77" lineend="77">
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_dff60c5d9926b5e43e7357fb11248ff5"/>
+<template_arguments>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="int"/>
+<bt name="char"/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments/>
+</tss>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="reversed_accum" id="565445ad6805dee2e10213420f49ae06_b2e908327f72ec453b4e3a67a6197f8e" file="1" linestart="80" lineend="80">
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5"/>
+<template_arguments>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="int"/>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<v name="reversed_accum_ok" proto="const bool" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_1562e1e7a6c7fc897356fd45c1e8de2a" file="1" linestart="82" lineend="82" init="true" access2="none">
+<QualType const="true">
+<bt name="bool"/>
+</QualType>
+<Stmt>
+<n32 lb="82" cb="36" le="82" ce="87">
+<drx lb="82" cb="36" le="82" ce="87" kind="lvalue" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<f name="testAccumulate" id="565445ad6805dee2e10213420f49ae06_13f08993cbfc70fbd707803379753f44" file="1" linestart="85" lineend="90" access="none" hasbody="true" isdef="true">
+<fpt cc="cdecl" proto="void">
+<bt name="void"/>
+</fpt>
+<Stmt>
+<u lb="86" cb="1" le="90" ce="1">
+<dst lb="87" cb="2" le="87" ce="21">
+<exp pvirg="true"/>
+<Var nm="p">
+<pt>
+<Tdef>
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_dff60c5d9926b5e43e7357fb11248ff5"/>
+<template_arguments>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="int"/>
+<bt name="char"/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments/>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</pt>
+<n32 lb="87" cb="14">
+<n16 lb="87" cb="14">
+<exp pvirg="true"/>
+</n16>
+</n32>
+</Var>
+</dst>
+<dst lb="88" cb="2" le="88" ce="30">
+<exp pvirg="true"/>
+<Var nm="pp">
+<pt>
+<Tdef>
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_404bcc32c41d4e883cb7635623ffb7a5"/>
+<template_arguments>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="int"/>
+<bt name="char"/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</Tdef>
+</pt>
+<n32 lb="88" cb="23">
+<n16 lb="88" cb="23">
+<exp pvirg="true"/>
+</n16>
+</n32>
+</Var>
+</dst>
+</u>
+
+</Stmt>
+</f>
+<tm access="none" depth="1" kind="class" name="LargerTypeT" id="7f8548042425104c91295a3208fecfcb_d43eb1469c479b3e8fbe892cb8b0dea6" file="15" linestart="8" lineend="10">
+<template_parameters>
+<ttp name="T" id="7f8548042425104c91295a3208fecfcb_9660c7dd88ca4ce50132634088264c7f" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="V" id="7f8548042425104c91295a3208fecfcb_c45fb6b7d5beb5e56b7d2dabf3109e7a" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr access="none" depth="1" kind="class" name="LargerTypeT" id="7f8548042425104c91295a3208fecfcb_d43eb1469c479b3e8fbe892cb8b0dea6" file="15" linestart="9" lineend="10">
+<base access="public">
+<tss>
+<templatebase id="167351b72b24e25e7699baaaebead9de_86263a2221d3d03639dab60c2bc526c8"/>
+<template_arguments>
+<Stmt>
+<xop lb="9" cb="41" le="9" ce="62" kind="&gt;=">
+<n55 lb="9" cb="41" le="9" ce="49">
+<sizeof>
+<ttp/>
+</sizeof>
+</n55>
+<n55 lb="9" cb="54" le="9" ce="62">
+<sizeof>
+<ttp/>
+</sizeof>
+</n55>
+</xop>
+
+</Stmt>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="LargerTypeT" id="7f8548042425104c91295a3208fecfcb_cc390865f41098d70465066241d47f69" file="15" linestart="9" lineend="9"/>
+</cr>
+</tm>
+<tm access="none" depth="0" kind="class" name="LargestTypeAccT" id="7f8548042425104c91295a3208fecfcb_075915d70143e3a3083b643bb54449bc" file="15" linestart="13" lineend="15">
+<template_parameters>
+<ttp name="List" id="7f8548042425104c91295a3208fecfcb_4c53999bc5f1ae466e902f476d240847" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr access="none" depth="0" kind="class" name="LargestTypeAccT" id="7f8548042425104c91295a3208fecfcb_075915d70143e3a3083b643bb54449bc" file="15" linestart="14" lineend="15">
+<base access="public">
+<tss>
+<templatebase id="6a322ddc739fc164075f07c9060b2670_c4b7ad4605cb7e39d0713325a4c4bb85"/>
+<template_arguments>
+<tss>
+<templatebase id="1e56fee2c1f4818d5ddd2bda1fbb760e_7fddb2752264eaf247a16d7dc5f62ce9"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="90db8a69a405c0fb263754a534e17939_17661712d241bc79d400764956514116"/>
+<template_arguments>
+<ttp/>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</base>
+<cr access="public" kind="class" name="LargestTypeAccT" id="7f8548042425104c91295a3208fecfcb_d0752989016c185ad5ad6e4f9170ce04" file="15" linestart="14" lineend="14"/>
+</cr>
+</tm>
+<RedeclarableTemplateDecl name="LargestTypeAcc" id="7f8548042425104c91295a3208fecfcb_cb352a53b4391c75c24aad37dd8820bf" file="15" linestart="17" lineend="18">
+<template_parameters>
+<ttp name="List" id="7f8548042425104c91295a3208fecfcb_057d900a2bd15689e4067b8d2152e1a8" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<TypedefNameDecl name="LargestTypeAcc" id="7f8548042425104c91295a3208fecfcb_cb352a53b4391c75c24aad37dd8820bf" file="15" linestart="18" lineend="18">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<TypedefNameDecl name="types" id="565445ad6805dee2e10213420f49ae06_543157dbc755b100848dba90c5692bb8" file="1" linestart="95" lineend="95">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="bool"/>
+<bt name="char"/>
+<bt name="long"/>
+<bt name="long double"/>
+<bt name="long long"/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<TypedefNameDecl name="largest" id="565445ad6805dee2e10213420f49ae06_73ba75ca0b5df7f61d90eba6ce45c343" file="1" linestart="97" lineend="97">
+<tss>
+<templatebase id="7f8548042425104c91295a3208fecfcb_cb352a53b4391c75c24aad37dd8820bf"/>
+<template_arguments>
+<Tdef>
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<bt name="bool"/>
+<bt name="char"/>
+<bt name="long"/>
+<bt name="long double"/>
+<bt name="long long"/>
+</template_arguments>
+</tss>
+</Tdef>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
 </tun>
 </Root>

@@ -13,4 +13,6 @@
  <error level="warning" id="ext_static_assert_no_message" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TypelistsCPPTemplates2ndEd.cpp" line="25" col="27" msg="static_assert with no message is a C++1z extension" />
  <error level="warning" id="ext_static_assert_no_message" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TypelistsCPPTemplates2ndEd.cpp" line="32" col="38" msg="static_assert with no message is a C++1z extension" />
  <error level="warning" id="ext_static_assert_no_message" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TypelistsCPPTemplates2ndEd.cpp" line="41" col="27" msg="static_assert with no message is a C++1z extension" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TypelistsCPPTemplates2ndEd.cpp" line="87" col="10" msg="unused variable &apos;p&apos;" />
+ <error level="warning" id="warn_unused_variable" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\TypelistsCPPTemplates2ndEd.cpp" line="88" col="18" msg="unused variable &apos;pp&apos;" />
 </log>

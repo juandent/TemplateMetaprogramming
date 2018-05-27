@@ -12,5 +12,5 @@
   <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'hasLess' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:202:25</ClangError>
   <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'g1' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\ParsingTemplates.cpp:191:4</ClangError>
   <Info>No dependency cycle detected in Projects referencement graph.</Info>
-  <Info>CppDepend analysis done. Duration: 00:01:13</Info>
+  <Info>CppDepend analysis done. Duration: 00:01:16</Info>
 </InfoWarnings>

@@ -190,6 +190,9 @@
     <ClInclude Include="Typelist.hpp" />
     <ClInclude Include="typelist\accumulate.hpp" />
     <ClInclude Include="typelist\addconst.hpp" />
+    <ClInclude Include="typelist\largerType.hpp" />
+    <ClInclude Include="typelist\largesttypeacc.hpp" />
+    <ClInclude Include="typelist\largesttypeaccum0.hpp" />
     <ClInclude Include="typelist\transform.hpp" />
     <ClInclude Include="typelist\typelistFront.hpp" />
     <ClInclude Include="typelist\typelistGenericLargestType.hpp" />

@@ -674,9 +674,9 @@
 <NamedDecl name="&lt;using-directive&gt;" id="22bede69932147ac6f1f9ff43d51f5ad_6728b6b0f829183eb7bbd3d3d987c87d" file="1" linestart="39" lineend="39"/>
 <NamedDecl name="&lt;using-directive&gt;" id="22bede69932147ac6f1f9ff43d51f5ad_6728b6b0f829183eb7bbd3d3d987c87d" file="1" linestart="40" lineend="40"/>
 <sas/>
-<ns name="Chapter3" id="22bede69932147ac6f1f9ff43d51f5ad_2d5be68db577e41598c2b772d0fc2a90" file="1" linestart="50" lineend="1716" original="0x959f7d0">
+<ns name="Chapter3" id="22bede69932147ac6f1f9ff43d51f5ad_2d5be68db577e41598c2b772d0fc2a90" file="1" linestart="50" lineend="1716" original="0x99cc380">
 <Namedalias name="mpl" id="22bede69932147ac6f1f9ff43d51f5ad_6bdf590661caf552b6dfbea65eeaf30a" file="1" linestart="51" lineend="51"/>
-<ns name="QuantityStuff" id="22bede69932147ac6f1f9ff43d51f5ad_da0810e58452c43b72929d6e85fd8fa6" file="1" linestart="53" lineend="200" original="0x959f848">
+<ns name="QuantityStuff" id="22bede69932147ac6f1f9ff43d51f5ad_da0810e58452c43b72929d6e85fd8fa6" file="1" linestart="53" lineend="200" original="0x99cc3f8">
 <tyd name="mass" id="22bede69932147ac6f1f9ff43d51f5ad_c3e63b6636ed7d15e542f2417f56b70c" file="1" linestart="54" lineend="54">
 <ety>
 <tss>
@@ -3289,7 +3289,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="Questions" id="22bede69932147ac6f1f9ff43d51f5ad_6f9d49a8ff01d9fd906ec9e8d836d5f3" file="1" linestart="202" lineend="1715" original="0x959f980">
+<ns name="Questions" id="22bede69932147ac6f1f9ff43d51f5ad_6f9d49a8ff01d9fd906ec9e8d836d5f3" file="1" linestart="202" lineend="1715" original="0x99cc530">
 <ns name="Q3_0" id="22bede69932147ac6f1f9ff43d51f5ad_408dd7e474bb3a1990b090dd4dd98f11" file="1" linestart="204" lineend="225">
 <tm namespace="Chapter3.Questions.Q3_0" access="none" depth="0" pod="true" kind="struct" name="binary" id="22bede69932147ac6f1f9ff43d51f5ad_15078e7595e98f9dbebce0c9f14382e0" file="1" linestart="206" lineend="211">
 <template_parameters>
@@ -3388,7 +3388,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="Q3_1" id="22bede69932147ac6f1f9ff43d51f5ad_7ff6a68560028203458a675cf0466981" file="1" linestart="226" lineend="235" original="0x959f9f8">
+<ns name="Q3_1" id="22bede69932147ac6f1f9ff43d51f5ad_7ff6a68560028203458a675cf0466981" file="1" linestart="226" lineend="235" original="0x99cc5a8">
 <tyd name="sequence" id="22bede69932147ac6f1f9ff43d51f5ad_f7286cb4af785bc10f4e53b5963a3372" file="1" linestart="228" lineend="228">
 <ety>
 <tss>
@@ -3508,7 +3508,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="Q3_8" id="22bede69932147ac6f1f9ff43d51f5ad_0c4ba45c9fd16a5763ed623d76e85b79" file="1" linestart="236" lineend="1429" original="0x959fb30">
+<ns name="Q3_8" id="22bede69932147ac6f1f9ff43d51f5ad_0c4ba45c9fd16a5763ed623d76e85b79" file="1" linestart="236" lineend="1429" original="0x99cc6e0">
 <ns name="AddingUnitsToQuantity" id="22bede69932147ac6f1f9ff43d51f5ad_897df30fe9dd203f907a207edab6a4e7" file="1" linestart="238" lineend="461">
 <tyd name="mass" id="22bede69932147ac6f1f9ff43d51f5ad_f7db29710973c870fc4645b0a5c6fdc0" file="1" linestart="240" lineend="240">
 <ety>
@@ -7174,7 +7174,7 @@
 </Stmt>
 </f>
 </ft>
-<ns name="Detail" id="22bede69932147ac6f1f9ff43d51f5ad_c96ff2d8abee2cf4278f383337591077" file="1" linestart="923" lineend="939" original="0x9f02778">
+<ns name="Detail" id="22bede69932147ac6f1f9ff43d51f5ad_c96ff2d8abee2cf4278f383337591077" file="1" linestart="923" lineend="939" original="0xa33c858">
 <cr namespace="Chapter3.Questions.Q3_8.SeparateSourceAndTargetUnits.NoIntegrals.Detail" access="none" depth="0" pod="true" kind="struct" name="plus_f" id="22bede69932147ac6f1f9ff43d51f5ad_565b74c3fd0d550559c677bc48f99b8e" file="1" linestart="931" lineend="938">
 <cr access="public" kind="struct" name="plus_f" id="22bede69932147ac6f1f9ff43d51f5ad_356200f0461c19812fb2675f96a5f501" file="1" linestart="931" lineend="931"/>
 <tm parent="22bede69932147ac6f1f9ff43d51f5ad_565b74c3fd0d550559c677bc48f99b8e" access="none" depth="0" pod="true" kind="struct" name="apply" id="22bede69932147ac6f1f9ff43d51f5ad_725937a5426e4f230ce74d6df76adc07" file="1" linestart="933" lineend="937">
@@ -15288,7 +15288,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="HigherOrderMetafunctions" id="22bede69932147ac6f1f9ff43d51f5ad_c959070e319e5bce7663601ca828ee29" file="1" linestart="1430" lineend="1714" original="0x959fc68">
+<ns name="HigherOrderMetafunctions" id="22bede69932147ac6f1f9ff43d51f5ad_c959070e319e5bce7663601ca828ee29" file="1" linestart="1430" lineend="1714" original="0x99cc818">
 <tm namespace="Chapter3.Questions.HigherOrderMetafunctions" access="none" depth="0" kind="struct" name="apply1" id="22bede69932147ac6f1f9ff43d51f5ad_d0086b04093997eb30972fb95aef1be2" file="1" linestart="1441" lineend="1443">
 <template_parameters>
 <ttp name="UnaryMetaFunctionClass" id="22bede69932147ac6f1f9ff43d51f5ad_36a191b905fc9bffec09eab9acf1fc22" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -16209,7 +16209,7 @@
 </ns>
 </ns>
 </ns>
-<ns name="Solution_to_Exercise_3_1" id="22bede69932147ac6f1f9ff43d51f5ad_8e08e5894377dccb0179614922c2e518" file="1" linestart="1719" lineend="1749" original="0x959fda0">
+<ns name="Solution_to_Exercise_3_1" id="22bede69932147ac6f1f9ff43d51f5ad_8e08e5894377dccb0179614922c2e518" file="1" linestart="1719" lineend="1749" original="0x99cc950">
 <Namedalias name="mpl" id="22bede69932147ac6f1f9ff43d51f5ad_877a6ff1360ebf5abd080c943b285569" file="1" linestart="1725" lineend="1725"/>
 <NamedDecl name="&lt;using-directive&gt;" id="22bede69932147ac6f1f9ff43d51f5ad_4e049ee6846d7f9e88f445beca1c097d" file="1" linestart="1726" lineend="1726"/>
 <f namespace="Solution_to_Exercise_3_1" name="solve" id="22bede69932147ac6f1f9ff43d51f5ad_467c5f6cfcedc248525aff396c6dd7a1" file="1" linestart="1729" lineend="1748" previous="430dc6c5137fc4faef7757e1b864855d_467c5f6cfcedc248525aff396c6dd7a1" access="none" hasbody="true" isdef="true">
@@ -16367,7 +16367,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="Solution_to_Exercise_3_2" id="22bede69932147ac6f1f9ff43d51f5ad_11a15c0edf7b4d516b21e00195ac76d3" file="1" linestart="1751" lineend="1780" original="0x959fed8">
+<ns name="Solution_to_Exercise_3_2" id="22bede69932147ac6f1f9ff43d51f5ad_11a15c0edf7b4d516b21e00195ac76d3" file="1" linestart="1751" lineend="1780" original="0x99cca88">
 <Namedalias name="mpl" id="22bede69932147ac6f1f9ff43d51f5ad_cc7ba18b6ca54dbc3d13c0dd4bfaf8e2" file="1" linestart="1757" lineend="1757"/>
 <NamedDecl name="&lt;using-directive&gt;" id="22bede69932147ac6f1f9ff43d51f5ad_f8ede9f675bd40d00cfec622de244ed6" file="1" linestart="1758" lineend="1758"/>
 <f namespace="Solution_to_Exercise_3_2" name="solve" id="22bede69932147ac6f1f9ff43d51f5ad_33de74930aec4002df2c408afeebdba0" file="1" linestart="1761" lineend="1779" previous="430dc6c5137fc4faef7757e1b864855d_33de74930aec4002df2c408afeebdba0" access="none" hasbody="true" isdef="true">
@@ -16521,7 +16521,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="Solution_to_Exercise_3_3_AND_3_4" id="22bede69932147ac6f1f9ff43d51f5ad_b9e5455c13f7d9d26c5fa018b265e420" file="1" linestart="1782" lineend="1890" original="0x95a0010">
+<ns name="Solution_to_Exercise_3_3_AND_3_4" id="22bede69932147ac6f1f9ff43d51f5ad_b9e5455c13f7d9d26c5fa018b265e420" file="1" linestart="1782" lineend="1890" original="0x99ccbc0">
 <cr namespace="Solution_to_Exercise_3_3_AND_3_4" access="none" depth="0" pod="true" kind="struct" name="add_pointer_f" id="22bede69932147ac6f1f9ff43d51f5ad_21c26e7bb9ad04d9dd94e324614cdea5" file="1" linestart="1785" lineend="1789">
 <cr access="public" kind="struct" name="add_pointer_f" id="22bede69932147ac6f1f9ff43d51f5ad_e8f453a80b39da23411b26a816dfa2f4" file="1" linestart="1785" lineend="1785"/>
 <tm parent="22bede69932147ac6f1f9ff43d51f5ad_21c26e7bb9ad04d9dd94e324614cdea5" access="none" depth="0" kind="struct" name="apply" id="22bede69932147ac6f1f9ff43d51f5ad_7799599554732d8045b888bce29a0555" file="1" linestart="1787" lineend="1788">
@@ -17144,7 +17144,7 @@
 </Stmt>
 </f>
 </ns>
-<ns name="Solution_to_Exercise_3_7" id="22bede69932147ac6f1f9ff43d51f5ad_d5ba7201c0ca3749a5ea8061dd140c27" file="1" linestart="1912" lineend="2043" original="0x95a0148">
+<ns name="Solution_to_Exercise_3_7" id="22bede69932147ac6f1f9ff43d51f5ad_d5ba7201c0ca3749a5ea8061dd140c27" file="1" linestart="1912" lineend="2043" original="0x99cccf8">
 <f namespace="Solution_to_Exercise_3_7" name="solve_3_7" id="22bede69932147ac6f1f9ff43d51f5ad_3a87a5bf47b1c3fc25c53cdd9d776080" file="1" linestart="1915" lineend="2041" previous="430dc6c5137fc4faef7757e1b864855d_3a87a5bf47b1c3fc25c53cdd9d776080" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
 <bt name="void"/>

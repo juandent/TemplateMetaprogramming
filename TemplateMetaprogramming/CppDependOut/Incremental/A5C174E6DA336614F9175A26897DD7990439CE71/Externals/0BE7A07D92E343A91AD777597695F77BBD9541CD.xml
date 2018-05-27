@@ -1,6 +1,41 @@
 <Externals>
-<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="2" linestart="423" lineend="526"/>
-<cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639" file="2" linestart="383" lineend="386">
+<tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="plus" id="d66f498e989365adb4a419492a40ecd0_2d1c5d489f9bf8bb3503a07fda1c615f" file="2" linestart="91" lineend="102">
+<template_parameters>
+<ttp name="_Ty" id="d66f498e989365adb4a419492a40ecd0_28be45231a4e3b982bf7db9d09fc82ad" depth="0" index="0" proto="type-parameter-0-0">
+<bt name="void"/>
+</ttp>
+</template_parameters>
+<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="plus" id="d66f498e989365adb4a419492a40ecd0_2d1c5d489f9bf8bb3503a07fda1c615f" file="2" linestart="92" lineend="102">
+<cr access="public" kind="struct" name="plus" id="d66f498e989365adb4a419492a40ecd0_04471fc54fa5b8662955a4eb162d03b9" file="2" linestart="92" lineend="92"/>
+</cr>
+</tm>
+<tm namespace="std" access="none" depth="0" kind="class" name="initializer_list" id="321f728dfc11e1cbb9da1d5bdd6b13ac_d0df8863f0ca3fe8bec9984b396fa3d7" file="3" linestart="17" lineend="58">
+<template_parameters>
+<ttp name="_Elem" id="321f728dfc11e1cbb9da1d5bdd6b13ac_8ae41d5ab1bbb8f5e2fa01926cb6aefa" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="std" access="none" depth="0" kind="class" name="initializer_list" id="321f728dfc11e1cbb9da1d5bdd6b13ac_d0df8863f0ca3fe8bec9984b396fa3d7" file="3" linestart="18" lineend="58">
+<cr access="public" kind="class" name="initializer_list" id="321f728dfc11e1cbb9da1d5bdd6b13ac_c74ffc711d952a0812d8c27eaae50fe8" file="3" linestart="18" lineend="18"/>
+<m name="begin" id="321f728dfc11e1cbb9da1d5bdd6b13ac_3bb323aac5b34fbc31dbbe704975127e" file="3" linestart="40" lineend="43" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="const _Elem *">
+<pt>
+<QualType const="true">
+<ttp/>
+</QualType>
+</pt>
+</fpt>
+</m>
+<m name="end" id="321f728dfc11e1cbb9da1d5bdd6b13ac_16a19da76f97d735c9ef0c4f597291bc" file="3" linestart="45" lineend="48" access="public" hasbody="true" isdef="true">
+<fpt cc="x86_thiscall" const="true" proto="const _Elem *">
+<pt>
+<QualType const="true">
+<ttp/>
+</QualType>
+</pt>
+</fpt>
+</m>
+</cr>
+</tm>
+<cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639" file="4" linestart="383" lineend="386">
 <base access="public">
 <tss>
 <templatebase id="249b4c0096e6d1394c81e46f6fb193b8_0e14667e7fa909cae787013e4a665cda"/>
@@ -11,42 +46,7 @@
 </tss>
 </base>
 </cr>
-<tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="plus" id="d66f498e989365adb4a419492a40ecd0_2d1c5d489f9bf8bb3503a07fda1c615f" file="3" linestart="91" lineend="102">
-<template_parameters>
-<ttp name="_Ty" id="d66f498e989365adb4a419492a40ecd0_28be45231a4e3b982bf7db9d09fc82ad" depth="0" index="0" proto="type-parameter-0-0">
-<bt name="void"/>
-</ttp>
-</template_parameters>
-<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="plus" id="d66f498e989365adb4a419492a40ecd0_2d1c5d489f9bf8bb3503a07fda1c615f" file="3" linestart="92" lineend="102">
-<cr access="public" kind="struct" name="plus" id="d66f498e989365adb4a419492a40ecd0_04471fc54fa5b8662955a4eb162d03b9" file="3" linestart="92" lineend="92"/>
-</cr>
-</tm>
-<tm namespace="std" access="none" depth="0" kind="class" name="initializer_list" id="321f728dfc11e1cbb9da1d5bdd6b13ac_d0df8863f0ca3fe8bec9984b396fa3d7" file="4" linestart="17" lineend="58">
-<template_parameters>
-<ttp name="_Elem" id="321f728dfc11e1cbb9da1d5bdd6b13ac_8ae41d5ab1bbb8f5e2fa01926cb6aefa" depth="0" index="0" proto="type-parameter-0-0"/>
-</template_parameters>
-<cr namespace="std" access="none" depth="0" kind="class" name="initializer_list" id="321f728dfc11e1cbb9da1d5bdd6b13ac_d0df8863f0ca3fe8bec9984b396fa3d7" file="4" linestart="18" lineend="58">
-<cr access="public" kind="class" name="initializer_list" id="321f728dfc11e1cbb9da1d5bdd6b13ac_c74ffc711d952a0812d8c27eaae50fe8" file="4" linestart="18" lineend="18"/>
-<m name="begin" id="321f728dfc11e1cbb9da1d5bdd6b13ac_3bb323aac5b34fbc31dbbe704975127e" file="4" linestart="40" lineend="43" access="public" hasbody="true" isdef="true">
-<fpt cc="x86_thiscall" const="true" proto="const _Elem *">
-<pt>
-<QualType const="true">
-<ttp/>
-</QualType>
-</pt>
-</fpt>
-</m>
-<m name="end" id="321f728dfc11e1cbb9da1d5bdd6b13ac_16a19da76f97d735c9ef0c4f597291bc" file="4" linestart="45" lineend="48" access="public" hasbody="true" isdef="true">
-<fpt cc="x86_thiscall" const="true" proto="const _Elem *">
-<pt>
-<QualType const="true">
-<ttp/>
-</QualType>
-</pt>
-</fpt>
-</m>
-</cr>
-</tm>
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="4" linestart="423" lineend="526"/>
 <tm namespace="std" access="none" depth="0" kind="struct" name="pair" id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49" file="5" linestart="91" lineend="294">
 <template_parameters>
 <ttp name="_Ty1" id="b9e4183ee61331ebfdc985678ac87295_54c9f296fcca0f29026ef3edaed525ce" depth="0" index="0" proto="type-parameter-0-0"/>
@@ -554,18 +554,7 @@
 </tss>
 </base>
 </cr>
-<cr namespace="std" access="none" depth="2" kind="class" name="list" id="c83325bed4ca1f3c654747384e440744_e910965c5c5696d04494d8269d29d91a" file="17" linestart="789" lineend="1884">
-<base access="public">
-<tss>
-<templatebase id="c83325bed4ca1f3c654747384e440744_652f73fca67769c2a25eb6cc5ca09af5"/>
-<template_arguments>
-<ttp/>
-<ttp/>
-</template_arguments>
-</tss>
-</base>
-</cr>
-<cr namespace="std" access="none" depth="1" kind="class" name="deque" id="72613b6bf11c707947774abcee4305bc_936b3721bb2dae502758d4d22ace95d0" file="18" linestart="934" lineend="1980">
+<cr namespace="std" access="none" depth="1" kind="class" name="deque" id="72613b6bf11c707947774abcee4305bc_936b3721bb2dae502758d4d22ace95d0" file="17" linestart="934" lineend="1980">
 <base access="public">
 <tss>
 <templatebase id="72613b6bf11c707947774abcee4305bc_d844dc0861ae12e31f1b72c7c60a062c"/>
@@ -580,7 +569,7 @@
 </template_arguments>
 </tss>
 </base>
-<e parent="72613b6bf11c707947774abcee4305bc_936b3721bb2dae502758d4d22ace95d0" access="public" name="" id="72613b6bf11c707947774abcee4305bc_c1481c21e4d6a22e21f3f8bbc9bf8fc3" file="18" linestart="967" lineend="967" fixed="true">
+<e parent="72613b6bf11c707947774abcee4305bc_936b3721bb2dae502758d4d22ace95d0" access="public" name="" id="72613b6bf11c707947774abcee4305bc_c1481c21e4d6a22e21f3f8bbc9bf8fc3" file="17" linestart="967" lineend="967" fixed="true">
 <promotion_type>
 <bt name="&lt;dependent type&gt;"/>
 </promotion_type>
@@ -588,6 +577,17 @@
 <bt name="int"/>
 </integer_type>
 </e>
+</cr>
+<cr namespace="std" access="none" depth="2" kind="class" name="list" id="c83325bed4ca1f3c654747384e440744_e910965c5c5696d04494d8269d29d91a" file="18" linestart="789" lineend="1884">
+<base access="public">
+<tss>
+<templatebase id="c83325bed4ca1f3c654747384e440744_652f73fca67769c2a25eb6cc5ca09af5"/>
+<template_arguments>
+<ttp/>
+<ttp/>
+</template_arguments>
+</tss>
+</base>
 </cr>
 <cr access="none" depth="0" kind="class" name="" id="d18bb25a031fcdd792cf35745b6cee81_2b627bcbcfca32308896690b5b84f4dd" file="1" linestart="216" lineend="216">
 <c name="" id="d18bb25a031fcdd792cf35745b6cee81_29710b16a26642c6c8cd16c70434a05c" file="1" linestart="216" lineend="216" implicit="true" access="public" inline="true" hasbody="true" isdef="true">
