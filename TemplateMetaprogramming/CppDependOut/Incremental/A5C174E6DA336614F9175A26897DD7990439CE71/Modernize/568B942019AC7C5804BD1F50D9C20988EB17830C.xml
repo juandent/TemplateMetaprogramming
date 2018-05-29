@@ -1,0 +1,4 @@
+<log>
+ <error level="error" id="empty error" file="c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelisttester.cpp" line="3" col="10" msg="&apos;typelistGenericPushBack.hpp&apos; file not found [clang-diagnostic-error]" />
+ <error level="error" id="empty error" file="c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelisttester.cpp" line="7" col="37" msg="expected &apos;;&apos; after alias declaration [clang-diagnostic-error]" />
+</log>

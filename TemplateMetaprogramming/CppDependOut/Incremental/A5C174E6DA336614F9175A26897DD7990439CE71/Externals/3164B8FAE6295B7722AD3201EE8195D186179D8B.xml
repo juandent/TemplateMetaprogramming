@@ -1,4 +1,6 @@
 <Externals>
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="2" linestart="423" lineend="526"/>
+<cr namespace="std" access="none" kind="class" name="basic_ostream" id="249b4c0096e6d1394c81e46f6fb193b8_7df99f34c778205aaa2e1759bec30243" file="2" linestart="551" lineend="551"/>
 <cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639" file="2" linestart="383" lineend="386">
 <base access="public">
 <tss>
@@ -10,8 +12,6 @@
 </tss>
 </base>
 </cr>
-<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="2" linestart="423" lineend="526"/>
-<cr namespace="std" access="none" kind="class" name="basic_ostream" id="249b4c0096e6d1394c81e46f6fb193b8_7df99f34c778205aaa2e1759bec30243" file="2" linestart="551" lineend="551"/>
 <tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="_Simple_types" id="dee9a38fa9553e14571d74e3900a9d5d_d16a5f6f5bc0b20f10361aff0d9f12b0" file="3" linestart="966" lineend="975">
 <template_parameters>
 <ttp name="_Value_type" id="dee9a38fa9553e14571d74e3900a9d5d_626879621e24d9f9efce904904e1301a" depth="0" index="0" proto="type-parameter-0-0"/>

@@ -1,2 +1,4 @@
 <log>
+ <error level="error" id="err_pp_file_not_found" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\TypelistTester.cpp" line="3" col="10" msg="&apos;typelistGenericPushBack.hpp&apos; file not found" />
+ <error level="error" id="err_expected_after" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\TypelistTester.cpp" line="7" col="37" msg="expected &apos;;&apos; after alias declaration" />
 </log>

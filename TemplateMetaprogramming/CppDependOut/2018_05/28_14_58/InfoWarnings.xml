@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<InfoWarnings>
+  <Info>Begin analysis with CppDepend v2018.1.0.73</Info>
+  <Info>Compare with analysis result obtained on 2018 May - 23 Wednesday 08:13  (which is the analysis result with date closest to 30 days ago)</Info>
+  <Warning>Additional include directory C:\Program Files (x86)\BCGSoft\BCGControlBar Professional Evaluation\BCGCBPro not found for the project TemplateMetaprogramming : This can influence the analysis. You can add the directory path from Project Properties Panel -&gt; View Additional Include Paths. Please contact CppDepend support to check why this path was not correctly resolved.</Warning>
+  <Info>The parser used is Clang</Info>
+  <Info>8 Cores are used, you can change this value from the menu Tools-&gt;Options-&gt;Parser Configuration</Info>
+  <Info>Clang-Tidy is enabled. However, it will take more time to analyse your code base the first time.</Info>
+  <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'm' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17STLCookbook.cpp:124:30</ClangError>
+  <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'key' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17STLCookbook.cpp:133:20</ClangError>
+  <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'p' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp:16:29</ClangError>
+  <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'val' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\CPP17_Compliance.cpp:41:8</ClangError>
+  <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'hasLess' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\declval.cpp:202:25</ClangError>
+  <ClangError>Project:TemplateMetaprogramming=&gt;use of undeclared identifier 'g1' at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\ParsingTemplates.cpp:191:4</ClangError>
+  <ClangError>Project:TemplateMetaprogramming=&gt;'typelistGenericPushBack.hpp' file not found at C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\TypelistTester.cpp:3:10</ClangError>
+  <Info>No dependency cycle detected in Projects referencement graph.</Info>
+  <Info>Log trend metrics values.</Info>
+  <Warning>3 quality gates fail.
+  - 'New Blocker / Critical / High Issues' value 1 issues greater than fail threshold 0 issues
+  - 'Critical Rules Violated' value 2 rules greater than fail threshold 0 rules
+  - 'Debt Rating per Namespace' value 6 namespaces greater than fail threshold 0 namespaces</Warning>
+  <Info>CppDepend analysis done. Duration: 00:01:30</Info>
+</InfoWarnings>

@@ -190,13 +190,16 @@
     <ClInclude Include="Typelist.hpp" />
     <ClInclude Include="typelist\accumulate.hpp" />
     <ClInclude Include="typelist\addconst.hpp" />
+    <ClInclude Include="typelist\Identity.hpp" />
+    <ClInclude Include="typelist\insertionsort.hpp" />
+    <ClInclude Include="typelist\insertsorted.hpp" />
     <ClInclude Include="typelist\largerType.hpp" />
     <ClInclude Include="typelist\largesttypeacc.hpp" />
     <ClInclude Include="typelist\largesttypeaccum0.hpp" />
     <ClInclude Include="typelist\transform.hpp" />
     <ClInclude Include="typelist\typelistFront.hpp" />
     <ClInclude Include="typelist\typelistGenericLargestType.hpp" />
-    <ClInclude Include="typelist\typelistGenericPushBack.hpp" />
+    <ClInclude Include="typelist\typelistRecPushBack.hpp" />
     <ClInclude Include="typelist\typelistLargestType.hpp" />
     <ClInclude Include="typelist\typelistNthElement.hpp" />
     <ClInclude Include="typelist\typelistPopBack.hpp" />
@@ -271,6 +274,9 @@
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
+    <ClCompile Include="TypelistsCPPTemplates2ndEd-2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="TypelistsCPPTemplates2ndEd.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>

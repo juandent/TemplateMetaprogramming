@@ -24,11 +24,16 @@ c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\targetver.h
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\accumulate.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\addconst.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\identity.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\insertionsort.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\insertsorted.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\largertype.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\largesttypeacc.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\largesttypeaccum0.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\transform.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistfront.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistgenericlargesttype.hpp
-c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistgenericpushback.hpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistrecpushback.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistlargesttype.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistnthelement.hpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelistpopback.hpp
@@ -88,6 +93,7 @@ c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\testmodules.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\traitscpptempl.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typeclassificationcpptemp.cpp
+c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelistscpptemplates2nded-2.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelistscpptemplates2nded.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typelist\typelisttester.cpp
 c:\users\juan dent\documents\visual studio 2015\projects\templatemetaprogramming\templatemetaprogramming\typeprinting_8_3_3.cpp
