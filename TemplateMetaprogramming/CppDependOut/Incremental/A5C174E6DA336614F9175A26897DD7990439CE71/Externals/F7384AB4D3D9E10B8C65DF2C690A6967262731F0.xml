@@ -1,17 +1,16 @@
 <Externals>
-<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="2" linestart="423" lineend="526"/>
-<tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="bfa602f8e9b02922d01dda3dc6094b76_9f608860ac47c736aa9e7255f3b2c38a" file="3" linestart="17" lineend="35">
+<tm namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="bfa602f8e9b02922d01dda3dc6094b76_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="17" lineend="35">
 <template_parameters>
 <ttp name="_Ty" id="bfa602f8e9b02922d01dda3dc6094b76_3ddd43b4e6565475f3b9a7df82f4d2fb" depth="0" index="0" proto="type-parameter-0-0"/>
 </template_parameters>
-<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="bfa602f8e9b02922d01dda3dc6094b76_9f608860ac47c736aa9e7255f3b2c38a" file="3" linestart="19" lineend="35">
-<cr access="public" kind="struct" name="integral_constant" id="bfa602f8e9b02922d01dda3dc6094b76_4c5c2990e41a98fc113cc7fdbc481727" file="3" linestart="19" lineend="19"/>
-<v name="value" proto="const _Ty" const="true" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" file="3" linestart="21" lineend="21" storage="static" init="true" access2="public">
+<cr namespace="std" access="none" depth="0" pod="true" kind="struct" name="integral_constant" id="bfa602f8e9b02922d01dda3dc6094b76_9f608860ac47c736aa9e7255f3b2c38a" file="2" linestart="19" lineend="35">
+<cr access="public" kind="struct" name="integral_constant" id="bfa602f8e9b02922d01dda3dc6094b76_4c5c2990e41a98fc113cc7fdbc481727" file="2" linestart="19" lineend="19"/>
+<v name="value" proto="const _Ty" const="true" id="bfa602f8e9b02922d01dda3dc6094b76_59533a95ed8965943872704845b566cb" file="2" linestart="21" lineend="21" storage="static" init="true" access2="public">
 <QualType const="true">
 <ttp/>
 </QualType>
 </v>
-<cv name="operator value_type" id="bfa602f8e9b02922d01dda3dc6094b76_8b8866d80016c519b0070d5b8ffd7e2b" file="3" linestart="26" lineend="29" access="public" hasbody="true" isdef="true">
+<cv name="operator value_type" id="bfa602f8e9b02922d01dda3dc6094b76_8b8866d80016c519b0070d5b8ffd7e2b" file="2" linestart="26" lineend="29" access="public" hasbody="true" isdef="true">
 <fpt cc="x86_thiscall" const="true" proto="value_type">
 <Tdef>
 <ttp/>
@@ -20,11 +19,12 @@
 </cv>
 </cr>
 </tm>
-<tm namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="2" linestart="529" lineend="530">
+<cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="3" linestart="423" lineend="526"/>
+<tm namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="529" lineend="530">
 <template_parameters>
 <ttp name="_Ty" id="249b4c0096e6d1394c81e46f6fb193b8_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
 </template_parameters>
-<cr namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="2" linestart="530" lineend="530"/>
+<cr namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="530" lineend="530"/>
 </tm>
 <tm namespace="std" access="none" depth="0" kind="struct" name="pair" id="b9e4183ee61331ebfdc985678ac87295_588c02fb583a80daabf4c37e3fd82a49" file="4" linestart="91" lineend="294">
 <template_parameters>

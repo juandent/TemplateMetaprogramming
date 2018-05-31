@@ -1,0 +1,7 @@
+<log>
+ <error level="warning" id="pp_pragma_once_in_main_file" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\cttypelist.hpp" line="1" col="9" msg="#pragma once in main file" />
+ <error level="error" id="err_undeclared_var_use" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\cttypelist.hpp" line="6" col="29" msg="use of undeclared identifier &apos;CTValue&apos;" />
+ <error level="error" id="err_ref_non_value" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\cttypelist.hpp" line="6" col="37" msg="&apos;T&apos; does not refer to a value" />
+ <error level="note" id="note_declared_at" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\cttypelist.hpp" line="5" col="19" msg="declared here" />
+ <error level="error" id="err_expected_after" file="C:\Users\Juan Dent\Documents\Visual Studio 2015\Projects\TemplateMetaprogramming\TemplateMetaprogramming\typelist\cttypelist.hpp" line="6" col="47" msg="expected &apos;;&apos; after alias declaration" />
+</log>

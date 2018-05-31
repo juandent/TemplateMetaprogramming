@@ -9,7 +9,7 @@
 <c f="1" b="28" e="28"/>
 <c f="1" b="30" e="28"/>
 <c f="1" b="94" e="94"/>
-<c f="1" b="97" e="94"/>
+<c f="1" b="96" e="94"/>
 </Comments>
 <Macros/>
 <Directives>
@@ -33,6 +33,10 @@
 <m f="1" bl="75" bc="1"/>
 <m f="1" bl="85" bc="1"/>
 <m f="1" bl="91" bc="1"/>
+<m f="1" bl="96" bc="1"/>
+<m f="1" bl="100" bc="1"/>
+<m f="1" bl="104" bc="1"/>
+<m f="1" bl="110" bc="1"/>
 </Directives>
 <tun>
 <tm access="none" kind="class" name="FrontT" id="90db8a69a405c0fb263754a534e17939_28c3300bda3b9ba9a3567b45a90411a6" file="2" linestart="5" lineend="6">
@@ -1142,35 +1146,221 @@
 </template_arguments>
 </tss>
 </TypedefNameDecl>
-<f name="testAccumulate" id="565445ad6805dee2e10213420f49ae06_13f08993cbfc70fbd707803379753f44" file="1" linestart="97" lineend="105" access="none" hasbody="true" isdef="true">
+<tm access="none" depth="0" pod="true" kind="struct" name="CTValue" id="7eacb54a4e03a2a8a507b287fc8236a7_abcbee2eade0d0c9466d90fe68a3c233" file="18" linestart="4" lineend="8">
+<template_parameters>
+<ttp name="T" id="7eacb54a4e03a2a8a507b287fc8236a7_f54f4dd914041c5a8731f0481383a4b6" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="Value" id="7eacb54a4e03a2a8a507b287fc8236a7_7435507e924a65f68cd8c63a8a859d89" file="18" linestart="4" lineend="4" depth="0" index="1">
+<ttp/>
+</DeclaratorDecl>
+</template_parameters>
+<cr access="none" depth="0" pod="true" kind="struct" name="CTValue" id="7eacb54a4e03a2a8a507b287fc8236a7_abcbee2eade0d0c9466d90fe68a3c233" file="18" linestart="5" lineend="8">
+<cr access="public" kind="struct" name="CTValue" id="7eacb54a4e03a2a8a507b287fc8236a7_19baec1859e4c1264290677dd03e3e3c" file="18" linestart="5" lineend="5"/>
+<v name="value" proto="const T" const="true" id="7eacb54a4e03a2a8a507b287fc8236a7_7c11d9048167ddf715b5ab1ab84372ef" file="18" linestart="7" lineend="7" storage="static" init="true" access2="public">
+<QualType const="true">
+<ttp/>
+</QualType>
+<Stmt>
+<drx lb="7" cb="29" id="7eacb54a4e03a2a8a507b287fc8236a7_7435507e924a65f68cd8c63a8a859d89" nm="Value"/>
+
+</Stmt>
+</v>
+</cr>
+</tm>
+<TypedefNameDecl name="Primes" id="565445ad6805dee2e10213420f49ae06_2350a66caacf17556d81c7d22f1be862" file="1" linestart="98" lineend="98">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<tss>
+<templatebase id="7eacb54a4e03a2a8a507b287fc8236a7_abcbee2eade0d0c9466d90fe68a3c233"/>
+<template_arguments>
+<bt name="int"/>
+<Stmt>
+<n45 lb="98" cb="38">
+<flit/>
+</n45>
+
+</Stmt>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="7eacb54a4e03a2a8a507b287fc8236a7_abcbee2eade0d0c9466d90fe68a3c233"/>
+<template_arguments>
+<bt name="int"/>
+<Stmt>
+<n45 lb="98" cb="55">
+<flit/>
+</n45>
+
+</Stmt>
+</template_arguments>
+</tss>
+<tss>
+<templatebase id="7eacb54a4e03a2a8a507b287fc8236a7_abcbee2eade0d0c9466d90fe68a3c233"/>
+<template_arguments>
+<bt name="int"/>
+<Stmt>
+<n45 lb="98" cb="72">
+<flit/>
+</n45>
+
+</Stmt>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<tm access="none" kind="struct" name="MultiplyT" id="8a64658228cb7d08cc06ca44ac064cad_ad85b9ddcb7776582085906aedf5f010" file="19" linestart="5" lineend="6">
+<template_parameters>
+<ttp name="T" id="8a64658228cb7d08cc06ca44ac064cad_b4274d7667b78aa99eb07cf209ecad55" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="U" id="8a64658228cb7d08cc06ca44ac064cad_ada29030cb5f2b5c083eeded6f53abc3" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<cr access="none" kind="struct" name="MultiplyT" id="8a64658228cb7d08cc06ca44ac064cad_ad85b9ddcb7776582085906aedf5f010" file="19" linestart="6" lineend="6"/>
+</tm>
+<ctps Spec="&lt;CTValue&lt;type-parameter-0-0, Value&gt;, CTValue&lt;type-parameter-0-0, Value2&gt; &gt;" access="none" depth="0" pod="true" kind="struct" name="MultiplyT" id="8a64658228cb7d08cc06ca44ac064cad_34a9938bddd4777962d1dc1e79f78e15" file="19" linestart="8" lineend="12">
+<cr access="public" kind="struct" name="MultiplyT" id="8a64658228cb7d08cc06ca44ac064cad_2bf00ab8d68b34fced0a06d332f648bc" file="19" linestart="9" lineend="9"/>
+<TypedefNameDecl name="Type" id="8a64658228cb7d08cc06ca44ac064cad_3004dea68ae8925d413cbc92ec3d023b" file="19" linestart="11" lineend="11">
+<tss>
+<templatebase id="7eacb54a4e03a2a8a507b287fc8236a7_abcbee2eade0d0c9466d90fe68a3c233"/>
+<template_arguments>
+<ttp/>
+<Stmt>
+<xop lb="11" cb="26" le="11" ce="33" kind="*">
+<drx lb="11" cb="26" id="8a64658228cb7d08cc06ca44ac064cad_e09b272f99c9f413ee4de86e23de894a" nm="Value1"/>
+<drx lb="11" cb="33" id="8a64658228cb7d08cc06ca44ac064cad_600790f2f5ea6472e9104bd4e8dcb3be" nm="Value2"/>
+</xop>
+
+</Stmt>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ctps>
+<RedeclarableTemplateDecl name="Multiply" id="8a64658228cb7d08cc06ca44ac064cad_cdad67696c783395a6548e4c964f5ded" file="19" linestart="14" lineend="15">
+<template_parameters>
+<ttp name="T" id="8a64658228cb7d08cc06ca44ac064cad_758cee7a865ac07050f87902c1a0aa1f" depth="0" index="0" proto="type-parameter-0-0"/>
+<ttp name="U" id="8a64658228cb7d08cc06ca44ac064cad_56f149aa8efcc61d0cb7dc7d62160613" depth="0" index="1" proto="type-parameter-0-1"/>
+</template_parameters>
+<TypedefNameDecl name="Multiply" id="8a64658228cb7d08cc06ca44ac064cad_cdad67696c783395a6548e4c964f5ded" file="19" linestart="15" lineend="15">
+<DependentName/>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<v name="primesMultiplied" proto="const int" const="true" isLiteral="true" isPrimitive="true" id="565445ad6805dee2e10213420f49ae06_5993224229fe3e6c60202203ec5ac19f" file="1" linestart="102" lineend="102" init="true" access2="none">
+<QualType const="true">
+<bt name="int"/>
+</QualType>
+<Stmt>
+<n32 lb="102" cb="34" le="102" ce="82">
+<drx lb="102" cb="34" le="102" ce="82" kind="lvalue" id="7eacb54a4e03a2a8a507b287fc8236a7_7c11d9048167ddf715b5ab1ab84372ef" nm="value"/>
+</n32>
+
+</Stmt>
+</v>
+<RedeclarableTemplateDecl name="CTTypelist" id="608e3d4c1afb05ed1024fd0aeccd3330_8eaf42e535e158acba656f6e38c565ec" file="20" linestart="5" lineend="6">
+<template_parameters>
+<ttp name="T" id="608e3d4c1afb05ed1024fd0aeccd3330_758cee7a865ac07050f87902c1a0aa1f" depth="0" index="0" proto="type-parameter-0-0"/>
+<DeclaratorDecl name="Values" id="608e3d4c1afb05ed1024fd0aeccd3330_d5950a8faaeb125e62bb6ea588c0da3d" file="20" linestart="5" lineend="5" depth="0" index="1">
+<ttp/>
+</DeclaratorDecl>
+</template_parameters>
+<TypedefNameDecl name="CTTypelist" id="608e3d4c1afb05ed1024fd0aeccd3330_8eaf42e535e158acba656f6e38c565ec" file="20" linestart="6" lineend="6">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<PackExpansion/>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</RedeclarableTemplateDecl>
+<TypedefNameDecl name="PrimesEasier" id="565445ad6805dee2e10213420f49ae06_46926477278a216abbee9906ce9ce58a" file="1" linestart="106" lineend="106">
+<tss>
+<templatebase id="608e3d4c1afb05ed1024fd0aeccd3330_8eaf42e535e158acba656f6e38c565ec"/>
+<template_arguments>
+<bt name="int"/>
+<Stmt>
+<n45 lb="106" cb="38"/>
+
+</Stmt>
+<Stmt>
+<n45 lb="106" cb="41"/>
+
+</Stmt>
+<Stmt>
+<n45 lb="106" cb="44"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+<Comments/>
+<Macros/>
+<Directives/>
+<ns name="CPP_17" id="bab522cd10e9a69e0d699fcb65a4693a_4301ab8d0e04fb2d1619a54ff8a08b1a" file="21" linestart="3" lineend="10">
+<tm namespace="CPP_17" access="none" depth="0" pod="true" kind="struct" name="CTValue" id="bab522cd10e9a69e0d699fcb65a4693a_53f1eac77e9e87920f0de6441ee100ec" file="21" linestart="5" lineend="9">
+<template_parameters>
+<DeclaratorDecl name="Value" id="bab522cd10e9a69e0d699fcb65a4693a_a1f9dfede1b5cd260ac0a88c35c7c608" file="21" linestart="5" lineend="5" depth="0" index="0">
+<bt name="int"/>
+</DeclaratorDecl>
+</template_parameters>
+<cr namespace="CPP_17" access="none" depth="0" pod="true" kind="struct" name="CTValue" id="bab522cd10e9a69e0d699fcb65a4693a_1e08b8b755cde19647d618d97f4543b4" file="21" linestart="6" lineend="9">
+<cr access="public" kind="struct" name="CTValue" id="bab522cd10e9a69e0d699fcb65a4693a_ddb2c0860a4bd2e91b852402731dcb3e" file="21" linestart="6" lineend="6"/>
+<v name="value" proto="const int" const="true" isLiteral="true" isPrimitive="true" id="bab522cd10e9a69e0d699fcb65a4693a_3eba7c8d5f43ce7617b10e65591f6ec0" file="21" linestart="8" lineend="8" storage="static" init="true" access2="public">
+<QualType const="true">
+<auto/>
+</QualType>
+<Stmt>
+<drx lb="8" cb="33" id="bab522cd10e9a69e0d699fcb65a4693a_a1f9dfede1b5cd260ac0a88c35c7c608" nm="Value"/>
+
+</Stmt>
+</v>
+</cr>
+</tm>
+</ns>
+<ns name="CPP_17" id="565445ad6805dee2e10213420f49ae06_4301ab8d0e04fb2d1619a54ff8a08b1a" file="1" linestart="111" lineend="114" original="0x7a8f720">
+<TypedefNameDecl name="AutoPrimes" id="565445ad6805dee2e10213420f49ae06_38b39562b9fc7e61de8fa12cc9c8c114" file="1" linestart="113" lineend="113">
+<tss>
+<templatebase id="8f847f60bbafe214e6bf92a06e58d217_4a1cb5616500bc1361609c80d0f59db8"/>
+<template_arguments>
+<tss>
+<templatebase id="bab522cd10e9a69e0d699fcb65a4693a_1e08b8b755cde19647d618d97f4543b4"/>
+<template_arguments>
+<Stmt>
+<n45 lb="113" cb="38"/>
+
+</Stmt>
+</template_arguments>
+</tss>
+</template_arguments>
+</tss>
+</TypedefNameDecl>
+</ns>
+<f name="testAccumulate" id="565445ad6805dee2e10213420f49ae06_13f08993cbfc70fbd707803379753f44" file="1" linestart="117" lineend="125" access="none" hasbody="true" isdef="true">
 <fpt cc="cdecl" proto="void">
 <bt name="void"/>
 </fpt>
 <Stmt>
-<u lb="98" cb="1" le="105" ce="1">
-<dst lb="99" cb="2" le="99" ce="31">
+<u lb="118" cb="1" le="125" ce="1">
+<dst lb="119" cb="2" le="119" ce="31">
 <exp pvirg="true"/>
 <Var nm="ld" value="true">
 <auto/>
-<n55 lb="99" cb="12" le="99" ce="30">
+<n55 lb="119" cb="12" le="119" ce="30">
 <sizeof>
 <bt name="long double"/>
 </sizeof>
 </n55>
 </Var>
 </dst>
-<dst lb="100" cb="2" le="100" ce="29">
+<dst lb="120" cb="2" le="120" ce="29">
 <exp pvirg="true"/>
 <Var nm="ll" value="true">
 <auto/>
-<n55 lb="100" cb="12" le="100" ce="28">
+<n55 lb="120" cb="12" le="120" ce="28">
 <sizeof>
 <bt name="long long"/>
 </sizeof>
 </n55>
 </Var>
 </dst>
-<dst lb="101" cb="2" le="101" ce="21">
+<dst lb="121" cb="2" le="121" ce="21">
 <exp pvirg="true"/>
 <Var nm="p">
 <pt>
@@ -1193,14 +1383,14 @@
 </tss>
 </Tdef>
 </pt>
-<n32 lb="101" cb="14">
-<n16 lb="101" cb="14">
+<n32 lb="121" cb="14">
+<n16 lb="121" cb="14">
 <exp pvirg="true"/>
 </n16>
 </n32>
 </Var>
 </dst>
-<dst lb="102" cb="2" le="102" ce="30">
+<dst lb="122" cb="2" le="122" ce="30">
 <exp pvirg="true"/>
 <Var nm="pp">
 <pt>
@@ -1219,14 +1409,14 @@
 </tss>
 </Tdef>
 </pt>
-<n32 lb="102" cb="23">
-<n16 lb="102" cb="23">
+<n32 lb="122" cb="23">
+<n16 lb="122" cb="23">
 <exp pvirg="true"/>
 </n16>
 </n32>
 </Var>
 </dst>
-<dst lb="103" cb="2" le="103" ce="22">
+<dst lb="123" cb="2" le="123" ce="22">
 <exp pvirg="true"/>
 <Var nm="l">
 <pt>
@@ -1250,14 +1440,14 @@
 </tss>
 </Tdef>
 </pt>
-<n32 lb="103" cb="15">
-<n16 lb="103" cb="15">
+<n32 lb="123" cb="15">
+<n16 lb="123" cb="15">
 <exp pvirg="true"/>
 </n16>
 </n32>
 </Var>
 </dst>
-<dst lb="104" cb="2" le="104" ce="29">
+<dst lb="124" cb="2" le="124" ce="29">
 <exp pvirg="true"/>
 <Var nm="la">
 <pt>
@@ -1281,8 +1471,8 @@
 </tss>
 </Tdef>
 </pt>
-<n32 lb="104" cb="22">
-<n16 lb="104" cb="22">
+<n32 lb="124" cb="22">
+<n16 lb="124" cb="22">
 <exp pvirg="true"/>
 </n16>
 </n32>

@@ -190,12 +190,16 @@
     <ClInclude Include="Typelist.hpp" />
     <ClInclude Include="typelist\accumulate.hpp" />
     <ClInclude Include="typelist\addconst.hpp" />
+    <ClInclude Include="typelist\cttypelist.hpp" />
+    <ClInclude Include="typelist\ctvalue.hpp" />
+    <ClInclude Include="typelist\ctvalue17.hpp" />
     <ClInclude Include="typelist\Identity.hpp" />
     <ClInclude Include="typelist\insertionsort.hpp" />
     <ClInclude Include="typelist\insertsorted.hpp" />
     <ClInclude Include="typelist\largerType.hpp" />
     <ClInclude Include="typelist\largesttypeacc.hpp" />
     <ClInclude Include="typelist\largesttypeaccum0.hpp" />
+    <ClInclude Include="typelist\multiply.hpp" />
     <ClInclude Include="typelist\transform.hpp" />
     <ClInclude Include="typelist\typelistFront.hpp" />
     <ClInclude Include="typelist\typelistGenericLargestType.hpp" />
@@ -207,6 +211,7 @@
     <ClInclude Include="typelist\typelistPushBack.hpp" />
     <ClInclude Include="typelist\typelistPushFront.hpp" />
     <ClInclude Include="typelist\typelistReverse.hpp" />
+    <ClInclude Include="typelist\Valuelist.hpp" />
     <ClInclude Include="UtilsForMyFold.h" />
   </ItemGroup>
   <ItemGroup>

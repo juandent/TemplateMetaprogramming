@@ -93,6 +93,33 @@ using largest = LargestTypeAcc<types>;
 using largest_accum = LargestTypeAccOkNull<types>;
 //using largest_accum_null_list = LargestTypeAccOkNull<Typelist<>>;
 
+#include "typelist/ctvalue.hpp"
+
+using Primes = Typelist<CTValue<int, 2>, CTValue<int, 3>, CTValue<int, 5>>;
+
+#include "typelist/multiply.hpp"
+
+constexpr int primesMultiplied = Accumulate<Primes, MultiplyT, CTValue<int, 1>>::value;
+
+#include "typelist/cttypelist.hpp" // OJO: syntactic sugar only!!
+
+using PrimesEasier = CTTypelist<int, 2, 3, 5>;	// OJO: syntactic sugar only!!
+
+
+
+#include "typelist/ctvalue17.hpp"
+namespace CPP_17
+{
+	using AutoPrimes = Typelist<CTValue<2>, CTValue<3>, CTValue<5>>;
+}
+
+#include "typelist/Valuelist.hpp" // ValueList has all the operations it requires to behave as a Typelist
+
+namespace ValueListScope
+{
+	using Primes = ValueList<int, 2, 3, 5>;	// thus we can use it in algorithms that work for Typelists
+	constexpr int primesMultiplied = Accumulate<Primes, MultiplyT, CTValue<int, 1>>::value;
+}
 
 void testAccumulate()
 {

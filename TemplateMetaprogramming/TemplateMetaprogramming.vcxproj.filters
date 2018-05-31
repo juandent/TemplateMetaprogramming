@@ -162,6 +162,21 @@
     <ClInclude Include="typelist\insertsorted.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="typelist\ctvalue.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelist\multiply.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelist\cttypelist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelist\Valuelist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelist\ctvalue17.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

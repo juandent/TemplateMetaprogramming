@@ -1,0 +1,10 @@
+#pragma once
+
+namespace CPP_17
+{
+	template<auto Value>
+	struct CTValue
+	{
+		static constexpr auto value = Value;
+	};
+}

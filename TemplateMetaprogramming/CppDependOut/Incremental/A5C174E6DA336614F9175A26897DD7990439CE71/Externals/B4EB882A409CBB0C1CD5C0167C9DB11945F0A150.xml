@@ -1,5 +1,11 @@
 <Externals>
 <cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="2" linestart="423" lineend="526"/>
+<tm namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="2" linestart="529" lineend="530">
+<template_parameters>
+<ttp name="_Ty" id="249b4c0096e6d1394c81e46f6fb193b8_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="2" linestart="530" lineend="530"/>
+</tm>
 <cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639" file="2" linestart="383" lineend="386">
 <base access="public">
 <tss>
@@ -11,12 +17,6 @@
 </tss>
 </base>
 </cr>
-<tm namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="2" linestart="529" lineend="530">
-<template_parameters>
-<ttp name="_Ty" id="249b4c0096e6d1394c81e46f6fb193b8_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
-</template_parameters>
-<cr namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="2" linestart="530" lineend="530"/>
-</tm>
 <cr namespace="std" access="none" depth="0" kind="class" name="allocator" id="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="979" lineend="1063" previous="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85">
 <tm parent="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85" access="none" depth="0" pod="true" kind="struct" name="rebind" id="dee9a38fa9553e14571d74e3900a9d5d_38c2be5a786a253bb82af3c54854f921" file="3" linestart="1002" lineend="1006">
 <template_parameters>

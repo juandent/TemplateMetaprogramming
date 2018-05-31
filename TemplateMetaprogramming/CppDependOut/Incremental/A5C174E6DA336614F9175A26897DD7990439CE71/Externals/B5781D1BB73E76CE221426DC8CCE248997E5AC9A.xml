@@ -1,4 +1,10 @@
 <Externals>
+<tm namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="529" lineend="530">
+<template_parameters>
+<ttp name="_Ty" id="249b4c0096e6d1394c81e46f6fb193b8_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
+</template_parameters>
+<cr namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="530" lineend="530"/>
+</tm>
 <cts Spec="&lt;char&gt;" namespace="std" access="none" depth="0" pod="true" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_76e43d9fa50c2ce16dafa9452550a098" file="3" linestart="423" lineend="526"/>
 <cr namespace="std" access="none" depth="1" kind="struct" name="char_traits" id="249b4c0096e6d1394c81e46f6fb193b8_bf3447e13ccfc57e5fa847f5d78e7639" file="3" linestart="383" lineend="386">
 <base access="public">
@@ -11,19 +17,6 @@
 </tss>
 </base>
 </cr>
-<cts Spec="&lt;int&gt;" access="none" depth="0" pod="true" kind="struct" name="type_description" id="949385a758a7b58d90f33f9a8028965a_c49672ea6334a4dd0e5e742ea5fec22c" file="1" linestart="23" lineend="31">
-<c name="type_description" id="949385a758a7b58d90f33f9a8028965a_992b4c0f8008fac58cb8c2c2c0834dd2" file="1" linestart="24" lineend="24" implicit="true" access="public" inline="true">
-<fpt cc="x86_thiscall" proto="void">
-<bt name="void"/>
-</fpt>
-</c>
-</cts>
-<tm namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="529" lineend="530">
-<template_parameters>
-<ttp name="_Ty" id="249b4c0096e6d1394c81e46f6fb193b8_5dabb8add95e1f50264087371ebe1436" depth="0" index="0" proto="type-parameter-0-0"/>
-</template_parameters>
-<cr namespace="std" access="none" kind="class" name="allocator" id="249b4c0096e6d1394c81e46f6fb193b8_07566aa809aee0bdf1c0fac16e19fa85" file="3" linestart="530" lineend="530"/>
-</tm>
 <cr namespace="std" access="none" depth="0" kind="class" name="allocator" id="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85" file="4" linestart="979" lineend="1063" previous="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85">
 <tm parent="dee9a38fa9553e14571d74e3900a9d5d_07566aa809aee0bdf1c0fac16e19fa85" access="none" depth="0" pod="true" kind="struct" name="rebind" id="dee9a38fa9553e14571d74e3900a9d5d_38c2be5a786a253bb82af3c54854f921" file="4" linestart="1002" lineend="1006">
 <template_parameters>
@@ -134,6 +127,13 @@
 </m>
 </cr>
 </tm>
+<cts Spec="&lt;int&gt;" access="none" depth="0" pod="true" kind="struct" name="type_description" id="949385a758a7b58d90f33f9a8028965a_c49672ea6334a4dd0e5e742ea5fec22c" file="1" linestart="23" lineend="31">
+<c name="type_description" id="949385a758a7b58d90f33f9a8028965a_992b4c0f8008fac58cb8c2c2c0834dd2" file="1" linestart="24" lineend="24" implicit="true" access="public" inline="true">
+<fpt cc="x86_thiscall" proto="void">
+<bt name="void"/>
+</fpt>
+</c>
+</cts>
 <f name="strcat" id="a931a838e1ba37ea3f1a7864bab4333c_b35cb4f312b371b4dc3c138013001d7a" file="7" linestart="86" lineend="86" extC="true" access="none">
 <Attributed/>
 <p name="_Destination" proto="char *" isPtr="true" isLiteral="true" access2="none">
