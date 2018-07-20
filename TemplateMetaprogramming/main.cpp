@@ -1297,10 +1297,14 @@ namespace LambdaImpl_2
 
 void testAccumulate();
 
+void useInvoker();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	useInvoker();
 
 	testAccumulate();
 

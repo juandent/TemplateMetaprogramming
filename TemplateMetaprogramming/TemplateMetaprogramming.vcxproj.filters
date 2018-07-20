@@ -177,6 +177,9 @@
     <ClInclude Include="typelist\ctvalue17.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Delegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -345,6 +348,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TypelistsCPPTemplates2ndEd-2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Delegate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

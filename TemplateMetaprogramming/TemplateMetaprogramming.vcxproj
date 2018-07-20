@@ -165,6 +165,7 @@
     <ClInclude Include="Chapter6.h" />
     <ClInclude Include="CRTP_0.h" />
     <ClInclude Include="Debug.h" />
+    <ClInclude Include="Delegate.h" />
     <ClInclude Include="Exercise 2_3.hpp" />
     <ClInclude Include="Exercise 2_3_JLBorges.hpp" />
     <ClInclude Include="Exercises_4.hpp" />
@@ -227,6 +228,7 @@
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
     <ClCompile Include="declval.cpp" />
+    <ClCompile Include="Delegate.cpp" />
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="DetectionIdiom.cpp" />
     <ClCompile Include="EBCO_CPPTempl.cpp" />
