@@ -72,13 +72,15 @@ void theseWillWorkInCPP17()
 struct X
 {
 	static bool b;
-	int n;
+	const int n = 55;
 	constexpr operator int() const { return 42; }
 };
 
+constexpr X anX{ 50 };
+
 void useX()
 {
-	UseVal< long, X{} > * c7;
+	UseVal< const X*, &anX > * c7;
 
 }
 

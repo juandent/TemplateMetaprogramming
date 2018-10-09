@@ -3,10 +3,10 @@
 // Front:
 
 template<typename List>
-class FrontT;
+struct FrontT;
 
 template<typename Head, typename...Tail>
-class FrontT < Typelist<Head, Tail...>>
+struct FrontT < Typelist<Head, Tail...>>
 {
 public:
 	using Type = Head;

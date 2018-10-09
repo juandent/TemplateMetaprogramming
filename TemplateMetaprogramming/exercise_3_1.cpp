@@ -908,7 +908,7 @@ namespace Chapter3 {
 						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match for addition");
 						using f = typename process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 
-						return quantity<T, Dimension, TargetUnits>{ x.value() + f::get(y.value()) };
+						return Quantity<T, Dimension, TargetUnits>{ x.value() + f::get(y.value()) };
 					}
 					template<typename T, typename Dimension, typename TargetUnits, typename OtherDim, typename SourceUnits>
 					Quantity<T, Dimension, TargetUnits>
@@ -917,7 +917,7 @@ namespace Chapter3 {
 						static_assert(mpl::equal<Dimension, OtherDim>::value, "dimensions much match for subtraction");
 						using f = typename process_dimension_into_ratio<T, Dimension, TargetUnits, SourceUnits>::type;
 
-						return quantity<T, Dimension, TargetUnits>{ x.value() - f::get(y.value()) };
+						return Quantity<T, Dimension, TargetUnits>{ x.value() - f::get(y.value()) };
 					}
 
 					namespace Detail

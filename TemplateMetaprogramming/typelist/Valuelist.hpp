@@ -2,6 +2,10 @@
 
 #include "isempty.hpp"
 #include "ctvalue.hpp"
+#include "typelist/typelistFront.hpp"
+#include "typelist/typelistPopFront.hpp"
+#include "typelist/typelistPushFront.hpp"
+#include "typelist/typelistPushBack.hpp"
 
 template<typename T, T...Values>
 struct ValueList

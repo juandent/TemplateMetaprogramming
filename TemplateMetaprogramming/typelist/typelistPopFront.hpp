@@ -4,10 +4,10 @@
 // PopFront:
 
 template<typename List>
-class PopFrontT;
+struct PopFrontT;
 
 template<typename Head, typename...Tail>
-class PopFrontT < Typelist<Head, Tail...>>
+struct PopFrontT < Typelist<Head, Tail...>>
 {
 public:
 	using Type = Typelist<Tail...>;

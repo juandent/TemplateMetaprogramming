@@ -27,7 +27,7 @@ template<typename T>
 class DXTM : private BXT<T>
 {
 public:
-	using BXT<T>::template Magic;
+	using typename BXT<T>::template Magic;
 	Magic<T>* plink;
 };
 
@@ -183,7 +183,7 @@ namespace Instantiation
 		{
 			ff<Int>(x);
 		}
-		
+		void g1(int i);
 
 		template<typename T>
 		void f1(T x)

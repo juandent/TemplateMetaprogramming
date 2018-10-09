@@ -3,10 +3,10 @@
 #include "Typelist.hpp"
 
 template<typename List, typename NewElement>
-class PushBackT;
+struct PushBackT;
 
 template<typename...Elements, typename NewElement>
-class PushBackT< Typelist<Elements...>, NewElement>
+struct PushBackT< Typelist<Elements...>, NewElement>
 {
 public:
 	using Type = Typelist<Elements..., NewElement>;

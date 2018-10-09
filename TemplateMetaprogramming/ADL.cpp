@@ -184,7 +184,7 @@ namespace RequiredUseOfTypename
 		X<T> f()
 		{
 			typename X<T>::C * p;
-			X<T>::D * q;
+			typename X<T>::D * q;
 		}
 
 		X<int>::C * s;

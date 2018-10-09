@@ -228,6 +228,7 @@ namespace sqlpp
 			static char s[] = { Cs..., '\0' };
 			return s;
 		}
+		static constexpr int Dim = sizeof...(Cs);
 	};
 
 	template <char... Cs>
@@ -240,18 +241,20 @@ namespace sqlpp
 				decltype(get_quote_right(std::declval<Context>()))::value, '\0' };
 			return s;
 		}
+		static constexpr int Dim = sizeof...(Cs) + 1;
 	};
 
-	template <std::size_t N, const char(&s)[N], typename T>
-	struct make_char_sequence_impl;
+	template <std::size_t N, const char(s)[N], typename T>
+	struct make_char_sequence_impl
+	{	};
 
-	template <std::size_t N, const char(&s)[N], std::size_t... i>
+	template <std::size_t N, const char(s)[N], std::size_t... i>
 	struct make_char_sequence_impl<N, s, sqlpp::detail::index_sequence<i...>>
 	{
 		using type = char_sequence<s[i]...>;
 	};
 
-	template <std::size_t N, const char(&Input)[N]>
+	template <std::size_t N, const char(Input)[N]>
 	using make_char_sequence =
 		typename make_char_sequence_impl<N, Input, sqlpp::detail::make_index_sequence<N - 1>>::type;
 
@@ -259,18 +262,36 @@ namespace sqlpp
 	{
 		static constexpr const char literal[] = "!hello";
 		typedef make_char_sequence < sizeof(literal), literal> chSeq;
-
+		static  constexpr const int dimension = chSeq::Dim;
 		static chSeq seq;
 	};
 	void useCharSequence()
 	{
 		_alias_t::chSeq ssss;
-		auto s = _alias_t::chSeq::char_ptr<int>();
+		auto s = _alias_t::chSeq::template char_ptr<int>();
+		constexpr static int dim = _alias_t::dimension;
 		//(void)seq;
 		int i = 1;
 	}
 
 }
+
+#if 0
+template<>
+////
+template <std::size_t N, const char(&Input)[N]>
+struct sequence<const char (&Input)[N]>
+{
+	static constexpr  int Dim = N;
+};
+
+
+void useSequence()
+{
+	constexpr const char vec[10]{};
+	using type = sequence<vec>;
+}
+#endif
 
 ///////////////////////////////////////////////////////
 // is_element_of => type_set (SIMPLER IMPL)

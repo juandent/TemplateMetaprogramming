@@ -2,17 +2,17 @@
 
 // PushFront:
 template<typename List, typename NewElement>
-class PushFrontT;
+struct PushFrontT;
 
 template<typename...Elements, typename NewElement>
-class PushFrontT<  Typelist<Elements...>, NewElement>
+struct PushFrontT<  Typelist<Elements...>, NewElement>
 {
 public:
 	using Type = Typelist< NewElement, Elements...>;
 };
 
 template<typename...Elements, typename NewElement>
-class PushFrontT<  NewElement, Typelist<Elements...>>
+struct PushFrontT<  NewElement, Typelist<Elements...>>
 {
 public:
 	using Type = Typelist< NewElement, Elements...>;
