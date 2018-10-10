@@ -1,8 +1,14 @@
 #pragma once
 
+#ifndef CONSCELL
 #include "IsEmpty.hpp"
 #include "typelistPopFront.hpp"
 #include "typelistFront.hpp"
+#else
+#include "../typelistConsIsEmpty.hpp"
+#include "../typelistConsPopFront.hpp"
+#include "../typelistConsFront.hpp"
+#endif
 
 template<typename List,
 	template<typename T, typename U> class Compare,

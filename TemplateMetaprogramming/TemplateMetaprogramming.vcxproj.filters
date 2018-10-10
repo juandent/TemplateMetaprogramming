@@ -183,6 +183,21 @@
     <ClInclude Include="typelistSelect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="typelistCons.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelistConsFront.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelistConsPushFront.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelistConsPopFront.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="typelistConsIsEmpty.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -357,6 +372,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="typelistSelect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="typelistConsListTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

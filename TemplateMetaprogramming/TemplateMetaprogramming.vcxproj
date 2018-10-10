@@ -189,6 +189,11 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Typelist.hpp" />
+    <ClInclude Include="typelistCons.hpp" />
+    <ClInclude Include="typelistConsFront.hpp" />
+    <ClInclude Include="typelistConsIsEmpty.hpp" />
+    <ClInclude Include="typelistConsPopFront.hpp" />
+    <ClInclude Include="typelistConsPushFront.hpp" />
     <ClInclude Include="typelistSelect.hpp" />
     <ClInclude Include="typelist\accumulate.hpp" />
     <ClInclude Include="typelist\addconst.hpp" />
@@ -282,6 +287,7 @@
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
+    <ClCompile Include="typelistConsListTest.cpp" />
     <ClCompile Include="TypelistsCPPTemplates2ndEd-2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
