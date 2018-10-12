@@ -34,12 +34,5 @@ class InsertSortedT<List, Element, Compare, true>
 {};
 
 
-#if 0
-{
-public:
-	using Type = Typelist<Element>;
-};
-#endif
-
 template<typename List, typename Element, template<typename T, typename U> class Compare, bool isEmpty>
 using InsertSorted = typename InsertSortedT<List, Element, Compare, isEmpty>::Type;

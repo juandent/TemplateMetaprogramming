@@ -1299,10 +1299,14 @@ void testAccumulate();
 
 void useInvoker();
 
+void conslistester();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	conslistester();
 
 	useInvoker();
 

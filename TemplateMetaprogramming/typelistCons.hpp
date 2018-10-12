@@ -7,6 +7,5 @@ struct Cons
 {
 	using Head = HeadT;
 	using  Tail = TailT;
-	//using Type = Cons<Head, Tail>;
 };
 
