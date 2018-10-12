@@ -287,7 +287,10 @@
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
-    <ClCompile Include="typelistConsListTest.cpp" />
+    <ClCompile Include="typelistConsListTest.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="TypelistsCPPTemplates2ndEd-2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>

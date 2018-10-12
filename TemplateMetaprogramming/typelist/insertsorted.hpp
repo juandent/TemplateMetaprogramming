@@ -3,11 +3,15 @@
 
 #include "insertionsort.hpp"
 #include "..\traits\IfThenElse.hpp"
+
+#ifndef CONSCELL
 #include "typelistPushFront.hpp"
+#else
+#include "../typelistConsPushFront.hpp"
+#endif
+
 #include "Identity.hpp"
 
-//template<typename List, typename Element, template<typename T, typename U> class Compare, bool = IsEmpty<List>::value>
-//class InsertSortedT;
 
 // recursive case
 template<typename List, typename Element, template<typename T, typename U> class Compare>
@@ -37,5 +41,5 @@ public:
 };
 #endif
 
-template<typename List, typename Element, template<typename T, typename U> class Compare>
-using InsertSorted = typename InsertSortedT<List, Element, Compare>::Type;
+template<typename List, typename Element, template<typename T, typename U> class Compare, bool isEmpty>
+using InsertSorted = typename InsertSortedT<List, Element, Compare, isEmpty>::Type;

@@ -15,7 +15,7 @@ template<typename List,
 	bool = IsEmpty<List>::value>
 	class InsertionSortT;
 
-template<typename List, typename Element, template<typename T, typename U> class Compare, bool = IsEmpty<List>::value>
+template<typename List, typename Element, template<typename T, typename U> class Compare, bool isEmpty = IsEmpty<List>::value>
 class InsertSortedT;
 
 
@@ -35,5 +35,7 @@ class InsertionSortT<List, Compare, true>
 {
 public:
 	using Type = List;
+	using Head = Nil;
+	using Tail = Nil;
 };
 

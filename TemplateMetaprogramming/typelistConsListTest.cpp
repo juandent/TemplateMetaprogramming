@@ -1,9 +1,11 @@
-#include "stdafx.h"
+#include <string>
+#include <iostream>
 
 #include "typelistCons.hpp"
 #define CONSCELL
 
-#include "typelist/insertionsort.hpp"
+
+#include "typelist/insertsorted.hpp"
 
 template<typename T, typename U>
 struct SmallerThanT
@@ -17,7 +19,7 @@ void conslistest()
 	using ConsList = Cons<int, Cons<char, Cons<short, Cons<double>>>>;
 	using SortedTypes = InsertionSort<ConsList, SmallerThanT>;
 	using Expected = Cons<char, Cons<short, Cons<int, Cons<double>>>>;
-	std::cout << std::is_same_v<SortedTypes, Expected> << std::endl;
+	std::cout << std::is_same<SortedTypes, Expected>::value << std::endl;
 }
 #endif
 
