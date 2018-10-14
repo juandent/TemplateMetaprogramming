@@ -188,6 +188,11 @@
     <ClInclude Include="sqlpp11_mockdb.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="tuples\maketuples.hpp" />
+    <ClInclude Include="tuples\tuple0.hpp" />
+    <ClInclude Include="tuples\tupleeq.hpp" />
+    <ClInclude Include="tuples\tupleget.hpp" />
+    <ClInclude Include="tuples\tupleio.hpp" />
     <ClInclude Include="Typelist.hpp" />
     <ClInclude Include="typelistCons.hpp" />
     <ClInclude Include="typelistConsFront.hpp" />
@@ -286,6 +291,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
+    <ClCompile Include="tuples\TupleTester.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
     <ClCompile Include="typelistConsFlattened.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>

@@ -46,15 +46,6 @@ struct PopFrontT<Nil>
 
 
 
-#if 0
-  template<typename Head, template<typename T, typename U> class Compare>
-struct PopFrontT<InsertionSortT<Cons<Head, Nil>, Compare, false>>
-{
-	using Type = Nil;
-};
-#endif
-
-
 template<typename List>
 using PopFront = typename PopFrontT<List>::Type;
 
@@ -103,7 +94,6 @@ class InsertionSortT<List, Compare, false>
 	: public InsertSortedT< typename InsertionSortT<PopFront<List>, Compare>::Type, Front<List>, Compare>
 {
 public:
-//	using Type = typename InsertSortedT< typename InsertionSortT<PopFront<List>, Compare>::Type, Front<List>, Compare>::Type;
 };
 
 
@@ -167,8 +157,6 @@ class InsertSortedT<List, Element, Compare, true>
 	: public PushFrontT<List, Element>
 {
 public:
-	//using Head = Element;
-	//using Tail = List;
 };
 
 

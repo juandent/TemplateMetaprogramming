@@ -198,6 +198,21 @@
     <ClInclude Include="typelistConsIsEmpty.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tuples\tuple0.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\tupleget.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\maketuples.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\tupleeq.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\tupleio.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -378,6 +393,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="typelistConsFlattened.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tuples\TupleTester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
