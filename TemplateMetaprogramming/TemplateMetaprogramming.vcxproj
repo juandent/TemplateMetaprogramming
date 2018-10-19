@@ -189,10 +189,14 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tuples\maketuples.hpp" />
+    <ClInclude Include="tuples\popfront.hpp" />
+    <ClInclude Include="tuples\pushback.hpp" />
+    <ClInclude Include="tuples\pushfront.hpp" />
     <ClInclude Include="tuples\tuple0.hpp" />
     <ClInclude Include="tuples\tupleeq.hpp" />
     <ClInclude Include="tuples\tupleget.hpp" />
     <ClInclude Include="tuples\tupleio.hpp" />
+    <ClInclude Include="tuples\tupletypelist.hpp" />
     <ClInclude Include="Typelist.hpp" />
     <ClInclude Include="typelistCons.hpp" />
     <ClInclude Include="typelistConsFront.hpp" />
@@ -294,6 +298,7 @@
     <ClCompile Include="tuples\TupleTester.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="tuples\tuple_tester.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
     <ClCompile Include="typelistConsFlattened.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>

@@ -1302,10 +1302,14 @@ void useInvoker();
 void conslistester();
 void testTuples();
 
+void useTuplePushfront();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+	
+	useTuplePushfront();
 
 	testTuples();
 	conslistester();

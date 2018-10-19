@@ -213,6 +213,18 @@
     <ClInclude Include="tuples\tupleio.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tuples\tupletypelist.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\pushfront.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\pushback.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\popfront.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -396,6 +408,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tuples\TupleTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tuples\tuple_tester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
