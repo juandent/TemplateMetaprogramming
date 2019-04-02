@@ -176,6 +176,7 @@ namespace sqlpp
 
 namespace sqlpp
 {
+#if 0
 	namespace detail
 	{
 		// Note: This is a minimalistic implementation of index_sequence available in C++14
@@ -246,7 +247,9 @@ namespace sqlpp
 
 	template <std::size_t N, const char(s)[N], typename T>
 	struct make_char_sequence_impl
-	{	};
+	{
+		using type = void;	// JDH added
+	};
 
 	template <std::size_t N, const char(s)[N], std::size_t... i>
 	struct make_char_sequence_impl<N, s, sqlpp::detail::index_sequence<i...>>
@@ -273,7 +276,7 @@ namespace sqlpp
 		//(void)seq;
 		int i = 1;
 	}
-
+#endif
 }
 
 #if 0

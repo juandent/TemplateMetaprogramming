@@ -225,6 +225,12 @@
     <ClInclude Include="tuples\popfront.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tuples\reverse.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuples\popback.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -411,6 +417,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tuples\tuple_tester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="static_assert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LegacyAPIsWithSmartPtrs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sqlpp11_VC_CompilerBug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -4,6 +4,7 @@
 #include "tupleeq.hpp"
 #include <iostream>
 #include "tupleio.hpp"
+#include "reverse.hpp"
 
 void testTuples()
 {
@@ -21,4 +22,8 @@ void testTuples()
 	bool equal = t == t2;
 
 	std::cout << t << std::endl;
+
+	auto r = reverse(makeTuple(true, "leslie", 51.99));
+
+
 }

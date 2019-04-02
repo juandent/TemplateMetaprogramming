@@ -3,6 +3,7 @@
 #include "pushfront.hpp"
 #include "pushback.hpp"
 #include "popfront.hpp"
+#include "popback.hpp"
 
 using namespace std::string_literals;
 
@@ -17,7 +18,11 @@ void useTuplePushfront()
 
 	using fr = typename FrenteT<Tuple<int, double>>::Type;
 
-
 	using rev = Reverse<Tuple<int, bool,char>>;
 	rev* pRev;
+
+	using pback = PopBack<Tuple<int, bool, char>>;
+
+	auto pbackTuple = popBack(tback);
+
 }

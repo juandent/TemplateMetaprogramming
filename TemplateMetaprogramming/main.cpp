@@ -1304,10 +1304,18 @@ void testTuples();
 
 void useTuplePushfront();
 
+void  useLegacyAPIs();
+
+void Test_literal();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
     using namespace std;
+
+	Test_literal();
+
+	useLegacyAPIs();
 	
 	useTuplePushfront();
 
@@ -1398,9 +1406,9 @@ int main(int argc, const char * argv[]) {
 
 	JD::useTypeSetJD();
 
-	sqlpp::useIndexSequence();
+	//sqlpp::useIndexSequence();
 
-	sqlpp::useCharSequence();
+	//sqlpp::useCharSequence();
 
 	Sqlpp11_Fragments::useSwallow();
 
