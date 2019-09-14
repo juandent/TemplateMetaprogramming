@@ -17,7 +17,7 @@ public:
 		: head{ head }, tail{tail}
 	{}
 	Tuple(Head const& head, Tail const&...tail)
-		: head{head}, tail{tail}{}
+		: head{head}, tail{tail...}{}
 
 	template<typename VHead, typename ...VTail,
 		typename = std::enable_if_t<sizeof...(VTail)==sizeof...(Tail)>>

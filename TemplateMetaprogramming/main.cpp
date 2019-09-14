@@ -1308,10 +1308,26 @@ void  useLegacyAPIs();
 
 void Test_literal();
 
+#include "constexpr_functions.h"
+
+void use_opt_print();
+
+void usingOverloads();
+
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
+
+	usingOverloads();
+
+	use_opt_print();
+
+
     using namespace std;
+
+	constexpr int x = 15;
+
+	constexpr long l = fibonacci(13);
 
 	Test_literal();
 

@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SourceComp)\loki;$(SourceComp)\boost_1_62_0\boost_1_62_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
       <ShowIncludes>false</ShowIncludes>
@@ -163,6 +163,7 @@
   <ItemGroup>
     <ClInclude Include="AssociativeSequences.h" />
     <ClInclude Include="Chapter6.h" />
+    <ClInclude Include="constexpr_functions.h" />
     <ClInclude Include="CRTP_0.h" />
     <ClInclude Include="Debug.h" />
     <ClInclude Include="Delegate.h" />
@@ -236,11 +237,16 @@
     <ClCompile Include="ADL.cpp" />
     <ClCompile Include="AliasTemplates_CPPTemp.cpp" />
     <ClCompile Include="AssociativeSequences.cpp" />
+    <ClCompile Include="Camtasia14-42.cpp" />
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
+    <ClCompile Include="Concept.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Conformance.cpp">
       <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessToFile>
     </ClCompile>
+    <ClCompile Include="constexpr_functions.cpp" />
     <ClCompile Include="CPP17STLCookbook.cpp" />
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
@@ -283,6 +289,7 @@
     </ClCompile>
     <ClCompile Include="RuntimeVersions.cpp" />
     <ClCompile Include="SequenceClasses.cpp" />
+    <ClCompile Include="SQLPP.cpp" />
     <ClCompile Include="Sqlpp11_fragments.cpp" />
     <ClCompile Include="sqlpp11_mockdb.cpp" />
     <ClCompile Include="sqlpp11_statement_t.cpp" />

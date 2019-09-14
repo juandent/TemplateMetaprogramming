@@ -231,6 +231,9 @@
     <ClInclude Include="tuples\popback.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="constexpr_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -426,6 +429,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Sqlpp11_VC_CompilerBug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="constexpr_functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Concept.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SQLPP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camtasia14-42.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

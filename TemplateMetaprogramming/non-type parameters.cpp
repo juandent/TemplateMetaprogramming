@@ -34,7 +34,7 @@ class Converter
 	Base m_base;
 public:
 	constexpr Converter(int x) : m_base{ x } {}
-	constexpr operator Base*() { return &m_base; }
+	constexpr operator const Base*() const { return &m_base; }
 };
 
 class Derived : public Base
@@ -50,23 +50,25 @@ void useDerived()
 }
 
 template <typename T, T val>
-struct UseVal
-{
+struct UseVal {};
 
-};
+constexpr Base    base{ 9 };
+constexpr Derived der{ 8 };
+constexpr Converter conv{ 5 };
 
-Base    base{ 9 };
-Derived der{ 8 };
-Converter conv{ 5 };
+static_assert(std::is_literal_type<Converter>::value);
+
 
 void theseWillWorkInCPP17()
 {
-	UseVal<Base*, &base> obj;
+	UseVal<const Base*, &base> obj;
 	//UseVal<Base*, &der> obj2;
-	Base* p = &der;
-	Base* pp = conv;
+	const Base* p = &der;
+	auto ret = conv.operator const Base* ();
 
-	//UseVal<Base*, conv> obj3;
+	const Base* pp = conv;
+
+	//UseVal<const Base*, conv> obj3;
 }
 
 struct X
