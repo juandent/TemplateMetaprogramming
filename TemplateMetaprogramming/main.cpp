@@ -1335,7 +1335,7 @@ namespace DanglingReference
 }
 
 
-namespace PartialSpecialization
+namespace PS 
 {
     void useSpecialization();
     void useCreatorPolicy();
@@ -1346,8 +1346,8 @@ namespace PartialSpecialization
 int main(int argc, const char * argv[]) {
     // insert code here...
 
-    PartialSpecialization::useSpecialization();
-    PartialSpecialization::useCreatorPolicy();
+    PS::useSpecialization();
+    PS::useCreatorPolicy();
 	
     DanglingReference::main();
 

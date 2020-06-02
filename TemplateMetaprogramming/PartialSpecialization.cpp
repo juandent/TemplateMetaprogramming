@@ -2,9 +2,8 @@
 
 using namespace std;
 
-namespace PartialSpecialization
-{
-
+namespace PS
+{	
 	template< typename T> class Widget
 	{
 	public:
@@ -114,6 +113,8 @@ namespace PartialSpecialization
 	template<typename T, template<typename Created> class ClonePolicy = NullPolicy>
 	struct MallocCreator2
 	{
+		MallocCreator2(T* obj = nullptr) {}
+		
 		template<typename...Args>
 		static T* Create(Args&&... args)
 		{
@@ -235,14 +236,16 @@ namespace PartialSpecialization
 		EmptyManagerPrototypeCreator(Empty* empty) : PrototypeCreator2<Empty, ClonePolicy>(empty) {}
 	};
 
-	template< class T, template < typename C> class ClonePolicy, template<typename T, template<typename X> class P> class CreationPolicy>
+	template<typename T, template < typename C> class ClonePolicy,
+	template<typename T, template < typename X> class P> class CreationPolicy>
 	struct EntityManager : public CreationPolicy<T, ClonePolicy>
 	{
 		EntityManager(Empty* empty = nullptr) : CreationPolicy<T, ClonePolicy>(empty) {}
 	};
 
 	using EmptyManager2 = EntityManager<Empty, OpNewCreator2, OpNewCreator2 >;
-
+	using EmptyManager3 = EntityManager<Empty, MallocCreator2, MallocCreator2>;
+	using EmptyManager4 = EntityManager<Empty, OpNewCreator2, PrototypeCreator2>;
 	
 	template< template <class Created> class ClonePolicy>
 	struct EmptyManagerPrototypeCreator2 : public PrototypeCreator2<Empty, ClonePolicy>
@@ -268,9 +271,12 @@ namespace PartialSpecialization
 		cout << p->a << endl;
 		auto q = OpNewCreator<Dummy>().Create(8, 99.99);
 
-		auto em2 = EmptyManager2().Create(3, 6);
-
 		auto r = OpNewCreator<Empty>().Create(12, 15);
+
+		auto em2 = EmptyManager2().Create(3, 6);
+		auto em3 = EmptyManager3().Create(23, 46);
+		auto em4 = EmptyManager4(r).Create();
+
 
 		auto eee = EmptyManagerPrototypeCreator<OpNewCreator>(r).Create();
 
