@@ -161,6 +161,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack1.hpp" />
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack2.hpp" />
     <ClInclude Include="AssociativeSequences.h" />
     <ClInclude Include="Chapter6.h" />
     <ClInclude Include="constexpr_functions.h" />
@@ -180,11 +182,13 @@
     <ClInclude Include="IteratorFacadeByAccess.hpp" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="ListNodeIterator.h" />
+    <ClInclude Include="MiniBuffer.h" />
     <ClInclude Include="MyFold.h" />
     <ClInclude Include="MyReversedFold.h" />
     <ClInclude Include="NamedTemplateArgs_CPPTempl.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="ProjectionIterator_CPPTempl.h" />
+    <ClInclude Include="S.h" />
     <ClInclude Include="SequenceClasses.h" />
     <ClInclude Include="sqlpp11_mockdb.h" />
     <ClInclude Include="stdafx.h" />
@@ -234,10 +238,21 @@
     <ClInclude Include="UtilsForMyFold.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\max3ref.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack1test.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ADL.cpp" />
     <ClCompile Include="AliasTemplates_CPPTemp.cpp" />
     <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="Camtasia14-42.cpp" />
+    <ClCompile Include="Ch4_VariadicTemplates.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
     <ClCompile Include="Concept.cpp">
@@ -255,6 +270,9 @@
     <ClCompile Include="DependentNames.cpp" />
     <ClCompile Include="DetectionIdiom.cpp" />
     <ClCompile Include="EBCO_CPPTempl.cpp" />
+    <ClCompile Include="Elision.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Enable_if.cpp" />
     <ClCompile Include="equivalent_interfaces.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
@@ -270,8 +288,13 @@
     <ClCompile Include="LegacyAPIsWithSmartPtrs.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Meta_ErwinUnruh.cpp" />
+    <ClCompile Include="MiniBuffer.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="MPLAlgorithms.cpp" />
     <ClCompile Include="MPLFold.cpp" />
     <ClCompile Include="MyFold.cpp" />
@@ -280,6 +303,7 @@
     <ClCompile Include="NamedTemplateArgs_CPPTempl.cpp" />
     <ClCompile Include="non-type parameters.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
+    <ClCompile Include="PartialSpecialization.cpp" />
     <ClCompile Include="PassByValue_decay_CPPTemp.cpp" />
     <ClCompile Include="PPP_Chapter_19.cpp" />
     <ClCompile Include="ProjectionIterator_CPPTempl.cpp" />
@@ -288,6 +312,10 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="RuntimeVersions.cpp" />
+    <ClCompile Include="Rvalue_Lvalue.cpp" />
+    <ClCompile Include="S.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="SequenceClasses.cpp" />
     <ClCompile Include="SQLPP.cpp" />
     <ClCompile Include="Sqlpp11_fragments.cpp" />
@@ -332,7 +360,16 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TypePrinting_8_3_3.cpp" />
+    <ClCompile Include="ValueCategories.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="void_t.cpp" />
+    <ClCompile Include="X1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="X2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

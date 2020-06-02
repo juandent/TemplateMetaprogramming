@@ -1314,9 +1314,55 @@ void use_opt_print();
 
 void usingOverloads();
 
+namespace JD
+{
+	void useFactory();
+}
+
+#include "S.h"
+#include "MiniBuffer.h"
+
+void tryElision();
+
+namespace Ch4
+{
+    void useTraverse();
+}
+
+namespace DanglingReference
+{
+    int main();
+}
+
+
+namespace PartialSpecialization
+{
+    void useSpecialization();
+    void useCreatorPolicy();
+	
+}
+#if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
+
+    PartialSpecialization::useSpecialization();
+    PartialSpecialization::useCreatorPolicy();
+	
+    DanglingReference::main();
+
+	
+    Ch4::useTraverse();
+	
+    tryElision();
+	
+    MiniBuffer buf;
+
+	
+    OverloadResolution::main();
+
+	
+	JD::useFactory();
 
 	usingOverloads();
 
@@ -1598,3 +1644,4 @@ int main(int argc, const char * argv[]) {
 
     return 0;
 }
+#endif

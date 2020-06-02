@@ -56,7 +56,7 @@ constexpr Base    base{ 9 };
 constexpr Derived der{ 8 };
 constexpr Converter conv{ 5 };
 
-static_assert(std::is_literal_type<Converter>::value);
+//static_assert(std::is_literal_type<Converter>::value);
 
 
 void theseWillWorkInCPP17()

@@ -55,6 +55,9 @@ void usingOverloads()
 	const int z = 1000;
 	f(z);
 
+	int const x = 42;
+	f(std::move(x));
+
 
 	using namespace  std;
 

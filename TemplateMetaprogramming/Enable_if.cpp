@@ -11,7 +11,7 @@ using namespace std;
 
 namespace NotUsingDefaultValues
 {
-	template<typename T, typename std::enable_if<(sizeof(T) > 2), int>::type a>
+	template<typename T, typename std::enable_if<(sizeof(T) > 2), int>::type c>
 	T Add(T a, T b)
 	{
 		std::cout << "Large type" << std::endl;
@@ -19,7 +19,7 @@ namespace NotUsingDefaultValues
 	}
 
 
-	template<typename T, typename std::enable_if<(sizeof(T) <= 2), int>::type a>
+	template<typename T, typename std::enable_if<(sizeof(T) <= 2), int>::type c>
 	T Add(T a, T b)
 	{
 		std::cout << "Small type" << std::endl;

@@ -16,6 +16,12 @@
     <Filter Include="C++Templates 2nd ed">
       <UniqueIdentifier>{95a1e6ea-cf94-41df-aa1b-a7f22527be00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CppTemplates_2nd_Edition">
+      <UniqueIdentifier>{25b33424-6735-4910-8bc7-ca1497755d5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ModernCPPDesign">
+      <UniqueIdentifier>{95490633-9585-47f3-bab6-31155b0c482a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -234,6 +240,18 @@
     <ClInclude Include="constexpr_functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="S.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MiniBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack1.hpp">
+      <Filter>CppTemplates_2nd_Edition</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack2.hpp">
+      <Filter>CppTemplates_2nd_Edition</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -442,6 +460,39 @@
     </ClCompile>
     <ClCompile Include="Camtasia14-42.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rvalue_Lvalue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\max3ref.cpp">
+      <Filter>CppTemplates_2nd_Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="S.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="X2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueCategories.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Elision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack1test.cpp">
+      <Filter>CppTemplates_2nd_Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="Ch4_VariadicTemplates.cpp">
+      <Filter>C++Templates 2nd ed</Filter>
+    </ClCompile>
+    <ClCompile Include="PartialSpecialization.cpp">
+      <Filter>ModernCPPDesign</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

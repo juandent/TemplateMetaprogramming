@@ -3,7 +3,7 @@
 #include <cstddef>
 
 
-template <size_t N, const char(s)[N]>
+template <size_t N, const char(&s)[N]>
 struct X
 {
 	static constexpr size_t Size = N;
@@ -14,8 +14,8 @@ struct A
 {
 	static constexpr const char _literal[] = "concat_";
 	using Y = X<sizeof(_literal), _literal>;
-	size_t x = Y::Size;
-	const char* p = Y::Str;
+	static constexpr size_t x = Y::Size;
+	static constexpr const char* p = Y::Str;
 };
 
 
@@ -36,8 +36,9 @@ namespace DanglingReference
 		auto lambda = [&] {return  i + 3; };
 		int a_ok = lambda(); // 2+3=5 
 
+		int val = 2;
 		// create a lambda with a dangling reference     
-		auto lamda_missingRef = f1(2);
+		auto lamda_missingRef = f1(val);
 
 		// example of result: // 14621279 instead of 2+3=5 
 		// i_ is out of scope     
