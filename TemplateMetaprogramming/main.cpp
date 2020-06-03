@@ -1339,7 +1339,7 @@ namespace PS
 {
     void useSpecialization();
     void useCreatorPolicy();
-	
+    void useOneOpNewCreator();
 }
 #if 1
 /* &main& */
@@ -1348,6 +1348,7 @@ int main(int argc, const char * argv[]) {
 
     PS::useSpecialization();
     PS::useCreatorPolicy();
+    PS::useOneOpNewCreator();
 	
     DanglingReference::main();
 

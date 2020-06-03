@@ -91,11 +91,18 @@ namespace PS
 	template<typename T>
 	struct OpNewCreator
 	{
+		OpNewCreator() { cout << "OpNewCreator(): " << hex << this << endl; }
 		template<typename ...Args>
-		static T* Create(Args&&... args )
+		/*static*/ T* Create(Args&&... args ) &
 		{
 			return new T{std::forward<Args>(args)...};
 		}
+		template<typename ...Args>
+		T* Create(Args&&... args) &&
+		{
+			return new T{ std::forward<Args>(args)... };
+		}
+		~OpNewCreator() { cout << "~OpNewCreator(): " << hex << this << endl; }
 	};
 
 	template<typename T>
@@ -141,23 +148,6 @@ namespace PS
 		T* pPrototype;
 	};
 
-#if 0	
-	template<typename T, template<typename Created> class ClonePolicy>
-	struct PrototypeCreator3
-	{
-		PrototypeCreator3(T* obj = nullptr) : pPrototype(obj) {}
-
-		T* Create()
-		{
-			return pPrototype ? pPrototype->template Clone<ClonePolicy>() : nullptr;
-		}
-
-		T* getPrototype() { return pPrototype; }
-		void setPrototype(T* obj) { pPrototype = obj; }
-	private:
-		T* pPrototype;
-	};
-#endif
 	template<typename T, template<typename Created> class ClonePolicy>
 	struct PrototypeCreator2
 	{
@@ -235,7 +225,7 @@ namespace PS
 	{
 		EmptyManagerPrototypeCreator(Empty* empty) : PrototypeCreator2<Empty, ClonePolicy>(empty) {}
 	};
-
+	
 	template<typename T, template < typename C> class ClonePolicy,
 	template<typename T, template < typename X> class P> class CreationPolicy>
 	struct EntityManager : public CreationPolicy<T, ClonePolicy>
@@ -265,14 +255,19 @@ namespace PS
 	
 	void useCreatorPolicy()
 	{
-		auto a = MyDummyManager2::Create(45, 78.8);
+		auto mgr = MyDummyManager2();
+		auto aa = mgr.Create(55, 77.7);
 		
-		auto p = OpNewCreator<Dummy>::Create(5, 4.75);
+		auto a = MyDummyManager2().Create(45, 78.8);
+		
+		auto p = OpNewCreator<Dummy>().Create(5, 4.75);
 		cout << p->a << endl;
 		auto q = OpNewCreator<Dummy>().Create(8, 99.99);
 
 		auto r = OpNewCreator<Empty>().Create(12, 15);
 
+		auto em1 = EmptyManager<OpNewCreator>().Create(2, 6);
+		
 		auto em2 = EmptyManager2().Create(3, 6);
 		auto em3 = EmptyManager3().Create(23, 46);
 		auto em4 = EmptyManager4(r).Create();
@@ -299,6 +294,27 @@ namespace PS
 
 		auto g = MallocCreator<Dummy>::Create(80, 29.55);
 		cout << g->a << " " << g->b << endl;
+	}
+
+	struct Holder
+	{
+		EmptyManager<OpNewCreator> emgr;
+
+		Holder() : emgr{ EmptyManager<OpNewCreator>() } {}
+
+		template<typename ...Args>
+		Empty* Create(Args ... args)
+		{
+			return emgr.Create(std::forward<Args>(args)...);
+		}
+	};
+	void useOneOpNewCreator()
+	{
+		auto p = OpNewCreator<Dummy>().Create(5, 4.75);
+		cout << p->a << endl;
+
+		Holder holder;
+		auto c = holder.Create(88, 99);
 	}
 }
 
