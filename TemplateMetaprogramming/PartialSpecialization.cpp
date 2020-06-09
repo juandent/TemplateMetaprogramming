@@ -215,6 +215,7 @@ namespace PS
 	struct EmptyManager : public CreationPolicy<Empty>
 	{
 		EmptyManager(Empty* pObj = nullptr) : prototype(pObj) {}
+		EmptyManager( const EmptyManager& man) : prototype(man.prototype){}
 		// ....
 	private:
 		Empty* prototype;
@@ -247,7 +248,7 @@ namespace PS
 
 
 	
-	template<typename Created, template<class Created> class CreationPolicy>
+	template<typename Created, template<class> class CreationPolicy>
 	Created* Clone()
 	{
 		return CreationPolicy<Created>().Create();
@@ -300,7 +301,7 @@ namespace PS
 	{
 		EmptyManager<OpNewCreator> emgr;
 
-		Holder() : emgr{ EmptyManager<OpNewCreator>() } {}
+		Holder() : emgr{ EmptyManager<OpNewCreator>() } {}	// NOTE: copy ctor NOT called!
 
 		template<typename ...Args>
 		Empty* Create(Args ... args)

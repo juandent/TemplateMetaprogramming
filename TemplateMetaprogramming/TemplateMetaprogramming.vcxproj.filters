@@ -494,5 +494,11 @@
     <ClCompile Include="PartialSpecialization.cpp">
       <Filter>ModernCPPDesign</Filter>
     </ClCompile>
+    <ClCompile Include="CombiningPolicyClasses.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Experimenting.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

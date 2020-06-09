@@ -255,6 +255,7 @@
     </ClCompile>
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
+    <ClCompile Include="CombiningPolicyClasses.cpp" />
     <ClCompile Include="Concept.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -279,6 +280,7 @@
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
     <ClCompile Include="Exercises_4.cpp" />
     <ClCompile Include="exercise_3_1.cpp" />
+    <ClCompile Include="Experimenting.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="foldingCPP17STL.cpp" />
     <ClCompile Include="ImplementingLambdas.cpp" />

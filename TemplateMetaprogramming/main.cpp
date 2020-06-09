@@ -1341,11 +1341,22 @@ namespace PS
     void useCreatorPolicy();
     void useOneOpNewCreator();
 }
+
+namespace MixingPolicies
+{
+    void useSmartPtrBasic();
+}
+
+void useAccessSubobject();
+
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
 
+    useAccessSubobject();
+    MixingPolicies::useSmartPtrBasic();
+	
     PS::useSpecialization();
     PS::useCreatorPolicy();
     PS::useOneOpNewCreator();
