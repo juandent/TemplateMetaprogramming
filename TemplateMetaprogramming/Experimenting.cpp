@@ -90,9 +90,13 @@ template<typename T>
 struct NoChecking
 {
 	NoChecking() = default;
-	template<typename T2>
-	NoChecking(const EnforceNotNull<T2>& other)
-	{}
+
+	// template<typename T2, template<typename> class Policy >
+	// NoChecking(const Policy<T2>& other) {}
+
+	// template<typename T2>
+	// NoChecking(const EnforceNotNull<T2>& other)
+	// {}
 	static void Check(T*) {}
 };
 
@@ -100,6 +104,12 @@ template<typename T>
 struct EnforceNotNull
 {
 	EnforceNotNull() = default;
+
+	template<typename T2>
+	operator NoChecking<T2>() const
+	{
+		return NoChecking<T2>{};
+	}
 	//template<typename T2>
 	// EnforceNotNull(const NoChecking<T>& other)
 	// {}
@@ -163,7 +173,10 @@ void usePolicy()
 	SmartPtr<SubSample, EnforceNotNull> spSample(new SubSample);
 
 	SmartPtr<Sample, NoChecking> spSample2(spSample);
-	//SmartPtr<Sample, EnforceNotNull> spSample3(spSample);
+
+	const EnforceNotNull<Sample> sen;
+	const NoChecking<Sample> noc = sen;
+
 }
 
 
