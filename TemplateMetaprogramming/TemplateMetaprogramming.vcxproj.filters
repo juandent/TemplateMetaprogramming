@@ -252,6 +252,9 @@
     <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack2.hpp">
       <Filter>CppTemplates_2nd_Edition</Filter>
     </ClInclude>
+    <ClInclude Include="SampleTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -498,6 +501,24 @@
       <Filter>ModernCPPDesign</Filter>
     </ClCompile>
     <ClCompile Include="Experimenting.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="CompileTimeAssertions.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalClasses.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Int2Type.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="Type2Type.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeSelection.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertibilityAtCompileTime.cpp">
       <Filter>ModernCPPDesign</Filter>
     </ClCompile>
   </ItemGroup>

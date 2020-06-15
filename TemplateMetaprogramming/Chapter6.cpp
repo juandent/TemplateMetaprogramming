@@ -258,10 +258,10 @@ namespace LambdaMetaFunction
 
 	void useLambdaMetaFunction()
 	{
-		b1 bb;
-		b2 bb2;
-		wr1 w1;
-		wr2 w2;
+		[[maybe_unused]] b1 bb;
+		[[maybe_unused]] b2 bb2;
+		[[maybe_unused]] wr1 w1;
+		[[maybe_unused]] wr2 w2;
 
 		cout << "end of function\n";
 	}

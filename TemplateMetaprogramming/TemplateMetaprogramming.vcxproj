@@ -117,6 +117,7 @@
       <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
       <ShowIncludes>false</ShowIncludes>
       <ConformanceMode>true</ConformanceMode>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -189,6 +190,7 @@
     <ClInclude Include="Person.h" />
     <ClInclude Include="ProjectionIterator_CPPTempl.h" />
     <ClInclude Include="S.h" />
+    <ClInclude Include="SampleTypes.h" />
     <ClInclude Include="SequenceClasses.h" />
     <ClInclude Include="sqlpp11_mockdb.h" />
     <ClInclude Include="stdafx.h" />
@@ -256,6 +258,7 @@
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
     <ClCompile Include="CombiningPolicyClasses.cpp" />
+    <ClCompile Include="CompileTimeAssertions.cpp" />
     <ClCompile Include="Concept.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -263,6 +266,7 @@
       <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessToFile>
     </ClCompile>
     <ClCompile Include="constexpr_functions.cpp" />
+    <ClCompile Include="ConvertibilityAtCompileTime.cpp" />
     <ClCompile Include="CPP17STLCookbook.cpp" />
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
@@ -285,11 +289,13 @@
     <ClCompile Include="foldingCPP17STL.cpp" />
     <ClCompile Include="ImplementingLambdas.cpp" />
     <ClCompile Include="InstantiationSafeTemplatesCPPTemp.cpp" />
+    <ClCompile Include="Int2Type.cpp" />
     <ClCompile Include="integer_sequence.cpp" />
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
     <ClCompile Include="LegacyAPIsWithSmartPtrs.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
+    <ClCompile Include="LocalClasses.cpp" />
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
@@ -341,6 +347,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="tuples\tuple_tester.cpp" />
+    <ClCompile Include="Type2Type.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
     <ClCompile Include="typelistConsFlattened.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
@@ -362,6 +369,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="TypePrinting_8_3_3.cpp" />
+    <ClCompile Include="TypeSelection.cpp" />
     <ClCompile Include="ValueCategories.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>

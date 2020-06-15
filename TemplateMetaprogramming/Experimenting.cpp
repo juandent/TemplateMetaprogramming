@@ -30,7 +30,7 @@ struct S
 
 struct Sample
 {
-	double d;
+	double d{};
 	Sample() {}
 	~Sample() {}
 	void Hello() { cout << "Hello" << endl; }
@@ -126,6 +126,7 @@ template
 	typename T,
 	template<typename> class CheckingPolicy
 >
+// shared ptr
 struct SmartPtr : public CheckingPolicy<T>
 {
 	SmartPtr(T* p = nullptr) : pointee{ p } {  }
@@ -136,16 +137,18 @@ struct SmartPtr : public CheckingPolicy<T>
 	{
 		//auto pCPT2 = static_cast<CheckingPolicy<T>*>(&other);
 		constexpr auto eq = std::is_same<T2, SubSample>::value;
-		static_assert(eq);
+		//static_assert(eq);
 		constexpr auto eqq = std::is_same<T, Sample>::value;
-		static_assert(eqq);
+		//static_assert(eqq);
 	}
-
-	// SmartPtr( const SmartPtr<T,NoChecking>& other)
-	// 	: EnforceNotNull(other)
-	// {
-	// 	
-	// }
+	
+	template<typename T2, template<typename> class CP2>	
+	SmartPtr<T, CheckingPolicy>& operator=( const SmartPtr<T2,CP2>& other)
+	{
+		SmartPtr<T, CheckingPolicy> temp{ other };
+		Swap(temp);
+		return *this;
+	}
 
 	template<typename T2, template<typename> class CP2>
 	friend struct SmartPtr;
@@ -164,6 +167,13 @@ struct SmartPtr : public CheckingPolicy<T>
 	}
 
 private:
+	void Swap( SmartPtr<T, CheckingPolicy>& other) noexcept
+	{
+		auto tmp = other.pointee;
+		other.pointee = pointee;
+		pointee = tmp;
+	}
+
 	T* pointee;
 };
 
@@ -174,6 +184,9 @@ void usePolicy()
 
 	SmartPtr<Sample, NoChecking> spSample2(spSample);
 
+	spSample2 = spSample;
+////	spSample = spSample2;		// no!!
+	
 	const EnforceNotNull<Sample> sen;
 	const NoChecking<Sample> noc = sen;
 
