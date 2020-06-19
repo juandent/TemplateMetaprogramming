@@ -1349,11 +1349,30 @@ namespace MixingPolicies
 
 void useAccessSubobject();
 
+void use_typeid();
+
+void useTypeInfo();
+
+void useMyStruct();
+void useSearcher();
+
+namespace Searcher
+{
+    int main(int argc, char* argv[]);
+};
+
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
 
+    //Searcher::main(1, nullptr);
+
+    useSearcher();
+
+    useMyStruct();
+    useTypeInfo();
+    use_typeid();
     useAccessSubobject();
     MixingPolicies::useSmartPtrBasic();
 	

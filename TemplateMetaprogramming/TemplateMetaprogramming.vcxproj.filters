@@ -22,6 +22,9 @@
     <Filter Include="ModernCPPDesign">
       <UniqueIdentifier>{95490633-9585-47f3-bab6-31155b0c482a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C++ 17 - The Complete Guide">
+      <UniqueIdentifier>{41994e38-6bab-4fef-95eb-5a9295f60620}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -520,6 +523,15 @@
     </ClCompile>
     <ClCompile Include="ConvertibilityAtCompileTime.cpp">
       <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeInfo.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="StructuredBindings.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="Searcher1.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

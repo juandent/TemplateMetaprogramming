@@ -324,6 +324,9 @@
     <ClCompile Include="S.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Searcher1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="SequenceClasses.cpp" />
     <ClCompile Include="SQLPP.cpp" />
     <ClCompile Include="Sqlpp11_fragments.cpp" />
@@ -338,6 +341,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="StructuredBindings.cpp" />
     <ClCompile Include="TestModules.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -349,6 +353,7 @@
     <ClCompile Include="tuples\tuple_tester.cpp" />
     <ClCompile Include="Type2Type.cpp" />
     <ClCompile Include="TypeClassificationCPPTemp.cpp" />
+    <ClCompile Include="TypeInfo.cpp" />
     <ClCompile Include="typelistConsFlattened.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
