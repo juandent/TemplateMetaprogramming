@@ -533,5 +533,11 @@
     <ClCompile Include="Searcher1.cpp">
       <Filter>C++ 17 - The Complete Guide</Filter>
     </ClCompile>
+    <ClCompile Include="structbind2.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="mystructbind2.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

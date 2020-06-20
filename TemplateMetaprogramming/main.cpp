@@ -1361,12 +1361,17 @@ namespace Searcher
     int main(int argc, char* argv[]);
 };
 
+void useDeclTypeAuto();
+
+
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
 
     //Searcher::main(1, nullptr);
+
+    useDeclTypeAuto();
 
     useSearcher();
 
