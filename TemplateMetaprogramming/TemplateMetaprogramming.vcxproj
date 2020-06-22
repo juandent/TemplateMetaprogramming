@@ -249,6 +249,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ADL.cpp" />
+    <ClCompile Include="AggregateExtensions.cpp" />
     <ClCompile Include="AliasTemplates_CPPTemp.cpp" />
     <ClCompile Include="AssociativeSequences.cpp" />
     <ClCompile Include="Camtasia14-42.cpp" />
@@ -288,6 +289,7 @@
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
     <ClCompile Include="foldingCPP17STL.cpp" />
     <ClCompile Include="ImplementingLambdas.cpp" />
+    <ClCompile Include="InlineVariables.cpp" />
     <ClCompile Include="InstantiationSafeTemplatesCPPTemp.cpp" />
     <ClCompile Include="Int2Type.cpp" />
     <ClCompile Include="integer_sequence.cpp" />
@@ -350,6 +352,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="threadLocalInline.cpp" />
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="tuples\TupleTester.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>

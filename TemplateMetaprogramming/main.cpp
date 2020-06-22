@@ -1363,6 +1363,7 @@ namespace Searcher
 
 void useDeclTypeAuto();
 
+void useThreadLocal();
 
 #if 1
 /* &main& */
@@ -1371,6 +1372,8 @@ int main(int argc, const char * argv[]) {
 
     //Searcher::main(1, nullptr);
 
+    useThreadLocal();
+	
     useDeclTypeAuto();
 
     useSearcher();
