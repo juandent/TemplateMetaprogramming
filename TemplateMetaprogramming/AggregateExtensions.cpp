@@ -27,6 +27,13 @@ struct D : std::string, std::complex<T>
 void useD()
 {
 	D<float> s{ {"hello"},{4.5,6.7}, "world" };
+	D<float> t{ "hello", {4.5,6.7}, "world" };
+
+	using namespace std;
+
+	cout << s.data << endl;
+	cout << static_cast<string>(s);
+	cout << static_cast<complex<float>>(s);
 	
 }
 

@@ -548,5 +548,26 @@
     <ClCompile Include="AggregateExtensions.cpp">
       <Filter>C++ 17 - The Complete Guide</Filter>
     </ClCompile>
+    <ClCompile Include="copyElision.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="Lambda Extensions.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="Attributes.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="other language features.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="class template argument deduction.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="compile time if.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="using fold expressions.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

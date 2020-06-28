@@ -2,7 +2,7 @@
 
 template<char...> int operator "" _B7();
 
-int a = 121_B7;
+int aa = 121_B7;
 
 template<char...cs>
 int operator "" _B7()

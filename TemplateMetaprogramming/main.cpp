@@ -1365,6 +1365,18 @@ void useDeclTypeAuto();
 
 void useThreadLocal();
 
+void useD();
+
+void useCountCalls();
+
+void usePtr();
+
+void useCall();
+
+void usePrintSpaceBefore();
+
+void useHashCustomer();
+
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
@@ -1372,6 +1384,18 @@ int main(int argc, const char * argv[]) {
 
     //Searcher::main(1, nullptr);
 
+    useHashCustomer();
+	
+    usePrintSpaceBefore();
+	
+    useCall();
+	
+    usePtr();
+	
+    useCountCalls();
+
+	
+    useD();
     useThreadLocal();
 	
     useDeclTypeAuto();

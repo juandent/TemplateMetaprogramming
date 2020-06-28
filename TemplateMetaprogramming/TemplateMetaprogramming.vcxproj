@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SourceComp)\loki;$(SourceComp)\boost_1_62_0\boost_1_62_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
       <ShowIncludes>false</ShowIncludes>
@@ -252,13 +252,16 @@
     <ClCompile Include="AggregateExtensions.cpp" />
     <ClCompile Include="AliasTemplates_CPPTemp.cpp" />
     <ClCompile Include="AssociativeSequences.cpp" />
+    <ClCompile Include="Attributes.cpp" />
     <ClCompile Include="Camtasia14-42.cpp" />
     <ClCompile Include="Ch4_VariadicTemplates.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Chapter6.cpp" />
     <ClCompile Include="Chapter_2.cpp" />
+    <ClCompile Include="class template argument deduction.cpp" />
     <ClCompile Include="CombiningPolicyClasses.cpp" />
+    <ClCompile Include="compile time if.cpp" />
     <ClCompile Include="CompileTimeAssertions.cpp" />
     <ClCompile Include="Concept.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
@@ -268,6 +271,9 @@
     </ClCompile>
     <ClCompile Include="constexpr_functions.cpp" />
     <ClCompile Include="ConvertibilityAtCompileTime.cpp" />
+    <ClCompile Include="copyElision.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="CPP17STLCookbook.cpp" />
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
@@ -294,6 +300,7 @@
     <ClCompile Include="Int2Type.cpp" />
     <ClCompile Include="integer_sequence.cpp" />
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
+    <ClCompile Include="Lambda Extensions.cpp" />
     <ClCompile Include="LegacyAPIsWithSmartPtrs.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
@@ -313,6 +320,7 @@
     <ClCompile Include="mystructbind2.cpp" />
     <ClCompile Include="NamedTemplateArgs_CPPTempl.cpp" />
     <ClCompile Include="non-type parameters.cpp" />
+    <ClCompile Include="other language features.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
     <ClCompile Include="PartialSpecialization.cpp" />
     <ClCompile Include="PassByValue_decay_CPPTemp.cpp" />
@@ -382,6 +390,7 @@
     </ClCompile>
     <ClCompile Include="TypePrinting_8_3_3.cpp" />
     <ClCompile Include="TypeSelection.cpp" />
+    <ClCompile Include="using fold expressions.cpp" />
     <ClCompile Include="ValueCategories.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
