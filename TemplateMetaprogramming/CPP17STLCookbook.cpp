@@ -467,7 +467,7 @@ public:
 			};
 
 
-			constexpr auto print_cartesian(cartesian(1, 2, 3));
+			auto print_cartesian(cartesian(1, 2, 3));
 
 			print_cartesian(print);
 

@@ -16,6 +16,9 @@
 #include "ExpressionTemplates_Ch_10.h"
 #include "Exercises_4.hpp"
 
+namespace [[deprecated]] DraftAPI{
+}
+
 
 constexpr size_t rankkk = boost::rank<int[8][2]>::value;
 
@@ -1377,13 +1380,47 @@ void usePrintSpaceBefore();
 
 void useHashCustomer();
 
+namespace Packs_cppreference
+{
+    void useG();
+}
+
+
+void useOptionals();
+
+void useConcepts();
+
+void usedef();
+
+namespace InverseOrderConcepts
+{
+    void call_h();
+}
+void useVariableTemplates();
+void useList();
+
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
     // insert code here...
 
     //Searcher::main(1, nullptr);
-
+    // int* array = new int[100];
+    // array[100] = 1;
+    useList();
+	
+    useVariableTemplates();
+	
+    InverseOrderConcepts::call_h();
+	
+    usedef();
+	
+    useConcepts();
+	
+    useOptionals();
+	
+    Packs_cppreference::useG();
+	
     useHashCustomer();
 	
     usePrintSpaceBefore();

@@ -108,16 +108,17 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SourceComp)\loki;$(SourceComp)\boost_1_62_0\boost_1_62_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SourceComp)\loki;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DiagnosticsFormat>Caret</DiagnosticsFormat>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <AdditionalOptions>/experimental:module /module:stdIfcDir "$(VCToolsInstallDir_150)ifc\$(PlatformTarget)" %(AdditionalOptions)</AdditionalOptions>
       <ShowIncludes>false</ShowIncludes>
       <ConformanceMode>true</ConformanceMode>
       <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <AdditionalOptions>/FS /fsanitize=address %(AdditionalOptions)</AdditionalOptions>
+      <EnableModules>false</EnableModules>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,6 +165,9 @@
   <ItemGroup>
     <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack1.hpp" />
     <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ Courses\Supporting Bibliography\C++ Templates - The Complete Guide - 2nd edition\basics\stack2.hpp" />
+    <ClCompile Include="AB.h">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClInclude Include="AssociativeSequences.h" />
     <ClInclude Include="Chapter6.h" />
     <ClInclude Include="constexpr_functions.h" />
@@ -251,16 +255,27 @@
     <ClCompile Include="ADL.cpp" />
     <ClCompile Include="AggregateExtensions.cpp" />
     <ClCompile Include="AliasTemplates_CPPTemp.cpp" />
-    <ClCompile Include="AssociativeSequences.cpp" />
+    <ClCompile Include="AssociativeSequences.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Attributes.cpp" />
+    <ClCompile Include="auto as template parameters.cpp" />
     <ClCompile Include="Camtasia14-42.cpp" />
     <ClCompile Include="Ch4_VariadicTemplates.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Chapter6.cpp" />
-    <ClCompile Include="Chapter_2.cpp" />
-    <ClCompile Include="class template argument deduction.cpp" />
-    <ClCompile Include="CombiningPolicyClasses.cpp" />
+    <ClCompile Include="Chapter6.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Chapter_2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="class template argument deduction.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="CombiningPolicyClasses.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="compile time if.cpp" />
     <ClCompile Include="CompileTimeAssertions.cpp" />
     <ClCompile Include="Concept.cpp">
@@ -271,10 +286,10 @@
     </ClCompile>
     <ClCompile Include="constexpr_functions.cpp" />
     <ClCompile Include="ConvertibilityAtCompileTime.cpp" />
-    <ClCompile Include="copyElision.cpp">
-      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
+    <ClCompile Include="copyElision.cpp" />
+    <ClCompile Include="CPP17STLCookbook.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="CPP17STLCookbook.cpp" />
     <ClCompile Include="CPP17_Compliance.cpp" />
     <ClCompile Include="CRTP_0.cpp" />
     <ClCompile Include="declval.cpp" />
@@ -289,18 +304,27 @@
     <ClCompile Include="equivalent_interfaces.cpp" />
     <ClCompile Include="Exercise 2_3.cpp" />
     <ClCompile Include="Exercise 2_3_JLBorges.cpp" />
-    <ClCompile Include="Exercises_4.cpp" />
-    <ClCompile Include="exercise_3_1.cpp" />
+    <ClCompile Include="Exercises_4.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="exercise_3_1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="Experimenting.cpp" />
     <ClCompile Include="ExpressionTemplates_Ch_10.cpp" />
-    <ClCompile Include="foldingCPP17STL.cpp" />
+    <ClCompile Include="extended using declarations.cpp" />
+    <ClCompile Include="foldingCPP17STL.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ImplementingLambdas.cpp" />
     <ClCompile Include="InlineVariables.cpp" />
     <ClCompile Include="InstantiationSafeTemplatesCPPTemp.cpp" />
     <ClCompile Include="Int2Type.cpp" />
     <ClCompile Include="integer_sequence.cpp" />
     <ClCompile Include="IsEqualityComparable_CPPTempl.cpp" />
-    <ClCompile Include="Lambda Extensions.cpp" />
+    <ClCompile Include="Lambda Extensions.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="LegacyAPIsWithSmartPtrs.cpp" />
     <ClCompile Include="ListNodeIterator.cpp" />
     <ClCompile Include="LiteralOperators_CPPTemplates.cpp" />
@@ -308,24 +332,52 @@
     <ClCompile Include="main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="MetaProgramming.cpp" />
     <ClCompile Include="Meta_ErwinUnruh.cpp" />
     <ClCompile Include="MiniBuffer.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="MPLAlgorithms.cpp" />
-    <ClCompile Include="MPLFold.cpp" />
+    <ClCompile Include="DefaultPrinter.ixx">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Modules.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MPLAlgorithms.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MPLFold.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="MyFold.cpp" />
     <ClCompile Include="MyLamda.cpp" />
     <ClCompile Include="MyReverseFold.cpp" />
     <ClCompile Include="mystructbind2.cpp" />
     <ClCompile Include="NamedTemplateArgs_CPPTempl.cpp" />
+    <ClCompile Include="New.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stats.ixx">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabbedPrinter.ixx">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="non-type parameters.cpp" />
+    <ClCompile Include="optional.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="other language features.cpp" />
     <ClCompile Include="ParsingTemplates.cpp" />
     <ClCompile Include="PartialSpecialization.cpp" />
     <ClCompile Include="PassByValue_decay_CPPTemp.cpp" />
     <ClCompile Include="PPP_Chapter_19.cpp" />
-    <ClCompile Include="ProjectionIterator_CPPTempl.cpp" />
+    <ClCompile Include="ProjectionIterator_CPPTempl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="RatioSequenceBug.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
@@ -338,7 +390,9 @@
     <ClCompile Include="Searcher1.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SequenceClasses.cpp" />
+    <ClCompile Include="SequenceClasses.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SQLPP.cpp" />
     <ClCompile Include="Sqlpp11_fragments.cpp" />
     <ClCompile Include="sqlpp11_mockdb.cpp" />
@@ -352,6 +406,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="string literals as template parameters.cpp" />
     <ClCompile Include="structbind2.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -360,10 +415,13 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="threadLocalInline.cpp" />
+    <ClCompile Include="threadLocalInline.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="TraitsCPPTempl.cpp" />
     <ClCompile Include="tuples\TupleTester.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="tuples\tuple_tester.cpp" />
     <ClCompile Include="Type2Type.cpp" />
@@ -388,9 +446,21 @@
     <ClCompile Include="typelist\TypelistTester.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TypePrinting_8_3_3.cpp" />
+    <ClCompile Include="TypePrinting_8_3_3.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="TypeSelection.cpp" />
-    <ClCompile Include="using fold expressions.cpp" />
+    <ClCompile Include="UseDefaultPrinter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="UseExport.ixx">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="using fold expressions.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="ValueCategories.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>

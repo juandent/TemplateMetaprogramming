@@ -25,6 +25,9 @@
     <Filter Include="C++ 17 - The Complete Guide">
       <UniqueIdentifier>{41994e38-6bab-4fef-95eb-5a9295f60620}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Exploring C++ 20">
+      <UniqueIdentifier>{45eb3940-1a0d-44e8-a231-81bf2365655d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -568,6 +571,39 @@
     </ClCompile>
     <ClCompile Include="using fold expressions.cpp">
       <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="string literals as template parameters.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="auto as template parameters.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="extended using declarations.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="optional.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UseDefaultPrinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="New.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UseExport.ixx" />
+    <ClCompile Include="DefaultPrinter.ixx" />
+    <ClCompile Include="TabbedPrinter.ixx" />
+    <ClCompile Include="stats.ixx">
+      <Filter>Exploring C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="AB.h">
+      <Filter>Exploring C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="MetaProgramming.cpp">
+      <Filter>Exploring C++ 20</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

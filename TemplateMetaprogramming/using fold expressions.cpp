@@ -38,7 +38,7 @@ template<typename First, typename... Args>
 void printLambdaInline(const First& f, const Args& ...args)
 {
 	cout << f;
-	(cout << ... << [](const auto& arg) -> decltype(auto)
+	(cout << ... << [](const auto& arg)// -> decltype(auto)
 	{
 			cout << ' ';
 			return arg;
