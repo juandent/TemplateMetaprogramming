@@ -1,4 +1,5 @@
 #pragma once
+#include <cstddef>
 
 
 
@@ -41,7 +42,7 @@ struct IntToStr
 	//constexpr static const char* literal = "18";
 
 	template<int i>
-	constexpr static char* Convert()
+	constexpr static const char* const Convert()
 	{
 		buffer[MAX - 1] = 0;
 		SetDigit<i, buffer, MAX - 2>::doIt();

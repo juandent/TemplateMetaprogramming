@@ -28,6 +28,9 @@
     <Filter Include="Exploring C++ 20">
       <UniqueIdentifier>{45eb3940-1a0d-44e8-a231-81bf2365655d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CPP Concurrency in action">
+      <UniqueIdentifier>{493d0f3a-f595-4532-bb36-7d4932896357}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -604,6 +607,96 @@
     </ClCompile>
     <ClCompile Include="MetaProgramming.cpp">
       <Filter>Exploring C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="variant.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="Any.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="Byte.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="StringViews.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystemLib.cpp">
+      <Filter>C++ 17 - The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="MathModule.ixx" />
+    <ClCompile Include="MathModule1.ixx" />
+    <ClCompile Include="MathModule2.ixx" />
+    <ClCompile Include="UseMathModule.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CalculusPartition.ixx" />
+    <ClCompile Include="CalculusPartitition1.ixx" />
+    <ClCompile Include="CalculusPartition2.ixx" />
+    <ClCompile Include="ThreeWayComparisonOp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sqlite_orm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Passing args  to thread func.cpp">
+      <Filter>CPP Concurrency in action</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeList.cpp">
+      <Filter>ModernCPPDesign</Filter>
+    </ClCompile>
+    <ClCompile Include="IntToStr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeOfDay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stats.cpp">
+      <Filter>Exploring C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="JDGridCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImportStats.cpp">
+      <Filter>Exploring C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadDangling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionTemplates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressioTemplate2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateMetaprogrammingArticle1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForwardingAndUniversalReferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TypeErasure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OverloadSet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OverloadSetBoost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IsIterable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SFINAE.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VarTypeDict.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

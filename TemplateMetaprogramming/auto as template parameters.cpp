@@ -127,6 +127,40 @@ namespace UsingDecltypeAuto
 }
 
 
+namespace JD
+{
+	struct Widget
+	{
+		[[nodiscard]] explicit Widget(const std::string& s)
+			: s(s)
+		{
+		}
+
+		Widget(Widget& rhs)
+			: s(std::forward<std::string>(rhs.s))
+		{}
+
+	private:
+		std::string s;
+	};
+
+	[[nodiscard]] std::string GetString()
+	{
+		return "Leslie"s;
+	}
+	
+	void useWidget()
+	{
+		std::string ss = "juan";
+		Widget w{ ss };
+		Widget q{ w };
+		GetString();
+		Widget b{ GetString() };
+	}
+	
+}
+
+
 namespace Packs_cppreference
 {
 

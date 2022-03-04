@@ -242,7 +242,7 @@ namespace  TypeFuncList {
     void useType()
     {
         typedef  Type<int, bool, char>::type Integrals;
-        Integrals integrals;
+        Integrals integrals{};
         
         
     }
@@ -848,7 +848,7 @@ namespace JD
             struct binary
             {
                 static unsigned long constexpr value = binary<N/10>::value * 2 + N%10;
-                BOOST_STATIC_ASSERT(N%10 < 2);
+                // BOOST_STATIC_ASSERT(N%10 < 2);
             };
             template<>
             struct binary<0>
@@ -1115,7 +1115,7 @@ private:
                 forward_list_iterator( half_list_node<T>* p) : current{p}{}
                 const T &operator*() const{
                     auto address = static_cast<list_node<T> *>(this->current);
-                    assert( this->current == address);
+                    // assert( this->current == address);
                     return address->data;
                 }
                 void operator++(){
@@ -1399,51 +1399,225 @@ namespace InverseOrderConcepts
 void useVariableTemplates();
 void useList();
 
+auto l = [] (int a)-> int&& { return a + 42; };
+
+// std::function<const int& ()> F = {  };
+auto func = [](double a, double b)->double
+{
+    return a + b;
+};
+
+auto ffunc = [](double a) { return 2 * a; };
+
+namespace rewriting
+{
+    void main();
+}
+
+namespace UsingDecltypeAuto
+{
+    void useDeclType();
+}
+
+namespace JD
+{
+    void useWidget();
+}
+
+
+import calculus;
+
+
+void useDeclTypeAuto() {}
+
+namespace overload
+{
+    void callReferenceOverload();
+}
+
+
+namespace References
+{
+    int f() { return 55; }
+    int& g() {
+        static int i = 4;
+        return ++i;
+    }
+
+    vector<int> vi(100);
+
+    void useReferences()
+    {
+        int&& r1 = f();
+        int& r2 = vi[0];
+        int& r3 = r1;
+//        decltype(auto) rr3 = r1;
+        int&& r4 = vi[0] * f();
+        int& r5 = g();
+        int val = ++r5;
+
+    }
+}
+
+
+#include "IntToStr.cpp"
+
+import stats;
+
+namespace Paint
+{
+    void useUtility();
+}
+
+
+
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
-    // insert code here...
+
+    void useTag2ID();
+    useTag2ID();
+
+
+    void useSumVectorOfVectors();
+    useSumVectorOfVectors();
+
+
+    Paint::useUtility();
+
+    void useInt();
+    useInt();
+
+    void callScreensaver();
+    callScreensaver();
+
+
+    void testForwarding();
+    testForwarding();
+
+
+    void useExpr();
+    useExpr();
+
+
+    void  oops();
+    oops();
+
+
+
+
+    void AnotherFuncModule(std::string s);
+    AnotherFuncModule("hello"s);
+
+
+    void useTimeOfDay();
+    useTimeOfDay();
+
+
+    References::useReferences();
+
+
+    useIntToStr();
+
+	// insert code here...
+    overload::callReferenceOverload();
+
+	
+    void useTypeDeduction();
+    useTypeDeduction();
+	
+    goto next;
+
+    JD::useWidget();
+	
+    UsingDecltypeAuto::useDeclType();
+
+
+
+
+	
+    void useCustomer();
+    useCustomer();
+	
+    useMyStruct();
+	
+    rewriting::main();
+
+next:
+    auto xxxx = l(5);
+    double a{}, b{};
+    // double derivative(std::function<double(double, double)> d, double a, double b);
+    derivative(func, a, b);
+    calculus::integrate(ffunc, 5.5);
+    // auto aaaa = calculus::absolute(-4);
+	
+    void useICT();
+    useICT();
+	
+    void useStringViews();
+    useStringViews();
+	
+    void useByte();
+    useByte();
+	
+    void useAny();
+    useAny();
+	
+    void useOverloadMixins();
+    useOverloadMixins();
+
+    void useVariant();
+    useVariant();
+
+    void useData();
+    useData();
+
+    void usePair1();
+    usePair1();
+
 
     //Searcher::main(1, nullptr);
     // int* array = new int[100];
     // array[100] = 1;
     useList();
 	
-    useVariableTemplates();
+    // useVariableTemplates();
 	
-    InverseOrderConcepts::call_h();
+    // InverseOrderConcepts::call_h();
 	
-    usedef();
+    // usedef();
 	
-    useConcepts();
+    // useConcepts();
 	
-    useOptionals();
+    // useOptionals();
 	
     Packs_cppreference::useG();
 	
-    useHashCustomer();
+    // useHashCustomer();
 	
-    usePrintSpaceBefore();
+    // usePrintSpaceBefore();
 	
     useCall();
 	
     usePtr();
 	
-    useCountCalls();
+    // useCountCalls();
 
 	
     useD();
-    useThreadLocal();
+    // useThreadLocal();
 	
     useDeclTypeAuto();
 
     useSearcher();
 
-    useMyStruct();
+	
+    // useMyStruct();
+	
     useTypeInfo();
     use_typeid();
     useAccessSubobject();
-    MixingPolicies::useSmartPtrBasic();
+    // MixingPolicies::useSmartPtrBasic();
 	
     PS::useSpecialization();
     PS::useCreatorPolicy();
@@ -1481,35 +1655,35 @@ int main(int argc, const char * argv[]) {
 	
 	useTuplePushfront();
 
-	testTuples();
+	// testTuples();
 	conslistester();
 
 	useInvoker();
 
 	testAccumulate();
 
-	Transform_if_with_lambdas::simplestAccumulate();
-	Transform_if_with_lambdas::accumulateIntoAnOutputIterator();
-	Transform_if_with_lambdas::useTransform_if();
+	// Transform_if_with_lambdas::simplestAccumulate();
+	// Transform_if_with_lambdas::accumulateIntoAnOutputIterator();
+	// Transform_if_with_lambdas::useTransform_if();
 
 
 	LambdaImpl_2::useMulticall();
 
 	AmbiguousConditionalOperatorsArguments::ConditionalOperatorReturnTypesVary::seeDifferentResultTypes();
 
-	Cartesian_product_at_compile_time::useCartesian();
+	// Cartesian_product_at_compile_time::useCartesian();
 
-	CallingMultipleFunctionsWithSameInput::useMulti();
-	CombineFunctions::useCombine();
-	FunctionConcat::useConcat();
-	PolymorphyViaStd_Function::main();
+	// CallingMultipleFunctionsWithSameInput::useMulti();
+	// CombineFunctions::useCombine();
+	// FunctionConcat::useConcat();
+	// PolymorphyViaStd_Function::main();
 
 	// repeat it
-	Chapter3::QuantityStuff::useQuantities();
+	// Chapter3::QuantityStuff::useQuantities();
 
-	useSortedInserting();
+	// useSortedInserting();
 
-	useAddable();
+	// useAddable();
 
 	print_primes();
 
@@ -1530,7 +1704,7 @@ int main(int argc, const char * argv[]) {
 
 	useConvertible();
 
-	useSumFold();
+	// useSumFold();
 
 	useCompileTimeIf();
 
@@ -1552,7 +1726,7 @@ int main(int argc, const char * argv[]) {
 
 	useNamedTemplateArgs();
 
-	useProjectionIterator();
+	// useProjectionIterator();
 
 	useListsNodeIterator();
 
@@ -1564,7 +1738,7 @@ int main(int argc, const char * argv[]) {
 
 	useReverseFold();
 
-	doReverseAtRunTime();
+	// doReverseAtRunTime();
 
 	JD::useTypeSetJD();
 
@@ -1582,27 +1756,27 @@ int main(int argc, const char * argv[]) {
 
 	SpecialMemberFunctions::useSpecialMemberFunctions();
 
-	Exercise_4_3::Section_1::Original::call_next_if();
+	// Exercise_4_3::Section_1::Original::call_next_if();
 
 	testAssignmentOfIntToPointer();
 
 	useExpressionTemplate();
 
-	reverse_fold::useReverseFold();
+	// reverse_fold::useReverseFold();
 
-	LambdaMetaFunction::useLambdaMetaFunction();
+	// LambdaMetaFunction::useLambdaMetaFunction();
 
-	Section6_3::useTransform();
+	// Section6_3::useTransform();
 
-	TinySequenceImplementation::useTiny();
+	// TinySequenceImplementation::useTiny();
 
-	AssociativeSequences::Basics::usingOrder();
+	// AssociativeSequences::Basics::usingOrder();
 
-	Chapter3::Questions::Q3_8::useLength();
+	// Chapter3::Questions::Q3_8::useLength();
 
-	Chapter3::Questions::Q3_1::useTransform();
+	// Chapter3::Questions::Q3_1::useTransform();
 
-	Chapter3::Questions::HigherOrderMetafunctions::useTwicePointerDouble();
+	// Chapter3::Questions::HigherOrderMetafunctions::useTwicePointerDouble();
     
     Iterator_invalidation::useForwardListIterator();
     
@@ -1612,11 +1786,11 @@ int main(int argc, const char * argv[]) {
     useType_Description();
 
     
-    Solution_to_Exercise_3_7::solve_3_7();
+    // Solution_to_Exercise_3_7::solve_3_7();
     
-    Chapter3::QuantityStuff::useQuantities();
+    // Chapter3::QuantityStuff::useQuantities();
     
-    Solution_to_Exercise_3_3_AND_3_4::use_add_pointer();
+    // Solution_to_Exercise_3_3_AND_3_4::use_add_pointer();
     
     JD::Hide::useF();
     
@@ -1626,9 +1800,9 @@ int main(int argc, const char * argv[]) {
     
     std::cout << std::boolalpha;
 
-    Solution_to_Exercise_3_1::solve();
+    // Solution_to_Exercise_3_1::solve();
     
-    Solution_to_Exercise_3_2::solve();
+    // Solution_to_Exercise_3_2::solve();
     
     JD::Solution_to_Exercise_2_1::useReplaceType();
     

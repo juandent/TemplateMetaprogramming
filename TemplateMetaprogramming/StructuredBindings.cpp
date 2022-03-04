@@ -2,9 +2,13 @@
 
 struct MyStruct
 {
-// private:
+
 	int i = 0;
-	std::string s;
+	std::string s{};
+public:
+	MyStruct() = default;
+	MyStruct(int i, std::string s) : i{i}, s{s} {}
+	int getI() const { return i; }
 };
 
 
@@ -29,10 +33,22 @@ std::array<int,4> getArray()
 	return ar;
 }
 
+std::vector<int> getIntVector()
+{
+	std::vector<int > vec{ 1,2,5,88 };
+	return vec;
+}
+
 void useMyStruct()
 {
 
+	// auto [tt, jj, kkk, ll] = getIntVector();
+
+	
 	const auto& [a, b, c, d] = getArray();
+
+	auto arreglo = getArray();
+	
 
 	// auto& [a, b, c, d] = getArray();    // ERROR (prvalue to non const reference is not allowed)
 	
@@ -67,12 +83,25 @@ void useMyStruct()
 
 	std::cout << "mmm.s = " << mmm.s << std::endl;
 
+	MyStruct tttt{ 31, "Juan" };
+
+	auto [ssss, nnn] = tttt;
+
+	auto nnnn = std::move(nnn);
+
+	int i = ssss;
 }
 
 
 auto getArr() -> int(&)[2]
 {
 	int arr[2] = {3,9};
+	return arr;
+}
+
+auto getArrByValue()
+{
+	int arr[2]{ 3,9 };
 	return arr;
 }
 
@@ -102,89 +131,191 @@ void useSearcher()
 	}	
 }
 
-#if 0
-namespace juan
+
+struct Customer
 {
-	struct Customer
+	void set_name(const std::string& name)
 	{
-		std::string name;
-		std::string last;
-		int age;
-	};
-
-
-	template<typename T>
-	struct tuple_size
-	{
-	};
-
-	template<>
-	struct tuple_size<Customer>
-	{
-		static constexpr size_t value = 3;
-	};
-
-	template<size_t Idx, typename Type >
-	struct tuple_element
-	{
-	};
-
-	template<>
-	struct tuple_element<0, Customer>
-	{
-		using type = std::string;
-	};
-
-	template<>
-	struct tuple_element<1, Customer>
-	{
-		using type = std::string;
-	};
-
-	template<>
-	struct tuple_element<2, Customer>
-	{
-		using type = long;
-	};
-
-
-	template<size_t idx, typename U>
-	constexpr const auto& getauto(const U& u)
-	{
+		this->name = name;
 	}
 
-	template<>
-	constexpr  const auto& getauto<0>(const Customer& c)
+	void set_last(const std::string& last)
 	{
-		return c.name;
+		this->last = last;
+	}
+
+	void set_age(int age)
+	{
+		this->age = age;
+	}
+
+	[[nodiscard]] const std::string& get_name() const
+	{
+		return name;
 	}
 
 
-	template<size_t idx, typename U>
-	const typename tuple_element<idx, U>::type& get( const U& u)
+	[[nodiscard]] const std::string& get_last() const
 	{
+		return last;
 	}
 
-	template<>
-	const typename tuple_element<0, Customer>::type&  get<0>( const Customer& c)
+
+	[[nodiscard]] int get_age() const
 	{
-		return c.name;
+		return age;
 	}
 
-	template<>
-	const typename tuple_element<1, Customer>::type& get<1>(const Customer& c)
+	[[nodiscard]] std::string& get_name()
 	{
-		return c.last;
+		return name;
 	}
 
-	template<>
-	const typename tuple_element<2, Customer>::type& get<2>(const Customer& c)
+	[[nodiscard]] std::string& get_last()
 	{
-		return c.age;
+		return last;
 	}
 
+	[[nodiscard]] int& get_age()
+	{
+		return age;
+	}
+
+	Customer(std::string name, std::string last, int age)
+		: name(std::move(name)),
+		last(std::move(last)),
+		age(age)
+	{
+	}
+private:
+	std::string name;
+	std::string last;
+	int age;
+};
+
+template<typename T>
+struct ::std::tuple_size
+{
+
+};
+
+template<>
+struct ::std::tuple_size<Customer>
+{
+	static constexpr int value = 3;
+};
+
+template<size_t Idx, typename Type >
+struct std::tuple_element
+{
+};
+
+template<size_t Idx>
+struct std::tuple_element<Idx, Customer>
+{
+	using type = std::string;
+};
+
+template<>
+struct std::tuple_element<2, Customer>
+{
+	using type = int;
+};
+
+
+#ifdef NO_CONSTEXPR_IF
+
+template<> decltype(auto) get<0>(Customer& c)  { return c.get_name(); }
+template<> decltype(auto) get<1>(Customer& c) { return c.get_last(); }
+template<> decltype(auto) get<2>(Customer& c) { return c.get_age(); }
+
+template<> decltype(auto) get<0>(const Customer& c) { return c.get_name(); }
+template<> decltype(auto) get<1>(const Customer& c) { return c.get_last(); }
+template<> decltype(auto) get<2>(const Customer& c) { return c.get_age(); }
+
+template<> decltype(auto) get<0>(Customer&& c) { return c.get_name(); }
+template<> decltype(auto) get<1>(Customer&& c) { return c.get_last(); }
+template<> decltype(auto) get<2>(Customer&& c) { return c.get_age(); }
+
+
+#else
+
+
+
+template<std::size_t I> decltype(auto) get(Customer& c)
+{
+	static_assert(I < 3);
+
+	if constexpr (I == 0)
+	{
+		return c.get_name();
+	}
+	else if constexpr (I == 1)
+	{
+		return c.get_last();
+	}
+	else
+		return c.get_age();
 }
+
+template<std::size_t I> decltype(auto) get(const Customer& c)
+{
+	static_assert(I < 3);
+
+	if constexpr (I == 0)
+	{
+		return c.get_name();
+	}
+	else if constexpr (I == 1)
+	{
+		return c.get_last();
+	}
+	else
+		return c.get_age();
+}
+
+
+template<std::size_t I> decltype(auto) get(Customer&& c)
+{
+	static_assert(I < 3);
+
+	if constexpr (I == 0)
+	{
+		return std::move(c.get_name());
+	}
+	else if constexpr (I == 1)
+	{
+		return std::move(c.get_last());
+	}
+	else
+		return c.get_age();
+}
+
 #endif
+
+Customer getCustomer()
+{
+	return Customer{ "Juan","Dent", 60 };
+}
+
+void useCustomer()
+{
+	Customer c{ "Tim", "Stark", 42 };
+	auto [f, l, a] = c;
+	++a;
+
+	auto [ff, ll, aa] = getCustomer();
+	++aa;
+
+	const Customer d{ "Leslie","Hulse", 52 };
+	auto [fff,lll,aaa] = d;
+
+	auto&& x = getCustomer();
+
+	int i = 0;
+}
+
+
 
 template<typename T>
 struct Reveal
@@ -194,8 +325,10 @@ struct Reveal
 };
 
 
-// namespace dent
-// {
+
+
+namespace dent
+{
 	struct Customer
 	{
 	private:
@@ -232,14 +365,14 @@ struct Reveal
 		}
 	};
 
-//}
+}
 
 	// template<typename T>
 	// struct ::std::tuple_size
 	// {
 	// };
 
-
+#if 0
 template<>
 struct std::tuple_size<Customer>
 {
@@ -320,6 +453,7 @@ decltype(auto) get(Customer&& c)
 		return c.value();
 	}
 }
+#endif
 
 
 
@@ -359,3 +493,78 @@ void useAPI()
 }
 
 #endif
+
+
+template<typename T>
+void func_for_x(T param)
+{
+	int i = 0;
+}
+
+template<typename T>
+void func_for_cx(const T param)
+{
+	int i = 0;
+}
+
+template<typename T>
+void func_for_rx(const T& param)
+{
+	int i = 0;
+}
+
+
+void useTypeDeduction()
+{
+	auto x = 27;
+	
+	func_for_x(27);
+
+	func_for_cx(x);
+	
+	func_for_rx(x);
+	
+	auto& r = x;
+
+	const auto cx = x;
+	const auto& rx = x;
+
+	
+}
+
+
+namespace overload
+{
+	// void f(int&& x)
+	// {
+	//
+	// }
+
+	void f(int& i)
+	{
+
+	}
+
+	void f(int i)
+	{
+		
+	}
+
+	int&& gg()
+	{
+		static int i{ 9 };
+		return std::move(i);
+	}
+
+	void callReferenceOverload()
+	{
+		f(gg());
+
+		f(28);
+
+		int x = 34;
+
+		// f(x);
+
+	}
+}

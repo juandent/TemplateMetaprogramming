@@ -122,23 +122,51 @@ namespace CurrentInstantiation
 		} jj;
 
 		I* i;
+		J* j;
 	};
 
+#if 0
 	template<> struct C<int>::I
 	{
 		int counter;
 	};
+#endif
+
+#if 1	
+	template<> struct C<int>
+	{
+		struct I
+		{
+			C* f;
+		} *pointI;
+		int counter;
+	};
+#endif
 
 	void use()
 	{
-		C<int>::I c{ 4 };
-		c.counter++;
+#if 0
+		C<int> ff;
+		ff.pointI->f;
+#endif
+
+		C<int>::I i{nullptr};
+		i.f = nullptr;
+
+//		c.counter++;
 		C<int> cc{};	/// HERE!!!!
-		cc.i->counter--;
+
+		cc.counter++;
+		cc.pointI->f;
+#if 0
+		cc.i = &c;
+		cc.i->counter++;
+		cc.jj.c[0];
+
 
 		C<long>::I i;
 		i.c->jj.i;
-
+#endif
 	}
 }
 
@@ -192,6 +220,25 @@ namespace RequiredUseOfTypename
 		using Type = T;
 		using OtherType = typename S<T>::Type;
 	};
+
+	template<>
+	struct S<int> : X<int>::C
+	{
+		S() : X<int>::C(X<int>::C()) {}
+
+		X<int> f()
+		{
+			X<int>::C* p;
+			return X<int>{};
+		}
+
+	};
+
+	void useReqUseOfTypename()
+	{
+		S<int> s{};
+		s.f();
+	}
 
 #endif
 

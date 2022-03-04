@@ -12,7 +12,7 @@ struct Integral
 template<int...N>
 struct List
 {
-	static std::tuple<Integral<N>...> values; // = make_tuple(N...);
+	inline static std::tuple<Integral<N>...> values; // = make_tuple(N...);
 	List() {}    //  : values{ make_tuple(N...) } {}
 };
 

@@ -37,12 +37,12 @@ void usesquared3()
 
 
 
-auto squared4 = [](auto val) constexpr
+constexpr auto squared4 = [](auto val) constexpr
 {
 	return  val * val;
 };
 
-constexpr auto squared5 = [](auto val)
+constexpr decltype(auto) squared5 = [](auto val) constexpr
 {
 	return  val * val;
 };
@@ -50,7 +50,9 @@ constexpr auto squared5 = [](auto val)
 
 void useConstexprLambda()
 {
+	int n = 5;
 	constexpr auto r = squared4(5);
+	auto rs = squared4(n);
 	auto&& s = squared5(5);
 	auto a = squared5(9);
 	int ret = 5;
@@ -59,7 +61,7 @@ void useConstexprLambda()
 }
 
 
-auto hashed = [](const char* str)
+constexpr auto hashed = [](const char* str) constexpr
 {
 	std::size_t hash = 5381;
 	while(*str != '\0')

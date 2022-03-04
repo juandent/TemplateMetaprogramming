@@ -54,6 +54,8 @@ void useCountCalls()
 		return x > y;
 	} };
 
+	auto r = sc(5, 7);
+
 	vector v{ 3,5,8,2,1,0 };
 
 	sort(v.begin(), v.end(), std::ref(sc));
@@ -89,6 +91,10 @@ template<typename T1, typename T2>
 Pair1(T1, T2)->Pair1<T1, T2>;
 
 
+// template<typename T1, typename T2>
+// Pair1(const T1&, const T2&)->Pair1<T1, T2>;
+
+
 
 void usePair1()
 {
@@ -97,7 +103,7 @@ void usePair1()
 
 	// char first[3]{ x };
 	// char second[6]{ y };
-
+	Pair1 p0{ x,y };
 
 	Pair1 p1{ "hi", "world" };
 
@@ -126,13 +132,14 @@ struct S2
 	T val;
 };
 
-explicit S2(const char*)->S2<string>;
+S2(const char*)->S2<string>;
+explicit S2(string)->S2<string>;
 
 void useS2()
 {
 	S2 s1{ "hello" };
 //	S2 s2 = { "hello" };
-	S2 s3 = S2{ "hello" };
+	S2 s3 { "hello"s };
 }
 
 
