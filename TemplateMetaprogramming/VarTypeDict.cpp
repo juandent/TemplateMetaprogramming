@@ -40,6 +40,23 @@ struct Tag2ID_<1, T, Head>
 template<typename T, typename ...Types>
 constexpr size_t Tag2ID = Tag2ID_<sizeof...(Types), T, Types...>::position;
 
+template<size_t Pos, typename...TTypes>
+struct TypeAtPos;
+
+template<size_t Pos, typename Type, typename...TTypes>
+struct TypeAtPos<Pos,Type, TTypes...>
+{
+	using type = TypeAtPos<Pos - 1, TTypes...>::type;
+};
+
+
+
+template<typename Type, typename...Rest>
+struct TypeAtPos<0, Type, Rest...>
+{
+	using type = Type;
+};
+
 
 template<typename TVal, size_t N, size_t M, typename TProcessedTypes, typename...TRemainingTypes>
 struct NewTupleType_;
@@ -47,7 +64,8 @@ struct NewTupleType_;
 template<typename TVal, size_t N, size_t M, template<typename...> class TCont, typename ...TModifiedTypes, typename TCurType, typename... TRemainingTypes>
 struct NewTupleType_<TVal, N, M, TCont<TModifiedTypes...>, TCurType, TRemainingTypes...>
 {
-	using type = typename NewTupleType_<TVal, N, M + 1, TCont<TModifiedTypes..., TCurType>, TCurType, TRemainingTypes...>::type;
+	using type = typename NewTupleType_<TVal, N, M + 1, TCont<TModifiedTypes..., TCurType>, TRemainingTypes...>::type;
+	// using type = typename NewTupleType_<TVal, N, M + 1, TCont<TRemainingTypes..., TCurType>, TModifiedTypes...>::type;
 };
 
 
@@ -55,6 +73,7 @@ template<typename TVal, size_t N, template<typename...> class TCont, typename ..
 struct NewTupleType_<TVal, N, N, TCont<TModifiedTypes...>, TCurType, TRemainingTypes...>
 {
 	using type = TCont<TModifiedTypes..., TVal, TRemainingTypes...>;
+	// using type = TCont<TRemainingTypes..., TVal, TModifiedTypes...>;
 };
 
 
@@ -82,23 +101,23 @@ struct VarTypeDict
 		static constexpr size_t Size = sizeof...(TTypes);
 	public:
 		Values() = default;
-		// Values(std::shared_ptr<void>(&& input)[sizeof...(TTypes)])
-		// {
-		// 	for (size_t i = 0; i < sizeof...(TTypes); ++i)
-		// 	{
-		// 		m_tuple[i] = std::move(input[i]);
-		// 	}
-		// }
-
-		Values(auto&& input)
+		Values(std::shared_ptr<void>(&& input)[sizeof...(TTypes)])
 		{
-			std::cout << typeid(input).name() << std::endl;
-
-			for (size_t i = 0; i < sizeof...(TParameters); ++i)
+			for (size_t i = 0; i < sizeof...(TTypes); ++i)
 			{
 				m_tuple[i] = std::move(input[i]);
 			}
 		}
+
+		// Values(auto&& input)
+		// {
+		// 	std::cout << typeid(input).name() << std::endl;
+		//
+		// 	for (size_t i = 0; i < sizeof...(TParameters); ++i)
+		// 	{
+		// 		m_tuple[i] = std::move(input[i]);
+		// 	}
+		// }
 	public:
 		template<typename TTag, typename TVal>
 		auto Set(TVal&& val)&&
@@ -113,7 +132,7 @@ struct VarTypeDict
 					rawVal* nptr = static_cast<rawVal*>(ptr);
 					delete nptr;
 				});
-			constexpr size_t Size = sizeof...(TTypes);
+			size_t Size = sizeof...(TTypes);
 			using new_type = NewTupleType<rawVal, TagPos, Values<>, TTypes...>;
 			return new_type(std::move(m_tuple));
 		}
@@ -122,9 +141,14 @@ struct VarTypeDict
 		auto& Get() const
 		{
 			using namespace NSVarTypeDict;
-			constexpr static size_t TagPos = Tag2ID<TTag, TParameters...>;
+			constexpr size_t TagPos = Tag2ID<TTag, TParameters...>;
+			TTag* tt = nullptr;
+
+			using type = typename TypeAtPos<TagPos, TTypes...>::type;
+			int pos = TagPos;
 			auto p = m_tuple[TagPos].get();
-			return p;
+			type* t = static_cast<type*>(p);
+			return *t;
 		}
 	};
 	static auto Create()
@@ -144,9 +168,9 @@ void useTag2ID()
 
 	constexpr size_t pos2 = Tag2ID<long, int>;
 
-	struct A; struct B;
+	struct A; struct B; struct C;
 
-	auto a = VarTypeDict<A, B>::Create().Set<A>(5).Set<B>(56L).Get<A>();
+	auto a = VarTypeDict<A, B, C>::Create().Set<A>(5).Set<B>(56L).Set<C>("hello").Get<C>();
 
 }
 
