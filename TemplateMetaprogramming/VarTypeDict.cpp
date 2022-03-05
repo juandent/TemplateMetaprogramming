@@ -108,16 +108,6 @@ struct VarTypeDict
 				m_tuple[i] = std::move(input[i]);
 			}
 		}
-
-		// Values(auto&& input)
-		// {
-		// 	std::cout << typeid(input).name() << std::endl;
-		//
-		// 	for (size_t i = 0; i < sizeof...(TParameters); ++i)
-		// 	{
-		// 		m_tuple[i] = std::move(input[i]);
-		// 	}
-		// }
 	public:
 		template<typename TTag, typename TVal>
 		auto Set(TVal&& val)&&
