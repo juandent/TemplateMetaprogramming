@@ -98,9 +98,12 @@ struct VarTypeDict
 	{
 	private:
 		std::shared_ptr<void> m_tuple[sizeof...(TTypes)];
-		static constexpr size_t Size = sizeof...(TTypes);
+		// static constexpr size_t Size = sizeof...(TTypes);
 	public:
 		Values() = default;
+	// private:
+		// template<> friend struct Values<TTypes...>;
+
 		Values(std::shared_ptr<void>(&& input)[sizeof...(TTypes)])
 		{
 			for (size_t i = 0; i < sizeof...(TTypes); ++i)

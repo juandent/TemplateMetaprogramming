@@ -778,7 +778,7 @@ void useConcepts()
 	const auto& r1 = getString().value();	// Error
 	auto&& r2 = getString().value();				// Error
 	
-#if 0	
+#if 1	
 	int a = 4;
 	int b = 'a';
 	MMM mmm;

@@ -1469,11 +1469,28 @@ namespace Paint
     void useUtility();
 }
 
+void useFilterTransform();
+
+namespace options_3
+{
+    void useFastSort();
+}
+namespace moreSFINAE
+{
+    void useIncrease();
+}
 
 
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
+
+
+    moreSFINAE::useIncrease();
+
+    options_3::useFastSort();
+
+    useFilterTransform();
 
     void useTag2ID();
     useTag2ID();

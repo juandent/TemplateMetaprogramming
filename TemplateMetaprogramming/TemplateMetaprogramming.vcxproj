@@ -314,6 +314,9 @@
     <ClCompile Include="declval.cpp" />
     <ClCompile Include="Delegate.cpp" />
     <ClCompile Include="DependentNames.cpp" />
+    <ClCompile Include="Designators.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="DetectionIdiom.cpp" />
     <ClCompile Include="EBCO_CPPTempl.cpp" />
     <ClCompile Include="Elision.cpp">
@@ -406,7 +409,12 @@
     <ClCompile Include="Passing args  to thread func.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ranges filter transform.cpp" />
     <ClCompile Include="SFINAE.cpp" />
+    <ClCompile Include="SFINAE_2.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="sqlite_orm.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>

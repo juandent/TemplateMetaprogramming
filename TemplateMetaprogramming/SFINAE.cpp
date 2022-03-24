@@ -1,5 +1,7 @@
 #include "stdafx.h"
 
+// import std_core;
+
 template<typename T,  typename U = typename T::type >
 constexpr bool has_type_member(T*)
 {

@@ -31,6 +31,9 @@
     <Filter Include="CPP Concurrency in action">
       <UniqueIdentifier>{493d0f3a-f595-4532-bb36-7d4932896357}</UniqueIdentifier>
     </Filter>
+    <Filter Include="C++ 20 Get the Details">
+      <UniqueIdentifier>{87ec6d63-d901-4b03-93ac-5990756116e9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -696,6 +699,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VarTypeDict.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Designators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ranges filter transform.cpp">
+      <Filter>C++ 20 Get the Details</Filter>
+    </ClCompile>
+    <ClCompile Include="SFINAE_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
