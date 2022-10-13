@@ -34,6 +34,27 @@
     <Filter Include="C++ 20 Get the Details">
       <UniqueIdentifier>{87ec6d63-d901-4b03-93ac-5990756116e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ModernesCPP.com">
+      <UniqueIdentifier>{abe919c6-48f5-4eaa-a37f-52306b10a6d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Programming with C++ 20">
+      <UniqueIdentifier>{dd951bd3-0e99-4cab-a5b0-80dc3ddff468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hands-on Design Patterns  with C++">
+      <UniqueIdentifier>{45fb8688-7f98-4419-9e05-26147bb0f83e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++ Template MetaProgramming in Practice">
+      <UniqueIdentifier>{3e0b7f44-da6a-4128-bd46-3d034b5473c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Software Architecture with C++">
+      <UniqueIdentifier>{166bf9ab-e736-4854-b87d-cdbfc027cb85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sqlite_orm">
+      <UniqueIdentifier>{381445a7-258b-4bc7-bb7e-519b32475cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++17-20 Course">
+      <UniqueIdentifier>{cb5e5b5b-9ed5-4c26-9232-7969c2cc589f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -710,5 +731,92 @@
     <ClCompile Include="SFINAE_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="duckTypingWithConcept.cpp">
+      <Filter>ModernesCPP.com</Filter>
+    </ClCompile>
+    <ClCompile Include="ch11_Prog_with_CPP20.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="1_8.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="1_9.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="SFINAE_ultimate.cpp">
+      <Filter>Hands-on Design Patterns  with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="CRTP_chapter_8.cpp">
+      <Filter>Hands-on Design Patterns  with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="1_10.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="1_5.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="2_4.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexSequence_cppreference.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3_6_1.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="3_10.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="5_2.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="CPPTemplateMetaProgramming2_2.cpp">
+      <Filter>C++ Template MetaProgramming in Practice</Filter>
+    </ClCompile>
+    <ClCompile Include="CppTMP_2_3.cpp">
+      <Filter>C++ Template MetaProgramming in Practice</Filter>
+    </ClCompile>
+    <ClCompile Include="CompileTimeCollection.cpp">
+      <Filter>C++ Template MetaProgramming in Practice</Filter>
+    </ClCompile>
+    <ClCompile Include="DelarativeCode.cpp">
+      <Filter>Software Architecture with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="constexpr_optimization.cpp">
+      <Filter>Software Architecture with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="CopyAndSwap.cpp">
+      <Filter>Software Architecture with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="CRTP_chapter6.cpp">
+      <Filter>Software Architecture with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="DisabliingSpecialMemberFunctions.cpp">
+      <Filter>C++Templates 2nd ed</Filter>
+    </ClCompile>
+    <ClCompile Include="builders.cpp">
+      <Filter>Software Architecture with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="concept_compiler_error.cpp">
+      <Filter>sqlite_orm</Filter>
+    </ClCompile>
+    <ClCompile Include="removeallextents.cpp">
+      <Filter>CppTemplates_2nd_Edition</Filter>
+    </ClCompile>
+    <ClCompile Include="encoding.cpp">
+      <Filter>C++17-20 Course</Filter>
+    </ClCompile>
+    <ClCompile Include="Concepts_1.cpp">
+      <Filter>C++17-20 Course</Filter>
+    </ClCompile>
+    <ClCompile Include="StateVisiting.cpp">
+      <Filter>Software Architecture with C++</Filter>
+    </ClCompile>
+    <ClCompile Include="3_1_3.cpp">
+      <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

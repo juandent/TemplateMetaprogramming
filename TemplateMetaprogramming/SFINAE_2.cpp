@@ -336,8 +336,7 @@ namespace moreSFINAE
 	template<typename T>
 	struct increase_helper<T,true,true>
 	{
-		template<typename Q=T>
-		static auto increase(const Q& x, size_t n)
+		static auto increase(const T& x, size_t n)
 		{
 			return x * n;
 		}
@@ -346,8 +345,7 @@ namespace moreSFINAE
 	template<typename T>
 	struct increase_helper<T, true, false>
 	{
-		template<typename Q = T>
-		static auto increase(const Q& x, size_t n)
+		static auto increase(const T& x, size_t n)
 		{
 			T y{ x };
 			return y *= n;
@@ -357,8 +355,7 @@ namespace moreSFINAE
 	template<typename T>
 	struct increase_helper<T, false, true>
 	{
-		template<typename Q = T>
-		static auto increase(const Q& x, size_t n)
+		static auto increase(const T& x, size_t n)
 		{
 			return x * n;
 		}
@@ -367,15 +364,11 @@ namespace moreSFINAE
 	template<typename T>
 	struct increase_helper<T, false, false>
 	{
-		template<typename Q = T>
-		static auto increase(const Q& x, size_t n)
+		static auto increase(const T& x, size_t n)
 		{
 			static_assert(sizeof(T) < 0);
 		}
 	};
-
-	template<typename T>
-	constexpr size_t size = sizeof(have_star_equal(T{}, 5));
 
 	template<typename T>
 	void increase(const T& x, size_t n)
@@ -407,8 +400,144 @@ namespace moreSFINAE
 
 		constexpr size_t s = sizeof(have_star_equal(x, n));
 
-		AA a{5};
+		AA a{ 5 };
 		constexpr size_t t = sizeof(have_star_equal(a, n));
 	}
-
 }
+
+namespace withTrueType
+{
+	template<typename T>
+	auto have_star(const T& x, size_t n) -> decltype(x * n, std::true_type{});
+	std::false_type have_star(...);
+
+	template<typename T>
+	auto have_star_equal(T x, size_t n) -> decltype(x *= n, std::true_type{});
+	std::false_type have_star_equal(...);
+
+	template<typename T>
+	auto have_plus(const T& x) -> decltype(x + x, std::true_type{});
+	std::false_type have_plus(...);
+
+	template<typename T, bool have_star, bool have_star_equal, bool have_plus>
+	struct increase_helper;
+
+	template<typename T, bool have_star_equal, bool have_plus>
+	struct increase_helper<T, true, have_star_equal, have_plus>
+	{
+		static auto f(const T& x, size_t n)
+		{
+			return x * n;
+		}
+	};
+
+	template<typename T, bool have_plus>
+	struct increase_helper<T, false, true, have_plus>
+	{
+		static auto f(const T& x, size_t n)
+		{
+			T y(x);
+			return y *= n;
+		}
+	};
+
+
+	template<typename T>
+	struct increase_helper<T, false, false, true>
+	{
+		static auto f(const T& x, size_t n)
+		{
+			T y(x);
+			for (int i = 1; i < n; ++i)
+				y = y + y;
+			return y *= n;
+		}
+	};
+
+	template<typename T>
+	auto increase( const T& x, size_t n )
+	{
+		return increase_helper<T,
+			decltype(have_star(x, n))::value,
+			decltype(have_star_equal(x, n))::value,
+			decltype(have_plus(x))::value >::f(x, n);
+	}
+
+	void useIncrease()
+	{
+		int x = 10, n = 4;
+		size_t res = increase(x, n);
+
+	}
+}
+
+namespace withFramework
+{
+
+	template<typename Lambda>
+	struct is_valid_helper
+	{
+		template<typename LambdaArgs>
+		constexpr auto test(int)-> decltype(std::declval<Lambda>() (std::declval<LambdaArgs>()), std::true_type{})
+		{
+			return std::true_type{};
+		}
+		template<typename LambdaArgs>
+		constexpr std::false_type test(...)
+		{
+			return std::false_type{};
+		}
+		template<typename LambdaArgs>
+		constexpr auto operator()(const LambdaArgs& )
+		{
+			return this->test<LambdaArgs>(0);
+		}
+	};
+
+	template<typename Lambda>
+	constexpr auto is_valid( const Lambda&)
+	{
+		return is_valid_helper<Lambda>();
+	}
+
+	auto is_assignable = is_valid([](auto&& x)->decltype(x = x)	{});
+
+	struct A
+	{
+		// A& operator=(const A& other) = delete;
+	};
+
+	// using A = int;
+	void my_function( const A& a) 
+	{
+		static_assert(decltype(is_assignable(a))::value, "A is not assignable");
+	}
+
+	template<typename T>
+	struct IsAssignable
+	{
+		static constexpr bool value = decltype(is_assignable(std::declval<T>()))::value;
+	};
+
+	struct B
+	{
+		int m_i;
+		B(int i =0) : m_i{1} {}
+		B& operator=(const B& r)
+		{
+			m_i = r.m_i;
+			return *this;
+		}
+	};
+
+	B b;
+	constexpr bool is = decltype(is_assignable(b))::value;
+
+	void useFramework()
+	{
+		A a;
+		static_assert(IsAssignable<A>::value);
+		my_function(a);
+	}
+}
+

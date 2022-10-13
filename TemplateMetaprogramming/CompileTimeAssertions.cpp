@@ -13,8 +13,16 @@ namespace Loki
 	{\
 		class ERROR_##msg{};\
 		sizeof(Loki::CompileTimeChecker<\
-		(expr) != 0>((ERROR_##msg())));\
+		(expr) == true>((ERROR_##msg())));\
 	}
+
+
+	class ERROR_DestinationTypeTooNarrow {};
+	ERROR_DestinationTypeTooNarrow obj{};
+	auto sss = sizeof(Loki::CompileTimeChecker<(sizeof(long) >= sizeof(long ))>(obj));
+
+
+
 
 	struct DestinationTypeTooNarrow {};
 	

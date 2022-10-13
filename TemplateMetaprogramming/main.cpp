@@ -7,6 +7,8 @@
 //
 #include "stdafx.h"
 
+#include <optional>
+
 #include "exercise_3_1.hpp"
 #include "Exercise 2_3.hpp"
 #include "Exercise 2_3_JLBorges.hpp"
@@ -1479,12 +1481,242 @@ namespace moreSFINAE
 {
     void useIncrease();
 }
+namespace withFramework
+{
+    void useFramework();
+}
+
+namespace _1_9
+{
+    void use();
+}
+
+struct Shared
+{
+    std::shared_ptr<std::string> data;
+
+    Shared(std::shared_ptr<std::string> param)
+	    : data{move(param)}
+    {
+    }
+};
+namespace seq
+{
+    void useSequenceCPP();
+}
+
+namespace alternative_impl
+{
+    void useFakeBytes();
+}
+
+
+template<typename ...Ids>
+struct get_pointer_t
+{
+    using ids_type = std::tuple<Ids...>;
+
+    std::tuple<Ids...> ids;
+};
+
+
+template<class... Ids>
+get_pointer_t<Ids...> get_pointer(Ids... ids) {
+    ((ids += "\t"),...);
+    std::tuple<Ids...> idsTuple{ std::forward<Ids>(ids)... };
+    return { move(idsTuple) };
+}
+
+void rvFunc(std::string&& str)
+{
+    constexpr auto isPrvalue = std::is_same_v<decltype(str + str), std::string>;
+    constexpr auto isLvalue = std::is_same_v<decltype((str)), std::string&>;
+    constexpr  auto isXvalue = std::is_same_v<decltype((std::move(str))), std::string&&>;
+
+}
+std::optional<int> LastDayStableTemperatures();
+optional<int> LastDayStableTemperaturesWithAlgo();
+
+
+namespace HasMerchant
+{
+    void main();
+}
+
+namespace detail
+{
+    consteval bool useEqualto()
+    {
+        std::array ar{ 1,2,3,4 };
+        auto res = std::ranges::equal_to{};
+        bool ok = res(&ar[1], &ar[2]);
+        return ok;
+    }
+
+}
+
+namespace CppTemplates
+{
+    void use();
+}
+
+namespace Loki
+{
+    void useSafeCast();
+}
+
+namespace str_converting
+{
+    void main();
+}
+namespace too_specific
+{
+    void main();
+}
+namespace generic_open
+{
+    void main();
+}
+
+namespace modulus
+{
+    void main();
+}
+
+namespace decay_samples
+{
+    void use();
+}
+
 
 
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
 
+    void useFSM();
+    useFSM();
+
+    void comparable();
+    comparable();
+
+    decay_samples::use();
+
+    void useListTemplate();
+    useListTemplate();
+
+    ::modulus::main();
+
+    generic_open::main();
+
+
+    too_specific::main();
+
+    str_converting::main();
+
+    void useCvt();
+    useCvt();
+
+
+    Loki::useSafeCast();
+
+    //void useConceptYields_fp();
+    //useConceptYields_fp();
+
+    void useGenericItemBuilder();
+    useGenericItemBuilder();
+
+
+
+
+    CppTemplates::use();
+
+
+
+    void useInvoke();
+    useInvoke();
+
+    void useGI();
+    useGI();
+
+
+    constexpr auto bb=detail::useEqualto();
+
+    HasMerchant::main();
+
+    void showCasingFeaturedGallery();
+    showCasingFeaturedGallery();
+
+    std::string declarative_programming();
+    auto ress = declarative_programming();
+
+    std::optional<int> rr = LastDayStableTemperatures();
+    optional<int> ret = LastDayStableTemperaturesWithAlgo();
+
+
+    void useAcc();
+    useAcc();
+
+    void useVarTypeDict();
+    useVarTypeDict();
+
+
+    void useFormat();
+    useFormat();
+
+    void useFilter();
+    useFilter();
+
+    std::string aaaa{ "This is " };
+    std::string bbbb{ "Hello" };
+    auto gp = get_pointer(aaaa, bbbb, "Hawai"s );
+
+    auto& at = std::get<0>(gp.ids);
+    auto& bt = std::get<1>(gp.ids);
+    auto& ct = std::get<2>(gp.ids);
+
+    alternative_impl::useFakeBytes();
+
+    seq::useSequenceCPP();
+
+    std::shared_ptr<std::string> ps{ new std::string{"Hello"}};
+    Shared sh(ps);
+
+    std::shared_ptr<std::string> psm{ ps };
+    std::shared_ptr<std::string> psmm{ std::move(ps) };
+
+    void useFakeBytes();
+    useFakeBytes();
+
+    void useParse();
+    useParse();
+
+
+    void parseHelloWorld();
+    parseHelloWorld();
+
+    void printAscii();
+    printAscii();
+
+    void useMyOptional();
+    useMyOptional();
+
+
+    void useAdd();
+    useAdd();
+
+    _1_9::use();
+
+    useB7();
+
+    void fuz();
+    fuz();
+
+    void Use();
+    Use();
+
+
+    withFramework::useFramework();
 
     moreSFINAE::useIncrease();
 

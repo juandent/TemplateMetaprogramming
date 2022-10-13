@@ -59,18 +59,18 @@ struct TypeAtPos<0, Type, Rest...>
 
 
 template<typename TVal, size_t N, size_t M, typename TProcessedTypes, typename...TRemainingTypes>
-struct NewTupleType_;
+struct ReplaceType_;
 
 template<typename TVal, size_t N, size_t M, template<typename...> class TCont, typename ...TModifiedTypes, typename TCurType, typename... TRemainingTypes>
-struct NewTupleType_<TVal, N, M, TCont<TModifiedTypes...>, TCurType, TRemainingTypes...>
+struct ReplaceType_<TVal, N, M, TCont<TModifiedTypes...>, TCurType, TRemainingTypes...>
 {
-	using type = typename NewTupleType_<TVal, N, M + 1, TCont<TModifiedTypes..., TCurType>, TRemainingTypes...>::type;
-	// using type = typename NewTupleType_<TVal, N, M + 1, TCont<TRemainingTypes..., TCurType>, TModifiedTypes...>::type;
+	using type = typename ReplaceType_<TVal, N, M + 1, TCont<TModifiedTypes..., TCurType>, TRemainingTypes...>::type;
+	// using type = typename ReplaceType_<TVal, N, M + 1, TCont<TRemainingTypes..., TCurType>, TModifiedTypes...>::type;
 };
 
 
 template<typename TVal, size_t N, template<typename...> class TCont, typename ...TModifiedTypes, typename TCurType, typename... TRemainingTypes>
-struct NewTupleType_<TVal, N, N, TCont<TModifiedTypes...>, TCurType, TRemainingTypes...>
+struct ReplaceType_<TVal, N, N, TCont<TModifiedTypes...>, TCurType, TRemainingTypes...>
 {
 	using type = TCont<TModifiedTypes..., TVal, TRemainingTypes...>;
 	// using type = TCont<TRemainingTypes..., TVal, TModifiedTypes...>;
@@ -80,10 +80,10 @@ struct NewTupleType_<TVal, N, N, TCont<TModifiedTypes...>, TCurType, TRemainingT
 
 
 template<typename TVal, size_t TagPos, typename TCont, typename ...TRemainingTypes>
-using NewTupleType = typename NewTupleType_<TVal, TagPos, 0, TCont, TRemainingTypes...>::type;
+using NewTupleType = typename ReplaceType_<TVal, TagPos, 0, TCont, TRemainingTypes...>::type;
 
 // template<typename TVal, size_t TagPos, typename TCont, typename ...TRemainingTypes>
-// struct NewTupleType : public NewTupleType_<TVal, TagPos, 0, TCont, TRemainingTypes...>
+// struct NewTupleType : public ReplaceType_<TVal, TagPos, 0, TCont, TRemainingTypes...>
 // {
 // 	NewTupleType(auto x) {}
 // };
