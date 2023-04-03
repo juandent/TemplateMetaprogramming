@@ -52,10 +52,10 @@ struct Vector
 
 	Vector() = default;
 	Vector(const Vector& rhs) = default;
-	Vector(const std::initializer_list<float>& list)
+	Vector(const std::initializer_list<float>& list) 
 	{
 		auto p = std::begin(list);
-		for (int i = 0; i < Cols; ++i, ++p) { data[i] = *p; }
+		for (auto i = 0u; i < Cols; ++i, ++p) { data[i] = *p; }
 	}
 	~Vector() = default;
 
@@ -71,7 +71,7 @@ struct Vector
 
 	Vector& operator=(const Vector<Cols>& rhs)
 	{
-		for (int i = 0; i < Cols; ++i)
+		for (auto i = 0u; i < Cols; ++i)
 		{
 			data[i] = rhs[i];
 		}
@@ -111,7 +111,7 @@ struct Array
 	Array(const std::initializer_list<Vector<Cols>>& list)
 	{
 		auto p = std::begin(list);
-		for (int i = 0; i < Rows; ++i, ++p) { data[i] = *p; }
+		for (auto i = 0u; i < Rows; ++i, ++p) { data[i] = *p; }
 	}
 	~Array() = default;
 	Array(const Array& rhs) = default;

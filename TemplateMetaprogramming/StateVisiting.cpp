@@ -67,6 +67,11 @@ State on_event(state::Depleted depleted, event::DeliveryArrived delivery)
 	return state::Available{ delivery.count };
 }
 
+State on_event(state::Discontinued discontinued, event::DeliveryArrived delivery)
+{
+	return state::Available{ delivery.count };
+}
+
 template<typename ...Ts>
 struct overload : Ts...
 {
@@ -87,8 +92,10 @@ public:
 			{
 				return on_event(state, std::forward<Event>(event));
 			},
-			[](const auto& unsupported_state)->State
+			[&](const auto& unsupported_state)->State
 			{
+				//using type = decltype(on_event(unsupported_state, std::forward<Event>(event)));
+			//	type* p;
 				throw std::logic_error("unsupported state transition");
 			}
 			}, _state);

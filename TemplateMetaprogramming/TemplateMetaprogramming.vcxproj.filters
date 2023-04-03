@@ -55,6 +55,21 @@
     <Filter Include="C++17-20 Course">
       <UniqueIdentifier>{cb5e5b5b-9ed5-4c26-9232-7969c2cc589f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modernes C++">
+      <UniqueIdentifier>{6c39017a-a60b-4935-afeb-d12e1cf28d22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cppreference">
+      <UniqueIdentifier>{12fe890a-82fd-484f-ac23-08b2bf3927d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Smart pointer course">
+      <UniqueIdentifier>{d0c5c0d1-9fdf-48f6-af7a-e57b43d24541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C++ 20 The Complete Guide">
+      <UniqueIdentifier>{ca4d4739-9024-4a26-9624-d66480ab86c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LocaleList">
+      <UniqueIdentifier>{83216c26-b697-43bf-a578-51995f2a62b7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -287,6 +302,21 @@
     </ClInclude>
     <ClInclude Include="SampleTypes.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="printcoll.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\format\formatalways41.hpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\format\always41.hpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\format\always42.hpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\format\formatalways42.hpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -814,6 +844,72 @@
     </ClCompile>
     <ClCompile Include="3_1_3.cpp">
       <Filter>Programming with C++ 20</Filter>
+    </ClCompile>
+    <ClCompile Include="DecoratorPattern.cpp">
+      <Filter>Modernes C++</Filter>
+    </ClCompile>
+    <ClCompile Include="UsingConcepts.cpp">
+      <Filter>C++ 20 Get the Details</Filter>
+    </ClCompile>
+    <ClCompile Include="Enbale_if_options.cpp">
+      <Filter>cppreference</Filter>
+    </ClCompile>
+    <ClCompile Include="Requires_expressions.cpp">
+      <Filter>cppreference</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartPointers.cpp">
+      <Filter>Smart pointer course</Filter>
+    </ClCompile>
+    <ClCompile Include="spaceship.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="auto_parameters_ordinary_functiona.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="counted.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="begin.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="subrange.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="elements_view.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="elementsviewhack.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="joinconst.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="is_instance_of.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="format_locale.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\format\always41.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\format\always42.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\lib\chrono3.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\lib\chrono2.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\juan_\OneDrive\C++\C++ 20 The Complete Guide\lib\chronotz.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="iochronotype.cpp">
+      <Filter>C++ 20 The Complete Guide</Filter>
+    </ClCompile>
+    <ClCompile Include="localelist.cpp">
+      <Filter>LocaleList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

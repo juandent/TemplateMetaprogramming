@@ -1588,11 +1588,149 @@ namespace decay_samples
     void use();
 }
 
+void printCollFunc(const auto& coll)
+{
+    for (const auto& elem : coll)
+    {
+        std::cout << elem << "\n";
+    }
+}
 
 
+namespace auto_param
+{
+    void main();
+}
+
+namespace Cpp20TCG
+{
+    void main();
+    void exerciseForwarding();
+}
+
+namespace locale_experimenting
+{
+    void main();
+}
+
+namespace formatter_tester
+{
+    void main();
+}
+
+namespace formatter_tester_2
+{
+    void main();
+}
+namespace chrono3
+{
+    void main();
+}
+namespace chrono2
+{
+    void main();
+}
+namespace tz {
+    void main();
+}
+namespace iochronotype
+{
+    void main();
+    void usingFromStream();
+    void useParseDuration();
+    void useParseManip();
+    void useParseTZ();
+    void useInvalid();
+}
+namespace locale_list
+{
+    int main();
+}
 #if 1
 /* &main& */
 int main(int argc, const char * argv[]) {
+
+    iochronotype::useInvalid();
+
+    iochronotype::useParseTZ();
+
+    iochronotype::useParseManip();
+
+    iochronotype::useParseDuration();
+
+    iochronotype::usingFromStream();
+
+    locale_list::main();
+
+    iochronotype::main();
+
+    tz::main();
+
+    chrono2::main();
+
+    chrono3::main();
+
+    formatter_tester_2::main();
+
+    formatter_tester::main();
+
+    locale_experimenting::main();
+
+    Cpp20TCG::exerciseForwarding();
+
+    Cpp20TCG::main();
+
+
+
+    void useElementsHack();
+    useElementsHack();
+
+
+    void elements_view();
+    elements_view();
+
+
+    void useSubrange();
+    useSubrange();
+
+
+
+    void useCounted();
+    useCounted();
+
+
+
+    auto_param::main();
+
+
+    std::vector<int> vec;
+    printCollFunc(vec);
+
+    void useCountCallsWrapper();
+    useCountCallsWrapper();
+
+
+    void useSmartPointers();
+    useSmartPointers();
+
+
+    void useEnableIf();
+    useEnableIf();
+
+
+
+    void useFilterTransform();
+    useFilterTransform();
+
+
+
+    void useFibonacci();
+    useFibonacci();
+
+
+    void useCollection();
+    useCollection();
+
 
     void useFSM();
     useFSM();

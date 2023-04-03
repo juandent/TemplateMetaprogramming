@@ -97,26 +97,27 @@ constexpr std::size_t hv1{ hashed_extended("beer", [](auto hash, char c)
 
 
 using namespace std;
-
-class Data
-{
-	string name;
-public:
-	Data( const string& n) : name{n} {}
-
-	auto startThreadWithCopyOfThis() const
+namespace {
+	class Data
 	{
-		using namespace std::literals;
-		thread t{ [a=*this]
+		string name;
+	public:
+		Data(const string& n) : name{ n } {}
+
+		auto startThreadWithCopyOfThis() const
 		{
-			this_thread::sleep_for(3s);
-			cout << a.name << endl;
-		} };
+			using namespace std::literals;
+			thread t{ [a = *this]
+			{
+				this_thread::sleep_for(3s);
+				cout << a.name << endl;
+			} };
 
-		return t;
-	}
-};
+			return t;
+		}
+	};
 
+}
 
 void useData()
 {
